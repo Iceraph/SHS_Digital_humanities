@@ -1,0 +1,6 @@
+drh_id,drh_tradition,drh_lat,drh_lon,d_place_culture_id,d_place_culture_name,distance_km,temporal_overlap,confidence_score,linkage_method,notes
+DRH_002,Sufi Islam,35.0,50.0,Ea9,Iranians,212.46308553223844,UNKNOWN_ERA,0.288,geographic_proximity,Distance: 212 km; Temporal: UNKNOWN_ERA
+DRH_002,Sufi Islam,35.0,50.0,Ea8,Bakhtiari,288.8600580696033,UNKNOWN_ERA,0.211,geographic_proximity,Distance: 289 km; Temporal: UNKNOWN_ERA
+DRH_003,Tibetan Buddhism,32.0,90.0,Ee4,Central Tibetans,241.94992508868268,UNKNOWN_ERA,0.258,geographic_proximity,Distance: 242 km; Temporal: UNKNOWN_ERA
+DRH_004,Korean Shamanism,37.0,127.0,SCCS116,Koreans,84.16071694091058,DISTANT_ERA,0.166,geographic_proximity,Distance: 84 km; Temporal: DISTANT_ERA
+DRH_004,Korean Shamanism,37.0,127.0,Ed1,Koreans,126.1588174919338,DISTANT_ERA,0.15,geographic_proximity,Distance: 126 km; Temporal: DISTANT_ERA

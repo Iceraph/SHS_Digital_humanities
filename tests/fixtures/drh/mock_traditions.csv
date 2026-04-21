@@ -1,0 +1,6 @@
+Entry name,Start Date,End Date,Region,Does religious specialist engage in trance:,Is divination present:,Is spirit possession present:,Does religion practice ritual healing:,Are shamans present:,Describe other shamanic practices:
+Siberian Shamanism,-1000,1950,Asia,yes,yes,yes,yes,yes,Ecstatic communication with spirits
+Sufi Islam,-622,,Asia,yes,yes,no,yes,no,Mystical ecstasy; Dervish practices
+Tibetan Buddhism,-127,,Asia,uncertain,yes,no,yes,no,Ritual specialists; Spirit mediation
+Korean Shamanism,-500,1950,Asia,yes,yes,yes,yes,yes,Shamanic healing rituals
+DRH_005,Aboriginal Australian Spirituality,25.0,133.0,-1000,2000,trance_question_1:yes|divination_question_1:yes

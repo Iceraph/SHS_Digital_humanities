@@ -1,0 +1,2 @@
+drh_id,drh_tradition,drh_lat,drh_lon,d_place_culture_id,d_place_culture_name,distance_km,drh_time_start,drh_time_end,d_place_time_start,d_place_time_end,temporal_overlap,confidence_score,linkage_method,notes
+DRH_003,Tibetan Buddhism,32.0,90.0,Ee3,Lepcha,455.0765074933341,-127,,-1850,-1950,UNKNOWN_ERA,0.045,geographic_proximity,Distance: 455 km; Temporal: UNKNOWN_ERA

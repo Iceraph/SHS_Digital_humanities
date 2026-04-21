@@ -1,0 +1,6 @@
+id,name,region,start_year,end_year,latitude,longitude
+P0001,Joseon,East Asia,-1392,1878,37.5,127.0
+P0002,Ottoman Empire,Middle East,-1299,1922,39.0,35.0
+P0003,Edo Japan,East Asia,-1603,1868,35.5,139.5
+P0004,Ming China,East Asia,-1368,1644,35.0,115.0
+P0005,Khanate of Kazan,Central Asia,-1438,1552,55.7,49.1

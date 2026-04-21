@@ -1,0 +1,37 @@
+{
+  "phylogenetic_filtering": {
+    "n_filtered": 1257,
+    "n_full": 1850,
+    "method": "one_per_language_family"
+  },
+  "clustering_kmeans": {
+    "k": 8,
+    "silhouette_score": 0.7219093901222482,
+    "davies_bouldin_index": 0.782122790223672,
+    "calinski_harabasz_index": 281.77664126350317,
+    "cluster_sizes": {
+      "0": 714,
+      "1": 41,
+      "2": 273,
+      "3": 43,
+      "4": 175,
+      "5": 1,
+      "6": 3,
+      "7": 7
+    }
+  },
+  "k_selection_analysis": {
+    "k_range": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "optimal_k": 8,
+    "best_silhouette": 0.7219093901222482
+  }
+}

@@ -1,0 +1,10 @@
+ID,Name,Description
+EA112,Trance States,"Practitioners deliberately induce trance for ritual purposes"
+EA34,Religious Practitioners,"Presence of specialized religious practitioners"
+SCCS_shamanism,Shaman-like practitioners,"Cross-cultural shamanism classification"
+SCCS_healing,Healing rituals,"Use of ritual for healing"
+SCCS_percussion,Rhythmic percussion,"Use of drums/rattles in rituals"
+EA100,Divination,"Foretelling future or discovering hidden knowledge"
+EA102,Ritual complexity,"Overall level of ritual elaboration"
+VAR_unrelated1,Agricultural practice,Main mode of subsistence
+VAR_unrelated2,Kinship system,Primary kinship organization

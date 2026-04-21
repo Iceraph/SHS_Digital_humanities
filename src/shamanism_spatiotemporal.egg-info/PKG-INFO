@@ -1,0 +1,28 @@
+Metadata-Version: 2.4
+Name: shamanism-spatiotemporal
+Version: 0.1.0
+Summary: Spatio-temporal computational analysis of shamanism across world cultures
+Author: Shamanism Research Team
+License: MIT
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: pandas>=2.0
+Requires-Dist: numpy>=1.24
+Requires-Dist: pyarrow>=12.0
+Requires-Dist: requests>=2.31
+Requires-Dist: python-dotenv>=1.0
+Requires-Dist: scikit-learn>=1.3
+Requires-Dist: scipy>=1.11
+Requires-Dist: geopandas>=0.13
+Requires-Dist: matplotlib>=3.7
+Requires-Dist: seaborn>=0.12
+Requires-Dist: umap-learn>=0.5
+Requires-Dist: polars>=0.18
+Provides-Extra: dev
+Requires-Dist: pytest>=7.4; extra == "dev"
+Requires-Dist: pytest-mock>=3.11; extra == "dev"
+Requires-Dist: responses>=0.23; extra == "dev"
+Requires-Dist: black>=23.9; extra == "dev"
+Requires-Dist: ruff>=0.1; extra == "dev"
+Requires-Dist: jupyter>=1.0; extra == "dev"
+Requires-Dist: ipython>=8.12; extra == "dev"

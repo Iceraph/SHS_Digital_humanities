@@ -1,0 +1,9 @@
+id,name,description,coding_scheme
+spirit_possession,Spirit possession,Cross-cultural presence of spirit possession phenomena,binary
+trance_induction,Trance Induction,Practitioners deliberately enter non-ordinary mental states,binary
+divination,Divination,Foretelling future or discovering hidden knowledge,binary
+healing_rituals,Healing Rituals,Use of ritual for curing illness or affliction,binary
+ancestor_mediation,Ancestor Mediation,Communication with deceased ancestors,binary
+ritual_complexity,Ritual Complexity,Overall elaboration of ritual technology,ordinal
+religious_specialist,Religious Specialist,Presence of full-time religious practitioners,ordinal
+ancestor_veneration,Ancestor Veneration,Ritual focus on ancestors and deceased,binary

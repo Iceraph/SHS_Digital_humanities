@@ -1,0 +1,9 @@
+metric,value
+drh_traditions_total,5.0
+drh_traditions_linked,3.0
+d_place_cultures_involved,5.0
+average_matches_per_tradition,1.6666666666666667
+geographic_threshold_km,500.0
+confidence_threshold,0.1
+linkage_records_accepted,5.0
+linkage_records_needs_review,1.0

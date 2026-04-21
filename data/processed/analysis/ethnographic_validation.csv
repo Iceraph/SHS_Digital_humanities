@@ -1,0 +1,3 @@
+culture_id,culture_name,agreements,conflicts,unknowns,agreement_rate,validation_status
+DRH_001,Siberian Shamanism,1,1,7,0.5,REVIEW
+DRH_004,Korean Shamanism,1,0,5,1.0,PASS

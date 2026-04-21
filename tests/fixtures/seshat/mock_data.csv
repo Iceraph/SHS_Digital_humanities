@@ -1,0 +1,12 @@
+polity_id,var_id,value,uncertainty
+P0001,spirit_possession,1,certain
+P0001,trance_induction,1,probable
+P0001,divination,1,possible
+P0001,healing_rituals,1,certain
+P0002,spirit_possession,0,certain
+P0002,divination,1,probable
+P0002,ancestor_mediation,1,speculative
+P0003,trance_induction,1,certain
+P0003,healing_rituals,1,probable
+P0004,spirit_possession,1,certain
+P0004,divination,1,certain

@@ -1,0 +1,138 @@
+{
+  "timestamp": "2026-04-20 20:55:50.003183",
+  "feature_sensitivity": {
+    "core_shamanic": {
+      "n_features": 5,
+      "n_cultures": 1850,
+      "silhouette_score": 0.9994594594594595,
+      "davies_bouldin_index": 3.638347674079802e-09,
+      "calinski_harabasz_index": 1.4999762108432207e+31
+    },
+    "cosmology": {
+      "n_features": 4,
+      "n_cultures": 1850,
+      "silhouette_score": 1.0,
+      "davies_bouldin_index": 1.9747457515549503e-08,
+      "calinski_harabasz_index": 2.2827612333082915e+31
+    },
+    "all_features": {
+      "n_features": 19,
+      "n_cultures": 1850,
+      "silhouette_score": 0.5101276606587303,
+      "davies_bouldin_index": 0.833512901829475,
+      "calinski_harabasz_index": 302.0187941582732
+    }
+  },
+  "k_value_analysis": {
+    "5": {
+      "silhouette_score": 0.4964739572846871,
+      "davies_bouldin_index": 1.3465442784039776,
+      "calinski_harabasz_index": 250.44022314095767,
+      "cluster_sizes": {
+        "0": 419,
+        "1": 1224,
+        "2": 112,
+        "3": 92,
+        "4": 3
+      }
+    },
+    "6": {
+      "silhouette_score": 0.5091692016155509,
+      "davies_bouldin_index": 1.1468494808704472,
+      "calinski_harabasz_index": 260.6995067188546,
+      "cluster_sizes": {
+        "0": 1222,
+        "1": 111,
+        "2": 92,
+        "3": 4,
+        "4": 2,
+        "5": 419
+      }
+    },
+    "7": {
+      "silhouette_score": 0.5606228488598075,
+      "davies_bouldin_index": 1.0224283985996307,
+      "calinski_harabasz_index": 275.6812014138831,
+      "cluster_sizes": {
+        "0": 239,
+        "1": 49,
+        "2": 1250,
+        "3": 17,
+        "4": 289,
+        "5": 2,
+        "6": 4
+      }
+    },
+    "8": {
+      "silhouette_score": 0.5101276606587303,
+      "davies_bouldin_index": 0.833512901829475,
+      "calinski_harabasz_index": 302.0187941582732,
+      "cluster_sizes": {
+        "0": 108,
+        "1": 1435,
+        "2": 58,
+        "3": 239,
+        "4": 1,
+        "5": 3,
+        "6": 2,
+        "7": 4
+      }
+    },
+    "9": {
+      "silhouette_score": 0.6613579282209712,
+      "davies_bouldin_index": 0.846888138195283,
+      "calinski_harabasz_index": 337.3266699376377,
+      "cluster_sizes": {
+        "0": 1020,
+        "1": 104,
+        "2": 55,
+        "3": 239,
+        "4": 419,
+        "5": 4,
+        "6": 6,
+        "7": 1,
+        "8": 2
+      }
+    },
+    "10": {
+      "silhouette_score": 0.7429784512257572,
+      "davies_bouldin_index": 0.783697572893206,
+      "calinski_harabasz_index": 376.5421906921958,
+      "cluster_sizes": {
+        "0": 419,
+        "1": 252,
+        "2": 875,
+        "3": 239,
+        "4": 36,
+        "5": 4,
+        "6": 16,
+        "7": 2,
+        "8": 1,
+        "9": 6
+      }
+    }
+  },
+  "imputation_comparison": {
+    "fill_zero": {
+      "strategy": "Fill missing with 0",
+      "silhouette_score": 0.5101276606554476,
+      "davies_bouldin_index": 0.833512901829473
+    },
+    "mean": {
+      "strategy": "Mean imputation",
+      "silhouette_score": 0.797519991858609,
+      "davies_bouldin_index": 0.3746323744061003
+    }
+  },
+  "geographic_independence": {
+    "correlation": 0.059674193814155216,
+    "p_value": 0.0,
+    "interpretation": "Features are independent of geography (r < 0.3)"
+  },
+  "interpretation": {
+    "feature_sensitivity": "VARIABLE ACROSS SUBSETS",
+    "k_selection": "STABLE",
+    "imputation": "SENSITIVE TO IMPUTATION",
+    "geographic": "INDEPENDENT"
+  }
+}

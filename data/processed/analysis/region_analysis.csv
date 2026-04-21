@@ -1,0 +1,6 @@
+region,record_count,culture_count,feature_coverage,gap_severity,recommendation
+Other,365,50,0.26217228464419473,GREEN,Adequate coverage; proceed with regional analysis
+Europe,783,279,0.34841628959276016,GREEN,Adequate coverage; proceed with regional analysis
+Africa,1689,440,0.37271853986551395,GREEN,Adequate coverage; proceed with regional analysis
+Asia-Pacific,2322,398,0.27167630057803466,GREEN,Adequate coverage; proceed with regional analysis
+Americas,6661,683,0.350880251002266,GREEN,Adequate coverage; proceed with regional analysis

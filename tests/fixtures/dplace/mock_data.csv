@@ -1,0 +1,17 @@
+ID,Soc_ID,Var_ID,Value,Code_ID,Comment
+dplace-mock-1,EA001,EA112,1,,Evenki trance
+dplace-mock-2,EA001,EA34,2,,Evenki practitioners
+dplace-mock-3,EA001,SCCS_shamanism,1,,Evenki shamanism
+dplace-mock-4,EA001,SCCS_healing,1,,Evenki healing
+dplace-mock-5,EA001,SCCS_percussion,1,,Evenki percussion
+dplace-mock-6,EA001,EA100,1,,Evenki divination
+dplace-mock-7,EA002,EA112,1,,Sami trance
+dplace-mock-8,EA002,EA34,1,,Sami practitioners
+dplace-mock-9,EA002,SCCS_shamanism,1,,Sami shamanism
+dplace-mock-10,EA002,SCCS_healing,0,,Sami healing
+dplace-mock-11,EA003,EA112,,,Ainu trance missing
+dplace-mock-12,EA003,EA34,2,,Ainu practitioners
+dplace-mock-13,EA003,SCCS_shamanism,1,,Ainu shamanism
+dplace-mock-14,EA004,EA112,1,,Australian trance
+dplace-mock-15,EA004,SCCS_percussion,1,,Australian percussion
+dplace-mock-16,EA004,EA100,0,,Australian divination

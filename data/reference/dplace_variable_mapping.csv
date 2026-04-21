@@ -1,0 +1,6 @@
+source_var_id,source_var_name,shamanism_relevant,reason
+EA112,Trance States,True,Matched shamanism keyword
+SCCS_healing,Healing rituals,True,Matched shamanism keyword
+SCCS_percussion,Rhythmic percussion,True,Matched shamanism keyword
+EA100,Divination,True,Matched shamanism keyword
+EA102,Ritual complexity,True,Matched shamanism keyword

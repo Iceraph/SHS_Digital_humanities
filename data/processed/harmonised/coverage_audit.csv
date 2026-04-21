@@ -1,0 +1,10 @@
+region,time_bin,record_count,data_quality_mean,source,gap_severity
+Africa,-2000_to_-1500,2165,0.5564069284064665,dplace,GREEN
+Americas,-2000_to_-1500,7090,0.43334513399153735,dplace,GREEN
+Asia-Pacific,-2000_to_-1500,2083,0.511634181469035,dplace,GREEN
+Europe,-2000_to_-1500,262,0.5254961832061069,dplace,GREEN
+Other,-2000_to_-1500,220,0.5275318181818182,dplace,GREEN
+Africa,-1000_to_-500,2,0.0,drh,YELLOW
+Asia-Pacific,-1000_to_-500,2,0.0,drh,YELLOW
+Asia-Pacific,-500_to_0,4,0.0,drh,YELLOW
+Other,-1000_to_-500,3,0.0,drh,YELLOW

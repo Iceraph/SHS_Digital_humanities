@@ -1,0 +1,4 @@
+drh_id,drh_tradition,num_d_place_matches,confidence_distribution,needs_expert_review
+DRH_002,Sufi Islam,2,LOW(2),True
+DRH_003,Tibetan Buddhism,1,LOW(1),True
+DRH_004,Korean Shamanism,2,LOW(2),True

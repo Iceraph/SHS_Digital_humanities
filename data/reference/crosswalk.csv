@@ -1,0 +1,18 @@
+feature|d_place_var_id|d_place_codes|drh_column|seshat_var_id|primary_source|binarisation_rule|confidence_level|notes
+trance_induction|EA112|1 2 3 4 5 6 7 8|trance_question_1||d_place|EA112 codes 1-8=trance present; 99=NA. DRH binary 0/1|high|EA112 documented trance types. Code 99 NA placeholder convert to 1
+spirit_possession|EA112|1 2 3 4 5 6 7 8||spirit_possession|seshat|EA112 1-8=1; 99=NA. Seshat 0/1 binary|high|EA112 trance category. Seshat explicit spirit_possession
+soul_flight|SCCS1170||drh_spirit_question|spirit_mediation|multiple|DRH spirit_question + Seshat spirit_mediation map to soul_flight|medium|Limited direct coverage. DRH implies soul contact; SCCS1170 shamanism index
+healing_function|EA34|3 4 5|healing_question_1||d_place|EA34 0-5 ordinal scales; 3-5=full-time specialists. DRH binary|high|EA34 specialist presence proxy. Theory: healing=specialist
+dedicated_specialist|EA34|3 4 5|healing_question_1||d_place|EA34 0/1/2=0 (part-time); 3/4/5=1 (full-time specialist). Theory-driven threshold|high|Shamanism requires full-time commitment
+initiatory_crisis|SCCS580||drh_trance_question||d_place|SCCS580 binary 0/1; 1=initiation crisis required|medium|Shamanism hallmark. DRH may imply but not explicit
+hereditary_transmission|SCCS673|||||d_place|SCCS673 binary 0/1; 1=role inherited|high|Clear SCCS code. Limited DRH/Seshat coverage
+rhythmic_percussion|SCCS535|||||d_place|SCCS535 binary 0/1; 1=drumming/percussion central|high|Explicit SCCS code
+layered_cosmology|WNAI169|||||d_place|WNAI169 binary 0/1; 1=multiple worlds or axis mundi|medium|EA code for cosmology
+animal_transformation|SCCS536|||||d_place|SCCS536 binary 0/1; 1=shape-shifting/animal merging|high|Explicit SCCS code
+ancestor_mediation|SCCS530||ancestor_question_1||multiple|SCCS530 binary 0/1. DRH binary 0/1. Any-source: yes->1|high|Multi-source coverage
+nature_spirits||||spirit_mediation|seshat|Seshat spirit_mediation includes nature spirits|low|Seshat best proxy. D-PLACE lacks specificity
+divination||divination_question_1|divination|multiple|DRH + Seshat explicit divination. Binary 0/1 across sources|high|Strong multi-source coverage
+public_performance|SCCS1823|||||d_place|SCCS1823 binary 0/1; 1=ritual performance before community|high|Explicit SCCS code
+chanting_singing|SCCS654|||||d_place|SCCS654 binary 0/1; 1=vocal techniques central|high|Explicit SCCS code for icaros/singing
+entheogen_use|WNAI390|||||d_place|WNAI390 binary 0/1; 1=psychoactive substances used|high|Explicit EA code for drug use
+ritual_practice||||ritual_practice|seshat|Seshat ritual_practice overall shamanism presence flag. Binary 0/1|low|Conflates multiple features; use as presence indicator
