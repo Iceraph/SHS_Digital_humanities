@@ -1,0 +1,197 @@
+culture_id,culture_name,source,lat,lon,time_start,time_end,cluster_k10_kmeans,cluster_k10_hierarchical
+DRH_001,Siberian Shamanism,drh,60.0,100.0,-1000,1950.0,9,2
+DRH_002,Sufi Islam,drh,35.0,50.0,-622,,9,2
+DRH_005,Aboriginal Australian Spirituality,drh,25.0,133.0,-1000,2000.0,9,2
+SCCS10,Luguru,dplace,-6.83,37.67,-1850,-1950.0,6,2
+SCCS100,Tikopia,dplace,-12.29,168.83,-1850,-1950.0,8,0
+SCCS101,Bunlap,dplace,-15.95,168.22,-1850,-1950.0,0,4
+SCCS103,Ajie,dplace,-21.33,165.67,-1850,-1950.0,6,2
+SCCS107,Makin,dplace,3.38,172.99,-1850,-1950.0,6,2
+SCCS109,Trukese,dplace,7.34,151.6,-1850,-1950.0,8,0
+SCCS11,Kikuyu,dplace,-0.67,37.17,-1850,-1950.0,3,1
+SCCS110,Yapese,dplace,9.52,138.16,-1850,-1950.0,1,5
+SCCS111,Palauans,dplace,7.5,134.5,-1850,-1950.0,0,4
+SCCS112,Ifugao,dplace,16.83,121.17,-1850,-1950.0,5,3
+SCCS114,Chinese,dplace,31.0,120.08,-1850,-1950.0,6,2
+SCCS115,Manchu,dplace,50.0,125.5,-1850,-1950.0,3,1
+SCCS116,Koreans,dplace,37.6,126.42,-1850,-1950.0,5,3
+SCCS117,Japanese,dplace,34.67,133.67,-1850,-1950.0,0,4
+SCCS118,Ainu,dplace,42.83,143.0,-1850,-1950.0,6,2
+SCCS119,Nivkh,dplace,53.0,142.0,-1850,-1950.0,5,3
+SCCS121,Chukchi,dplace,66.5,179.6,-1850,-1950.0,0,5
+SCCS122,Deg Xit'an,dplace,62.5,-159.5,-1850,-1950.0,5,3
+SCCS123,Aleut,dplace,55.0,-162.85,-1850,-1950.0,3,1
+SCCS125,Montagnais,dplace,50.0,-74.0,-1850,-1950.0,1,5
+SCCS126,Mi'kmaq,dplace,46.99,-65.0,-1850,-1950.0,3,1
+SCCS127,Northern Saulteaux,dplace,52.0,-95.5,-1850,-1950.0,0,4
+SCCS128,DeneTha,dplace,62.0,-122.0,-1850,-1950.0,5,3
+SCCS130,Eyak,dplace,60.5,-145.0,-1850,-1950.0,0,5
+SCCS136,Southern Valley Yokuts,dplace,35.0,-119.5,-1850,-1950.0,8,0
+SCCS14,Nkundo,dplace,-0.75,19.17,-1850,-1950.0,3,1
+SCCS141,Hidatsa,dplace,47.0,-101.0,-1850,-1950.0,0,4
+SCCS142,Pawnee,dplace,42.0,-100.0,-1850,-1950.0,3,1
+SCCS144,Huron,dplace,44.5,-79.0,-1850,-1950.0,5,3
+SCCS146,Natchez,dplace,31.5,-91.42,-1850,-1950.0,1,5
+SCCS15,Banen,dplace,4.67,10.8,-1850,-1950.0,0,4
+SCCS152,Huichol,dplace,22.0,-105.0,-1850,-1950.0,1,2
+SCCS154,Sierra Popoluca,dplace,18.25,-94.83,-1850,-1950.0,5,3
+SCCS17,Igbo,dplace,5.5,7.33,-1850,-1950.0,3,1
+SCCS20,Mende,dplace,7.83,-12.0,-1850,-1950.0,3,1
+SCCS22,Bambara,dplace,12.5,-7.0,-1850,-1950.0,0,5
+SCCS23,Tallensi,dplace,10.66,-0.57,-1850,-1950.0,0,4
+SCCS24,Songhai,dplace,16.58,-1.67,-1850,-1950.0,5,3
+SCCS26,Zazzagawa Hausa,dplace,10.5,7.5,-1850,-1950.0,3,1
+SCCS27,Masa,dplace,10.5,15.5,-1850,-1950.0,0,4
+SCCS29,Fur,dplace,13.5,25.5,-1850,-1950.0,6,2
+SCCS30,Otoro,dplace,11.33,30.67,-1850,-1950.0,5,3
+SCCS32,Mao,dplace,9.27,34.67,-1850,-1950.0,5,3
+SCCS33,Kafa,dplace,7.27,36.5,-1850,-1950.0,1,5
+SCCS35,Konso,dplace,5.25,37.5,-1850,-1950.0,1,5
+SCCS37,Amhara,dplace,12.5,37.75,-1850,-1950.0,0,4
+SCCS38,Blin,dplace,15.75,38.75,-1850,-1950.0,6,4
+SCCS39,Barabra,dplace,23.0,32.5,-1850,-1950.0,0,4
+SCCS4,Lozi,dplace,-16.0,23.5,-1850,-1950.0,5,3
+SCCS40,Teda,dplace,20.5,17.5,-1850,-1950.0,1,5
+SCCS43,Egyptians,dplace,24.75,33.0,-1850,-1950.0,8,0
+SCCS44,Hebrews,dplace,31.18,34.92,-1850,-1950.0,0,4
+SCCS45,Babylonians,dplace,32.58,44.75,-1850,-1950.0,5,3
+SCCS47,Turks,dplace,39.33,34.25,-1850,-1950.0,0,4
+SCCS48,Gheg,dplace,42.0,20.17,-1850,-1950.0,0,4
+SCCS5,Mbundu,dplace,-12.25,16.5,-1850,-1950.0,0,4
+SCCS50,Spanish Basques,dplace,43.25,-1.67,-1850,-1950.0,3,1
+SCCS51,Irish,dplace,53.5,-10.0,-1850,-1950.0,0,4
+SCCS53,Yurak-Samoyeds,dplace,68.0,51.5,-1850,-1950.0,3,5
+SCCS54,Russians,dplace,52.67,41.33,-1850,-1950.0,6,2
+SCCS55,Abkhaz,dplace,43.13,40.77,-1850,-1950.0,5,3
+SCCS56,Armenians,dplace,40.0,44.5,-1850,-1950.0,6,2
+SCCS57,Kurd,dplace,36.5,44.5,-1850,-1950.0,8,0
+SCCS58,Basseri,dplace,29.0,53.0,-1850,-1950.0,0,4
+SCCS59,Punjabi,dplace,32.5,74.0,-1850,-1950.0,0,4
+SCCS60,Madia,dplace,19.63,80.92,-1850,-1950.0,3,1
+SCCS62,Santal,dplace,23.5,87.17,-1850,-1950.0,3,5
+SCCS63,Uttar Pradesh,dplace,25.92,83.0,-1850,-1950.0,8,0
+SCCS64,Burusho,dplace,36.43,74.58,-1850,-1950.0,8,2
+SCCS65,Kazakh,dplace,42.5,75.5,-1850,-1950.0,8,0
+SCCS66,Khalka,dplace,47.17,96.08,-1850,-1950.0,5,3
+SCCS67,Lolo,dplace,27.5,103.5,-1850,-1950.0,3,1
+SCCS68,Lepcha,dplace,27.5,89.0,-1850,-1950.0,8,0
+SCCS69,Garo,dplace,26.0,91.0,-1850,-1950.0,8,5
+SCCS70,Maras,dplace,22.33,93.0,-1850,-1950.0,5,3
+SCCS71,Burmese,dplace,22.0,95.67,-1850,-1950.0,3,1
+SCCS72,Lamet,dplace,20.0,100.67,-1850,-1950.0,5,3
+SCCS73,Annamese,dplace,20.5,106.25,-1850,-1950.0,3,1
+SCCS74,Rade,dplace,13.0,108.0,-1850,-1950.0,5,3
+SCCS75,Ancient Khmer,dplace,13.0,103.83,-1850,-1950.0,0,4
+SCCS76,Thai,dplace,14.0,100.85,-1850,-1950.0,6,2
+SCCS78,Nicobarese,dplace,7.0,93.75,-1850,-1950.0,5,3
+SCCS8,Nyakyusa,dplace,-9.5,34.0,-1850,-1950.0,8,0
+SCCS82,Negri Sembilan,dplace,2.58,102.25,-1850,-1950.0,3,1
+SCCS83,Javanese,dplace,-7.7,112.22,-1850,-1950.0,8,4
+SCCS84,Balinese,dplace,-8.5,115.33,-1850,-1950.0,0,4
+SCCS85,Iban,dplace,2.0,113.0,-1850,-1950.0,5,3
+SCCS86,Badjau Tawi-Tawi,dplace,5.0,120.0,-1850,-1950.0,5,4
+SCCS87,Toradja,dplace,-2.0,121.0,-1850,-1950.0,3,1
+SCCS88,Tobelorese,dplace,2.0,127.94,-1850,-1950.0,1,2
+SCCS89,Alorese,dplace,-8.33,124.67,-1850,-1950.0,5,3
+SCCS9,Hadza,dplace,-3.75,35.18,-1850,-1950.0,5,3
+SCCS91,Northern Aranda,dplace,-24.25,133.5,-1850,-1950.0,8,0
+SCCS92,Orokaiva,dplace,-8.5,148.0,-1850,-1950.0,5,3
+SCCS93,Kimam,dplace,-7.5,138.5,-1850,-1950.0,0,5
+SCCS95,Kwoma,dplace,-4.17,142.67,-1850,-1950.0,5,3
+SCCS96,Manus,dplace,-2.17,147.17,-1850,-1950.0,5,3
+SCCS97,Lesu,dplace,-2.71,151.0,-1850,-1950.0,5,3
+WNAI100,Sanpoil,dplace,48.0,-118.7,-1850,-1950.0,1,5
+WNAI101,Sinkiuse-Columbia,dplace,47.0,-119.5,-1850,-1950.0,1,5
+WNAI102,Wenatchi,dplace,47.5,-120.3,-1850,-1950.0,1,5
+WNAI103,Coeur d’Alene,dplace,47.7,-117.0,-1850,-1950.0,1,5
+WNAI107,Nez Perce,dplace,46.0,-117.0,-1850,-1950.0,5,3
+WNAI108,Umatilla,dplace,46.0,-119.0,-1850,-1950.0,1,5
+WNAI109,Klikitat,dplace,45.8,-121.5,-1850,-1950.0,1,5
+WNAI110,Wishram,dplace,45.5,-121.2,-1850,-1950.0,1,5
+WNAI124,Gosiute,dplace,40.0,-114.0,-1850,-1950.0,7,7
+WNAI127,Hukundika,dplace,41.7,-112.0,-1850,-1950.0,2,9
+WNAI13,Makah,dplace,48.33,-124.62,-1850,-1950.0,4,8
+WNAI130,Uncompahgre Ute,dplace,38.0,-108.0,-1850,-1950.0,2,9
+WNAI135,Chemehuevi,dplace,34.3,-116.0,-1850,-1950.0,7,7
+WNAI137,Hualapai,dplace,35.3,-114.0,-1850,-1950.0,1,7
+WNAI14,Klahoose,dplace,50.5,-124.5,-1850,-1950.0,1,5
+WNAI140,Mojave,dplace,34.5,-114.5,-1850,-1950.0,4,8
+WNAI141,Quechan,dplace,32.7,-114.5,-1850,-1950.0,7,7
+WNAI143,Cocopa,dplace,32.0,-115.0,-1850,-1950.0,2,9
+WNAI144,Maricopa,dplace,33.3,-112.5,-1850,-1950.0,2,9
+WNAI145,Pima,dplace,33.2,-112.0,-1850,-1950.0,7,7
+WNAI15,Pentlatch,dplace,49.5,-125.0,-1850,-1950.0,1,5
+WNAI155,Lipan Apache,dplace,30.0,-104.0,-1850,-1950.0,4,6
+WNAI156,Jicarilla,dplace,37.0,-105.5,-1850,-1950.0,7,7
+WNAI159,Hopi,dplace,36.0,-110.5,-1850,-1950.0,2,9
+WNAI16,Squamish,dplace,49.7,-123.3,-1850,-1950.0,1,5
+WNAI162,Sia,dplace,35.3,-106.5,-1850,-1950.0,4,6
+WNAI163,Santa Ana,dplace,35.2,-106.4,-1850,-1950.0,4,6
+WNAI164,Kewa,dplace,35.3,-106.1,-1850,-1950.0,4,6
+WNAI165,Cochiti,dplace,35.6,-106.0,-1850,-1950.0,4,6
+WNAI166,Ohkay Owingeh,dplace,36.1,-106.1,-1850,-1950.0,4,6
+WNAI167,San Ildefonso,dplace,35.9,-106.2,-1850,-1950.0,4,6
+WNAI168,Santa Clara,dplace,36.0,-106.3,-1850,-1950.0,4,6
+WNAI169,Nambé Pueblo,dplace,35.9,-105.9,-1850,-1950.0,4,6
+WNAI17,Cowichan,dplace,48.7,-123.7,-1850,-1950.0,1,5
+WNAI170,Taos,dplace,36.5,-105.5,-1850,-1950.0,2,9
+WNAI171,Isleta,dplace,34.8,-106.7,-1850,-1950.0,4,6
+WNAI172,Jemez,dplace,35.8,-106.8,-1850,-1950.0,4,6
+WNAI18,West Saanich,dplace,48.4,-123.5,-1850,-1950.0,1,5
+WNAI19,Stó:lō,dplace,49.4,-121.5,-1850,-1950.0,1,5
+WNAI20,Musqueam,dplace,49.37,-123.24,-1850,-1950.0,1,5
+WNAI21,Lummi,dplace,48.7,-123.7,-1850,-1950.0,1,5
+WNAI24,Quinault,dplace,47.4,-124.1,-1850,-1950.0,1,5
+WNAI25,Puyallup,dplace,47.1,-122.5,-1850,-1950.0,2,9
+WNAI26,Quileute,dplace,47.9,-124.3,-1850,-1950.0,2,9
+WNAI27,Lower Chinook,dplace,46.35,-124.0,-1850,-1950.0,1,5
+WNAI28,Tillamook,dplace,45.4,-123.82,-1850,-1950.0,1,5
+WNAI29,Alsea,dplace,44.7,-124.0,-1850,-1950.0,1,5
+WNAI30,Siuslaw,dplace,44.0,-124.0,-1850,-1950.0,1,5
+WNAI31,Coos,dplace,43.3,-124.2,-1850,-1950.0,1,5
+WNAI32,Tututni,dplace,42.5,-124.3,-1850,-1950.0,1,5
+WNAI34,Taltushtuntede,dplace,42.5,-123.5,-1850,-1950.0,1,5
+WNAI37,Karuk,dplace,41.4,-123.5,-1850,-1950.0,1,5
+WNAI38,Hupa,dplace,41.0,-123.5,-1850,-1950.0,1,5
+WNAI39,Wiyot,dplace,40.8,-124.0,-1850,-1950.0,1,5
+WNAI4,Haida (Southern),dplace,53.09,-132.1,-1850,-1950.0,1,8
+WNAI41,Mattole-Bear River,dplace,40.4,-124.1,-1850,-1950.0,1,8
+WNAI43,Cahto,dplace,39.7,-123.3,-1850,-1950.0,1,7
+WNAI46,Chimariko,dplace,40.7,-123.2,-1850,-1950.0,1,5
+WNAI47,Wintu (Trinity River),dplace,40.6,-123.2,-1850,-1950.0,1,5
+WNAI5,Tsimshian,dplace,55.3,-130.05,-1850,-1950.0,1,8
+WNAI50,Nomlaki,dplace,39.5,-122.5,-1850,-1950.0,1,5
+WNAI53,Atsugewi,dplace,40.5,-121.3,-1850,-1950.0,2,9
+WNAI54,Valley Maidu,dplace,39.7,-121.9,-1850,-1950.0,1,5
+WNAI55,Foothill Maidu,dplace,39.8,-121.3,-1850,-1950.0,1,5
+WNAI57,Nisenan (Foothill),dplace,39.4,-121.1,-1850,-1950.0,1,5
+WNAI6,Gitxsan,dplace,56.3,-127.5,-1850,-1950.0,4,8
+WNAI62,Yana,dplace,40.5,-122.0,-1850,-1950.0,1,5
+WNAI63,Northern Pomo,dplace,39.6,-123.3,-1850,-1950.0,1,5
+WNAI65,Southern Pomo,dplace,38.5,-123.0,-1850,-1950.0,1,5
+WNAI66,Wappo,dplace,38.7,-123.0,-1850,-1950.0,1,5
+WNAI67,Patwin,dplace,38.7,-122.0,-1850,-1950.0,1,5
+WNAI68,Northern Miwok,dplace,38.5,-121.0,-1850,-1950.0,1,5
+WNAI69,Central Sierra Miwok,dplace,38.0,-120.0,-1850,-1950.0,1,5
+WNAI7,Haisla,dplace,53.5,-128.0,-1850,-1950.0,1,5
+WNAI70,Southern Miwok,dplace,37.5,-119.5,-1850,-1950.0,1,5
+WNAI73,Northern Foothills Yokuts,dplace,37.2,-119.8,-1850,-1950.0,5,9
+WNAI74,Kings River Yokuts,dplace,36.8,-119.4,-1850,-1950.0,1,5
+WNAI75,Wukchumni,dplace,36.4,-119.1,-1850,-1950.0,1,5
+WNAI78,Tübalulabal,dplace,36.0,-118.2,-1850,-1950.0,4,6
+WNAI79,Kawaiisu,dplace,35.5,-118.5,-1850,-1950.0,4,7
+WNAI8,Haihais,dplace,53.0,-128.5,-1850,-1950.0,1,5
+WNAI80,Salinan,dplace,35.0,-120.0,-1850,-1950.0,5,9
+WNAI81,Tongva,dplace,34.8,-118.0,-1850,-1950.0,2,9
+WNAI82,Luiseño,dplace,33.3,-117.3,-1850,-1950.0,7,7
+WNAI83,Cupeño,dplace,33.2,-116.7,-1850,-1950.0,2,9
+WNAI84,Serrano,dplace,34.2,-117.0,-1850,-1950.0,2,9
+WNAI85,Cahuilla (Desert),dplace,33.5,-116.2,-1850,-1950.0,2,9
+WNAI9,Heiltsuk,dplace,52.0,-128.0,-1850,-1950.0,1,5
+WNAI91,Kiliwa,dplace,31.5,-115.0,-1850,-1950.0,2,9
+WNAI92,Akwa’ala,dplace,31.5,-115.8,-1850,-1950.0,7,7
+WNAI95,Chilcotin,dplace,51.7,-125.0,-1850,-1950.0,1,5
+WNAI96,Shuswap,dplace,51.3,-120.0,-1850,-1950.0,1,5
+WNAI97,Lillooet,dplace,50.3,-122.5,-1850,-1950.0,1,5
+WNAI98,Nlaka'pamux,dplace,50.3,-121.5,-1850,-1950.0,1,5
+WNAI99,Syilx,dplace,48.8,-119.5,-1850,-1950.0,1,5

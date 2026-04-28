@@ -513,10 +513,10 @@ Track every methodological choice here. When you make a decision, add a row.
 | Time bin width | 200yr / 500yr / 1000yr | **500-year bins** — balance between resolution and sample size per bin | 500yr provides sufficient granularity for cultural change time scales | Ph. 4 | 15 Apr 2026 |
 | Gap threshold | <3 / <5 / <10 records | **<5 records per region/time bin** = high gap severity | Conservative threshold; flags underrepresented space-times | Ph. 2 | 15 Apr 2026 |
 | Data quality scoring | Single metric / Multi-factor | **Multi-factor: `data_quality_score = f(unit_ambiguous, time_uncertainty, source_count)`** | Enables filtering high-quality subsets + robustness checks across data quality levels | Ph. 2 | 15 Apr 2026 |
-| Number of features | 10 / 15 / 20+ | _pending_ | | Ph. 3 | |
-| Missing data strategy | Complete-case / Imputation / Both | _pending_ | | Ph. 3 | |
-| Clustering algorithm | k-means / Hierarchical / DBSCAN / Multiple | _pending_ | | Ph. 5 | |
-| Optimal k | 1–10 | _pending_ | Determined by elbow + silhouette | Ph. 5 | |
+| Number of features | 10 / 15 / 20+ | **21 features** (19 D-PLACE + 4 DRH + 1 Seshat; union = 21 canonical features in `src/features/schema.py`) | Union of all crosswalked variables across sources; captures full theoretical scope | Ph. 3 | 28 Apr 2026 |
+| Missing data strategy | Complete-case / Imputation / Both | **Complete-case (primary, min 2 features); mean imputation as sensitivity check** | Complete-case avoids imputing structural missingness across sources; imputation available in `src/features/impute.py` | Ph. 3 | 28 Apr 2026 |
+| Clustering algorithm | k-means / Hierarchical / DBSCAN / Multiple | **K-means (primary) + Hierarchical Ward (confirmation)** | K-means chosen for scalability and interpretability; Ward hierarchical used to validate via ARI (0.752 — high agreement) | Ph. 4 | 28 Apr 2026 |
+| Optimal k | 1–10 | **k=10** (silhouette=0.696, DB=0.629, bootstrap ARI=0.896 ± 0.040) | All three metrics agree on k=10 from the 196-culture phylo-filtered dataset; bootstrap stability is very high; 10 clusters align with expected cultural diversity | Ph. 4 | 28 Apr 2026 |
 | Spatial weight matrix | k-nearest / Distance band / Queen contiguity | _pending_ | | Ph. 6 | |
 | Globe framework | Deck.gl / CesiumJS / Mapbox Globe | _pending_ | | Ph. 7 | |
 
