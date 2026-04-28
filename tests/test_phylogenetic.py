@@ -291,10 +291,13 @@ class TestMantelTest:
     
     def test_mantel_identical_matrices(self):
         """Identical matrices should have r ≈ 1."""
-        D = np.array([[0, 1, 2], [1, 0, 1], [2, 1, 0]])
-        
-        result = mantel_test(D, D, n_permutations=99)
-        
+        rng = np.random.default_rng(42)
+        D = rng.uniform(0, 1, (8, 8))
+        D = (D + D.T) / 2
+        np.fill_diagonal(D, 0)
+
+        result = mantel_test(D, D, n_permutations=999)
+
         assert result["correlation"] > 0.99
         assert result["p_value"] < 0.05  # Significant
     
