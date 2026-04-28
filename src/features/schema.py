@@ -20,6 +20,7 @@ CANONICAL_FEATURES: list[str] = [
     "initiatory_crisis",
     "initiatory_ordeal",
     "layered_cosmology",
+    "moralizing_supernatural",
     "nature_spirits",
     "possession_crisis",
     "public_performance",
@@ -79,6 +80,7 @@ SOURCE_FEATURE_COVERAGE: dict[str, list[str]] = {
     ],
     "seshat": [
         "dedicated_specialist",
+        "moralizing_supernatural",
     ],
 }
 
@@ -104,5 +106,6 @@ FEATURE_DESCRIPTIONS: dict[str, str] = {
     "specialist_presence":         "Any specialised ritual practitioner role present",
     "spirit_possession":           "Spirit enters and controls the practitioner's body",
     "trance_induction":            "Practitioner deliberately enters a non-ordinary mental state",
+    "moralizing_supernatural":      "Supernatural agents enforce moral norms (Seshat moralizing_supernatural / moralizing_agentic)",
     "unmapped_shamanic_indicators": "Other shamanic indicators not mapped to named features",
 }

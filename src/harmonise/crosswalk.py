@@ -86,9 +86,14 @@ EMBEDDED_CROSSWALK = {
     "dedicated_specialist": {
         "d_place": {"var_ids": ["EA34"], "include_codes": [3,4,5], "confidence": "high"},
         "drh": {"columns": ["healing_question_1"], "confidence": "high"},
-        "seshat": {"var_names": ["professional_priesthood"], "confidence": "high"},
+        "seshat": {
+            "var_names": ["professional_priesthood"],          # binary 0/1
+            "var_codes": {"religious_level": [3,4,5,6,7,8,9,10]},  # ordinal ≥3 → 1
+            "confidence": "high",
+        },
         "notes": "EA34: 0/1/2→0 (part-time/none); 3/4/5→1 (full-time specialists). "
-                 "Seshat sc/professional-priesthoods: present/absent → 1/0. "
+                 "Seshat professional_priesthood: binary 0/1. "
+                 "Seshat religious_level: ordinal 0-10, threshold ≥3 → 1 (Murdock/Seshat coding). "
                  "Theory-driven threshold: shamanism requires full-time commitment.",
     },
     "initiatory_crisis": {
@@ -209,6 +214,20 @@ EMBEDDED_CROSSWALK = {
         "notes": "Residual CARNEIRO/WNAI/SCCS codes that map loosely to shamanism-related presence. "
                  "Low signal; kept to preserve data. Considered 'meta' features.",
     },
+
+    # ========== SESHAT-SPECIFIC FEATURES ==========
+    "moralizing_supernatural": {
+        "d_place": {},
+        "drh": {},
+        "seshat": {
+            "var_names": ["moralizing_supernatural", "moralizing_agentic"],
+            "confidence": "high",
+        },
+        "notes": "Seshat moralizing_supernatural + moralizing_agentic: binary 0/1. "
+                 "Presence of supernatural beings with moral concerns. "
+                 "Any-source rule: if either variable = 1 → feature = 1. "
+                 "Theoretically relevant: high moralizing religion may crowd out shamanism.",
+    },
 }
 
 
@@ -290,12 +309,21 @@ class CrosswalkMapper:
             
             # Seshat variables (only if "seshat" in ACTIVE_SOURCES)
             if "seshat" in self.active_sources and sources.get("seshat"):
-                for var_name in sources["seshat"].get("var_names", []):
-                    self.seshat_lookup[var_name] = {
-                        "feature": feature,
-                        "confidence": sources["seshat"].get("confidence", "medium"),
-                        "notes": sources.get("notes", ""),
-                    }
+                seshat_def = sources["seshat"]
+                base_entry = {
+                    "feature": feature,
+                    "include_codes": None,   # None = binary passthrough (0/1)
+                    "confidence": seshat_def.get("confidence", "medium"),
+                    "notes": sources.get("notes", ""),
+                }
+                # Binary variables (0/1 passthrough)
+                for var_name in seshat_def.get("var_names", []):
+                    self.seshat_lookup[var_name] = dict(base_entry)
+                # Ordinal variables with explicit include_codes
+                for var_name, codes in seshat_def.get("var_codes", {}).items():
+                    entry = dict(base_entry)
+                    entry["include_codes"] = codes
+                    self.seshat_lookup[var_name] = entry
         
         logger.info(
             f"✓ Built lookup tables (active_sources={self.active_sources}): "
@@ -404,25 +432,35 @@ class CrosswalkMapper:
     
     def _map_seshat(self, var_name: str, value: float) -> Tuple[Optional[str], Optional[float]]:
         """
-        Map Seshat variable (typically binary: 0 = no, 1 = yes).
+        Map Seshat variable.
+
+        Two modes depending on how the variable was registered:
+        - Binary passthrough (include_codes=None): restrict to 0/1.
+        - Code-based binarisation (include_codes=[...]): 1.0 if value in codes, else 0.0.
+          Used for ordinal variables like religious_level (threshold ≥3).
         """
         if var_name not in self.seshat_lookup:
             logger.warning(f"Unmapped Seshat variable: {var_name}")
             return (None, None)
-        
+
         entry = self.seshat_lookup[var_name]
         feature = entry["feature"]
-        
-        # Seshat binarisation: typically already binary 0/1
-        if value in [0.0, 1.0]:
-            harmonised_value = value
+        include_codes = entry.get("include_codes")
+
+        if include_codes is not None:
+            # Ordinal variable: code-based binarisation
+            harmonised_value = 1.0 if value in include_codes else 0.0
         else:
-            logger.warning(
-                f"Unexpected Seshat value for {var_name}: {value}. "
-                f"Expected 0.0 or 1.0. Treating as NA."
-            )
-            harmonised_value = None
-        
+            # Binary passthrough: only accept 0/1
+            if value in [0.0, 1.0]:
+                harmonised_value = value
+            else:
+                logger.warning(
+                    f"Unexpected Seshat value for {var_name}: {value}. "
+                    f"Expected 0.0 or 1.0. Treating as NA."
+                )
+                harmonised_value = None
+
         return (feature, harmonised_value)
     
     def _get_feature_for_variable(self, source: str, variable_name: str) -> Optional[str]:

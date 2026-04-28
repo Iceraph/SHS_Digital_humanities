@@ -177,6 +177,11 @@ BINARISATION_RULES = {
         "description": "Already binary (meta-grouping of D-PLACE codes)",
         "sources": ["dplace"],
     },
+    "moralizing_supernatural": {
+        "rule_type": "binary_passthrough",
+        "description": "Binary 0/1 (Seshat moralizing_supernatural + moralizing_agentic)",
+        "sources": ["seshat"],
+    },
 }
 
 

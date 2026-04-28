@@ -1,197 +1,480 @@
 culture_id,culture_name,source,lat,lon,time_start,time_end,cluster_k10_kmeans,cluster_k10_hierarchical
-DRH_001,Siberian Shamanism,drh,60.0,100.0,-1000,1950.0,9,2
-DRH_002,Sufi Islam,drh,35.0,50.0,-622,,9,2
-DRH_005,Aboriginal Australian Spirituality,drh,25.0,133.0,-1000,2000.0,9,2
-SCCS10,Luguru,dplace,-6.83,37.67,-1850,-1950.0,6,2
-SCCS100,Tikopia,dplace,-12.29,168.83,-1850,-1950.0,8,0
-SCCS101,Bunlap,dplace,-15.95,168.22,-1850,-1950.0,0,4
-SCCS103,Ajie,dplace,-21.33,165.67,-1850,-1950.0,6,2
-SCCS107,Makin,dplace,3.38,172.99,-1850,-1950.0,6,2
-SCCS109,Trukese,dplace,7.34,151.6,-1850,-1950.0,8,0
-SCCS11,Kikuyu,dplace,-0.67,37.17,-1850,-1950.0,3,1
-SCCS110,Yapese,dplace,9.52,138.16,-1850,-1950.0,1,5
-SCCS111,Palauans,dplace,7.5,134.5,-1850,-1950.0,0,4
-SCCS112,Ifugao,dplace,16.83,121.17,-1850,-1950.0,5,3
-SCCS114,Chinese,dplace,31.0,120.08,-1850,-1950.0,6,2
-SCCS115,Manchu,dplace,50.0,125.5,-1850,-1950.0,3,1
-SCCS116,Koreans,dplace,37.6,126.42,-1850,-1950.0,5,3
-SCCS117,Japanese,dplace,34.67,133.67,-1850,-1950.0,0,4
-SCCS118,Ainu,dplace,42.83,143.0,-1850,-1950.0,6,2
-SCCS119,Nivkh,dplace,53.0,142.0,-1850,-1950.0,5,3
-SCCS121,Chukchi,dplace,66.5,179.6,-1850,-1950.0,0,5
-SCCS122,Deg Xit'an,dplace,62.5,-159.5,-1850,-1950.0,5,3
-SCCS123,Aleut,dplace,55.0,-162.85,-1850,-1950.0,3,1
-SCCS125,Montagnais,dplace,50.0,-74.0,-1850,-1950.0,1,5
-SCCS126,Mi'kmaq,dplace,46.99,-65.0,-1850,-1950.0,3,1
-SCCS127,Northern Saulteaux,dplace,52.0,-95.5,-1850,-1950.0,0,4
-SCCS128,DeneTha,dplace,62.0,-122.0,-1850,-1950.0,5,3
-SCCS130,Eyak,dplace,60.5,-145.0,-1850,-1950.0,0,5
-SCCS136,Southern Valley Yokuts,dplace,35.0,-119.5,-1850,-1950.0,8,0
-SCCS14,Nkundo,dplace,-0.75,19.17,-1850,-1950.0,3,1
-SCCS141,Hidatsa,dplace,47.0,-101.0,-1850,-1950.0,0,4
-SCCS142,Pawnee,dplace,42.0,-100.0,-1850,-1950.0,3,1
-SCCS144,Huron,dplace,44.5,-79.0,-1850,-1950.0,5,3
-SCCS146,Natchez,dplace,31.5,-91.42,-1850,-1950.0,1,5
-SCCS15,Banen,dplace,4.67,10.8,-1850,-1950.0,0,4
-SCCS152,Huichol,dplace,22.0,-105.0,-1850,-1950.0,1,2
-SCCS154,Sierra Popoluca,dplace,18.25,-94.83,-1850,-1950.0,5,3
-SCCS17,Igbo,dplace,5.5,7.33,-1850,-1950.0,3,1
-SCCS20,Mende,dplace,7.83,-12.0,-1850,-1950.0,3,1
-SCCS22,Bambara,dplace,12.5,-7.0,-1850,-1950.0,0,5
-SCCS23,Tallensi,dplace,10.66,-0.57,-1850,-1950.0,0,4
-SCCS24,Songhai,dplace,16.58,-1.67,-1850,-1950.0,5,3
-SCCS26,Zazzagawa Hausa,dplace,10.5,7.5,-1850,-1950.0,3,1
-SCCS27,Masa,dplace,10.5,15.5,-1850,-1950.0,0,4
-SCCS29,Fur,dplace,13.5,25.5,-1850,-1950.0,6,2
-SCCS30,Otoro,dplace,11.33,30.67,-1850,-1950.0,5,3
-SCCS32,Mao,dplace,9.27,34.67,-1850,-1950.0,5,3
-SCCS33,Kafa,dplace,7.27,36.5,-1850,-1950.0,1,5
-SCCS35,Konso,dplace,5.25,37.5,-1850,-1950.0,1,5
-SCCS37,Amhara,dplace,12.5,37.75,-1850,-1950.0,0,4
-SCCS38,Blin,dplace,15.75,38.75,-1850,-1950.0,6,4
-SCCS39,Barabra,dplace,23.0,32.5,-1850,-1950.0,0,4
-SCCS4,Lozi,dplace,-16.0,23.5,-1850,-1950.0,5,3
-SCCS40,Teda,dplace,20.5,17.5,-1850,-1950.0,1,5
-SCCS43,Egyptians,dplace,24.75,33.0,-1850,-1950.0,8,0
-SCCS44,Hebrews,dplace,31.18,34.92,-1850,-1950.0,0,4
-SCCS45,Babylonians,dplace,32.58,44.75,-1850,-1950.0,5,3
-SCCS47,Turks,dplace,39.33,34.25,-1850,-1950.0,0,4
-SCCS48,Gheg,dplace,42.0,20.17,-1850,-1950.0,0,4
-SCCS5,Mbundu,dplace,-12.25,16.5,-1850,-1950.0,0,4
-SCCS50,Spanish Basques,dplace,43.25,-1.67,-1850,-1950.0,3,1
-SCCS51,Irish,dplace,53.5,-10.0,-1850,-1950.0,0,4
-SCCS53,Yurak-Samoyeds,dplace,68.0,51.5,-1850,-1950.0,3,5
-SCCS54,Russians,dplace,52.67,41.33,-1850,-1950.0,6,2
-SCCS55,Abkhaz,dplace,43.13,40.77,-1850,-1950.0,5,3
-SCCS56,Armenians,dplace,40.0,44.5,-1850,-1950.0,6,2
-SCCS57,Kurd,dplace,36.5,44.5,-1850,-1950.0,8,0
-SCCS58,Basseri,dplace,29.0,53.0,-1850,-1950.0,0,4
-SCCS59,Punjabi,dplace,32.5,74.0,-1850,-1950.0,0,4
-SCCS60,Madia,dplace,19.63,80.92,-1850,-1950.0,3,1
-SCCS62,Santal,dplace,23.5,87.17,-1850,-1950.0,3,5
-SCCS63,Uttar Pradesh,dplace,25.92,83.0,-1850,-1950.0,8,0
-SCCS64,Burusho,dplace,36.43,74.58,-1850,-1950.0,8,2
-SCCS65,Kazakh,dplace,42.5,75.5,-1850,-1950.0,8,0
-SCCS66,Khalka,dplace,47.17,96.08,-1850,-1950.0,5,3
-SCCS67,Lolo,dplace,27.5,103.5,-1850,-1950.0,3,1
-SCCS68,Lepcha,dplace,27.5,89.0,-1850,-1950.0,8,0
-SCCS69,Garo,dplace,26.0,91.0,-1850,-1950.0,8,5
-SCCS70,Maras,dplace,22.33,93.0,-1850,-1950.0,5,3
-SCCS71,Burmese,dplace,22.0,95.67,-1850,-1950.0,3,1
-SCCS72,Lamet,dplace,20.0,100.67,-1850,-1950.0,5,3
-SCCS73,Annamese,dplace,20.5,106.25,-1850,-1950.0,3,1
-SCCS74,Rade,dplace,13.0,108.0,-1850,-1950.0,5,3
-SCCS75,Ancient Khmer,dplace,13.0,103.83,-1850,-1950.0,0,4
-SCCS76,Thai,dplace,14.0,100.85,-1850,-1950.0,6,2
-SCCS78,Nicobarese,dplace,7.0,93.75,-1850,-1950.0,5,3
-SCCS8,Nyakyusa,dplace,-9.5,34.0,-1850,-1950.0,8,0
-SCCS82,Negri Sembilan,dplace,2.58,102.25,-1850,-1950.0,3,1
-SCCS83,Javanese,dplace,-7.7,112.22,-1850,-1950.0,8,4
-SCCS84,Balinese,dplace,-8.5,115.33,-1850,-1950.0,0,4
-SCCS85,Iban,dplace,2.0,113.0,-1850,-1950.0,5,3
-SCCS86,Badjau Tawi-Tawi,dplace,5.0,120.0,-1850,-1950.0,5,4
-SCCS87,Toradja,dplace,-2.0,121.0,-1850,-1950.0,3,1
-SCCS88,Tobelorese,dplace,2.0,127.94,-1850,-1950.0,1,2
-SCCS89,Alorese,dplace,-8.33,124.67,-1850,-1950.0,5,3
-SCCS9,Hadza,dplace,-3.75,35.18,-1850,-1950.0,5,3
-SCCS91,Northern Aranda,dplace,-24.25,133.5,-1850,-1950.0,8,0
-SCCS92,Orokaiva,dplace,-8.5,148.0,-1850,-1950.0,5,3
-SCCS93,Kimam,dplace,-7.5,138.5,-1850,-1950.0,0,5
-SCCS95,Kwoma,dplace,-4.17,142.67,-1850,-1950.0,5,3
-SCCS96,Manus,dplace,-2.17,147.17,-1850,-1950.0,5,3
-SCCS97,Lesu,dplace,-2.71,151.0,-1850,-1950.0,5,3
-WNAI100,Sanpoil,dplace,48.0,-118.7,-1850,-1950.0,1,5
-WNAI101,Sinkiuse-Columbia,dplace,47.0,-119.5,-1850,-1950.0,1,5
-WNAI102,Wenatchi,dplace,47.5,-120.3,-1850,-1950.0,1,5
-WNAI103,Coeur d’Alene,dplace,47.7,-117.0,-1850,-1950.0,1,5
-WNAI107,Nez Perce,dplace,46.0,-117.0,-1850,-1950.0,5,3
-WNAI108,Umatilla,dplace,46.0,-119.0,-1850,-1950.0,1,5
-WNAI109,Klikitat,dplace,45.8,-121.5,-1850,-1950.0,1,5
-WNAI110,Wishram,dplace,45.5,-121.2,-1850,-1950.0,1,5
-WNAI124,Gosiute,dplace,40.0,-114.0,-1850,-1950.0,7,7
-WNAI127,Hukundika,dplace,41.7,-112.0,-1850,-1950.0,2,9
-WNAI13,Makah,dplace,48.33,-124.62,-1850,-1950.0,4,8
-WNAI130,Uncompahgre Ute,dplace,38.0,-108.0,-1850,-1950.0,2,9
-WNAI135,Chemehuevi,dplace,34.3,-116.0,-1850,-1950.0,7,7
-WNAI137,Hualapai,dplace,35.3,-114.0,-1850,-1950.0,1,7
-WNAI14,Klahoose,dplace,50.5,-124.5,-1850,-1950.0,1,5
-WNAI140,Mojave,dplace,34.5,-114.5,-1850,-1950.0,4,8
-WNAI141,Quechan,dplace,32.7,-114.5,-1850,-1950.0,7,7
-WNAI143,Cocopa,dplace,32.0,-115.0,-1850,-1950.0,2,9
-WNAI144,Maricopa,dplace,33.3,-112.5,-1850,-1950.0,2,9
-WNAI145,Pima,dplace,33.2,-112.0,-1850,-1950.0,7,7
-WNAI15,Pentlatch,dplace,49.5,-125.0,-1850,-1950.0,1,5
-WNAI155,Lipan Apache,dplace,30.0,-104.0,-1850,-1950.0,4,6
-WNAI156,Jicarilla,dplace,37.0,-105.5,-1850,-1950.0,7,7
-WNAI159,Hopi,dplace,36.0,-110.5,-1850,-1950.0,2,9
-WNAI16,Squamish,dplace,49.7,-123.3,-1850,-1950.0,1,5
-WNAI162,Sia,dplace,35.3,-106.5,-1850,-1950.0,4,6
-WNAI163,Santa Ana,dplace,35.2,-106.4,-1850,-1950.0,4,6
-WNAI164,Kewa,dplace,35.3,-106.1,-1850,-1950.0,4,6
-WNAI165,Cochiti,dplace,35.6,-106.0,-1850,-1950.0,4,6
-WNAI166,Ohkay Owingeh,dplace,36.1,-106.1,-1850,-1950.0,4,6
-WNAI167,San Ildefonso,dplace,35.9,-106.2,-1850,-1950.0,4,6
-WNAI168,Santa Clara,dplace,36.0,-106.3,-1850,-1950.0,4,6
-WNAI169,Nambé Pueblo,dplace,35.9,-105.9,-1850,-1950.0,4,6
-WNAI17,Cowichan,dplace,48.7,-123.7,-1850,-1950.0,1,5
-WNAI170,Taos,dplace,36.5,-105.5,-1850,-1950.0,2,9
-WNAI171,Isleta,dplace,34.8,-106.7,-1850,-1950.0,4,6
-WNAI172,Jemez,dplace,35.8,-106.8,-1850,-1950.0,4,6
-WNAI18,West Saanich,dplace,48.4,-123.5,-1850,-1950.0,1,5
-WNAI19,Stó:lō,dplace,49.4,-121.5,-1850,-1950.0,1,5
-WNAI20,Musqueam,dplace,49.37,-123.24,-1850,-1950.0,1,5
-WNAI21,Lummi,dplace,48.7,-123.7,-1850,-1950.0,1,5
-WNAI24,Quinault,dplace,47.4,-124.1,-1850,-1950.0,1,5
-WNAI25,Puyallup,dplace,47.1,-122.5,-1850,-1950.0,2,9
-WNAI26,Quileute,dplace,47.9,-124.3,-1850,-1950.0,2,9
-WNAI27,Lower Chinook,dplace,46.35,-124.0,-1850,-1950.0,1,5
-WNAI28,Tillamook,dplace,45.4,-123.82,-1850,-1950.0,1,5
-WNAI29,Alsea,dplace,44.7,-124.0,-1850,-1950.0,1,5
-WNAI30,Siuslaw,dplace,44.0,-124.0,-1850,-1950.0,1,5
-WNAI31,Coos,dplace,43.3,-124.2,-1850,-1950.0,1,5
-WNAI32,Tututni,dplace,42.5,-124.3,-1850,-1950.0,1,5
-WNAI34,Taltushtuntede,dplace,42.5,-123.5,-1850,-1950.0,1,5
-WNAI37,Karuk,dplace,41.4,-123.5,-1850,-1950.0,1,5
-WNAI38,Hupa,dplace,41.0,-123.5,-1850,-1950.0,1,5
-WNAI39,Wiyot,dplace,40.8,-124.0,-1850,-1950.0,1,5
-WNAI4,Haida (Southern),dplace,53.09,-132.1,-1850,-1950.0,1,8
-WNAI41,Mattole-Bear River,dplace,40.4,-124.1,-1850,-1950.0,1,8
-WNAI43,Cahto,dplace,39.7,-123.3,-1850,-1950.0,1,7
-WNAI46,Chimariko,dplace,40.7,-123.2,-1850,-1950.0,1,5
-WNAI47,Wintu (Trinity River),dplace,40.6,-123.2,-1850,-1950.0,1,5
-WNAI5,Tsimshian,dplace,55.3,-130.05,-1850,-1950.0,1,8
-WNAI50,Nomlaki,dplace,39.5,-122.5,-1850,-1950.0,1,5
-WNAI53,Atsugewi,dplace,40.5,-121.3,-1850,-1950.0,2,9
-WNAI54,Valley Maidu,dplace,39.7,-121.9,-1850,-1950.0,1,5
-WNAI55,Foothill Maidu,dplace,39.8,-121.3,-1850,-1950.0,1,5
-WNAI57,Nisenan (Foothill),dplace,39.4,-121.1,-1850,-1950.0,1,5
-WNAI6,Gitxsan,dplace,56.3,-127.5,-1850,-1950.0,4,8
-WNAI62,Yana,dplace,40.5,-122.0,-1850,-1950.0,1,5
-WNAI63,Northern Pomo,dplace,39.6,-123.3,-1850,-1950.0,1,5
-WNAI65,Southern Pomo,dplace,38.5,-123.0,-1850,-1950.0,1,5
-WNAI66,Wappo,dplace,38.7,-123.0,-1850,-1950.0,1,5
-WNAI67,Patwin,dplace,38.7,-122.0,-1850,-1950.0,1,5
-WNAI68,Northern Miwok,dplace,38.5,-121.0,-1850,-1950.0,1,5
-WNAI69,Central Sierra Miwok,dplace,38.0,-120.0,-1850,-1950.0,1,5
-WNAI7,Haisla,dplace,53.5,-128.0,-1850,-1950.0,1,5
-WNAI70,Southern Miwok,dplace,37.5,-119.5,-1850,-1950.0,1,5
-WNAI73,Northern Foothills Yokuts,dplace,37.2,-119.8,-1850,-1950.0,5,9
-WNAI74,Kings River Yokuts,dplace,36.8,-119.4,-1850,-1950.0,1,5
-WNAI75,Wukchumni,dplace,36.4,-119.1,-1850,-1950.0,1,5
-WNAI78,Tübalulabal,dplace,36.0,-118.2,-1850,-1950.0,4,6
-WNAI79,Kawaiisu,dplace,35.5,-118.5,-1850,-1950.0,4,7
-WNAI8,Haihais,dplace,53.0,-128.5,-1850,-1950.0,1,5
-WNAI80,Salinan,dplace,35.0,-120.0,-1850,-1950.0,5,9
-WNAI81,Tongva,dplace,34.8,-118.0,-1850,-1950.0,2,9
-WNAI82,Luiseño,dplace,33.3,-117.3,-1850,-1950.0,7,7
-WNAI83,Cupeño,dplace,33.2,-116.7,-1850,-1950.0,2,9
-WNAI84,Serrano,dplace,34.2,-117.0,-1850,-1950.0,2,9
-WNAI85,Cahuilla (Desert),dplace,33.5,-116.2,-1850,-1950.0,2,9
-WNAI9,Heiltsuk,dplace,52.0,-128.0,-1850,-1950.0,1,5
-WNAI91,Kiliwa,dplace,31.5,-115.0,-1850,-1950.0,2,9
-WNAI92,Akwa’ala,dplace,31.5,-115.8,-1850,-1950.0,7,7
-WNAI95,Chilcotin,dplace,51.7,-125.0,-1850,-1950.0,1,5
-WNAI96,Shuswap,dplace,51.3,-120.0,-1850,-1950.0,1,5
-WNAI97,Lillooet,dplace,50.3,-122.5,-1850,-1950.0,1,5
-WNAI98,Nlaka'pamux,dplace,50.3,-121.5,-1850,-1950.0,1,5
-WNAI99,Syilx,dplace,48.8,-119.5,-1850,-1950.0,1,5
+1,Early Qing,seshat,34.701825,112.517587,1644,1796.0,0,0
+10,Late Formative Basin of Mexico,seshat,19.43,-99.13,-400,-101.0,5,7
+101,Haudenosaunee Confederacy - Early,seshat,42.70498,-77.021375,1566,1713.0,2,9
+102,Haudenosaunee Confederacy - Late,seshat,42.70498,-77.021375,1714,1848.0,2,9
+103,Canaan,seshat,32.6996,35.3035,-2000,-1175.0,5,7
+104,Phoenician Empire,seshat,32.6996,35.3035,-1200,-332.0,5,7
+106,Neo-Assyrian Empire,seshat,32.47,44.42,-911,-612.0,0,0
+108,Seleucid Empire,seshat,32.47,44.42,-312,-63.0,0,0
+109,Ptolemaic Kingdom I,seshat,25.725715,32.714706,-305,-217.0,0,0
+11,Terminal Formative Basin of Mexico,seshat,19.43,-99.13,-100,99.0,5,7
+110,Yehuda,seshat,32.6996,35.3035,-141,-63.0,0,0
+111,Early A'chik,seshat,25.4444444439,90.5185390109,1775,1867.0,2,9
+112,Late A'chik,seshat,25.4444444439,90.5185390109,1867,1956.0,2,9
+113,Akan - Pre-Ashanti,seshat,5.573135,-0.21792,1501,1701.0,0,0
+114,Ashanti Empire,seshat,5.573135,-0.21792,1701,1895.0,0,0
+115,Icelandic Commonwealth,seshat,64.133088,-21.891497,930,1262.0,0,0
+116,Kingdom of Norway II,seshat,64.133088,-21.891497,1262,1396.0,0,0
+125,Parthian Empire I,seshat,32.382851,48.235564,-247,40.0,0,0
+126,Indo-Greek Kingdom,seshat,29.377664,67.628836,-180,-10.0,0,0
+128,Sasanid Empire I,seshat,32.382851,48.235564,205,487.0,0,0
+13,Epiclassic Basin of Mexico,seshat,19.43,-99.13,650,899.0,5,7
+130,Sasanid Empire II,seshat,32.382851,48.235564,488,642.0,0,0
+131,Umayyad Caliphate,seshat,32.47,44.42,661,750.0,0,0
+132,Abbasid Caliphate I,seshat,32.47,44.42,750,946.0,8,8
+133,Sind - Abbasid-Fatimid Period,seshat,29.377664,67.628836,854,1193.0,0,0
+134,Ghur Principality,seshat,29.377664,67.628836,1025,1215.0,0,0
+135,Delhi Sultanate,seshat,29.377664,67.628836,1206,1526.0,0,0
+136,Sind - Samma Dynasty,seshat,29.377664,67.628836,1335,1521.0,8,8
+137,Durrani Empire,seshat,29.377664,67.628836,1747,1826.0,8,8
+14,Toltecs,seshat,19.43,-99.13,900,1199.0,5,7
+144,Kansai - Yayoi Period,seshat,35.02528,135.7622,-300,250.0,8,8
+145,Kansai - Kofun Period,seshat,35.02528,135.7622,250,537.0,0,0
+146,Asuka,seshat,35.02528,135.7622,538,710.0,5,7
+147,Heian,seshat,35.02528,135.7622,794,1185.0,0,0
+148,Kamakura Shogunate,seshat,35.02528,135.7622,1185,1333.0,0,0
+149,Ashikaga Shogunate,seshat,35.02528,135.7622,1336,1467.0,0,0
+15,Middle Postclassic Basin of Mexico,seshat,19.43,-99.13,1200,1426.0,5,7
+150,Warring States Japan,seshat,35.02528,135.7622,1467,1568.0,0,0
+151,Japan - Azuchi-Momoyama,seshat,35.02528,135.7622,1568,1603.0,0,0
+152,Tokugawa Shogunate,seshat,35.02528,135.7622,1603,1868.0,0,0
+153,Iban - Pre-Brooke,seshat,0.77412081365,112.405971685,1650,1841.0,8,8
+154,Iban - Brooke Raj and Colonial,seshat,0.77412081365,112.405971685,1841,1987.0,0,0
+16,Aztec Empire,seshat,19.43,-99.13,1427,1526.0,5,7
+162,Hatti - Old Kingdom,seshat,37.877845,32.521164,-1650,-1500.0,0,0
+163,Konya Plain - Late Bronze Age II,seshat,37.877845,32.521164,-1500,-1400.0,0,0
+164,Hatti - New Kingdom,seshat,37.877845,32.521164,-1400,-1180.0,0,0
+165,Neo-Hittite Kingdoms,seshat,37.877845,32.521164,-1180,-900.0,0,0
+168,Kingdom of Lydia,seshat,37.877845,32.521164,-670,-546.0,0,0
+169,Lysimachus Kingdom,seshat,37.877845,32.521164,-323,-281.0,0,0
+171,Rum Sultanate,seshat,37.877845,32.521164,1077,1307.0,0,0
+173,Ottoman Emirate,seshat,37.877845,32.521164,1299,1402.0,0,0
+174,Ottoman Empire I,seshat,37.877845,32.521164,1402,1517.0,0,0
+175,Ottoman Empire II,seshat,37.877845,32.521164,1517,1683.0,0,0
+176,Ottoman Empire III,seshat,37.877845,32.521164,1683,1839.0,0,0
+177,Ottoman Empire IV,seshat,37.877845,32.521164,1839,1922.0,0,0
+179,Latium - Bronze Age,seshat,41.890407,12.486948,-1800,-900.0,8,8
+180,Latium - Iron Age,seshat,41.890407,12.486948,-1000,-580.0,0,0
+181,Roman Kingdom,seshat,41.890407,12.486948,-716,-509.0,0,0
+182,Early Roman Republic,seshat,41.890407,12.486948,-509,-264.0,0,0
+183,Middle Roman Republic,seshat,41.890407,12.486948,-264,-133.0,0,0
+184,Late Roman Republic,seshat,41.890407,12.486948,-133,-31.0,0,0
+185,Western Roman Empire - Late Antiquity,seshat,41.890407,12.486948,395,476.0,0,0
+186,Ostrogothic Kingdom,seshat,41.890407,12.486948,489,554.0,0,0
+187,Exarchate of Ravenna,seshat,41.890407,12.486948,568,751.0,0,0
+188,Republic of St Peter I,seshat,41.890407,12.486948,752,904.0,0,0
+189,Rome - Republic of St Peter II,seshat,41.890407,12.486948,904,1198.0,0,0
+19,Hawaii III,seshat,19.528931,-155.916989,1580,1778.0,0,0
+190,Papal States - High Medieval Period,seshat,41.890407,12.486948,1198,1309.0,0,0
+191,Papal States - Renaissance Period,seshat,41.890407,12.486948,1378,1527.0,0,0
+192,Papal States - Early Modern Period I,seshat,41.890407,12.486948,1527,1648.0,0,0
+193,Papal States - Early Modern Period II,seshat,41.890407,12.486948,1648,1809.0,0,0
+194,Sakha - Early,seshat,63.4628222423,129.379494854,1400,1632.0,8,8
+195,Sakha - Late,seshat,63.4628222423,129.379494854,1632,1900.0,8,8
+196,Shuar - Colonial,seshat,-2.89537519716,-77.6741904014,1534,1830.0,2,9
+197,Shuar - Ecuadorian,seshat,-2.89537519716,-77.6741904014,1831,1931.0,2,9
+198,Egypt - New Kingdom Thutmosid Period,seshat,25.725715,32.714706,-1550,-1293.0,0,0
+199,Egypt - New Kingdom Ramesside Period,seshat,25.725715,32.714706,-1293,-1070.0,0,0
+2,Late Qing,seshat,34.701825,112.517587,1796,1912.0,0,0
+20,Kingdom of Hawaii - Kamehameha Period,seshat,19.528931,-155.916989,1778,1819.0,0,0
+200,Egypt - Thebes-Libyan Period,seshat,25.725715,32.714706,-1069,-747.0,0,0
+203,Egypt - Saite Period,seshat,25.725715,32.714706,-664,-525.0,0,0
+205,Egypt - Inter-Occupation Period,seshat,25.725715,32.714706,-404,-342.0,0,0
+207,Ptolemaic Kingdom II,seshat,25.725715,32.714706,-217,-30.0,0,0
+208,Axum I,seshat,14.850891,43.315739,-149,349.0,0,0
+21,Kingdom of Hawaii - Post-Kamehameha Period,seshat,19.528931,-155.916989,1820,1898.0,0,0
+22,Cahokia - Early Woodland,seshat,38.658938,-90.062035,-600,-150.0,2,9
+221,Fatimid Caliphate,seshat,25.725715,32.714706,909,1171.0,0,0
+223,Almoravids,seshat,,,1035,1150.0,0,0
+229,Mali Empire,seshat,16.717549,-3.041703,1230,1410.0,0,0
+23,Cahokia - Middle Woodland,seshat,38.658938,-90.062035,-150,300.0,2,9
+232,Egypt - Mamluk Sultanate I,seshat,25.725715,32.714706,1260,1348.0,0,0
+236,Egypt - Mamluk Sultanate II,seshat,25.725715,32.714706,1348,1412.0,0,0
+239,Egypt - Mamluk Sultanate III,seshat,25.725715,32.714706,1412,1517.0,0,0
+24,Cahokia - Late Woodland I,seshat,38.658938,-90.062035,300,450.0,2,9
+242,Songhai Empire - Askiya Dynasty,seshat,16.717549,-3.041703,1493,1591.0,0,0
+243,Late Shang,seshat,34.701825,112.517587,-1250,-1045.0,5,7
+244,Western Zhou,seshat,34.701825,112.517587,-1122,-771.0,5,7
+245,Jin,seshat,34.701825,112.517587,-780,-404.0,0,0
+25,Cahokia - Late Woodland II,seshat,38.658938,-90.062035,450,600.0,2,9
+250,Qin Empire,seshat,,,-338,-207.0,8,8
+251,Western Han Empire,seshat,34.701825,112.517587,-202,9.0,0,0
+253,Eastern Han Empire,seshat,34.701825,112.517587,25,220.0,8,8
+26,Cahokia - Late Woodland III,seshat,38.658938,-90.062035,600,750.0,2,9
+260,Sui Dynasty,seshat,34.701825,112.517587,581,618.0,0,0
+261,Tang Dynasty I,seshat,34.701825,112.517587,617,763.0,0,0
+263,Nara,seshat,,,710,794.0,5,7
+264,Tang Dynasty II,seshat,34.701825,112.517587,763,907.0,0,0
+266,Jin Dynasty,seshat,34.701825,112.517587,1115,1234.0,0,0
+267,Mongol Empire,seshat,47.200757,102.845486,1206,1270.0,0,0
+268,Great Yuan,seshat,34.701825,112.517587,1271,1368.0,0,0
+269,Great Ming,seshat,34.701825,112.517587,1368,1644.0,0,0
+27,Cahokia - Emergent Mississippian I,seshat,38.658938,-90.062035,750,900.0,2,9
+272,Xiongnu Imperial Confederation,seshat,47.200757,102.845486,-209,-60.0,2,9
+274,Late Xiongnu,seshat,47.200757,102.845486,-60,100.0,2,9
+278,Rouran Khaganate,seshat,47.200757,102.845486,300,555.0,5,7
+28,Cahokia - Sand Prairie,seshat,38.658938,-90.062035,1275,1400.0,5,7
+282,Western Turk Khaganate,seshat,39.631284,66.93817,582,630.0,0,0
+283,Eastern Turk Khaganate,seshat,47.200757,102.845486,583,630.0,0,0
+286,Uigur Khaganate,seshat,47.200757,102.845486,745,840.0,0,0
+288,Khitan I,seshat,47.200757,102.845486,907,1125.0,0,0
+30,Early Illinois Confederation,seshat,38.658938,-90.062035,1640,1717.0,2,9
+302,England Tudor-Stuart,seshat,,,1486,1689.0,0,0
+304,Early Merovingian,seshat,48.866111,2.312458,481,543.0,0,0
+305,Lombard Kingdom,seshat,,,568,774.0,0,0
+306,Middle Merovingian,seshat,48.866111,2.312458,543,687.0,0,0
+309,Carolingian Empire I,seshat,48.866111,2.312458,752,840.0,0,0
+311,Carolingian Empire II,seshat,48.866111,2.312458,840,987.0,0,0
+314,Kievan Rus,seshat,,,880,1242.0,0,0
+32,Cahokia - Lohman-Stirling,seshat,38.658938,-90.062035,1050,1199.0,5,7
+33,Cahokia - Moorehead,seshat,38.658938,-90.062035,1200,1275.0,5,7
+333,French Kingdom - Early Valois,seshat,48.866111,2.312458,1328,1450.0,0,0
+337,"Grand Principality of Moscow, Rurikid Dynasty",seshat,,,1480,1613.0,0,0
+34,Cahokia - Emergent Mississippian II,seshat,38.658938,-90.062035,900,1049.0,5,7
+342,Kassite Babylonia,seshat,32.47,44.42,-1595,-1150.0,0,0
+346,Neo-Babylonian Empire,seshat,32.47,44.42,-626,-539.0,0,0
+350,Greco-Bactrian Kingdom,seshat,39.631284,66.93817,-256,-125.0,0,0
+353,Himyar I,seshat,14.850891,43.315739,270,340.0,0,0
+354,Himyar II,seshat,14.850891,43.315739,378,525.0,0,0
+359,Yemen Ziyadid Dynasty,seshat,14.850891,43.315739,822,1037.0,0,0
+360,Saffarid Caliphate,seshat,,,861,1003.0,8,8
+361,Egypt - Tulunid-Ikhshidid Period,seshat,25.725715,32.714706,868,969.0,8,8
+362,Buyid Confederation,seshat,32.382851,48.235564,932,1062.0,0,0
+364,Seljuk Sultanate,seshat,32.382851,48.235564,1037,1157.0,0,0
+365,Yemen - Era of Warlords,seshat,14.850891,43.315739,1038,1174.0,0,0
+367,Ayyubid Sultanate,seshat,25.725715,32.714706,1171,1250.0,0,0
+368,Rasulid Dynasty,seshat,14.850891,43.315739,1229,1453.0,0,0
+370,Timurid Empire,seshat,39.631284,66.93817,1370,1526.0,0,0
+372,Yemen - Tahirid Dynasty,seshat,14.850891,43.315739,1454,1517.0,0,0
+374,Safavid Empire,seshat,32.382851,48.235564,1501,1722.0,0,0
+388,Gupta Empire,seshat,25.75,82.7,320,550.0,0,0
+406,Kalachuris of Kalyani,seshat,,,1157,1184.0,0,0
+409,Bengal Sultanate,seshat,,,1338,1538.0,8,8
+417,Kannauj - Varman Dynasty,seshat,25.75,82.7,650,780.0,0,0
+42,Late Angkor,seshat,13.4125,103.8667,1220,1432.0,0,0
+421,Erlitou,seshat,34.701825,112.517587,-1850,-1600.0,5,7
+422,Erligang,seshat,34.701825,112.517587,-1650,-1250.0,5,7
+425,Northern Song,seshat,34.701825,112.517587,960,1127.0,0,0
+43,Khmer Kingdom,seshat,13.4125,103.8667,1432,1594.0,0,0
+432,Saadi Sultanate,seshat,16.717549,-3.041703,1554,1659.0,0,0
+437,Early Xiongnu,seshat,47.200757,102.845486,-1400,-300.0,2,9
+438,Xianbei Confederation,seshat,47.200757,102.845486,100,250.0,2,9
+439,Shiwei,seshat,47.200757,102.845486,600,1000.0,2,9
+44,Ayutthaya,seshat,13.4125,103.8667,1593,1767.0,0,0
+440,Second Turk Khaganate,seshat,47.200757,102.845486,682,744.0,0,0
+442,Early Mongols,seshat,47.200757,102.845486,1000,1206.0,0,0
+443,Late Mongols,seshat,47.200757,102.845486,1368,1690.0,0,0
+444,Zungharian Empire,seshat,47.200757,102.845486,1670,1757.0,0,0
+445,Orokaiva - Pre-Colonial,seshat,-8.590711,148.193783,1734,1883.0,2,9
+449,Hallstatt A-B1,seshat,48.866111,2.312458,-1000,-900.0,8,8
+45,Rattanakosin,seshat,13.4125,103.8667,1782,1873.0,0,0
+450,Hallstatt B2-3,seshat,48.866111,2.312458,-900,-700.0,8,8
+451,Hallstatt C,seshat,48.866111,2.312458,-700,-600.0,8,8
+452,Hallstatt D,seshat,48.866111,2.312458,-600,-475.0,8,8
+454,La Tene B2-C1,seshat,48.866111,2.312458,-325,-175.0,0,0
+455,La Tene C2-D,seshat,48.866111,2.312458,-175,-27.0,0,0
+456,Proto-Carolingian,seshat,48.866111,2.312458,687,751.0,0,0
+457,Proto-French Kingdom,seshat,48.866111,2.312458,987,1150.0,0,0
+458,French Kingdom - Late Capetian,seshat,48.866111,2.312458,1150,1328.0,0,0
+459,French Kingdom - Late Valois,seshat,48.866111,2.312458,1450,1589.0,0,0
+460,French Kingdom - Early Bourbon,seshat,48.866111,2.312458,1589,1660.0,0,0
+461,French Kingdom - Late Bourbon,seshat,48.866111,2.312458,1660,1815.0,0,0
+464,Koktepe I,seshat,39.631284,66.93817,-1400,-1000.0,8,8
+466,Koktepe II,seshat,39.631284,66.93817,-750,-550.0,0,0
+468,Sogdiana - City-States Period,seshat,39.631284,66.93817,604,711.0,0,0
+469,Khanate of Bukhara,seshat,39.631284,66.93817,1599,1747.0,0,0
+476,Akkadian Empire,seshat,32.47,44.42,-2270,-2083.0,0,0
+477,Ur - Dynasty III,seshat,32.47,44.42,-2112,-2004.0,0,0
+478,Isin-Larsa,seshat,32.47,44.42,-2004,-1763.0,0,0
+48,Medang Kingdom,seshat,-6.985678,110.403498,732,1019.0,0,0
+480,Second Dynasty of Isin,seshat,32.47,44.42,-1153,-1027.0,0,0
+481,Bazi Dynasty,seshat,32.47,44.42,-1005,-986.0,0,0
+482,Dynasty of E,seshat,32.47,44.42,-979,-732.0,0,0
+483,Parthian Empire II,seshat,32.47,44.42,41,226.0,0,0
+484,Abbasid Caliphate II,seshat,32.47,44.42,1191,1258.0,8,8
+49,Kediri Kingdom,seshat,-6.985678,110.403498,1049,1222.0,0,0
+496,Elam - Shimashki Period,seshat,32.382851,48.235564,-2028,-1940.0,0,0
+497,Elam - Early Sukkalmah,seshat,32.382851,48.235564,-1900,-1701.0,0,0
+498,Elam - Late Sukkalmah,seshat,32.382851,48.235564,-1700,-1500.0,0,0
+499,Elam - Kidinuid Period,seshat,32.382851,48.235564,-1500,-1400.0,0,0
+50,Majapahit Kingdom,seshat,-6.985678,110.403498,1292,1518.0,0,0
+500,Elam - Igihalkid Period,seshat,32.382851,48.235564,-1399,-1200.0,0,0
+501,Elam - Shutrukid Period,seshat,32.382851,48.235564,-1199,-1100.0,0,0
+503,Elam I,seshat,32.382851,48.235564,-900,-744.0,0,0
+504,Elam II,seshat,32.382851,48.235564,-743,-647.0,0,0
+505,Elam III,seshat,32.382851,48.235564,-612,-539.0,0,0
+508,Ak Koyunlu,seshat,32.382851,48.235564,1339,1501.0,8,8
+509,Qajar Dynasty,seshat,32.382851,48.235564,1794,1925.0,0,0
+51,Mataram Sultanate,seshat,-6.985678,110.403498,1568,1755.0,0,0
+515,Egypt - Dynasty II,seshat,25.725715,32.714706,-2900,-2687.0,0,0
+516,Egypt - Classic Old Kingdom,seshat,25.725715,32.714706,-2650,-2350.0,0,0
+517,Egypt - Late Old Kingdom,seshat,25.725715,32.714706,-2350,-2150.0,0,0
+518,Egypt - Period of the Regions,seshat,25.725715,32.714706,-2150,-2016.0,0,0
+519,Egypt - Middle Kingdom,seshat,25.725715,32.714706,-2016,-1700.0,0,0
+520,Egypt - Thebes-Hyksos Period,seshat,25.725715,32.714706,-1720,-1567.0,0,0
+521,Egypt - Kushite Period,seshat,25.725715,32.714706,-747,-656.0,0,0
+525,Early Monte Alban I,seshat,17.041135,-96.761022,-500,-300.0,2,9
+526,Monte Alban Late I,seshat,17.041135,-96.761022,-300,-100.0,5,7
+527,Monte Alban II,seshat,17.041135,-96.761022,-100,200.0,5,7
+528,Monte Alban III,seshat,17.041135,-96.761022,200,500.0,5,7
+529,Monte Alban IIIB and IV,seshat,17.041135,-96.761022,500,900.0,5,7
+532,Monte Alban V,seshat,17.041135,-96.761022,900,1520.0,5,7
+539,Qatabanian Commonwealth,seshat,14.850891,43.315739,-450,-111.0,0,0
+541,Yemen - Qasimid Dynasty,seshat,14.850891,43.315739,1637,1805.0,0,0
+542,Yemen - Ottoman period,seshat,,,1873,1920.0,0,0
+544,Republic of Venice III,seshat,35.3387,25.1442,1204,1563.0,0,0
+545,Republic of Venice IV,seshat,35.3387,25.1442,1564,1797.0,0,0
+546,Five Dynasties Period,seshat,,,906,970.0,0,0
+548,Italian Kingdom Late Antiquity,seshat,,,476,489.0,0,0
+565,Austria - Habsburg Dynasty I,seshat,,,1454,1648.0,0,0
+566,Napoleonic France,seshat,,,1816,1870.0,0,0
+567,Austria - Habsburg Dynasty II,seshat,,,1649,1918.0,0,0
+568,Kingdom of Bohemia - Luxembourgian and Jagiellonian Dynasty,seshat,,,1310,1526.0,0,0
+569,Early United Mexican States,seshat,,,1810,1920.0,0,0
+57,Chuuk - Early Truk,seshat,7.351343,151.601918,1775,1886.0,8,8
+570,Spanish Empire II,seshat,,,1716,1814.0,0,0
+571,"Russian Empire, Romanov Dynasty II",seshat,,,1776,1917.0,0,0
+579,Plantagenet England,seshat,,,1154,1485.0,0,0
+58,Chuuk - Late Truk,seshat,7.351343,151.601918,1886,1948.0,8,8
+586,Norman England,seshat,,,1066,1153.0,0,0
+587,British Empire I,seshat,15.386856,76.625407,1690,1849.0,0,0
+600,"Russian Empire, Romanov Dynasty I",seshat,,,1614,1775.0,0,0
+625,Torwa-Rozvi,seshat,,,1494,1850.0,0,0
+626,Mutapa,seshat,,,1450,1880.0,0,0
+63,Monopalatial Crete,seshat,35.3387,25.1442,-1450,-1300.0,0,0
+64,Postpalatial Crete,seshat,35.3387,25.1442,-1300,-1200.0,0,0
+656,Classical Ife,seshat,,,1000,1400.0,0,0
+661,Ilú-ọba Ọ̀yọ́,seshat,,,1601,1835.0,0,0
+665,Aro,seshat,,,1690,1902.0,0,0
+666,Sokoto Caliphate,seshat,,,1804,1904.0,0,0
+667,Igala,seshat,,,1600,1900.0,0,0
+668,Ọ̀ràézè Ǹrì,seshat,,,1043,1911.0,0,0
+669,Hausa bakwai,seshat,,,900,1808.0,0,0
+67,Archaic Crete,seshat,35.3387,25.1442,-710,-500.0,0,0
+670,Kanem-Borno,seshat,,,1380,1893.0,0,0
+673,Wukari Federation,seshat,,,1820,1899.0,0,0
+68,Classical Crete,seshat,35.3387,25.1442,-500,-323.0,0,0
+69,Hellenistic Crete,seshat,35.3387,25.1442,-323,-69.0,0,0
+70,Roman Empire - Principate,seshat,41.890407,12.486948,-31,284.0,0,0
+708,Portuguese Empire - Renaissance Period,seshat,,,1495,1579.0,0,0
+709,Portuguese Empire - Early Modern,seshat,,,1640,1806.0,0,0
+71,Roman Empire - Dominate,seshat,37.877845,32.521164,285,394.0,0,0
+711,Imamate of Oman and Muscat,seshat,,,1749,1895.0,8,8
+72,East Roman Empire,seshat,37.877845,32.521164,395,631.0,0,0
+73,Byzantine Empire I,seshat,37.877845,32.521164,632,866.0,0,0
+74,The Emirate of Crete,seshat,35.3387,25.1442,824,961.0,0,0
+75,Byzantine Empire II,seshat,37.877845,32.521164,867,1072.0,0,0
+76,Byzantine Empire III,seshat,35.3387,25.1442,1073,1204.0,0,0
+78,Cuzco - Early Intermediate I,seshat,-13.47738,-72.067772,200,499.0,2,9
+798,East Francia,seshat,,,842,919.0,0,0
+80,Wari Empire,seshat,-13.47738,-72.067772,650,999.0,5,7
+82,Cuzco - Late Intermediate II,seshat,-13.47738,-72.067772,1250,1400.0,2,9
+83,Inca Empire,seshat,-13.47738,-72.067772,1375,1532.0,5,7
+84,Spanish Empire I,seshat,-13.47738,-72.067772,1516,1715.0,0,0
+87,Magadha - Maurya Empire,seshat,25.75,82.7,-324,-187.0,0,0
+89,Satavahana Empire,seshat,15.386856,76.625407,-100,200.0,0,0
+90,Vakataka Kingdom,seshat,15.386856,76.625407,255,550.0,0,0
+91,Kadamba Empire,seshat,15.386856,76.625407,345,550.0,0,0
+92,Chalukyas of Badami,seshat,15.386856,76.625407,543,753.0,0,0
+93,Rashtrakuta Empire,seshat,15.386856,76.625407,753,973.0,0,0
+94,Chalukyas of Kalyani,seshat,15.386856,76.625407,973,1189.0,0,0
+95,Hoysala Kingdom,seshat,15.386856,76.625407,1108,1346.0,0,0
+96,Kampili Kingdom,seshat,15.386856,76.625407,1280,1327.0,8,8
+97,Vijayanagara Empire,seshat,15.386856,76.625407,1336,1646.0,0,0
+DRH_001,Siberian Shamanism,drh,60.0,100.0,-1000,1950.0,2,9
+DRH_002,Sufi Islam,drh,35.0,50.0,-622,,2,9
+DRH_005,Aboriginal Australian Spirituality,drh,25.0,133.0,-1000,2000.0,2,9
+SCCS10,Luguru,dplace,-6.83,37.67,-1850,-1950.0,2,6
+SCCS100,Tikopia,dplace,-12.29,168.83,-1850,-1950.0,6,4
+SCCS101,Bunlap,dplace,-15.95,168.22,-1850,-1950.0,6,6
+SCCS103,Ajie,dplace,-21.33,165.67,-1850,-1950.0,2,6
+SCCS107,Makin,dplace,3.38,172.99,-1850,-1950.0,2,9
+SCCS109,Trukese,dplace,7.34,151.6,-1850,-1950.0,6,4
+SCCS11,Kikuyu,dplace,-0.67,37.17,-1850,-1950.0,9,4
+SCCS110,Yapese,dplace,9.52,138.16,-1850,-1950.0,4,1
+SCCS111,Palauans,dplace,7.5,134.5,-1850,-1950.0,6,6
+SCCS112,Ifugao,dplace,16.83,121.17,-1850,-1950.0,3,5
+SCCS114,Chinese,dplace,31.0,120.08,-1850,-1950.0,2,9
+SCCS115,Manchu,dplace,50.0,125.5,-1850,-1950.0,9,4
+SCCS116,Koreans,dplace,37.6,126.42,-1850,-1950.0,3,5
+SCCS117,Japanese,dplace,34.67,133.67,-1850,-1950.0,6,6
+SCCS118,Ainu,dplace,42.83,143.0,-1850,-1950.0,2,6
+SCCS119,Nivkh,dplace,53.0,142.0,-1850,-1950.0,3,5
+SCCS121,Chukchi,dplace,66.5,179.6,-1850,-1950.0,4,1
+SCCS122,Deg Xit'an,dplace,62.5,-159.5,-1850,-1950.0,3,5
+SCCS123,Aleut,dplace,55.0,-162.85,-1850,-1950.0,9,4
+SCCS125,Montagnais,dplace,50.0,-74.0,-1850,-1950.0,4,1
+SCCS126,Mi'kmaq,dplace,46.99,-65.0,-1850,-1950.0,9,4
+SCCS127,Northern Saulteaux,dplace,52.0,-95.5,-1850,-1950.0,6,6
+SCCS128,DeneTha,dplace,62.0,-122.0,-1850,-1950.0,3,5
+SCCS130,Eyak,dplace,60.5,-145.0,-1850,-1950.0,4,1
+SCCS136,Southern Valley Yokuts,dplace,35.0,-119.5,-1850,-1950.0,6,4
+SCCS14,Nkundo,dplace,-0.75,19.17,-1850,-1950.0,9,4
+SCCS141,Hidatsa,dplace,47.0,-101.0,-1850,-1950.0,6,6
+SCCS142,Pawnee,dplace,42.0,-100.0,-1850,-1950.0,9,4
+SCCS144,Huron,dplace,44.5,-79.0,-1850,-1950.0,3,5
+SCCS146,Natchez,dplace,31.5,-91.42,-1850,-1950.0,4,1
+SCCS15,Banen,dplace,4.67,10.8,-1850,-1950.0,6,6
+SCCS152,Huichol,dplace,22.0,-105.0,-1850,-1950.0,4,1
+SCCS154,Sierra Popoluca,dplace,18.25,-94.83,-1850,-1950.0,3,5
+SCCS17,Igbo,dplace,5.5,7.33,-1850,-1950.0,9,4
+SCCS20,Mende,dplace,7.83,-12.0,-1850,-1950.0,9,4
+SCCS22,Bambara,dplace,12.5,-7.0,-1850,-1950.0,4,1
+SCCS23,Tallensi,dplace,10.66,-0.57,-1850,-1950.0,6,6
+SCCS24,Songhai,dplace,16.58,-1.67,-1850,-1950.0,3,5
+SCCS26,Zazzagawa Hausa,dplace,10.5,7.5,-1850,-1950.0,9,4
+SCCS27,Masa,dplace,10.5,15.5,-1850,-1950.0,6,6
+SCCS29,Fur,dplace,13.5,25.5,-1850,-1950.0,2,6
+SCCS30,Otoro,dplace,11.33,30.67,-1850,-1950.0,3,5
+SCCS32,Mao,dplace,9.27,34.67,-1850,-1950.0,3,5
+SCCS33,Kafa,dplace,7.27,36.5,-1850,-1950.0,4,1
+SCCS35,Konso,dplace,5.25,37.5,-1850,-1950.0,4,1
+SCCS37,Amhara,dplace,12.5,37.75,-1850,-1950.0,6,6
+SCCS38,Blin,dplace,15.75,38.75,-1850,-1950.0,2,6
+SCCS39,Barabra,dplace,23.0,32.5,-1850,-1950.0,6,6
+SCCS4,Lozi,dplace,-16.0,23.5,-1850,-1950.0,3,5
+SCCS40,Teda,dplace,20.5,17.5,-1850,-1950.0,4,1
+SCCS43,Egyptians,dplace,24.75,33.0,-1850,-1950.0,6,4
+SCCS44,Hebrews,dplace,31.18,34.92,-1850,-1950.0,6,6
+SCCS45,Babylonians,dplace,32.58,44.75,-1850,-1950.0,3,5
+SCCS47,Turks,dplace,39.33,34.25,-1850,-1950.0,6,6
+SCCS48,Gheg,dplace,42.0,20.17,-1850,-1950.0,6,6
+SCCS5,Mbundu,dplace,-12.25,16.5,-1850,-1950.0,6,6
+SCCS50,Spanish Basques,dplace,43.25,-1.67,-1850,-1950.0,9,4
+SCCS51,Irish,dplace,53.5,-10.0,-1850,-1950.0,6,6
+SCCS53,Yurak-Samoyeds,dplace,68.0,51.5,-1850,-1950.0,4,1
+SCCS54,Russians,dplace,52.67,41.33,-1850,-1950.0,2,9
+SCCS55,Abkhaz,dplace,43.13,40.77,-1850,-1950.0,3,5
+SCCS56,Armenians,dplace,40.0,44.5,-1850,-1950.0,2,9
+SCCS57,Kurd,dplace,36.5,44.5,-1850,-1950.0,6,4
+SCCS58,Basseri,dplace,29.0,53.0,-1850,-1950.0,6,6
+SCCS59,Punjabi,dplace,32.5,74.0,-1850,-1950.0,6,6
+SCCS60,Madia,dplace,19.63,80.92,-1850,-1950.0,9,4
+SCCS62,Santal,dplace,23.5,87.17,-1850,-1950.0,4,1
+SCCS63,Uttar Pradesh,dplace,25.92,83.0,-1850,-1950.0,6,4
+SCCS64,Burusho,dplace,36.43,74.58,-1850,-1950.0,6,6
+SCCS65,Kazakh,dplace,42.5,75.5,-1850,-1950.0,6,4
+SCCS66,Khalka,dplace,47.17,96.08,-1850,-1950.0,3,5
+SCCS67,Lolo,dplace,27.5,103.5,-1850,-1950.0,9,4
+SCCS68,Lepcha,dplace,27.5,89.0,-1850,-1950.0,6,4
+SCCS69,Garo,dplace,26.0,91.0,-1850,-1950.0,6,1
+SCCS70,Maras,dplace,22.33,93.0,-1850,-1950.0,3,5
+SCCS71,Burmese,dplace,22.0,95.67,-1850,-1950.0,9,4
+SCCS72,Lamet,dplace,20.0,100.67,-1850,-1950.0,3,5
+SCCS73,Annamese,dplace,20.5,106.25,-1850,-1950.0,9,4
+SCCS74,Rade,dplace,13.0,108.0,-1850,-1950.0,3,5
+SCCS75,Ancient Khmer,dplace,13.0,103.83,-1850,-1950.0,6,6
+SCCS76,Thai,dplace,14.0,100.85,-1850,-1950.0,2,9
+SCCS78,Nicobarese,dplace,7.0,93.75,-1850,-1950.0,3,5
+SCCS8,Nyakyusa,dplace,-9.5,34.0,-1850,-1950.0,6,4
+SCCS82,Negri Sembilan,dplace,2.58,102.25,-1850,-1950.0,9,4
+SCCS83,Javanese,dplace,-7.7,112.22,-1850,-1950.0,6,6
+SCCS84,Balinese,dplace,-8.5,115.33,-1850,-1950.0,6,6
+SCCS85,Iban,dplace,2.0,113.0,-1850,-1950.0,3,5
+SCCS86,Badjau Tawi-Tawi,dplace,5.0,120.0,-1850,-1950.0,3,6
+SCCS87,Toradja,dplace,-2.0,121.0,-1850,-1950.0,9,4
+SCCS88,Tobelorese,dplace,2.0,127.94,-1850,-1950.0,4,1
+SCCS89,Alorese,dplace,-8.33,124.67,-1850,-1950.0,3,5
+SCCS9,Hadza,dplace,-3.75,35.18,-1850,-1950.0,3,5
+SCCS91,Northern Aranda,dplace,-24.25,133.5,-1850,-1950.0,6,4
+SCCS92,Orokaiva,dplace,-8.5,148.0,-1850,-1950.0,3,5
+SCCS93,Kimam,dplace,-7.5,138.5,-1850,-1950.0,4,1
+SCCS95,Kwoma,dplace,-4.17,142.67,-1850,-1950.0,3,5
+SCCS96,Manus,dplace,-2.17,147.17,-1850,-1950.0,3,5
+SCCS97,Lesu,dplace,-2.71,151.0,-1850,-1950.0,3,5
+WNAI100,Sanpoil,dplace,48.0,-118.7,-1850,-1950.0,4,1
+WNAI101,Sinkiuse-Columbia,dplace,47.0,-119.5,-1850,-1950.0,4,1
+WNAI102,Wenatchi,dplace,47.5,-120.3,-1850,-1950.0,4,1
+WNAI103,Coeur d’Alene,dplace,47.7,-117.0,-1850,-1950.0,4,1
+WNAI107,Nez Perce,dplace,46.0,-117.0,-1850,-1950.0,3,5
+WNAI108,Umatilla,dplace,46.0,-119.0,-1850,-1950.0,4,1
+WNAI109,Klikitat,dplace,45.8,-121.5,-1850,-1950.0,4,1
+WNAI110,Wishram,dplace,45.5,-121.2,-1850,-1950.0,4,1
+WNAI124,Gosiute,dplace,40.0,-114.0,-1850,-1950.0,1,2
+WNAI127,Hukundika,dplace,41.7,-112.0,-1850,-1950.0,1,3
+WNAI13,Makah,dplace,48.33,-124.62,-1850,-1950.0,7,3
+WNAI130,Uncompahgre Ute,dplace,38.0,-108.0,-1850,-1950.0,1,3
+WNAI135,Chemehuevi,dplace,34.3,-116.0,-1850,-1950.0,1,2
+WNAI137,Hualapai,dplace,35.3,-114.0,-1850,-1950.0,4,2
+WNAI14,Klahoose,dplace,50.5,-124.5,-1850,-1950.0,4,1
+WNAI140,Mojave,dplace,34.5,-114.5,-1850,-1950.0,7,3
+WNAI141,Quechan,dplace,32.7,-114.5,-1850,-1950.0,1,2
+WNAI143,Cocopa,dplace,32.0,-115.0,-1850,-1950.0,1,3
+WNAI144,Maricopa,dplace,33.3,-112.5,-1850,-1950.0,1,3
+WNAI145,Pima,dplace,33.2,-112.0,-1850,-1950.0,1,2
+WNAI15,Pentlatch,dplace,49.5,-125.0,-1850,-1950.0,4,1
+WNAI155,Lipan Apache,dplace,30.0,-104.0,-1850,-1950.0,7,2
+WNAI156,Jicarilla,dplace,37.0,-105.5,-1850,-1950.0,1,2
+WNAI159,Hopi,dplace,36.0,-110.5,-1850,-1950.0,1,3
+WNAI16,Squamish,dplace,49.7,-123.3,-1850,-1950.0,4,1
+WNAI162,Sia,dplace,35.3,-106.5,-1850,-1950.0,7,2
+WNAI163,Santa Ana,dplace,35.2,-106.4,-1850,-1950.0,7,2
+WNAI164,Kewa,dplace,35.3,-106.1,-1850,-1950.0,7,2
+WNAI165,Cochiti,dplace,35.6,-106.0,-1850,-1950.0,7,2
+WNAI166,Ohkay Owingeh,dplace,36.1,-106.1,-1850,-1950.0,7,2
+WNAI167,San Ildefonso,dplace,35.9,-106.2,-1850,-1950.0,7,2
+WNAI168,Santa Clara,dplace,36.0,-106.3,-1850,-1950.0,7,2
+WNAI169,Nambé Pueblo,dplace,35.9,-105.9,-1850,-1950.0,7,2
+WNAI17,Cowichan,dplace,48.7,-123.7,-1850,-1950.0,4,1
+WNAI170,Taos,dplace,36.5,-105.5,-1850,-1950.0,1,3
+WNAI171,Isleta,dplace,34.8,-106.7,-1850,-1950.0,7,2
+WNAI172,Jemez,dplace,35.8,-106.8,-1850,-1950.0,7,2
+WNAI18,West Saanich,dplace,48.4,-123.5,-1850,-1950.0,4,1
+WNAI19,Stó:lō,dplace,49.4,-121.5,-1850,-1950.0,4,1
+WNAI20,Musqueam,dplace,49.37,-123.24,-1850,-1950.0,4,1
+WNAI21,Lummi,dplace,48.7,-123.7,-1850,-1950.0,4,1
+WNAI24,Quinault,dplace,47.4,-124.1,-1850,-1950.0,4,1
+WNAI25,Puyallup,dplace,47.1,-122.5,-1850,-1950.0,1,3
+WNAI26,Quileute,dplace,47.9,-124.3,-1850,-1950.0,1,3
+WNAI27,Lower Chinook,dplace,46.35,-124.0,-1850,-1950.0,4,1
+WNAI28,Tillamook,dplace,45.4,-123.82,-1850,-1950.0,4,1
+WNAI29,Alsea,dplace,44.7,-124.0,-1850,-1950.0,4,1
+WNAI30,Siuslaw,dplace,44.0,-124.0,-1850,-1950.0,4,1
+WNAI31,Coos,dplace,43.3,-124.2,-1850,-1950.0,4,1
+WNAI32,Tututni,dplace,42.5,-124.3,-1850,-1950.0,4,1
+WNAI34,Taltushtuntede,dplace,42.5,-123.5,-1850,-1950.0,4,1
+WNAI37,Karuk,dplace,41.4,-123.5,-1850,-1950.0,4,1
+WNAI38,Hupa,dplace,41.0,-123.5,-1850,-1950.0,4,1
+WNAI39,Wiyot,dplace,40.8,-124.0,-1850,-1950.0,4,1
+WNAI4,Haida (Southern),dplace,53.09,-132.1,-1850,-1950.0,4,3
+WNAI41,Mattole-Bear River,dplace,40.4,-124.1,-1850,-1950.0,4,3
+WNAI43,Cahto,dplace,39.7,-123.3,-1850,-1950.0,4,2
+WNAI46,Chimariko,dplace,40.7,-123.2,-1850,-1950.0,4,1
+WNAI47,Wintu (Trinity River),dplace,40.6,-123.2,-1850,-1950.0,4,1
+WNAI5,Tsimshian,dplace,55.3,-130.05,-1850,-1950.0,4,3
+WNAI50,Nomlaki,dplace,39.5,-122.5,-1850,-1950.0,4,1
+WNAI53,Atsugewi,dplace,40.5,-121.3,-1850,-1950.0,1,3
+WNAI54,Valley Maidu,dplace,39.7,-121.9,-1850,-1950.0,4,1
+WNAI55,Foothill Maidu,dplace,39.8,-121.3,-1850,-1950.0,4,1
+WNAI57,Nisenan (Foothill),dplace,39.4,-121.1,-1850,-1950.0,4,1
+WNAI6,Gitxsan,dplace,56.3,-127.5,-1850,-1950.0,7,3
+WNAI62,Yana,dplace,40.5,-122.0,-1850,-1950.0,4,1
+WNAI63,Northern Pomo,dplace,39.6,-123.3,-1850,-1950.0,4,1
+WNAI65,Southern Pomo,dplace,38.5,-123.0,-1850,-1950.0,4,1
+WNAI66,Wappo,dplace,38.7,-123.0,-1850,-1950.0,4,1
+WNAI67,Patwin,dplace,38.7,-122.0,-1850,-1950.0,4,1
+WNAI68,Northern Miwok,dplace,38.5,-121.0,-1850,-1950.0,4,1
+WNAI69,Central Sierra Miwok,dplace,38.0,-120.0,-1850,-1950.0,4,1
+WNAI7,Haisla,dplace,53.5,-128.0,-1850,-1950.0,4,1
+WNAI70,Southern Miwok,dplace,37.5,-119.5,-1850,-1950.0,4,1
+WNAI73,Northern Foothills Yokuts,dplace,37.2,-119.8,-1850,-1950.0,3,3
+WNAI74,Kings River Yokuts,dplace,36.8,-119.4,-1850,-1950.0,4,1
+WNAI75,Wukchumni,dplace,36.4,-119.1,-1850,-1950.0,4,1
+WNAI78,Tübalulabal,dplace,36.0,-118.2,-1850,-1950.0,7,2
+WNAI79,Kawaiisu,dplace,35.5,-118.5,-1850,-1950.0,7,2
+WNAI8,Haihais,dplace,53.0,-128.5,-1850,-1950.0,4,1
+WNAI80,Salinan,dplace,35.0,-120.0,-1850,-1950.0,3,3
+WNAI81,Tongva,dplace,34.8,-118.0,-1850,-1950.0,1,3
+WNAI82,Luiseño,dplace,33.3,-117.3,-1850,-1950.0,1,2
+WNAI83,Cupeño,dplace,33.2,-116.7,-1850,-1950.0,1,3
+WNAI84,Serrano,dplace,34.2,-117.0,-1850,-1950.0,1,3
+WNAI85,Cahuilla (Desert),dplace,33.5,-116.2,-1850,-1950.0,1,3
+WNAI9,Heiltsuk,dplace,52.0,-128.0,-1850,-1950.0,4,1
+WNAI91,Kiliwa,dplace,31.5,-115.0,-1850,-1950.0,1,3
+WNAI92,Akwa’ala,dplace,31.5,-115.8,-1850,-1950.0,1,2
+WNAI95,Chilcotin,dplace,51.7,-125.0,-1850,-1950.0,4,1
+WNAI96,Shuswap,dplace,51.3,-120.0,-1850,-1950.0,4,1
+WNAI97,Lillooet,dplace,50.3,-122.5,-1850,-1950.0,4,1
+WNAI98,Nlaka'pamux,dplace,50.3,-121.5,-1850,-1950.0,4,1
+WNAI99,Syilx,dplace,48.8,-119.5,-1850,-1950.0,4,1
