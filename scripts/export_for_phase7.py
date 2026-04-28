@@ -22,7 +22,10 @@ sys.path.insert(0, str(Path(__file__).parent.parent / 'src'))
 def export_cultures_metadata():
     """
     Create cultures_metadata.json with all culture attributes.
-    
+
+    Uses the multisource feature matrix (D-PLACE + Seshat + DRH) and the
+    multisource cluster assignments (data/processed/clusters/multisource/).
+
     Structure:
     {
       "cultures": [
@@ -33,7 +36,7 @@ def export_cultures_metadata():
           "lon": 30.0,
           "cluster": 0,
           "language_family": "unknown",
-          "features": [...],
+          "features": {...},
           "source": "dplace"
         },
         ...
@@ -41,84 +44,66 @@ def export_cultures_metadata():
     }
     """
     print("Loading data...")
-    
-    # Load main data
-    dplace = pd.read_parquet('data/processed/dplace_real.parquet')
-    clusters = pd.read_csv('data/processed/clusters/culture_cluster_membership.csv')
-    
-    # Pivot features into matrix (one row per culture)
-    features_pivot = dplace.pivot_table(
-        index='culture_id',
-        columns='variable_name',
-        values='variable_value',
-        aggfunc='first'
+
+    # Canonical multisource feature matrix (2,452 cultures × 21 features + metadata)
+    feature_matrix = pd.read_parquet('data/processed/feature_matrix.parquet')
+
+    # Multisource cluster assignments (1,160 cultures: 755 dplace + 400 seshat + 5 drh)
+    clusters = pd.read_csv('data/processed/clusters/multisource/culture_cluster_membership_k8.csv')
+
+    # Feature columns: everything that isn't metadata
+    metadata_cols = {'culture_id', 'culture_name', 'source', 'unit_type', 'temporal_mode',
+                     'lat', 'lon', 'time_start', 'time_end', 'language_family', 'glottocode'}
+    feature_cols = [c for c in feature_matrix.columns if c not in metadata_cols]
+
+    # One row per culture (feature_matrix already has one row per culture)
+    culture_meta = feature_matrix.merge(
+        clusters[['culture_id', 'cluster_id']],
+        on='culture_id',
+        how='inner'  # Only include cultures that appear in the multisource clustering
     )
-    
-    # Get culture metadata (one row per culture)
-    culture_meta = dplace.drop_duplicates(
-        subset=['culture_id'],
-        keep='first'
-    )[['culture_id', 'culture_name', 'lat', 'lon', 'source']].copy()
-    
-    # Merge with cluster assignments
-    culture_meta = culture_meta.merge(
-        clusters,
-        left_on='culture_id',
-        right_on='culture_id',
-        how='left'
-    )
-    
-    # Merge with features
-    culture_meta = culture_meta.merge(
-        features_pivot,
-        left_on='culture_id',
-        right_index=True,
-        how='left'
-    )
-    
+
     # Build cultures array
     cultures = []
     for _, row in culture_meta.iterrows():
-        # Extract features (all columns except metadata)
-        metadata_cols = ['culture_id', 'culture_name', 'lat', 'lon', 'source', 'cluster_id', 'method']
-        feature_cols = [col for col in row.index if col not in metadata_cols]
-        
         culture = {
             "id": str(row['culture_id']),
             "name": str(row['culture_name']),
             "lat": float(row['lat']) if pd.notna(row['lat']) else None,
             "lon": float(row['lon']) if pd.notna(row['lon']) else None,
             "cluster": int(row['cluster_id']) if pd.notna(row['cluster_id']) else None,
-            "language_family": "unknown",  # TODO: Link from phylogenetic data
+            "language_family": (
+                str(row['language_family'])
+                if pd.notna(row.get('language_family')) and not str(row.get('language_family', '')).startswith('seshat:')
+                else 'unknown'
+            ),
             "source": str(row['source']),
             "features": {}
         }
-        
-        # Add features
+
         for col in feature_cols:
             val = row[col]
             if pd.notna(val):
-                culture["features"][col] = int(val) if isinstance(val, (int, float)) and not pd.isna(val) else val
-        
+                culture["features"][col] = int(val) if isinstance(val, (int, float)) else val
+
         cultures.append(culture)
-    
+
     output = {
         "metadata": {
             "total_cultures": len(cultures),
-            "total_clusters": int(culture_meta['cluster_id'].max()) + 1 if culture_meta['cluster_id'].max() >= 0 else 0,
-            "sources": list(culture_meta['source'].unique()),
-            "generated_from": "Phase 6 analysis"
+            "total_clusters": int(culture_meta['cluster_id'].max()) + 1 if len(culture_meta) > 0 else 0,
+            "sources": sorted(culture_meta['source'].unique().tolist()),
+            "generated_from": "Multisource Phase 3-4 (D-PLACE + Seshat + DRH, commit 3432cae)"
         },
         "cultures": cultures
     }
-    
-    # Save
+
     output_path = Path('phase7_visualization/data/cultures_metadata.json')
     output_path.parent.mkdir(parents=True, exist_ok=True)
-    
+
     with open(output_path, 'w') as f:
         json.dump(output, f, indent=2)
-    
+
     print(f"✓ Exported {len(cultures)} cultures to {output_path}")
     return len(cultures)
 
@@ -187,14 +172,19 @@ def export_cluster_profiles():
     print("Exporting cluster profiles...")
     
     cluster_path = Path('data/processed/clusters')
-    
+    multisource_path = cluster_path / 'multisource'
+
     profiles = {}
-    
-    # Load cluster profiles
-    if (cluster_path / 'cluster_profiles.csv').exists():
-        profiles_df = pd.read_csv(cluster_path / 'cluster_profiles.csv')
+
+    # Prefer multisource cluster profiles; fall back to baseline
+    profiles_file = multisource_path / 'cluster_profiles.csv'
+    if not profiles_file.exists():
+        profiles_file = cluster_path / 'cluster_profiles.csv'
+    if profiles_file.exists():
+        profiles_df = pd.read_csv(profiles_file)
         profiles = profiles_df.to_dict('records')
-    
+        print(f"  - Loaded cluster profiles from {profiles_file}")
+
     # Load robustness analysis
     robustness = {}
     if (cluster_path / 'robustness_analysis.json').exists():

@@ -77,10 +77,10 @@ The two competing hypotheses make different predictions about spatial patterns:
 ## Phase 4-5 Baseline (Inputs to Phase 6)
 
 ### Clustering Results (Phase 4)
-- 1,257 phylogenetically-filtered cultures
-- 8 optimal clusters (silhouette 0.722)
-- Membership file: `culture_cluster_membership.csv`
-- Profiles file: `cluster_profiles.csv` (8 clusters × 19 features)
+- **D-PLACE baseline:** 1,257 phylogenetically-filtered cultures, 8 clusters (silhouette 0.722)
+- **Multisource (28 Apr):** 1,160 cultures (755 D-PLACE + 400 Seshat + 5 DRH), 8 clusters — `data/processed/clusters/multisource/`
+- Membership file: `culture_cluster_membership.csv` (baseline) / `multisource/culture_cluster_membership_k8.csv`
+- Profiles file: `cluster_profiles.csv` (8 clusters × 19 features baseline) / `multisource/cluster_profiles.csv`
 
 ### Interpretation (Phase 5)
 - 8 cluster narratives with geographic coherence assessment
@@ -88,10 +88,10 @@ The two competing hypotheses make different predictions about spatial patterns:
 - Preliminary finding: **Constrained universalism with regional elaboration**
 
 ### Available Data
-- Geographic coordinates (lat/lon) for 1,257 cultures
-- Language family assignments (Glottolog via D-PLACE)
-- Feature matrix: 1,257 cultures × 19 features
-- 19 binary/ordinal shamanic practice features
+- Geographic coordinates (lat/lon) for 1,257 cultures (D-PLACE baseline) / 1,160 cultures (multisource)
+- Language family assignments (Glottolog via D-PLACE; region-based fallback for Seshat)
+- Feature matrix: 1,257 cultures × 19 features (D-PLACE baseline) / 2,452 cultures × 21 features (multisource, `feature_matrix.parquet`)
+- **Seshat temporal coverage note:** Seshat polities span −3000 CE to present (diachronic), unlike D-PLACE's ethnographic snapshot (1800–1950). When combining sources for spatial analysis, Seshat observations must be treated as temporally distinct. Moran's I analyses on the 64-feature expanded matrix (28 Apr) used the full multisource feature matrix but spatial coordinates are point-in-time; temporal heterogeneity may slightly dampen autocorrelation signals.
 
 ---
 

@@ -20,11 +20,13 @@ Phase 4 synthesises Phase 3 analysis into a publishable statistical model by:
 - Input: Harmonised parquets + synthesis indicators + validated cross-source agreements
 - Output: Cluster membership assignments, validation metrics, publication-ready narrative
 
-**Seshat Integration Note (28 April):**
-Current Phase 4 results are based on data **before** Seshat activation (f91f8fb). With Seshat integration:
-- Additional 2,213 polities available for phylogenetic filtering
-- Seshat polities require language family assignment to participate in Galton's problem filtering
-- Recommendation: Assign language families to Seshat polities, then re-run Phase 4 for complete analysis
+**Seshat Integration Note (28 April — COMPLETED):**
+A multisource re-run of Phase 3–4 was completed on 28 April 2026 (commit 3432cae). With Seshat integration:
+- Seshat polities expanded the crosswalk and are included in the canonical feature matrix (`data/processed/feature_matrix.parquet`: 2,452 rows across dplace/seshat/drh)
+- Multisource clustering output: `data/processed/clusters/multisource/` — 1,160 cultures (755 D-PLACE + 400 Seshat + 5 DRH), k=8
+- Language family assignment for Seshat polities: region-based geographic fallbacks used (`scripts/populate_language_families.py`)
+- Multisource cluster profiles: `data/processed/clusters/multisource/cluster_profiles.csv`
+- **Note:** Seshat polities contribute to clustering but have sparser features than D-PLACE; sensitivity should be assessed in Phase 8
 
 **Critical Decision:** All Phase 3 fixes (Issues 1–5) must be in place before Phase 4 execution:
 - ✅ Issue 1: Composite indicators (OR/weighted logic, not AND)

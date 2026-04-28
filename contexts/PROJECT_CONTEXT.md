@@ -21,7 +21,7 @@ This is a spatio-temporal computational analysis using cross-cultural databases.
 
 ## 2. Data sources
 
-**Status (28 April 2026):** All 3 sources active. **Total: 14,045 records** (↑18.7% from Seshat integration)
+**Status (28 April 2026):** All 3 sources active. **Total: 14,044 records** (↑18.7% from Seshat integration; 11,820 D-PLACE + 11 DRH + 2,213 Seshat)
 
 ### 2.1 Database of Religious History (DRH)
 - **URL:** https://religiondatabase.org/
@@ -624,5 +624,5 @@ Original approach used quality-weighted averaging (D-PLACE: 0.5, DRH: 0.3, Sesha
 
 ---
 
-*Last updated: 2026-04-14*
+*Last updated: 2026-04-28*
 *Maintainers: [your names here]*

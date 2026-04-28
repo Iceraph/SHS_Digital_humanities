@@ -15,7 +15,7 @@ Phase 1 produced three raw parser outputs:
 - **DRH**: 11 records (11 traditions, 5 variables)
 - **Seshat**: 2,214 records (2,213 polities, 6 variables) ✅ **ACTIVE 28 April**
 
-**Total Harmonised Data**: 14,045 records (18.7% increase from Seshat)
+**Total Harmonised Data**: 14,044 records (18.7% increase from Seshat; 11,820 D-PLACE + 11 DRH + 2,213 Seshat)
 
 These differ fundamentally in **unit of observation** (society vs. tradition vs. polity), **temporal granularity** (snapshot vs. diachronic), **coding vocabulary** (EA codes vs. DRH survey labels), and **variable scales** (binary vs. ordinal).
 
@@ -74,6 +74,20 @@ variable_name, variable_value, variable_type, confidence, notes
    dedicated_specialist,EA34,1|2|3|4|5,Does the religion have religious specialists:,religious_specialist_presence,"Ordinal: 1=none, 2=part-time, 3-5=full-time"
    ...
    ```
+
+**Resolved Seshat Crosswalk Mappings (28 April 2026):**
+
+| Seshat Variable | Maps To Feature | Binarisation Rule | Notes |
+|---|---|---|---|
+| `professional_priesthood` | `dedicated_specialist` | Binary passthrough (already binary in Seshat) | Maps to ordinal value 2 (full-time) |
+| `religious_level_from` | `dedicated_specialist` | Ordinal → binary: threshold ≥ 3 | `religious_level_from` is ordinal 0–5; ≥3 = full-time specialist |
+| `human_sacrifice` | `ritual_practice` | Binary passthrough | Seshat codes as 0/1 |
+| `moralizing_supernatural_beings` | `supernatural_beliefs` | Boolean field mapping | Seshat field already boolean; mapped to 0/1 |
+
+**Source-specific binarisation rules:**
+- Seshat variables are already binary or have explicit ordinal levels; no ambiguity
+- `religious_level_from` threshold of ≥3 chosen to match DRH definition of full-time specialist
+- Conflicts with D-PLACE: 0 conflicts (Seshat polities are geographically non-overlapping with D-PLACE societies in most cases)
 
 2. **`src/harmonise/crosswalk.py`** — Python module with:
    - `load_crosswalk()` → loads the CSV
@@ -277,9 +291,9 @@ variable_name, variable_value, confirmation, notes
    - 1,170 rows
 
 3. **`data/processed/harmonised/seshat_harmonised.parquet`**
-   - Source: Seshat parser output + harmonisation pipeline
+   - Source: Seshat REST API → `src/ingest/seshat_fetch.py` → harmonisation pipeline
    - Schema: same as above
-   - 6 rows (or more if real data obtained)
+   - **2,213 polities with 2,214 variable observations** (activated 28 April 2026, commit f91f8fb)
 
 **All three share identical column schema** so they can be concatenated without silent misalignment.
 
