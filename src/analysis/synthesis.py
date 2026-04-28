@@ -119,7 +119,8 @@ def aggregate_features_by_culture(
         DataFrame with one row per culture
     """
     if features is None:
-        features = df[~df["feature_name"].str.contains("composite")]["feature_name"].unique()
+        feature_col = df["feature_name"].dropna()
+        features = feature_col[~feature_col.str.contains("composite")].unique()
     
     aggregated = []
     

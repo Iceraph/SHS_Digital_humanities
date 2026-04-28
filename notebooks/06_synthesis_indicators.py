@@ -26,7 +26,8 @@ from src.analysis.synthesis import (
 
 df_dplace = pd.read_parquet("data/processed/harmonised/dplace_harmonised.parquet")
 df_drh = pd.read_parquet("data/processed/harmonised/drh_harmonised.parquet")
-harmonised_df = pd.concat([df_dplace, df_drh], ignore_index=True)
+df_seshat = pd.read_parquet("data/processed/harmonised/seshat_harmonised.parquet")
+harmonised_df = pd.concat([df_dplace, df_drh, df_seshat], ignore_index=True)
 
 print(f"Loaded {len(harmonised_df):,} records from {harmonised_df['culture_id'].nunique()} cultures")
 
@@ -45,7 +46,7 @@ print(f"  Feature columns: {len([c for c in aggregated.columns if c not in ['cul
 
 print("\nCreating composite indicators...")
 
-composites = create_composite_indicators(harmonised_df)
+composites = create_composite_indicators(aggregated)
 
 # Get only composite columns
 composite_cols = [c for c in composites.columns if c.startswith("composite_")]

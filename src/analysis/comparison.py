@@ -12,7 +12,6 @@ from dataclasses import dataclass
 from collections import defaultdict
 
 from .config import (
-    QUALITY_WEIGHTS,
     DEFAULT_CONFLICT_STRATEGY,
     AGREEMENT_THRESHOLDS,
     ConflictRecord,
@@ -81,6 +80,54 @@ def get_feature_matrix_by_source(
         matrices[source] = feature_matrix
     
     return matrices
+
+
+def apply_linkage_to_matrices(
+    feature_matrices: Dict[str, pd.DataFrame],
+    linkage_df: pd.DataFrame,
+    min_confidence: float = 0.0,
+) -> Dict[str, pd.DataFrame]:
+    """Re-index D-PLACE feature matrix rows to their linked DRH culture_id.
+
+    Phase 2.5 produces ``data/reference/dplace_drh_linkage.csv`` mapping each
+    DRH tradition to one or more D-PLACE societies. Without this step, sources
+    have disjoint culture_id schemes and overlap detection always returns 0.
+    Aliasing linked D-PLACE rows to the DRH id lets ``find_overlapping_cultures``
+    detect them as the same logical culture.
+
+    Args:
+        feature_matrices: Output of ``get_feature_matrix_by_source``.
+        linkage_df: Linkage table with columns ``drh_id``, ``d_place_culture_id``,
+            ``confidence_score``.
+        min_confidence: Drop links below this confidence threshold.
+
+    Returns:
+        New dict with the D-PLACE matrix re-indexed; other matrices untouched.
+    """
+    if "dplace" not in feature_matrices or "drh" not in feature_matrices:
+        return feature_matrices
+
+    valid = linkage_df[linkage_df["confidence_score"] >= min_confidence]
+    dplace_to_drh = dict(zip(valid["d_place_culture_id"], valid["drh_id"]))
+    if not dplace_to_drh:
+        return feature_matrices
+
+    out = dict(feature_matrices)
+    dplace_matrix = feature_matrices["dplace"].copy()
+    dplace_matrix.index = dplace_matrix.index.map(lambda cid: dplace_to_drh.get(cid, cid))
+
+    # Multiple D-PLACE societies can link to the same DRH tradition
+    # (e.g. Sufi Islam → Iranians + Bakhtiari). Collapse duplicates with
+    # any-source rule for binary features and first() for metadata.
+    if dplace_matrix.index.has_duplicates:
+        numeric_cols = dplace_matrix.select_dtypes(include="number").columns
+        meta_cols = [c for c in dplace_matrix.columns if c not in numeric_cols]
+        agg_spec: dict = {c: "max" for c in numeric_cols}
+        agg_spec.update({c: "first" for c in meta_cols})
+        dplace_matrix = dplace_matrix.groupby(level=0).agg(agg_spec)
+
+    out["dplace"] = dplace_matrix
+    return out
 
 
 def find_overlapping_cultures(
@@ -157,10 +204,12 @@ def compare_feature_agreements(
                     val1 = np.nan
                     val2 = np.nan
                     
-                    if culture_id in feature_matrices[source1].index:
+                    if (culture_id in feature_matrices[source1].index
+                            and feature in feature_matrices[source1].columns):
                         val1 = feature_matrices[source1].loc[culture_id, feature]
-                    
-                    if culture_id in feature_matrices[source2].index:
+
+                    if (culture_id in feature_matrices[source2].index
+                            and feature in feature_matrices[source2].columns):
                         val2 = feature_matrices[source2].loc[culture_id, feature]
                     
                     # Skip if both are null
