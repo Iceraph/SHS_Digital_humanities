@@ -56,17 +56,17 @@ EMBEDDED_CROSSWALK = {
     # ========== ALTERED STATES OF CONSCIOUSNESS (3.1) ==========
     "trance_induction": {
         "d_place": {"var_ids": ["EA112"], "include_codes": [1,2,3,4,5], "confidence": "high"},
-        "drh": {"columns": ["trance_question_1"], "confidence": "high"},
+        "drh": {"columns": ["In trance possession:"], "confidence": "high"},
         "seshat": {},
-        "notes": "EA112 codes 1-5 (trance induction phenomena). DRH explicitly about trance. "
+        "notes": "EA112 codes 1-5 (trance induction phenomena). DRH Q4944/Q4861 trance possession. "
                  "SPLIT from spirit_possession (codes 6-8): different state types.",
     },
     "spirit_possession": {
         "d_place": {"var_ids": ["EA112"], "include_codes": [6,7,8], "confidence": "high"},
-        "drh": {},
+        "drh": {"columns": ["Is a spirit-body distinction present:", "Other spirit-body relationship:"], "confidence": "high"},
         "seshat": {"var_names": ["spirit_possession"], "confidence": "high"},
-        "notes": "EA112 codes 6-8 (spirit possession forms). Seshat explicit spirit_possession. "
-                 "SPLIT from trance_induction (codes 1-5): different state types.",
+        "notes": "EA112 codes 6-8 (spirit possession forms). DRH Q4776/Q4779 spirit-body distinction. "
+                 "Seshat explicit spirit_possession. SPLIT from trance_induction (codes 1-5): different state types.",
     },
     "soul_flight": {
         "d_place": {"var_ids": ["SCCS1170"], "include_codes": [1], "confidence": "medium"},
@@ -85,7 +85,7 @@ EMBEDDED_CROSSWALK = {
     # ========== SPECIALIST ROLE AND INITIATION (3.2) ==========
     "dedicated_specialist": {
         "d_place": {"var_ids": ["EA34"], "include_codes": [3,4,5], "confidence": "high"},
-        "drh": {"columns": ["healing_question_1"], "confidence": "high"},
+        "drh": {"columns": ["Physical healing"], "confidence": "high"},
         "seshat": {
             "var_names": ["professional_priesthood"],          # binary 0/1
             "var_codes": {"religious_level": [3,4,5,6,7,8,9,10]},  # ordinal ≥3 → 1
@@ -125,9 +125,9 @@ EMBEDDED_CROSSWALK = {
     },
     "ancestor_mediation": {
         "d_place": {"var_ids": ["SCCS530"], "include_codes": [1], "confidence": "high"},
-        "drh": {"columns": ["ancestor_question_1"], "confidence": "high"},
+        "drh": {},
         "seshat": {},
-        "notes": "SCCS530 + DRH both present. Ancestor communication/channeling. Multi-source.",
+        "notes": "SCCS530 ancestor communication/channeling. D-PLACE only; DRH lacks direct ancestor column.",
     },
     "nature_spirits": {
         "d_place": {"var_ids": ["WNAI389", "WNAI391"], "include_codes": [1], "confidence": "medium"},
@@ -146,13 +146,13 @@ EMBEDDED_CROSSWALK = {
     },
     "healing_function": {
         "d_place": {"var_ids": ["EA34"], "include_codes": [3,4,5], "confidence": "high"},
-        "drh": {"columns": ["healing_question_1"], "confidence": "high"},
+        "drh": {"columns": ["Physical healing"], "confidence": "high"},
         "seshat": {},
-        "notes": "EA34 specialist presence (proxy). DRH explicitly measures healing role. Multi-source.",
+        "notes": "EA34 specialist presence (proxy). DRH Q4776 Physical healing. Multi-source.",
     },
     "divination": {
         "d_place": {"var_ids": ["SCCS532"], "include_codes": [1], "confidence": "medium"},
-        "drh": {"columns": ["divination_question_1"], "confidence": "high"},
+        "drh": {"columns": ["Through divination practices:", "Through divination processes:"], "confidence": "high"},
         "seshat": {"var_names": ["divination"], "confidence": "high"},
         "notes": "Strong multi-source coverage: foretelling/hidden knowledge discovery.",
     },
