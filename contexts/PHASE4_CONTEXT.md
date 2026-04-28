@@ -1,6 +1,7 @@
 # Phase 4: Clustering & Phylogenetic Analysis
 **Date:** 15 avril 2026  
-**Status:** Ready for Implementation  
+**Status:** ✅ IMPLEMENTATION COMPLETE (pre-Seshat data)
+**Update (28 April 2026):** Seshat activated AFTER Phase 4 execution. **Recommendation: Re-run Phase 4 with Seshat data for completeness**
 **Deliverables:** Phylogenetically-corrected clusters, robustness analysis, validation metrics
 
 ---
@@ -18,6 +19,12 @@ Phase 4 synthesises Phase 3 analysis into a publishable statistical model by:
 **Phase 3 → Phase 4:**
 - Input: Harmonised parquets + synthesis indicators + validated cross-source agreements
 - Output: Cluster membership assignments, validation metrics, publication-ready narrative
+
+**Seshat Integration Note (28 April):**
+Current Phase 4 results are based on data **before** Seshat activation (f91f8fb). With Seshat integration:
+- Additional 2,213 polities available for phylogenetic filtering
+- Seshat polities require language family assignment to participate in Galton's problem filtering
+- Recommendation: Assign language families to Seshat polities, then re-run Phase 4 for complete analysis
 
 **Critical Decision:** All Phase 3 fixes (Issues 1–5) must be in place before Phase 4 execution:
 - ✅ Issue 1: Composite indicators (OR/weighted logic, not AND)

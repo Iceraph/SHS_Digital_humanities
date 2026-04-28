@@ -55,12 +55,14 @@ def filter_one_per_language_family(
     np.random.seed(random_state)
     
     # Group by language family and sample 1 per group
-    filtered_df = (
-        df
-        .groupby(language_family_col, as_index=False)
-        .apply(lambda x: x.sample(n=1, random_state=random_state), include_groups=False)
-        .reset_index(drop=True)
-    )
+    # Use a list comprehension to avoid pandas groupby().apply() dropping the groupby column
+    filtered_dfs = []
+    for lf in df[language_family_col].unique():
+        group = df[df[language_family_col] == lf]
+        sampled = group.sample(n=1, random_state=random_state)
+        filtered_dfs.append(sampled)
+    
+    filtered_df = pd.concat(filtered_dfs, ignore_index=True)
     
     return filtered_df
 

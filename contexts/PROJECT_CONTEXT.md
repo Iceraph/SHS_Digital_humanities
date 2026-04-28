@@ -21,27 +21,34 @@ This is a spatio-temporal computational analysis using cross-cultural databases.
 
 ## 2. Data sources
 
+**Status (28 April 2026):** All 3 sources active. **Total: 14,045 records** (↑18.7% from Seshat integration)
+
 ### 2.1 Database of Religious History (DRH)
 - **URL:** https://religiondatabase.org/
 - **Unit of observation:** Religious group/tradition
+- **Records:** 11 traditions
 - **Format:** Structured expert-survey responses (mostly binary yes/no/uncertain + free text)
 - **Relevant variables:** Trance, spirit possession, soul journey, healing rituals, divination, cosmological levels, religious specialists, ritual substances, ancestor worship
 - **Access method:** Web API (JSON) or CSV bulk download
 - **Strengths:** Rich on belief content and ritual detail
 - **Weaknesses:** Uneven geographic coverage, expert-dependent coding
 
-### 2.2 Seshat: Global History Databank
-- **URL:** https://seshatdatabank.info/
+### 2.2 Seshat: Global History Databank ✅ **ACTIVE (28 April 2026)**
+- **URL:** https://seshat-db.com/api (REST API, no authentication)
 - **Unit of observation:** Polity (political entity) at a specific time period
-- **Format:** CSV/TSV with coded variables, temporal ranges
-- **Relevant variables:** Spirit possession, religious specialist presence, divination, supernatural beings, ritual complexity
-- **Access method:** Bulk download (CSV) or API
-- **Strengths:** Excellent temporal resolution (century-level), covers deep history
-- **Weaknesses:** Coarser religious data (polity-level, not tradition-level)
+- **Records:** 2,213 polities with 2,214 observations
+- **Format:** CSV with coded variables, temporal ranges
+- **Temporal Range:** -3000 CE to present (deep history coverage)
+- **Relevant variables:** Professional priesthood, religious organization levels, human sacrifice, moralizing supernatural beings
+- **Access method:** REST API (new, replaces old Equinox download) — see `src/ingest/seshat_fetch.py`
+- **Strengths:** Excellent temporal resolution (century-level), covers deep history to -3000 CE, now directly integrated
+- **Weaknesses:** Coarser religious data (polity-level, not tradition-level); polity-level aggregation may mask tradition diversity
+- **Implementation Date:** 28 April 2026 (Commit f91f8fb)
 
 ### 2.3 D-PLACE (Database of Places, Language, Culture and Environment)
 - **URL:** https://d-place.org/
 - **Unit of observation:** Ethnolinguistic society
+- **Records:** 11,820 societies
 - **Format:** CSV with coded ethnographic variables, linked to Glottolog language trees
 - **Relevant variables:** EA v112 (trance states), SCCS shamanism/healing codes, drug use, divination, religious practitioners (EA v34), initiation rites
 - **Access method:** Bulk CSV download, GitHub repository

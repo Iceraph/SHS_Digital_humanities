@@ -2,6 +2,7 @@
 
 **Status:** ✅ IMPLEMENTATION COMPLETE  
 **Date:** 21 avril 2026  
+**Updated:** 28 April 2026 with Seshat integration results
 **Predecessor:** Phase 5 (Interpretation & Publication) ✅ COMPLETE
 
 ---
@@ -11,11 +12,16 @@
 Phase 6 adds spatial and phylogenetic analysis to test whether clusters reflect **geographic structure** (support for diffusion hypothesis) or **neurobiological universalism** (support for universalism hypothesis). Core question: **Do shamanic features cluster geographically, or are they independent of space?**
 
 **Key deliverables:**
-- Spatial autocorrelation analysis (Moran's I per feature)
+- ✅ Spatial autocorrelation analysis (Moran's I per feature) — **EXPANDED to 64/64 features (28 Apr)**
 - Distance decay curves (feature similarity vs. geographic distance)
 - Phylogenetic signal testing (Pagel's lambda, Blomberg's K)
 - Partial Mantel test (geography vs. language family effects)
 - 2 analysis notebooks + publication figures
+
+**Major Update (28 April 2026 - Seshat Activation):**
+- Moran's I expanded from **19 features → 64 features** (100% coverage)
+- **Result: 0 significant clustering** (all p-values ≥ 0.05)
+- **Strong support for Neurobiological Universalism hypothesis** over Regional Diffusion
 
 ---
 

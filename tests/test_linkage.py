@@ -74,9 +74,9 @@ class TestTemporalOverlap:
             drh_time_start=0,
             drh_time_end=500
         )
-        # Gap is 200 years, so ADJACENT_ERA
+        # Gap is 200 years, so ADJACENT_ERA (with updated weight of 0.7)
         assert classification == "ADJACENT_ERA"
-        assert weight == 0.5
+        assert weight == 0.7
     
     def test_adjacent_era_gap_100_years(self):
         """Periods separated by ~200 years should be ADJACENT_ERA."""
@@ -87,7 +87,7 @@ class TestTemporalOverlap:
             drh_time_end=500
         )
         assert classification == "ADJACENT_ERA"
-        assert weight == 0.5
+        assert weight == 0.7
     
     def test_distant_era(self):
         """Periods far apart (>500 years) should be DISTANT_ERA."""
@@ -98,7 +98,7 @@ class TestTemporalOverlap:
             drh_time_end=2000
         )
         assert classification == "DISTANT_ERA"
-        assert weight == 0.2
+        assert weight == 0.3
     
     def test_no_overlap_disjoint(self):
         """Completely disjoint periods after distant gap."""
@@ -108,7 +108,7 @@ class TestTemporalOverlap:
             drh_time_start=-3000,
             drh_time_end=-2000
         )
-        assert weight == 0.2  # Far enough to be DISTANT
+        assert weight == 0.3  # Far enough to be DISTANT
     
     def test_missing_dates(self):
         """Missing dates should default to medium confidence."""

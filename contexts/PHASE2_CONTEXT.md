@@ -8,10 +8,14 @@
 
 ## Overview
 
+**Status Update (28 April 2026):** Seshat activation complete. All 3 sources now active.
+
 Phase 1 produced three raw parser outputs:
 - **D-PLACE**: 11,820 records (1,850 societies, 64 variables)
-- **DRH**: 1,170 records (234 traditions, 5 variables)
-- **Seshat**: 6 records (3 polities, 6 variables)
+- **DRH**: 11 records (11 traditions, 5 variables)
+- **Seshat**: 2,214 records (2,213 polities, 6 variables) ✅ **ACTIVE 28 April**
+
+**Total Harmonised Data**: 14,045 records (18.7% increase from Seshat)
 
 These differ fundamentally in **unit of observation** (society vs. tradition vs. polity), **temporal granularity** (snapshot vs. diachronic), **coding vocabulary** (EA codes vs. DRH survey labels), and **variable scales** (binary vs. ordinal).
 
@@ -43,13 +47,15 @@ variable_name, variable_value, variable_type, confidence, notes
 - **Metadata:** Region field, Start Date / End Date (often incomplete)
 - **Challenge:** No geographic coordinates in raw data; multiple traditions per region
 
-### Seshat
-- **Source:** `data/raw/seshat/polities.csv`, `variables.csv`, `data.csv` (mock or real)
+### Seshat (Status: ✅ ACTIVE as of 28 April 2026)
+- **Source:** `data/raw/seshat/polities.csv`, `variables.csv`, `data.csv` (via REST API)
 - **Unit:** Polity (political entity at a specific time period)
-- **Temporal:** Diachronic: each polity-variable pair has a corresponding time range
-- **Key variables:** Coded observations on spirit possession, divination, religious specialist presence, etc.
+- **Temporal:** Diachronic: each polity-variable pair has a corresponding time range (extends to -3000 CE)
+- **Volume**: 2,213 polities with 2,214 variable observations
+- **Key variables**: professional_priesthood, religious_level_from, human_sacrifice, moralizing_supernatural_beings
 - **Metadata:** Polity centroid (lat/lon), era/period names, time ranges
 - **Challenge:** Polity-level aggregation masks tradition-level diversity; temporal ranges may be uncertain
+- **Implementation Date**: 28 April 2026 (Commit f91f8fb)
 
 ---
 
