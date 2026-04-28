@@ -22,6 +22,7 @@ from pathlib import Path
 from src.analysis.comparison import (
     load_harmonised_data,
     get_feature_matrix_by_source,
+    apply_linkage_to_matrices,
     find_overlapping_cultures,
     compare_feature_agreements,
     compute_agreement_statistics,
@@ -39,6 +40,7 @@ print("✓ Phase 3 analysis modules imported")
 harmonised_data = load_harmonised_data(
     dplace_path="data/processed/harmonised/dplace_harmonised.parquet",
     drh_path="data/processed/harmonised/drh_harmonised.parquet",
+    seshat_path="data/processed/harmonised/seshat_harmonised.parquet",
 )
 
 print("\nData Summary:")
@@ -54,6 +56,11 @@ for source, df in harmonised_data.items():
 
 # Create feature matrices
 feature_matrices = get_feature_matrix_by_source(harmonised_data)
+
+# Alias D-PLACE culture_ids to their linked DRH ids (Phase 2.5 linkage)
+linkage_df = pd.read_csv("data/reference/dplace_drh_linkage.csv")
+feature_matrices = apply_linkage_to_matrices(feature_matrices, linkage_df)
+print(f"\n✓ Applied {len(linkage_df)} DRH↔D-PLACE linkages")
 
 # Find overlapping cultures
 all_cultures, overlapping = find_overlapping_cultures(feature_matrices)

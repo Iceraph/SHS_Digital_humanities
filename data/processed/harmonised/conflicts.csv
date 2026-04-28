@@ -1,1 +1,17 @@
-culture_id,feature_name,source1,value1,quality1,source2,value2,quality2,conflict_type,resolved_value,resolution_method,resolution_status
+culture_id,culture_name,feature_name,source1,value1,quality1,source2,value2,quality2,resolved_value,conflict_type
+DRH_002,Iranians,lat,dplace,36.0,,drh,35.0,,,conflict
+DRH_002,Iranians,lon,dplace,52.0,,drh,50.0,,,conflict
+DRH_002,Iranians,culture_name,dplace,Iranians,,drh,Sufi Islam,,,conflict
+DRH_002,Iranians,time_start,dplace,-1850,,drh,-622,,,conflict
+DRH_002,Iranians,source,dplace,dplace,,drh,drh,,,conflict
+DRH_003,Central Tibetans,lat,dplace,30.0,,drh,32.0,,,conflict
+DRH_003,Central Tibetans,lon,dplace,91.0,,drh,90.0,,,conflict
+DRH_003,Central Tibetans,culture_name,dplace,Central Tibetans,,drh,Tibetan Buddhism,,,conflict
+DRH_003,Central Tibetans,time_start,dplace,-1850,,drh,-127,,,conflict
+DRH_003,Central Tibetans,source,dplace,dplace,,drh,drh,,,conflict
+DRH_004,Koreans,lat,dplace,38.134147,,drh,37.0,,,conflict
+DRH_004,Koreans,lon,dplace,126.960754,,drh,127.0,,,conflict
+DRH_004,Koreans,time_end,dplace,-1950,,drh,1950.0,,,conflict
+DRH_004,Koreans,culture_name,dplace,Koreans,,drh,Korean Shamanism,,,conflict
+DRH_004,Koreans,time_start,dplace,-1850,,drh,-500,,,conflict
+DRH_004,Koreans,source,dplace,dplace,,drh,drh,,,conflict

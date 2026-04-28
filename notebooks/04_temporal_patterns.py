@@ -28,7 +28,8 @@ from src.analysis.temporal import (
 # Combine harmonised data
 df_dplace = pd.read_parquet("data/processed/harmonised/dplace_harmonised.parquet")
 df_drh = pd.read_parquet("data/processed/harmonised/drh_harmonised.parquet")
-harmonised_df = pd.concat([df_dplace, df_drh], ignore_index=True)
+df_seshat = pd.read_parquet("data/processed/harmonised/seshat_harmonised.parquet")
+harmonised_df = pd.concat([df_dplace, df_drh, df_seshat], ignore_index=True)
 
 print(f"Loaded {len(harmonised_df):,} harmonised records")
 print(f"Time range: {harmonised_df['time_start'].min()} to {harmonised_df['time_end'].max()}")

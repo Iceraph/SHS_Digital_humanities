@@ -28,9 +28,11 @@ from src.analysis.geography import (
 
 df_dplace = pd.read_parquet("data/processed/harmonised/dplace_harmonised.parquet")
 df_drh = pd.read_parquet("data/processed/harmonised/drh_harmonised.parquet")
+df_seshat = pd.read_parquet("data/processed/harmonised/seshat_harmonised.parquet")
 
 print(f"D-PLACE: {len(df_dplace):,} records")
 print(f"DRH: {len(df_drh):,} records")
+print(f"Seshat: {len(df_seshat):,} records")
 
 # ============================================================================
 # 2. COORDINATE VALIDATION
@@ -44,12 +46,16 @@ print(f"  D-PLACE: {len(dplace_issues['out_of_bounds'])} invalid coordinates")
 drh_issues = validate_coordinates(df_drh)
 print(f"  DRH: {len(drh_issues['out_of_bounds'])} invalid coordinates")
 
+seshat_issues = validate_coordinates(df_seshat)
+print(f"  Seshat: {len(seshat_issues['out_of_bounds'])} invalid coordinates")
+
 # ============================================================================
 # 3. REGIONAL ASSIGNMENT
 # ============================================================================
 
 df_dplace = assign_geographic_regions(df_dplace)
 df_drh = assign_geographic_regions(df_drh)
+df_seshat = assign_geographic_regions(df_seshat)
 
 print("\nRegional Distribution (D-PLACE):")
 print(df_dplace["region"].value_counts())
@@ -60,6 +66,7 @@ print(df_dplace["region"].value_counts())
 
 dplace_density = compute_regional_density(df_dplace)
 drh_density = compute_regional_density(df_drh)
+seshat_density = compute_regional_density(df_seshat)
 
 print("\nRegional Density (D-PLACE):")
 for region, stats in dplace_density.items():
@@ -79,10 +86,10 @@ print(gaps[["region", "record_count", "gap_severity"]])
 # 6. GEOGRAPHIC BIAS
 # ============================================================================
 
-bias = compute_geographic_bias(dplace_density, drh_density)
+bias = compute_geographic_bias(dplace_density, drh_density, seshat_density)
 
 print("\nSource Distribution by Region:")
-print(bias[["region", "dplace_count", "drh_count", "bias_indicator"]])
+print(bias[["region", "dplace_count", "drh_count", "seshat_count", "bias_indicator"]])
 
 # Save regional analysis
 Path("data/processed/analysis").mkdir(parents=True, exist_ok=True)

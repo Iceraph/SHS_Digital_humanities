@@ -1,5 +1,5 @@
 indicator,total_cultures,cultures_present,cultures_absent,presence_rate,mean_value,std_value,min_value,max_value
-shamanic_complex,11831,0,0,,,,,
-ritual_specialisation,11831,0,0,,,,,
-cosmological_framework,11831,0,0,,,,,
-healing_technology,11831,0,0,,,,,
+shamanic_complex,2455,0,2455,0.0,0.0,0.0,0.0,0.0
+ritual_specialisation,2455,6,2449,0.002443991853360489,0.002443991853360489,0.04938635686965895,0.0,1.0
+cosmological_framework,2455,25,2430,0.010183299389002037,0.010183299389002037,0.10041766387911265,0.0,1.0
+healing_technology,2455,0,2455,0.0,0.0,0.0,0.0,0.0

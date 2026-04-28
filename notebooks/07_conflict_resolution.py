@@ -61,6 +61,7 @@ print(f"✓ {len(narratives)} ethnographic profiles loaded")
 harmonised_df = pd.concat([
     pd.read_parquet("data/processed/harmonised/dplace_harmonised.parquet"),
     pd.read_parquet("data/processed/harmonised/drh_harmonised.parquet"),
+    pd.read_parquet("data/processed/harmonised/seshat_harmonised.parquet"),
 ], ignore_index=True)
 
 validation_results = cross_validate_all_cultures(harmonised_df)
