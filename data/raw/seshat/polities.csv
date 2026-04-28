@@ -1,0 +1,868 @@
+id,name,polity_code,latitude,longitude,start_year,end_year,region
+1,Early Qing,cn_qing_dyn_1,34.701825,112.517587,1644,1796,North China
+2,Late Qing,cn_qing_dyn_2,34.701825,112.517587,1796,1912,North China
+6,Archaic Basin of Mexico,mx_basin_of_mexico_1,19.43,-99.13,-6000,-2001,Mexico
+7,Initial Formative Basin of Mexico,mx_basin_of_mexico_2,19.43,-99.13,-2000,-1201,Mexico
+8,Early Formative Basin of Mexico,mx_basin_of_mexico_3,19.43,-99.13,-1200,-801,Mexico
+9,Middle Formative Basin of Mexico,mx_basin_of_mexico_4,19.43,-99.13,-800,-401,Mexico
+10,Late Formative Basin of Mexico,mx_basin_of_mexico_5,19.43,-99.13,-400,-101,Mexico
+11,Terminal Formative Basin of Mexico,mx_basin_of_mexico_6,19.43,-99.13,-100,99,Mexico
+12,Classic Basin of Mexico,mx_basin_of_mexico_7,19.43,-99.13,100,649,Mexico
+13,Epiclassic Basin of Mexico,mx_basin_of_mexico_8,19.43,-99.13,650,899,Mexico
+14,Toltecs,mx_toltec,19.43,-99.13,900,1199,Mexico
+15,Middle Postclassic Basin of Mexico,mx_basin_of_mexico_10,19.43,-99.13,1200,1426,Mexico
+16,Aztec Empire,mx_aztec_emp,19.43,-99.13,1427,1526,Mexico
+17,Hawaii I,us_hawaii_1,19.528931,-155.916989,1000,1200,Polynesia
+18,Hawaii II,us_hawaii_2,19.528931,-155.916989,1200,1580,Polynesia
+19,Hawaii III,us_hawaii_3,19.528931,-155.916989,1580,1778,Polynesia
+20,Kingdom of Hawaii - Kamehameha Period,us_kamehameha_k,19.528931,-155.916989,1778,1819,Polynesia
+21,Kingdom of Hawaii - Post-Kamehameha Period,us_hawaii_k,19.528931,-155.916989,1820,1898,Polynesia
+22,Cahokia - Early Woodland,us_woodland_1,38.658938,-90.062035,-600,-150,Mississippi Basin
+23,Cahokia - Middle Woodland,us_woodland_2,38.658938,-90.062035,-150,300,Mississippi Basin
+24,Cahokia - Late Woodland I,us_woodland_3,38.658938,-90.062035,300,450,Mississippi Basin
+25,Cahokia - Late Woodland II,us_woodland_4,38.658938,-90.062035,450,600,Mississippi Basin
+26,Cahokia - Late Woodland III,us_woodland_5,38.658938,-90.062035,600,750,Mississippi Basin
+27,Cahokia - Emergent Mississippian I,us_emergent_mississippian_1,38.658938,-90.062035,750,900,Mississippi Basin
+28,Cahokia - Sand Prairie,us_cahokia_3,38.658938,-90.062035,1275,1400,Mississippi Basin
+29,Oneota,us_oneota,38.658938,-90.062035,1400,1650,Mississippi Basin
+30,Early Illinois Confederation,us_early_illinois_confederation,38.658938,-90.062035,1640,1717,Mississippi Basin
+31,Late Illinois Confederation,us_late_illinois_confederation,,,1718,1778,Mississippi Basin
+32,Cahokia - Lohman-Stirling,us_cahokia_1,38.658938,-90.062035,1050,1199,Mississippi Basin
+33,Cahokia - Moorehead,us_cahokia_2,38.658938,-90.062035,1200,1275,Mississippi Basin
+34,Cahokia - Emergent Mississippian II,us_emergent_mississippian_2,38.658938,-90.062035,900,1049,Mississippi Basin
+35,Bronze Age Cambodia,kh_cambodia_ba,13.4125,103.8667,-1200,-501,Mainland Southeast Asia
+36,Iron Age Cambodia,kh_cambodia_ia,13.4125,103.8667,-500,224,Mainland Southeast Asia
+37,Funan I,kh_funan_1,13.4125,103.8667,225,540,Mainland Southeast Asia
+38,Funan II,kh_funan_2,13.4125,103.8667,540,640,Mainland Southeast Asia
+39,Chenla,kh_chenla,13.4125,103.8667,550,825,Mainland Southeast Asia
+40,Early Angkor,kh_angkor_1,13.4125,103.8667,802,1100,Mainland Southeast Asia
+41,Classical Angkor,kh_angkor_2,13.4125,103.8667,1100,1220,Mainland Southeast Asia
+42,Late Angkor,kh_angkor_3,13.4125,103.8667,1220,1432,Mainland Southeast Asia
+43,Khmer Kingdom,kh_khmer_k,13.4125,103.8667,1432,1594,Mainland Southeast Asia
+44,Ayutthaya,th_ayutthaya,13.4125,103.8667,1593,1767,Mainland Southeast Asia
+45,Rattanakosin,th_rattanakosin,13.4125,103.8667,1782,1873,Mainland Southeast Asia
+46,Java - Buni Culture,id_buni,-6.985678,110.403498,-400,500,Maritime Southeast Asia
+47,Kalingga Kingdom,id_kalingga_k,-6.985678,110.403498,500,732,Maritime Southeast Asia
+48,Medang Kingdom,id_medang_k,-6.985678,110.403498,732,1019,Maritime Southeast Asia
+49,Kediri Kingdom,id_kediri_k,-6.985678,110.403498,1049,1222,Maritime Southeast Asia
+50,Majapahit Kingdom,id_majapahit_k,-6.985678,110.403498,1292,1518,Maritime Southeast Asia
+51,Mataram Sultanate,id_mataram_k,-6.985678,110.403498,1568,1755,Maritime Southeast Asia
+52,Monagrillo,pa_monagrillo,,,-3000,-1300,Caribbean
+53,La Mula-Sarigua,pa_la_mula_sarigua,,,-1300,200,Caribbean
+54,Early Greater Coclé,pa_cocle_1,,,200,700,Caribbean
+55,Middle Greater Coclé,pa_cocle_2,,,700,1000,Caribbean
+56,Late Greater Coclé,pa_cocle_3,,,1000,1515,Caribbean
+57,Chuuk - Early Truk,fm_truk_1,7.351343,151.601918,1775,1886,Polynesia
+58,Chuuk - Late Truk,fm_truk_2,7.351343,151.601918,1886,1948,Polynesia
+59,Neolithic Crete,gr_crete_nl,35.3387,25.1442,-7000,-3000,Southeastern Europe
+60,Prepalatial Crete,gr_crete_pre_palace,35.3387,25.1442,-3000,-1900,Southeastern Europe
+61,Old Palace Crete,gr_crete_old_palace,35.3387,25.1442,-1900,-1700,Southeastern Europe
+62,New Palace Crete,gr_crete_new_palace,35.3387,25.1442,-1700,-1450,Southeastern Europe
+63,Monopalatial Crete,gr_crete_mono_palace,35.3387,25.1442,-1450,-1300,Southeastern Europe
+64,Postpalatial Crete,gr_crete_post_palace_1,35.3387,25.1442,-1300,-1200,Southeastern Europe
+65,Final Postpalatial Crete,gr_crete_post_palace_2,35.3387,25.1442,-1200,-1000,Southeastern Europe
+66,Geometric Crete,gr_crete_geometric,35.3387,25.1442,-1000,-710,Southeastern Europe
+67,Archaic Crete,gr_crete_archaic,35.3387,25.1442,-710,-500,Southeastern Europe
+68,Classical Crete,gr_crete_classical,35.3387,25.1442,-500,-323,Southeastern Europe
+69,Hellenistic Crete,gr_crete_hellenistic,35.3387,25.1442,-323,-69,Southeastern Europe
+70,Roman Empire - Principate,it_roman_principate,41.890407,12.486948,-31,284,Southern Europe
+71,Roman Empire - Dominate,tr_roman_dominate,37.877845,32.521164,285,394,Anatolia-Caucasus
+72,East Roman Empire,tr_east_roman_emp,37.877845,32.521164,395,631,Anatolia-Caucasus
+73,Byzantine Empire I,tr_byzantine_emp_1,37.877845,32.521164,632,866,Anatolia-Caucasus
+74,The Emirate of Crete,gr_crete_emirate,35.3387,25.1442,824,961,Southeastern Europe
+75,Byzantine Empire II,tr_byzantine_emp_2,37.877845,32.521164,867,1072,Anatolia-Caucasus
+76,Byzantine Empire III,tr_byzantine_emp_3,35.3387,25.1442,1073,1204,Anatolia-Caucasus
+77,Cuzco - Late Formative,pe_cuzco_1,-13.47738,-72.067772,-500,200,Andes
+78,Cuzco - Early Intermediate I,pe_cuzco_2,-13.47738,-72.067772,200,499,Andes
+79,Cuzco - Early Intermediate II,pe_cuzco_3,-13.47738,-72.067772,500,649,Andes
+80,Wari Empire,pe_wari_emp,-13.47738,-72.067772,650,999,Andes
+81,Cuzco - Late Intermediate I,pe_cuzco_5,-13.47738,-72.067772,1000,1250,Andes
+82,Cuzco - Late Intermediate II,pe_cuzco_6,-13.47738,-72.067772,1250,1400,Andes
+83,Inca Empire,pe_inca_emp,-13.47738,-72.067772,1375,1532,Andes
+84,Spanish Empire I,es_spanish_emp_1,-13.47738,-72.067772,1516,1715,Southern Europe
+85,Deccan - Neolithic,in_deccan_nl,15.386856,76.625407,-2700,-1200,Southern India
+86,Deccan - Iron Age,in_deccan_ia,15.386856,76.625407,-1200,-300,Southern India
+87,Magadha - Maurya Empire,in_mauryan_emp,25.75,82.7,-324,-187,North India
+88,Post-Mauryan Kingdoms,in_post_mauryan_k,15.386856,76.625407,-205,-101,Southern India
+89,Satavahana Empire,in_satavahana_emp,15.386856,76.625407,-100,200,Southern India
+90,Vakataka Kingdom,in_vakataka_k,15.386856,76.625407,255,550,Southern India
+91,Kadamba Empire,in_kadamba_emp,15.386856,76.625407,345,550,Southern India
+92,Chalukyas of Badami,in_badami_chalukya_emp,15.386856,76.625407,543,753,Southern India
+93,Rashtrakuta Empire,in_rashtrakuta_emp,15.386856,76.625407,753,973,Southern India
+94,Chalukyas of Kalyani,in_kalyani_chalukya_emp,15.386856,76.625407,973,1189,Southern India
+95,Hoysala Kingdom,in_hoysala_k,15.386856,76.625407,1108,1346,Southern India
+96,Kampili Kingdom,in_kampili_k,15.386856,76.625407,1280,1327,Southern India
+97,Vijayanagara Empire,in_vijayanagara_emp,15.386856,76.625407,1336,1646,Southern India
+98,Mughal Empire,in_mughal_emp,29.377664,67.628836,1526,1858,North India
+100,Proto-Haudenosaunee Confederacy,us_proto_haudenosaunee,42.70498,-77.021375,1300,1565,East Coast
+101,Haudenosaunee Confederacy - Early,us_haudenosaunee_1,42.70498,-77.021375,1566,1713,East Coast
+102,Haudenosaunee Confederacy - Late,us_haudenosaunee_2,42.70498,-77.021375,1714,1848,East Coast
+103,Canaan,il_canaan,32.6996,35.3035,-2000,-1175,Levant
+104,Phoenician Empire,lb_phoenician_emp,32.6996,35.3035,-1200,-332,Levant
+105,Yisrael,il_yisrael,32.6996,35.3035,-1030,-722,Levant
+106,Neo-Assyrian Empire,iq_neo_assyrian_emp,32.47,44.42,-911,-612,Mesopotamia
+107,Achaemenid Empire,ir_achaemenid_emp,32.382851,48.235564,-550,-331,Iran
+108,Seleucid Empire,ir_seleucid_emp,32.47,44.42,-312,-63,Iran
+109,Ptolemaic Kingdom I,eg_ptolemaic_k_1,25.725715,32.714706,-305,-217,Northeast Africa
+110,Yehuda,il_judea,32.6996,35.3035,-141,-63,Levant
+111,Early A'chik,in_achik_1,25.4444444439,90.5185390109,1775,1867,Eastern South Asia
+112,Late A'chik,in_achik_2,25.4444444439,90.5185390109,1867,1956,Eastern South Asia
+113,Akan - Pre-Ashanti,gh_akan,5.573135,-0.21792,1501,1701,West Africa
+114,Ashanti Empire,gh_ashanti_emp,5.573135,-0.21792,1701,1895,West Africa
+115,Icelandic Commonwealth,is_icelandic_commonwealth,64.133088,-21.891497,930,1262,Northern Europe
+116,Kingdom of Norway II,no_norway_k_2,64.133088,-21.891497,1262,1396,Northern Europe
+117,Kachi Plain - Aceramic Neolithic,pk_kachi_enl,29.377664,67.628836,-7500,-5500,Pakistan
+118,Kachi Plain - Ceramic Neolithic,pk_kachi_lnl,29.377664,67.628836,-5500,-4000,Pakistan
+119,Kachi Plain - Chalcolithic,pk_kachi_ca,29.377664,67.628836,-4000,-3200,Pakistan
+120,Kachi Plain - Pre-Urban Period,pk_kachi_pre_urban,29.377664,67.628836,-3200,-2500,Pakistan
+121,Kachi Plain - Urban Period I,pk_kachi_urban_1,29.377664,67.628836,-2500,-2100,Pakistan
+122,Kachi Plain - Urban Period II,pk_kachi_urban_2,29.377664,67.628836,-2100,-1800,Pakistan
+123,Kachi Plain - Post-Urban Period,pk_kachi_post_urban,29.377664,67.628836,-1800,-1300,Pakistan
+124,Kachi Plain - Proto-Historic Period,pk_kachi_proto_historic,29.377664,67.628836,-1300,-500,Pakistan
+125,Parthian Empire I,ir_parthian_emp_1,32.382851,48.235564,-247,40,Iran
+126,Indo-Greek Kingdom,pk_indo_greek_k,29.377664,67.628836,-180,-10,Pakistan
+127,Kushan Empire,af_kushan_emp,39.631284,66.93817,35,319,Afghanistan
+128,Sasanid Empire I,ir_sassanid_emp_1,32.382851,48.235564,205,487,Iran
+129,Hephthalite Empire,af_hephthalite_emp,39.631284,66.93817,408,561,Afghanistan
+130,Sasanid Empire II,ir_sassanid_emp_2,32.382851,48.235564,488,642,Iran
+131,Umayyad Caliphate,sy_umayyad_cal,32.47,44.42,661,750,Levant
+132,Abbasid Caliphate I,iq_abbasid_cal_1,32.47,44.42,750,946,Mesopotamia
+133,Sind - Abbasid-Fatimid Period,pk_sind_abbasid_fatimid,29.377664,67.628836,854,1193,Pakistan
+134,Ghur Principality,af_ghur_principality,29.377664,67.628836,1025,1215,Afghanistan
+135,Delhi Sultanate,in_delhi_sultanate,29.377664,67.628836,1206,1526,North India
+136,Sind - Samma Dynasty,pk_samma_dyn,29.377664,67.628836,1335,1521,Pakistan
+137,Durrani Empire,af_durrani_emp,29.377664,67.628836,1747,1826,Afghanistan
+138,Japan - Incipient Jomon,jp_jomon_1,35.02528,135.7622,-13600,-9200,Northeast Asia
+139,Japan - Initial Jomon,jp_jomon_2,35.02528,135.7622,-9200,-5300,Northeast Asia
+140,Japan - Early Jomon,jp_jomon_3,35.02528,135.7622,-5300,-3500,Northeast Asia
+141,Japan - Middle Jomon,jp_jomon_4,35.02528,135.7622,-3500,-2500,Northeast Asia
+142,Japan - Late Jomon,jp_jomon_5,35.02528,135.7622,-2500,-1200,Northeast Asia
+143,Japan - Final Jomon,jp_jomon_6,35.02528,135.7622,-1200,-300,Northeast Asia
+144,Kansai - Yayoi Period,jp_yayoi,35.02528,135.7622,-300,250,Northeast Asia
+145,Kansai - Kofun Period,jp_kofun,35.02528,135.7622,250,537,Northeast Asia
+146,Asuka,jp_asuka,35.02528,135.7622,538,710,Northeast Asia
+147,Heian,jp_heian,35.02528,135.7622,794,1185,Northeast Asia
+148,Kamakura Shogunate,jp_kamakura,35.02528,135.7622,1185,1333,Northeast Asia
+149,Ashikaga Shogunate,jp_ashikaga,35.02528,135.7622,1336,1467,Northeast Asia
+150,Warring States Japan,jp_sengoku_jidai,35.02528,135.7622,1467,1568,Northeast Asia
+151,Japan - Azuchi-Momoyama,jp_azuchi_momoyama,35.02528,135.7622,1568,1603,Northeast Asia
+152,Tokugawa Shogunate,jp_tokugawa_shogunate,35.02528,135.7622,1603,1868,Northeast Asia
+153,Iban - Pre-Brooke,id_iban_1,0.77412081365,112.405971685,1650,1841,Maritime Southeast Asia
+154,Iban - Brooke Raj and Colonial,id_iban_2,0.77412081365,112.405971685,1841,1987,Maritime Southeast Asia
+155,Konya Plain - Early Neolithic,tr_konya_enl,37.877845,32.521164,-9600,-7000,Anatolia-Caucasus
+156,Konya Plain - Ceramic Neolithic,tr_konya_mnl,37.877845,32.521164,-7000,-6600,Anatolia-Caucasus
+157,Konya Plain - Late Neolithic,tr_konya_lnl,37.877845,32.521164,-6600,-6000,Anatolia-Caucasus
+158,Konya Plain - Early Chalcolithic,tr_konya_eca,37.877845,32.521164,-6000,-5500,Anatolia-Caucasus
+159,Konya Plain - Late Chalcolithic,tr_konya_lca,37.877845,32.521164,-5500,-3000,Anatolia-Caucasus
+160,Konya Plain - Early Bronze Age,tr_konya_eba,37.877845,32.521164,-3000,-2000,Anatolia-Caucasus
+161,Middle Bronze Age in Central Anatolia,tr_central_anatolia_mba,37.877845,32.521164,-2000,-1700,Anatolia-Caucasus
+162,Hatti - Old Kingdom,tr_hatti_old_k,37.877845,32.521164,-1650,-1500,Anatolia-Caucasus
+163,Konya Plain - Late Bronze Age II,tr_konya_lba,37.877845,32.521164,-1500,-1400,Anatolia-Caucasus
+164,Hatti - New Kingdom,tr_hatti_new_k,37.877845,32.521164,-1400,-1180,Anatolia-Caucasus
+165,Neo-Hittite Kingdoms,tr_neo_hittite_k,37.877845,32.521164,-1180,-900,Anatolia-Caucasus
+166,Phrygian Kingdom,tr_phrygian_k,37.877845,32.521164,-900,-695,Anatolia-Caucasus
+167,Tabal Kingdoms,tr_tabal_k,37.877845,32.521164,-900,-730,Anatolia-Caucasus
+168,Kingdom of Lydia,tr_lydia_k,37.877845,32.521164,-670,-546,Anatolia-Caucasus
+169,Lysimachus Kingdom,tr_lysimachus_k,37.877845,32.521164,-323,-281,Anatolia-Caucasus
+170,Late Cappadocia,tr_cappadocia_2,37.877845,32.521164,-330,16,Anatolia-Caucasus
+171,Rum Sultanate,tr_rum_sultanate,37.877845,32.521164,1077,1307,Anatolia-Caucasus
+172,Ilkhanate,ir_il_khanate,32.382851,48.235564,1256,1339,Iran
+173,Ottoman Emirate,tr_ottoman_emirate,37.877845,32.521164,1299,1402,Anatolia-Caucasus
+174,Ottoman Empire I,tr_ottoman_emp_1,37.877845,32.521164,1402,1517,Anatolia-Caucasus
+175,Ottoman Empire II,tr_ottoman_emp_2,37.877845,32.521164,1517,1683,Anatolia-Caucasus
+176,Ottoman Empire III,tr_ottoman_emp_3,37.877845,32.521164,1683,1839,Anatolia-Caucasus
+177,Ottoman Empire IV,tr_ottoman_emp_4,37.877845,32.521164,1839,1922,Anatolia-Caucasus
+178,Latium - Copper Age,it_latium_ca,41.890407,12.486948,-3600,-1800,Southern Europe
+179,Latium - Bronze Age,it_latium_ba,41.890407,12.486948,-1800,-900,Southern Europe
+180,Latium - Iron Age,it_latium_ia,41.890407,12.486948,-1000,-580,Southern Europe
+181,Roman Kingdom,it_roman_k,41.890407,12.486948,-716,-509,Southern Europe
+182,Early Roman Republic,it_roman_rep_1,41.890407,12.486948,-509,-264,Southern Europe
+183,Middle Roman Republic,it_roman_rep_2,41.890407,12.486948,-264,-133,Southern Europe
+184,Late Roman Republic,it_roman_rep_3,41.890407,12.486948,-133,-31,Southern Europe
+185,Western Roman Empire - Late Antiquity,it_western_roman_emp,41.890407,12.486948,395,476,Southern Europe
+186,Ostrogothic Kingdom,it_ostrogoth_k,41.890407,12.486948,489,554,Southern Europe
+187,Exarchate of Ravenna,it_ravenna_exarchate,41.890407,12.486948,568,751,Southern Europe
+188,Republic of St Peter I,it_st_peter_rep_1,41.890407,12.486948,752,904,Southern Europe
+189,Rome - Republic of St Peter II,it_st_peter_rep_2,41.890407,12.486948,904,1198,Southern Europe
+190,Papal States - High Medieval Period,it_papal_state_1,41.890407,12.486948,1198,1309,Southern Europe
+191,Papal States - Renaissance Period,it_papal_state_2,41.890407,12.486948,1378,1527,Southern Europe
+192,Papal States - Early Modern Period I,it_papal_state_3,41.890407,12.486948,1527,1648,Southern Europe
+193,Papal States - Early Modern Period II,it_papal_state_4,41.890407,12.486948,1648,1809,Southern Europe
+194,Sakha - Early,ru_sakha_early,63.4628222423,129.379494854,1400,1632,Siberia
+195,Sakha - Late,ru_sakha_late,63.4628222423,129.379494854,1632,1900,Siberia
+196,Shuar - Colonial,ec_shuar_1,-2.89537519716,-77.6741904014,1534,1830,Amazonia
+197,Shuar - Ecuadorian,ec_shuar_2,-2.89537519716,-77.6741904014,1831,1931,Amazonia
+198,Egypt - New Kingdom Thutmosid Period,eg_new_k_1,25.725715,32.714706,-1550,-1293,Northeast Africa
+199,Egypt - New Kingdom Ramesside Period,eg_new_k_2,25.725715,32.714706,-1293,-1070,Northeast Africa
+200,Egypt - Thebes-Libyan Period,eg_thebes_libyan,25.725715,32.714706,-1069,-747,Northeast Africa
+201,Carthage Empire,tn_carthage_emp,,,-814,-146,Maghreb
+203,Egypt - Saite Period,eg_saite,25.725715,32.714706,-664,-525,Northeast Africa
+204,Meroe,sd_meroe,,,-600,-300,Northeast Africa
+205,Egypt - Inter-Occupation Period,eg_inter_occupation,25.725715,32.714706,-404,-342,Northeast Africa
+206,Numidia,dz_numidia,,,-220,-46,Maghreb
+207,Ptolemaic Kingdom II,eg_ptolemaic_k_2,25.725715,32.714706,-217,-30,Northeast Africa
+208,Axum I,et_aksum_emp_1,14.850891,43.315739,-149,349,East Africa
+209,Mauretania,ma_mauretania,,,-125,44,Sahel
+210,Axum II,et_aksum_emp_2,,,350,599,East Africa
+211,Vandal Kingdom,dz_vandal_k,,,429,534,Maghreb
+212,Makuria Kingdom I,sd_makuria_k_1,,,568,618,Northeast Africa
+213,Axum III,et_aksum_emp_3,,,600,800,East Africa
+214,Alodia Kingdom,sd_alodia,,,600,1504,Northeast Africa
+215,Makuria Kingdom II,sd_makuria_k_2,,,619,849,Northeast Africa
+216,Middle Wagadu Empire,mr_wagadu_2,16.717549,-3.041703,700,1077,West Africa
+217,Rustamid Imamate,dz_rustamid_imamate,,,761,909,Maghreb
+218,Idrisids,ma_idrisid_dyn,,,789,917,Maghreb
+219,Makuria Kingdom III,sd_makuria_k_3,,,850,1099,Northeast Africa
+220,Kanem Empire,td_kanem,,,850,1380,Sahel
+221,Fatimid Caliphate,tn_fatimid_cal,25.725715,32.714706,909,1171,Northeast Africa
+222,Zirids,tn_zirid_dyn,,,973,1148,Maghreb
+223,Almoravids,ma_almoravid_dyn,,,1035,1150,Maghreb
+224,Later Wagadu Empire,mr_wagadu_3,16.717549,-3.041703,1078,1203,West Africa
+225,Almohad Empire,ma_almohad_emp,,,1123,1248,Maghreb
+226,Banu Ghaniya,ib_banu_ghaniya,,,1126,1227,Maghreb
+227,Zagwe,et_zagwe,,,1137,1269,East Africa
+228,Hafsid Dynasty,tn_hafsid_dyn,,,1227,1452,Maghreb
+229,Mali Empire,ml_mali_emp,16.717549,-3.041703,1230,1410,West Africa
+230,Tlemcen,dz_tlemcen,,,1235,1554,Maghreb
+231,Zayyanid Berber Kingdom,dz_zayyanid_dyn,,,1235,1509,Sahel
+232,Egypt - Mamluk Sultanate I,eg_mamluk_sultanate_1,25.725715,32.714706,1260,1348,Northeast Africa
+233,Marinid Dynasty,ma_marinid_dyn,,,1269,1465,Maghreb
+234,Ethiopia Kingdom,et_ethiopian_k,,,1270,1620,East Africa
+235,Malacca Sultanate,my_malacca_sultanate_22222,,,1270,1415,Maritime Southeast Asia
+236,Egypt - Mamluk Sultanate II,eg_mamluk_sultanate_2,25.725715,32.714706,1348,1412,Northeast Africa
+237,Songhai Empire,ml_songhai_1,,,1376,1493,Sahel
+239,Egypt - Mamluk Sultanate III,eg_mamluk_sultanate_3,25.725715,32.714706,1412,1517,Northeast Africa
+240,Wattasid,ma_wattasid_dyn,,,1465,1554,Maghreb
+241,Kingdom of Congo,ao_kongo_2,,,1491,1568,Central Africa
+242,Songhai Empire - Askiya Dynasty,ml_songhai_2,16.717549,-3.041703,1493,1591,West Africa
+243,Late Shang,cn_late_shang_dyn,34.701825,112.517587,-1250,-1045,North China
+244,Western Zhou,cn_western_zhou_dyn,34.701825,112.517587,-1122,-771,North China
+245,Jin,cn_jin_spring_and_autumn,34.701825,112.517587,-780,-404,North China
+246,Chu Kingdom - Spring and Autumn Period,cn_chu_dyn_spring_autumn,,,-740,-489,South China
+247,Wu Confederacy,cn_wu_confederacy,,,-585,-477,South China
+248,Yue Kingdom,cn_yue_dyn,,,-510,-334,South China
+249,Chu Kingdom - Warring States Period,cn_chu_k_warring_states,34.701825,112.517587,-488,-223,South China
+250,Qin Empire,cn_qin_emp,,,-338,-207,North China
+251,Western Han Empire,cn_western_han_dyn,34.701825,112.517587,-202,9,North China
+252,Goguryeo Kingdom,kr_goguryeo_k,,,-37,668,Northeast Asia
+253,Eastern Han Empire,cn_eastern_han_dyn,34.701825,112.517587,25,220,North China
+254,Western Jin,cn_western_jin_dyn,34.701825,112.517587,265,317,North China
+255,Eastern Jin Dynasty,cn_eastern_jin_dyn,,,317,420,North China
+256,Later Yan Kingdom,cn_later_yan_dyn,,,385,409,North China
+257,Later Qin Kingdom,cn_later_qin_dyn,,,386,417,North China
+258,Northern Wei,cn_northern_wei_dyn,34.701825,112.517587,386,534,North China
+259,Southern Qi State,cn_southern_qi_dyn,,,479,502,South China
+260,Sui Dynasty,cn_sui_dyn,34.701825,112.517587,581,618,North China
+261,Tang Dynasty I,cn_tang_dyn_1,34.701825,112.517587,617,763,North China
+262,Balhae Kingdom,kr_balhae_k,,,698,926,Northeast Asia
+263,Nara,jp_nara,,,710,794,Northeast Asia
+264,Tang Dynasty II,cn_tang_dyn_2,34.701825,112.517587,763,907,North China
+265,Goryeo Kingdom,kr_goryeo_k,,,936,1258,Northeast Asia
+266,Jin Dynasty,cn_later_great_jin,34.701825,112.517587,1115,1234,North China
+267,Mongol Empire,mn_mongol_emp,47.200757,102.845486,1206,1270,Mongolia
+268,Great Yuan,cn_yuan_dyn,34.701825,112.517587,1271,1368,North China
+269,Great Ming,cn_ming_dyn,34.701825,112.517587,1368,1644,North China
+270,Joseon Dynasty,kr_joseon,,,1392,1567,Northeast Asia
+271,Third Scythian Kingdom,ua_skythian_k_3,,,-429,-225,Eastern Europe
+272,Xiongnu Imperial Confederation,mn_hunnu_emp,47.200757,102.845486,-209,-60,Mongolia
+273,Kangju,uz_kangju,,,-150,350,Turkestan
+274,Late Xiongnu,mn_hunnu_late,47.200757,102.845486,-60,100,Mongolia
+275,Loulan-Shanshan kingdom,cn_loulan_shanshan_k,,,25,330,Mongolia
+276,Tuyuhun,cn_tuyuhun,,,300,663,Mongolia
+277,Chionites,kz_chionite,,,300,388,Turkestan
+278,Rouran Khaganate,mn_rouran_khaganate,47.200757,102.845486,300,555,Mongolia
+279,Yueban,kz_yueban,,,350,450,Turkestan
+280,Kingdom of the Huns,hu_hun_k,,,376,469,Central Europe
+281,Kidarite Kingdom,af_kidarite_k,39.631284,66.93817,388,477,Afghanistan
+282,Western Turk Khaganate,kg_western_turk_khaganate,39.631284,66.93817,582,630,Turkestan
+283,Eastern Turk Khaganate,mn_turk_khaganate_1,47.200757,102.845486,583,630,Mongolia
+284,Avar Khaganate,hu_avar_khaganate,,,586,822,Central Europe
+285,Khazar Empire,ru_khazar_emp,,,626,965,Pontic-Caspian
+286,Uigur Khaganate,mn_uygur_khaganate,47.200757,102.845486,745,840,Mongolia
+287,Samanid Empire,uz_samanid_emp,39.631284,66.93817,819,999,Turkestan
+288,Khitan I,mn_khitan_1,47.200757,102.845486,907,1125,Mongolia
+289,Kara-Khanids,kg_kara_khanid_dyn,39.631284,66.93817,950,1212,Turkestan
+290,Kingdom of Georgia II,ge_georgia_k_2,,,975,1243,Anatolia-Caucasus
+291,Xixia,cn_xixia,,,1032,1227,Mongolia
+292,Principality of Ryazan,ru_ryazan_principality,,,1097,1521,Eastern Europe
+293,Russian Principate,ua_russian_principate,,,1133,1240,Eastern Europe
+294,Kara Khitai Khanate,tm_kara_khitai_khanate,,,1137,1218,Turkestan
+295,Khwarezmid Empire,tm_khwarezmid_emp,,,1157,1231,Turkestan
+296,Chagatai Khanate,uz_chagatai_khanate,39.631284,66.93817,1227,1402,Turkestan
+297,Oirats,kz_oirat,,,1368,1630,Turkestan
+298,Kazan Khanate,ru_kazan_khanate,,,1438,1552,Pontic-Caspian
+299,Crimean Khanate,ru_crimean_khanate,,,1440,1783,Pontic-Caspian
+300,Sibir Khanate,ru_sibir_khanate,,,1490,1598,Siberia
+301,Shaybanid Kingdom,uz_shaybanid_k,,,1500,1598,Turkestan
+302,England Tudor-Stuart,gb_tudor_stuart,,,1486,1689,Western Europe
+303,Visigothic Kingdom,es_visigothic_k,,,418,711,Southern Europe
+304,Early Merovingian,fr_merovingian_emp_1,48.866111,2.312458,481,543,Western Europe
+305,Lombard Kingdom,it_lombard_k,,,568,774,Southern Europe
+306,Middle Merovingian,fr_merovingian_emp_2,48.866111,2.312458,543,687,Western Europe
+307,Duchy of Aquitaine I,fr_aquitaine_duc_1,,,602,768,Western Europe
+308,Bulgaria - Early,bg_bulgaria_early,,,681,864,Southeastern Europe
+309,Carolingian Empire I,fr_carolingian_emp_1,48.866111,2.312458,752,840,Western Europe
+310,Cordoba Caliphate,es_cordoba_cal,,,929,1031,Southern Europe
+311,Carolingian Empire II,fr_carolingian_emp_2,48.866111,2.312458,840,987,Western Europe
+312,Bulgaria - Middle,bg_bulgaria_medieval,,,865,1018,Southeastern Europe
+313,Novgorod Land,ru_novgorod_land,,,880,1240,Eastern Europe
+314,Kievan Rus,ua_kievan_rus,,,880,1242,Eastern Europe
+315,Leon,es_leon_k,,,910,1158,Southern Europe
+317,Polish Kingdom - Piast Dynasty,pl_piast_dyn_1,,,963,1138,Central Europe
+318,Volga Kingdom,bg_volga_k,,,965,1236,Southeastern Europe
+320,Aragon Kingdom,es_aragon_k,,,1035,1163,Southern Europe
+321,Castile Kingdom,es_castile_k,,,1065,1230,Southern Europe
+323,Novgorod Republic,ru_novgorod_rep,,,1135,1478,Eastern Europe
+325,Vladimir-Suzdal,ru_vladimir_suzdal,,,1157,1331,Eastern Europe
+326,Kingdom of Sicily - Hohenstaufen and Angevin dynasties,it_sicily_k_2,,,1194,1281,Southern Europe
+328,Galicia-Volhynia Principality,ua_galicia_volhynia_principality,,,1199,1349,Eastern Europe
+329,Leon & Castille,es_leon_castille,,,1230,1715,Southern Europe
+330,State of the Teutonic Order,pl_teutonic_order,,,1300,1400,Central Europe
+333,French Kingdom - Early Valois,fr_valois_k_1,48.866111,2.312458,1328,1450,Western Europe
+334,Poland-Lithuania Kingdom,pl_jagiellonian_dyn,,,1386,1569,Central Europe
+335,Kalmar Union,sv_kalmar_union,,,1397,1523,Northern Europe
+337,"Grand Principality of Moscow, Rurikid Dynasty",ru_moskva_rurik_dyn,,,1480,1613,Eastern Europe
+339,Kingdom of Sweden II,sv_swedish_k_2,,,1524,1610,Northern Europe
+342,Kassite Babylonia,iq_babylonia_2,32.47,44.42,-1595,-1150,Mesopotamia
+343,Mitanni Kingdom,sy_mitanni_k,,,-1475,-1275,Levant
+344,Urartu Kingdom,tr_urartu_k,,,-1200,-710,Anatolia-Caucasus
+345,Median Persian Empire,ir_median_emp,,,-715,-550,Iran
+346,Neo-Babylonian Empire,iq_neo_babylonian_emp,32.47,44.42,-626,-539,Mesopotamia
+347,Atropatene Kingdom,ir_atropatene_k,,,-323,200,Iran
+348,Nabataean Kingdom,jo_nabataean_k,,,-312,106,Levant
+349,Pergamon Kingdom,tr_pergamon_k,,,-282,-133,Anatolia-Caucasus
+350,Greco-Bactrian Kingdom,af_greco_bactrian_k,39.631284,66.93817,-256,-125,Afghanistan
+351,Armenian Kingdom,am_artaxiad_dyn,,,-188,6,Anatolia-Caucasus
+352,Indo-Parthian Kingdom,pk_indo_parthian_k,,,-12,100,Pakistan
+353,Himyar I,ye_himyar_1,14.850891,43.315739,270,340,Arabia
+354,Himyar II,ye_himyar_2,14.850891,43.315739,378,525,Arabia
+355,Lakhmid Kigdom,iq_lakhmid_k,,,400,611,Arabia
+356,Ghassanid Kingdom,jo_ghassanid_k,,,500,636,Levant
+357,Omani Azd Tribe,om_azd,,,632,702,Arabia
+358,Yemen Hijaz,sa_rashidun_dyn,,,632,661,Arabia
+359,Yemen Ziyadid Dynasty,ye_ziyad_dyn,14.850891,43.315739,822,1037,Arabia
+360,Saffarid Caliphate,ir_saffarid_emp,,,861,1003,Iran
+361,Egypt - Tulunid-Ikhshidid Period,eg_thulunid_ikhshidid,25.725715,32.714706,868,969,Northeast Africa
+362,Buyid Confederation,ir_buyid_confederation,32.382851,48.235564,932,1062,Iran
+363,Ghaznavid Empire,af_ghaznavid_emp,,,998,1040,Afghanistan
+364,Seljuk Sultanate,ir_seljuk_sultanate,32.382851,48.235564,1037,1157,Iran
+365,Yemen - Era of Warlords,ye_warlords,14.850891,43.315739,1038,1174,Arabia
+366,Oman Imamate,om_nabhani_imamate,,,1160,1660,Arabia
+367,Ayyubid Sultanate,eg_ayyubid_sultanate,25.725715,32.714706,1171,1250,Northeast Africa
+368,Rasulid Dynasty,ye_rasulid_dyn,14.850891,43.315739,1229,1453,Arabia
+369,Jayarid Khanate,ir_jayarid_khanate,,,1336,1393,Iran
+370,Timurid Empire,uz_timurid_emp,39.631284,66.93817,1370,1526,Turkestan
+372,Yemen - Tahirid Dynasty,ye_tahirid_dyn,14.850891,43.315739,1454,1517,Arabia
+373,Astrakhan Khanate,ru_astrakhan_khanate,,,1466,1556,Pontic-Caspian
+374,Safavid Empire,ir_safavid_emp,32.382851,48.235564,1501,1722,Iran
+375,Viet Baiyu Kingdom,cn_viet_baiyu_k,,,-332,-109,Mainland Southeast Asia
+376,Nanzhao Kingdom,cn_nanzhao_k,,,800,900,Mainland Southeast Asia
+377,Srivijaya Empire,id_srivijaya_emp,,,852,1200,Maritime Southeast Asia
+378,Dali Kingdom,cn_dali_k,,,937,1253,Mainland Southeast Asia
+379,Bagan,mm_bagan,,,1044,1287,Mainland Southeast Asia
+380,Sukhotai,th_sukhotai,,,1238,1419,Mainland Southeast Asia
+381,Lan Xang Kingdom,la_lan_xang_k,,,1354,1707,Mainland Southeast Asia
+382,Ava Kingdom,mm_ava_k,,,1364,1527,Mainland Southeast Asia
+383,Malacca Sultanate,my_malacca_sultanate,,,1396,1511,Maritime Southeast Asia
+384,Mahajanapada era,in_mahajanapada,25.75,82.7,-600,-324,North India
+385,Magadha - Sunga Empire,in_sunga_emp,25.75,82.7,-187,-65,North India
+386,Western Satraps,pk_western_satraps,,,35,405,Pakistan
+387,Yaudheya Republic,in_yaudheya_rep,,,300,375,North India
+388,Gupta Empire,in_gupta_emp,25.75,82.7,320,550,North India
+389,Kamarupa Kingdom,in_kamarupa_k,,,350,1130,Eastern South Asia
+390,Magadha,in_magadha_k,25.75,82.7,450,605,North India
+391,Maitraka Dynasty,in_maitraka_dyn,,,470,790,North India
+393,Maukhari Dynasty,in_maukhari_dyn,,,550,605,Southern India
+394,Tibet Kingdom,cn_tibet_k,,,620,846,Tibet
+395,Karkota Dynasty,in_karkota_dyn,,,625,1339,North India
+396,Pala Empire,in_pala_emp,,,750,1174,Eastern South Asia
+397,Chola Empire,in_chola_emp,,,849,1280,Southern India
+398,Utpala Dynasty,in_utpala_dyn,,,855,1003,North India
+399,Chaulukya Dynasty,in_chaulukya_dyn,,,941,1245,North India
+400,Chandela Kingdom,in_chandela_k,,,950,1308,North India
+401,Chauhana Dynasty,in_chauhana_dyn,,,973,1192,North India
+402,Paramara Dynasty,in_paramara_dyn,,,974,1235,Southern India
+403,Lohara Dynasty,in_lohara_dyn,,,1003,1255,North India
+404,Ganga Kingdom,in_ganga_k,,,1028,1435,Eastern South Asia
+405,Gahadavala Dynasty,in_gahadavala_dyn,25.75,82.7,1085,1193,North India
+406,Kalachuris of Kalyani,in_kalachuri_emp,,,1157,1184,Southern India
+407,Kakatiya Dynasty,in_kakatiya_dyn,,,1175,1324,Southern India
+408,Yadava Dynasty,in_yadava_dyn,,,1190,1318,North India
+409,Bengal Sultanate,bd_bengal_sultanate,,,1338,1538,Eastern South Asia
+410,Kashmiri Sultanate,in_kashmiri_sultanate,,,1346,1580,North India
+411,Bahmani Sultanate,in_bahmani_sultanate,,,1347,1518,Southern India
+412,Sharqi,in_sharqi_dyn,,,1394,1479,North India
+413,Bijapur Sultanate,in_bijapur_sultanate,,,1470,1686,Southern India
+414,Neolithic Middle Ganga,in_ganga_nl,25.75,82.7,-7000,-3001,North India
+415,Chalcolithic Middle Ganga,in_ganga_ca,25.75,82.7,-3000,-601,North India
+416,Kingdom of Ayodhya,in_ayodhya_k,25.75,82.7,-64,34,North India
+417,Kannauj - Varman Dynasty,in_kannauj_varman_dyn,25.75,82.7,650,780,North India
+418,Gurjar-Pratihara Dynasty,in_gurjara_pratihara_dyn,25.75,82.7,730,1030,North India
+419,Yangshao,cn_yangshao,34.701825,112.517587,-5000,-3000,North China
+420,Longshan,cn_longshan,34.701825,112.517587,-3000,-1900,North China
+421,Erlitou,cn_erlitou,34.701825,112.517587,-1850,-1600,North China
+422,Erligang,cn_erligang,34.701825,112.517587,-1650,-1250,North China
+423,Eastern Zhou,cn_eastern_zhou_warring_states,,,-475,-256,North China
+424,Early Wei Dynasty,cn_wei_dyn_warring_states,34.701825,112.517587,-445,-225,North China
+425,Northern Song,cn_northern_song_dyn,34.701825,112.517587,960,1127,North China
+426,Southern Song,cn_southern_song_dyn,,,1127,1279,South China
+427,Jenne-jeno I,ml_jenne_jeno_1,16.717549,-3.041703,-250,49,West Africa
+428,Jenne-jeno II,ml_jenne_jeno_2,16.717549,-3.041703,50,399,West Africa
+429,Early Wagadu Empire,mr_wagadu_1,,,250,700,West Africa
+430,Jenne-jeno III,ml_jenne_jeno_3,16.717549,-3.041703,400,899,West Africa
+431,Jenne-jeno IV,ml_jenne_jeno_4,16.717549,-3.041703,900,1300,West Africa
+432,Saadi Sultanate,ma_saadi_sultanate,16.717549,-3.041703,1554,1659,Maghreb
+433,Segou Kingdom,ml_segou_k,16.717549,-3.041703,1650,1712,West Africa
+434,Bamana kingdom,ml_bamana_k,16.717549,-3.041703,1712,1861,West Africa
+435,Neguanje,co_neguanje,10.7802871821,-73.6403880979,250,1050,Caribbean
+436,Tairona,co_tairona,10.7802871821,-73.6403880979,1050,1524,Caribbean
+437,Early Xiongnu,mn_hunnu_early,47.200757,102.845486,-1400,-300,Mongolia
+438,Xianbei Confederation,mn_xianbei,47.200757,102.845486,100,250,Mongolia
+439,Shiwei,mn_shiwei,47.200757,102.845486,600,1000,Mongolia
+440,Second Turk Khaganate,mn_turk_khaganate_2,47.200757,102.845486,682,744,Mongolia
+442,Early Mongols,mn_mongol_early,47.200757,102.845486,1000,1206,Mongolia
+443,Late Mongols,mn_mongol_late,47.200757,102.845486,1368,1690,Mongolia
+444,Zungharian Empire,mn_zungharian_emp,47.200757,102.845486,1670,1757,Mongolia
+445,Orokaiva - Pre-Colonial,pg_orokaiva_pre_colonial,-8.590711,148.193783,1734,1883,New Guinea
+446,Orokaiva - Colonial,pg_orokaiva_colonial,-8.590711,148.193783,1884,1942,New Guinea
+447,Beaker Culture,fr_beaker_eba,48.866111,2.312458,-3200,-2000,Western Europe
+448,Atlantic Complex,fr_atlantic_complex,48.866111,2.312458,-2200,-1000,Western Europe
+449,Hallstatt A-B1,fr_hallstatt_a_b1,48.866111,2.312458,-1000,-900,Western Europe
+450,Hallstatt B2-3,fr_hallstatt_b2_3,48.866111,2.312458,-900,-700,Western Europe
+451,Hallstatt C,fr_hallstatt_c,48.866111,2.312458,-700,-600,Western Europe
+452,Hallstatt D,fr_hallstatt_d,48.866111,2.312458,-600,-475,Western Europe
+453,La Tene A-B1,fr_la_tene_a_b1,48.866111,2.312458,-475,-325,Western Europe
+454,La Tene B2-C1,fr_la_tene_b2_c1,48.866111,2.312458,-325,-175,Western Europe
+455,La Tene C2-D,fr_la_tene_c2_d,48.866111,2.312458,-175,-27,Western Europe
+456,Proto-Carolingian,fr_merovingian_emp_3,48.866111,2.312458,687,751,Western Europe
+457,Proto-French Kingdom,fr_capetian_k_1,48.866111,2.312458,987,1150,Western Europe
+458,French Kingdom - Late Capetian,fr_capetian_k_2,48.866111,2.312458,1150,1328,Western Europe
+459,French Kingdom - Late Valois,fr_valois_k_2,48.866111,2.312458,1450,1589,Western Europe
+460,French Kingdom - Early Bourbon,fr_bourbon_k_1,48.866111,2.312458,1589,1660,Western Europe
+461,French Kingdom - Late Bourbon,fr_bourbon_k_2,48.866111,2.312458,1660,1815,Western Europe
+462,Sarazm,tj_sarasm,39.631284,66.93817,-3500,-2000,Turkestan
+463,Andronovo,kz_andronovo,39.631284,66.93817,-1800,-1200,Turkestan
+464,Koktepe I,uz_koktepe_1,39.631284,66.93817,-1400,-1000,Turkestan
+465,Ancient Khwarazm,uz_khwarasm_1,39.631284,66.93817,-1000,-521,Turkestan
+466,Koktepe II,uz_koktepe_2,39.631284,66.93817,-750,-550,Turkestan
+467,Tocharians,af_tocharian,39.631284,66.93817,-129,29,Afghanistan
+468,Sogdiana - City-States Period,uz_sogdiana_city_states,39.631284,66.93817,604,711,Turkestan
+469,Khanate of Bukhara,uz_janid_dyn,39.631284,66.93817,1599,1747,Turkestan
+470,Hmong - Late Qing,cn_hmong_1,27.5388341428,103.99173096,1701,1895,South China
+471,Hmong - Early Chinese,cn_hmong_2,27.5388341428,103.99173096,1895,1941,South China
+472,Southern Mesopotamia Neolithic,iq_so_mesopotamia_nl,32.47,44.42,-9000,-5501,Mesopotamia
+473,Ubaid,iq_ubaid,32.47,44.42,-5500,-4000,Mesopotamia
+474,Uruk,iq_uruk,32.47,44.42,-4000,-2900,Mesopotamia
+475,Early Dynastic,iq_early_dynastic,32.47,44.42,-2900,-2500,Mesopotamia
+476,Akkadian Empire,iq_akkad_emp,32.47,44.42,-2270,-2083,Mesopotamia
+477,Ur - Dynasty III,iq_ur_dyn_3,32.47,44.42,-2112,-2004,Mesopotamia
+478,Isin-Larsa,iq_isin_larsa,32.47,44.42,-2004,-1763,Mesopotamia
+479,Amorite Babylonia,iq_babylonia_1,32.47,44.42,-2000,-1600,Mesopotamia
+480,Second Dynasty of Isin,iq_isin_dynasty2,32.47,44.42,-1153,-1027,Mesopotamia
+481,Bazi Dynasty,iq_bazi_dyn,32.47,44.42,-1005,-986,Mesopotamia
+482,Dynasty of E,iq_dynasty_e,32.47,44.42,-979,-732,Mesopotamia
+483,Parthian Empire II,iq_parthian_emp_2,32.47,44.42,41,226,Iran
+484,Abbasid Caliphate II,iq_abbasid_cal_2,32.47,44.42,1191,1258,Mesopotamia
+485,Pre-Ceramic Period,ir_susiana_pre_ceramic,32.382851,48.235564,-7800,-7200,Iran
+486,Formative Period,ir_susiana_formative,32.382851,48.235564,-7200,-7000,Iran
+487,Susiana - Muhammad Jaffar,ir_susiana_archaic,32.382851,48.235564,-7000,-6000,Iran
+488,Susiana A,ir_susiana_a,32.382851,48.235564,-6000,-5700,Iran
+489,Susiana B,ir_susiana_b,32.382851,48.235564,-5700,-5100,Iran
+490,Susiana - Early Ubaid,ir_susiana_ubaid_1,32.382851,48.235564,-5100,-4700,Iran
+491,Susiana - Late Ubaid,ir_susiana_ubaid_2,32.382851,48.235564,-4700,-4300,Iran
+492,Susa I,ir_susa_1,32.382851,48.235564,-4300,-3800,Iran
+493,Susa II,ir_susa_2,32.382851,48.235564,-3800,-3100,Iran
+494,Susa III,ir_susa_3,32.382851,48.235564,-3100,-2675,Iran
+495,Elam - Awan Dynasty I,ir_elam_1,32.382851,48.235564,-2675,-2100,Iran
+496,Elam - Shimashki Period,ir_elam_2,32.382851,48.235564,-2028,-1940,Iran
+497,Elam - Early Sukkalmah,ir_elam_3,32.382851,48.235564,-1900,-1701,Iran
+498,Elam - Late Sukkalmah,ir_elam_4,32.382851,48.235564,-1700,-1500,Iran
+499,Elam - Kidinuid Period,ir_elam_5,32.382851,48.235564,-1500,-1400,Iran
+500,Elam - Igihalkid Period,ir_elam_6,32.382851,48.235564,-1399,-1200,Iran
+501,Elam - Shutrukid Period,ir_elam_7,32.382851,48.235564,-1199,-1100,Iran
+502,Elam - Crisis Period,ir_elam_8,32.382851,48.235564,-1100,-900,Iran
+503,Elam I,ir_neo_elam_1,32.382851,48.235564,-900,-744,Iran
+504,Elam II,ir_neo_elam_2,32.382851,48.235564,-743,-647,Iran
+505,Elam III,ir_neo_elam_3,32.382851,48.235564,-612,-539,Iran
+506,Macedonian Empire,gr_macedonian_emp,,,-330,-312,Southeastern Europe
+507,Elymais II,ir_elymais_2,32.382851,48.235564,25,215,Iran
+508,Ak Koyunlu,ir_ak_koyunlu,32.382851,48.235564,1339,1501,Iran
+509,Qajar Dynasty,ir_qajar_dyn,32.382851,48.235564,1794,1925,Iran
+510,Badarian,eg_badarian,25.725715,32.714706,-4400,-3800,Northeast Africa
+511,Naqada I,eg_naqada_1,25.725715,32.714706,-3800,-3550,Northeast Africa
+512,Naqada II,eg_naqada_2,25.725715,32.714706,-3550,-3300,Northeast Africa
+513,Egypt - Dynasty 0,eg_naqada_3,25.725715,32.714706,-3300,-3100,Northeast Africa
+514,Egypt - Dynasty I,eg_dynasty_1,25.725715,32.714706,-3100,-2900,Northeast Africa
+515,Egypt - Dynasty II,eg_dynasty_2,25.725715,32.714706,-2900,-2687,Northeast Africa
+516,Egypt - Classic Old Kingdom,eg_old_k_1,25.725715,32.714706,-2650,-2350,Northeast Africa
+517,Egypt - Late Old Kingdom,eg_old_k_2,25.725715,32.714706,-2350,-2150,Northeast Africa
+518,Egypt - Period of the Regions,eg_regions,25.725715,32.714706,-2150,-2016,Northeast Africa
+519,Egypt - Middle Kingdom,eg_middle_k,25.725715,32.714706,-2016,-1700,Northeast Africa
+520,Egypt - Thebes-Hyksos Period,eg_thebes_hyksos,25.725715,32.714706,-1720,-1567,Northeast Africa
+521,Egypt - Kushite Period,eg_kushite,25.725715,32.714706,-747,-656,Northeast Africa
+522,Oaxaca - Tierras Largas,mx_tierras_largas,17.041135,-96.761022,-1400,-1150,Mexico
+523,Oaxaca - San Jose,mx_san_jose,17.041135,-96.761022,-1150,-700,Mexico
+524,Oaxaca - Rosario,mx_rosario,17.041135,-96.761022,-700,-500,Mexico
+525,Early Monte Alban I,mx_monte_alban_1_early,17.041135,-96.761022,-500,-300,Mexico
+526,Monte Alban Late I,mx_monte_alban_1_late,17.041135,-96.761022,-300,-100,Mexico
+527,Monte Alban II,mx_monte_alban_2,17.041135,-96.761022,-100,200,Mexico
+528,Monte Alban III,mx_monte_alban_3_a,17.041135,-96.761022,200,500,Mexico
+529,Monte Alban IIIB and IV,mx_monte_alban_3_b_4,17.041135,-96.761022,500,900,Mexico
+530,Monte Alban V Early Postclassic,mx_monte_alban_5_a,,,900,1099,Mexico
+531,Monte Alban V Late Postclassic,mx_monte_alban_5_b,,,1101,1520,Mexico
+532,Monte Alban V,mx_monte_alban_5,17.041135,-96.761022,900,1520,Mexico
+533,Early Nyoro,ug_early_nyoro,,,900,1449,Central Africa
+534,Cwezi Dynasty,ug_bunyoro_k_1,,,1450,1699,Central Africa
+535,Bito Dynasty,ug_bunyoro_k_2,,,1700,1894,Central Africa
+536,Neolithic Yemen,ye_yemen_lnl,14.850891,43.315739,-3500,-1201,Arabia
+537,Yemen - Late Bronze Age,ye_yemen_lba,14.850891,43.315739,-1200,-801,Arabia
+538,Sabaean Commonwealth,ye_sabaean_commonwealth,14.850891,43.315739,-800,-451,Arabia
+539,Qatabanian Commonwealth,ye_qatabanian_commonwealth,14.850891,43.315739,-450,-111,Arabia
+540,Kingdom of Saba and Dhu Raydan,ye_saba_k,14.850891,43.315739,-110,149,Arabia
+541,Yemen - Qasimid Dynasty,ye_qasimid_dyn,14.850891,43.315739,1637,1805,Arabia
+542,Yemen - Ottoman period,tr_ottoman_emp_4_copy,,,1873,1920,Anatolia-Caucasus
+543,Peiligang,cn_peiligang,34.701825,112.517587,-7000,-5001,North China
+544,Republic of Venice III,it_venetian_rep_3,35.3387,25.1442,1204,1563,Southern Europe
+545,Republic of Venice IV,it_venetian_rep_4,35.3387,25.1442,1564,1797,Southern Europe
+546,Five Dynasties Period,cn_five_dyn,,,906,970,North China
+547,Wei Kingdom,cn_wei_k,,,220,265,North China
+548,Italian Kingdom Late Antiquity,it_italy_k,,,476,489,Southern Europe
+560,Late Tiwanaku,bo_tiwanaku_2,,,800,1149,Andes
+561,Hohokam Culture,us_hohokam_culture,,,300,1500,Western North America
+562,Classic Maya,mx_maya_classic,,,550,950,Mexico
+563,Antebellum US,us_antebellum,,,1776,1865,East Coast
+565,Austria - Habsburg Dynasty I,at_habsburg_1,,,1454,1648,Central Europe
+566,Napoleonic France,fr_france_napoleonic,,,1816,1870,Western Europe
+567,Austria - Habsburg Dynasty II,at_habsburg_2,,,1649,1918,Central Europe
+568,Kingdom of Bohemia - Luxembourgian and Jagiellonian Dynasty,cz_bohemian_k_2,,,1310,1526,Central Europe
+569,Early United Mexican States,mx_mexico_1,,,1810,1920,Mexico
+570,Spanish Empire II,es_spanish_emp_2,,,1716,1814,Southern Europe
+571,"Russian Empire, Romanov Dynasty II",ru_romanov_dyn_2,,,1776,1917,Eastern Europe
+572,Austro-Hungarian Monarchy,at_austro_hungarian_emp,,,1867,1918,Central Europe
+573,Golden Horde,ru_golden_horde,,,1240,1440,Pontic-Caspian
+574,Anglo-Saxon England I,gb_anglo_saxon_1,,,410,926,Western Europe
+575,Us Reconstruction-Progressive,us_united_states_of_america_reconstruction,,,1866,1933,East Coast
+576,Chaco Regional System - Late,us_chaco_2,,,1040,1149,Western North America
+578,Alaouite Dynasty I,mo_alawi_dyn_1,,,1631,1727,Maghreb
+579,Plantagenet England,gb_england_plantagenet,,,1154,1485,Western Europe
+580,Titicaca Basin - Early Pacajes phase,bo_titicaca_early_pacajes,,,1150,1450,Andes
+581,Terminal Classic Tikal,gt_tikal_terminal_classic,,,870,950,Mexico
+582,Late United Mexican States,mx_mexico_2,,,1921,2020,Mexico
+585,Alawi Dynasty,mo_alawi_dyn_2,,,1728,1912,Maghreb
+586,Norman England,gb_england_norman,,,1066,1153,Western Europe
+587,British Empire I,gb_british_emp_1,15.386856,76.625407,1690,1849,Western Europe
+588,Empire of Japan,jp_japanese_emp,,,1869,1945,Northeast Asia
+589,Sur Empire,in_sur_emp,,,1540,1556,North India
+590,Early Classic Tikal,gt_tikal_early_classic,,,250,554,Mexico
+591,Late Classic Tikal,gt_tikal_late_classic,,,555,869,Mexico
+592,United States of America - Contemporary,us_united_states_of_america_contemporary,,,1934,2020,East Coast
+593,Italian Republic Restoration Period,it_republic_restoration,41.890407,12.486948,1309,1378,Southern Europe
+594,Interwar Austria,at_interwar_austria,,,1918,1938,Central Europe
+595,Nazi Germany,de_ns_germany,,,1933,1945,Central Europe
+598,Kingdom of Bohemia - Přemyslid Dynasty,cz_bohemian_k_1,,,1198,1309,Central Europe
+599,"Grand Principality of Moscow, Mongolian period",ru_moskva_mongolian_period,,,1240,1479,Eastern Europe
+600,"Russian Empire, Romanov Dynasty I",ru_romanov_dyn_1,,,1614,1775,Eastern Europe
+601,Soviet Union,ru_soviet_union,,,1918,1991,Eastern Europe
+605,Republic of Turkey,tr_turkey_rep,,,1923,2020,Anatolia-Caucasus
+606,Anglo-Saxon England II,gb_anglo_saxon_2,,,927,1065,Western Europe
+607,Early Modern Sierra Leone,si_early_modern_interior,,,1650,1896,West Africa
+608,Kaabu,gm_kaabu_emp,,,1500,1867,West Africa
+609,Freetown,si_freetown_1,,,1787,1808,West Africa
+610,Futa Jallon,gu_futa_jallon,,,1725,1896,West Africa
+611,Mane,si_mane_emp,,,1550,1650,West Africa
+612,Middle and Late Nok,ni_nok_1,,,-1500,-901,West Africa
+613,West Burkina Faso Yellow I,bf_west_burkina_faso_yellow_5,,,100,500,West Africa
+614,Kanem,cd_kanem,,,800,1379,West Africa
+615,Middle and Late Nok,ni_nok_2,,,-900,0,West Africa
+616,Pre-Sape Sierra Leone,si_pre_sape,,,600,1400,West Africa
+617,West Burkina Faso Red II and III,bf_west_burkina_faso_red_2,,,1100,1400,West Africa
+618,West Burkina Faso Red IV,bf_west_burkina_faso_red_4,,,1401,1500,West Africa
+619,West Burkina Faso Red I,bf_west_burkina_faso_red_1,,,701,1100,West Africa
+620,Mossi,bf_mossi_k_1,,,1100,1897,West Africa
+621,Sape,si_sape,,,1400,1550,West Africa
+622,West Burkina Faso Yellow II,bf_west_burkina_faso_yellow_6,,,501,700,West Africa
+623,Toutswe,zi_toutswe,,,700,1250,Southern Africa
+624,Great Zimbabwe,zi_great_zimbabwe,,,1270,1550,Southern Africa
+625,Torwa-Rozvi,zi_torwa_rozvi,,,1494,1850,Southern Africa
+626,Mutapa,zi_mutapa,,,1450,1880,Southern Africa
+627,Pandya Empire,in_pandya_emp_3,,,1216,1323,Southern India
+628,Dambadaneiya,sl_dambadeniya,,,1232,1293,Sri Lanka
+629,Anurādhapura IV,sl_anuradhapura_4,,,614,1017,Sri Lanka
+630,Polonnaruwa,sl_polonnaruva,,,1070,1255,Sri Lanka
+631,Anurādhapura III,sl_anuradhapura_3,,,428,614,Sri Lanka
+632,Dutch Empire,nl_dutch_emp_1,,,1648,1795,Western Europe
+633,Anurādhapura I,sl_anuradhapura_1,,,-300,70,Sri Lanka
+634,Jaffna,sl_jaffa_k,,,1310,1591,Sri Lanka
+635,Anurādhapura II,sl_anuradhapura_2,,,70,428,Sri Lanka
+636,Kingdom of Jimma,et_jimma_k,,,1790,1932,East Africa
+637,Adal Sultanate,so_adal_sultanate,,,1375,1543,East Africa
+638,Tunni Sultanate,so_tunni_sultanate,,,800,1200,East Africa
+639,Ajuran Sultanate,so_ajuran_sultanate,,,1250,1700,East Africa
+640,Habr Yunis,so_habr_yunis,,,1300,1886,East Africa
+641,Kingdom of Gomma,et_gomma_k,,,1780,1886,East Africa
+642,Sultanate of Geledi,so_geledi_sultanate,,,1750,1911,East Africa
+643,Shoa Sultanate,et_showa_sultanate,,,1108,1285,East Africa
+644,Harla Kingdom,et_harla_k,,,500,1500,East Africa
+645,Hadiya Sultanate,et_hadiya_sultanate,,,1300,1680,East Africa
+646,Ifat Sultanate,so_ifat_sultanate,,,1280,1375,East Africa
+647,Medri Bahri,er_medri_bahri,,,1310,1889,East Africa
+648,Majeerteen Sultanate,so_majeerteen_sultanate,,,1750,1926,East Africa
+649,Funj Sultanate,et_funj_sultanate,,,1504,1820,East Africa
+650,Kingdom of Kaffa,et_kaffa_k,,,1390,1897,East Africa
+651,Kingdom of Gumma,et_gumma_k,,,1800,1897,East Africa
+652,Emirate of Harar,et_harar_emirate,,,1650,1875,East Africa
+653,Early Sultanate of Aussa,et_aussa_sultanate,,,1734,1895,East Africa
+654,Isaaq Sultanate,so_isaaq_sultanate,,,1300,1886,East Africa
+655,Proto-Yoruba,ni_proto_yoruba,,,301,649,West Africa
+656,Classical Ife,ni_yoruba_classic,,,1000,1400,West Africa
+657,Late Formative Yoruba,ni_formative_yoruba,,,650,1049,West Africa
+658,Kwararafa,ni_kwararafa,,,596,1820,West Africa
+659,Allada,ni_allada_k,,,1100,1724,West Africa
+660,Igodomingodo,ni_igodomingodo,,,900,1450,West Africa
+661,Ilú-ọba Ọ̀yọ́,ni_oyo_emp_2,,,1601,1835,West Africa
+662,Whydah,ni_whydah_k,,,1671,1727,West Africa
+663,Oyo,ni_oyo_emp_1,,,1300,1535,West Africa
+664,Proto-Yoruboid,ni_proto_yoruboid,,,-300,300,West Africa
+665,Aro,ni_aro,,,1690,1902,West Africa
+666,Sokoto Caliphate,ni_sokoto_cal,,,1804,1904,West Africa
+667,Igala,ni_igala_k,,,1600,1900,West Africa
+668,Ọ̀ràézè Ǹrì,ni_nri_k,,,1043,1911,West Africa
+669,Hausa bakwai,ni_hausa_k,,,900,1808,West Africa
+670,Kanem-Borno,ni_bornu_emp,,,1380,1893,West Africa
+671,Foys,ni_dahomey_k,,,1715,1894,West Africa
+672,Benin Empire,ni_benin_emp,,,1140,1897,West Africa
+673,Wukari Federation,ni_wukari_fed,,,1820,1899,West Africa
+674,Kingdom of Cayor,se_cayor_k,,,1549,1864,West Africa
+675,Kingdom of Saloum,se_saloum_k,,,1490,1863,West Africa
+676,Kingdom of Baol,se_baol_k,,,1550,1890,West Africa
+677,Kingdom of Sine,se_sine_k,,,1350,1887,West Africa
+678,Kingdom of Waalo,se_waalo_k,,,1287,1855,West Africa
+679,Jolof Empire,se_jolof_emp,,,1360,1549,West Africa
+680,Imamate of Futa Toro,se_futa_toro_imamate,,,1776,1860,West Africa
+681,Denyanke Kingdom,se_great_fulo_emp,,,1490,1776,West Africa
+682,Kingdom of Jolof,se_jolof_k,,,1549,1865,West Africa
+683,Buganda II,ug_buganda_k_2,,,1717,1894,East Africa
+684,Toro,ug_toro_k,,,1830,1896,East Africa
+685,Buganda I,ug_buganda_k_1,,,1408,1716,East Africa
+686,Karagwe,tz_karagwe_k,,,1500,1916,East Africa
+687,Kingdom of Nyinginya,Early Niynginya,,,1650,1897,East Africa
+688,Nkore,ug_nkore_k_1,,,1450,1749,East Africa
+689,Ndorwa,rw_ndorwa_k,,,1700,1800,East Africa
+690,Burundi,bu_burundi_k,,,1680,1903,East Africa
+691,Mubari,rw_mubari_k,,,1700,1896,East Africa
+692,Gisaka,rw_gisaka_k,,,1700,1867,East Africa
+693,Fipa,tz_milansi_k,,,1600,1890,East Africa
+694,Bugesera,rw_bugesera_k,,,1700,1799,East Africa
+695,Nkore,ug_nkore_k_2,,,1750,1901,East Africa
+696,Buhaya,tz_buhayo_k,,,1700,1890,East Africa
+697,Pandya Dynasty,in_pandya_emp_2,,,590,915,Southern India
+698,Early Cholas,in_cholas_1,,,-300,300,Southern India
+699,Thanjavur Maratha Kingdom,in_thanjavur_maratha_k,,,1675,1799,Southern India
+700,Early Pandyas,in_pandya_emp_1,,,-300,300,Southern India
+701,Carnatic Sultanate,in_carnatic_sul,,,1710,1801,Southern India
+702,Late Pallava Empire,in_pallava_emp_2,,,300,890,Southern India
+703,Kalabhra Dynasty,in_kalabhra_dyn,,,200,600,Southern India
+704,Nayaks of Thanjavur,in_thanjavur_nayaks,,,1532,1676,Southern India
+705,Nayaks of Madurai,in_madurai_nayaks,,,1529,1736,Southern India
+708,Portuguese Empire - Renaissance Period,pt_portuguese_emp_1,,,1495,1579,Southern Europe
+709,Portuguese Empire - Early Modern,pt_portuguese_emp_2,,,1640,1806,Southern Europe
+710,Classic Tana,tz_tana,,,1000,1498,East Africa
+711,Imamate of Oman and Muscat,om_busaidi_imamate_1,,,1749,1895,Arabia
+712,Early Postclassic Tikal,gt_tikal_early_postclassic,,,951,1250,Mexico
+713,Late Formative Titicaca Basin,bo_titicaca_late_formative,,,100,499,Andes
+714,Early Tiwanaku,bo_tiwanaku_1,,,500,799,Andes
+715,Early East Africa Iron Age,tz_east_africa_ia_1,,,200,499,East Africa
+716,Early Tana 1,tz_early_tana_1,,,500,749,East Africa
+717,Early Tana 2,tz_early_tana_2,,,750,999,East Africa
+718,Spanish Empire III,es_spanish_emp_3,,,1815,1931,Southern Europe
+719,Kingdom of Lunda,cg_lunda_k,,,1600,1895,Central Africa
+721,Republic of South Africa,sa_south_africa_rep,,,1920,2020,Southern Africa
+722,Republic of Tunisia,tn_tunisia_rep,,,1956,2020,Maghreb
+723,Republic of Egypt,eg_egypt_rep,,,1953,1958,Northeast Africa
+724,Democratic Republic of the Congo,cg_congo_democratic_rep,,,1960,2020,Central Africa
+725,Republic of Rwanda,rw_rwanda_rep,,,1962,2020,Central Africa
+726,Argentine Republic I,ar_argentina_rep_1,,,1816,1983,Southern South America
+727,Republic of Chile I,ch_chile_rep_1,,,1818,1990,Andes
+728,Republic of Colombia I,co_colombia_rep_1,,,1819,1958,Caribbean
+729,United Mexican States I,mx_united_mexican_states_1,,,1821,1917,Mexico
+730,Empire of Brazil,br_brazil_emp,,,1822,1888,Amazonia
+731,Republic of Venezuela I,ve_venezuela_rep_1,,,1830,1983,Caribbean
+732,Republic of Costa Rica,cr_costa_rica_rep,,,1838,2020,Mexico
+733,Dominion of Canada,ca_canada_dominion,,,1867,2020,East Coast
+734,Republic of Cuba I,cu_cuba_rep_1,,,1902,1956,Caribbean
+735,Democratic People's Republic of Korea,ko_korean_democratic_peoples_rep,,,1948,2020,Northeast Asia
+736,Republic of Korea,ko_korean_rep,,,1948,2020,Northeast Asia
+737,People's Republic of China,cn_chinese_peoples_rep,,,1950,2024,North China
+738,Japan,jp_japan_contemporary,,,1952,2020,Northeast Asia
+739,Mongolian People's Republic,mn_mongolia_peoples_rep,,,1920,1992,Mongolia
+740,Kingdom of Afghanistan,af_afghanistan_k,,,1927,1973,Afghanistan
+741,Republic of Afghanistan,af_afghanistan_rep,,,1974,2020,Afghanistan
+743,Late Dutch Empire,nl_dutch_emp_2,,,1815,1940,Southern Europe
+744,Danish Empire,dk_danish_emp_modern,,,1815,1940,Northern Europe
+745,United Kingdoms of Sweden and Norway,sv_united_k_sweden_and_norway,,,1815,1905,Northern Europe
+746,Kingdom of Italy,it_italian_k,,,1861,1946,Southern Europe
+748,Modern France I,fr_france_modern_1,,,1871,1940,Western Europe
+749,Kingdom of Norway - Modern,no_norway_k_modern,,,1905,1940,Northern Europe
+750,Kingdom of Sweden - Modern,sv_sweden_k_modern,,,1906,2020,Northern Europe
+751,Republic of Finland,su_finland_rep,,,1917,2020,Northern Europe
+752,Weimar Republic,de_weimar_rep,,,1918,1932,Central Europe
+753,Republic of Ireland,ei_ireland_rep,,,1922,2024,Western Europe
+754,Yugoslavia,sr_yugoslavia,,,1944,1992,Southeastern Europe
+755,Second Austrian Republic,at_austrian_rep_2,,,1945,2020,Central Europe
+756,Oman Imamate Yaruba Period,om_yaruba_imamate,,,1160,1660,Arabia
+757,Iran Pahlavi Dynasty,ir_pahlavi_dyn,,,1926,1979,Iran
+758,Republic of Iraq,iq_iraq_rep,,,1959,2020,Mesopotamia
+759,Australia Colonial Period,as_australia_colonial,,,1803,1901,Australia
+760,Nguyen Dynasty,vt_nguyen_dyn,,,1802,1887,Mainland Southeast Asia
+761,Thailand Reform Period,th_reform_period_thailand,,,1887,1932,Mainland Southeast Asia
+762,Republic of the Philippines,pi_phililippines_rep,,,1946,2020,Maritime Southeast Asia
+763,Republic of Indonesia,id_indonesian_rep,,,1949,2020,Maritime Southeast Asia
+764,Democratic Republic of Vietnam,vt_vietnam_democratic_rep,,,1954,1975,Mainland Southeast Asia
+765,Republic of Vietnam,vt_vietnam_rep,,,1955,1975,Mainland Southeast Asia
+766,Socialist Republic of Vietnam,vt_vietnam_socialist_rep,,,1975,2020,Mainland Southeast Asia
+767,Islamic Republic of Pakistan,pk_pakistan_islamic_rep,,,1947,2020,Pakistan
+768,Sri Lanka,sl_sri_lanka,,,1948,2020,Sri Lanka
+769,Chaco Regional System - Early,us_chaco_1,,,850,1039,Western North America
+771,Aztec Regional System,us_aztec_puebloan,,,1150,1300,Western North America
+772,Late East Africa Iron Age,tz_east_africa_ia_2,,,800,1150,East Africa
+773,Pre-Maravi,mw_pre_maravi,,,1151,1399,Southern Africa
+774,Early Maravi,mw_early_maravi,,,1400,1499,Southern Africa
+775,Northern Maravi Kingdom,mw_northern_maravi_k,,,1500,1621,Southern Africa
+776,Maravi Empire,mw_maravi_emp,,,1622,1870,Southern Africa
+777,Magadha - Nanda Dynasty,in_nanda_dyn,,,-413,-322,North India
+778,British East India Company,in_east_india_co,,,1757,1858,Eastern South Asia
+779,Deva Dynasty,bd_deva_dyn,,,1150,1300,Eastern South Asia
+780,Chandra Dynasty,bd_chandra_dyn,,,900,1050,Eastern South Asia
+781,Nawabs of Bengal,bd_nawabs_of_bengal,,,1717,1757,Eastern South Asia
+782,Twelve Bhuyans,bd_twelve_bhuyans,,,1538,1612,Eastern South Asia
+783,Gauda Kingdom,in_gauda_k,,,600,625,Eastern South Asia
+784,Republic of China,cn_chinese_rep,,,1913,1949,North China
+785,Qasimid Dynasty XXXXXXX,ye_qasimid_dyn_222222,,,1637,1805,Arabia
+786,British Empire II,gb_british_emp_2,,,1850,1968,Western Europe
+787,Wattara Empire,ic_wattara_emp,,,1710,1895,West Africa
+788,Ethiopia Kingdom III,et_ethiopian_k_3,,,1769,1854,East Africa
+789,Ethiopia Kingdom II,et_ethiopian_k_2,,,1621,1768,East Africa
+790,Habesha,et_habesha,,,801,1136,East Africa
+791,Khadga Dynasty,bd_khadga_dyn,,,650,700,Eastern South Asia
+792,Magadha - Kanva Dynasty,in_kanva_dyn,,,-75,-30,North India
+793,Sena Dynasty,bd_sena_dyn,,,1095,1245,Eastern South Asia
+794,Vanga Dynasty,in_vanga_k,,,550,600,Eastern South Asia
+795,Yadava-Varman Dynasty,bd_yadava_varman_dyn,,,1080,1150,Eastern South Asia
+796,Gangaridai,in_gangaridai,,,-300,-100,Eastern South Asia
+797,Holy Roman Empire - Ottonian-Salian Dynasty,de_empire_1,,,919,1125,Central Europe
+798,East Francia,de_east_francia,,,842,919,Central Europe
+799,Holy Roman Empire - Hohenstaufen and Welf Dynasties,de_empire_2,,,1126,1254,Central Europe
+800,Holy Roman Empire - Fragmented Period,de_empire_3,,,1255,1453,Central Europe
+801,Electorate of Brandenburg,de_hohenzollern_1,,,1415,1618,Central Europe
+802,Brandenburg-Prussia,de_hohenzollern_2,,,1618,1870,Central Europe
+803,Electorate of Bavaria,de_bavaria_1,,,1623,1806,Central Europe
+806,Germany - Hohenzollern Dynasty,de_hohenzollern_3,,,1871,1918,Central Europe
+807,Holy Roman Empire - Hohenstaufen Faction,de_empire_2_sub,,,1198,1215,Central Europe
+808,Polish–Lithuanian Commonwealth,pl_poland_lithuania_commonwealth,,,1570,1791,Central Europe
+809,Polish Kingdom - Piast Dynasty Fragmented Period,pl_piast_dyn_2,,,1139,1382,Central Europe
+810,Hungary Kingdom - Árpád Dynasty,hu_arpad_dyn,,,1000,1301,Central Europe
+811,Hungary Kingdom - Anjou and Later Dynasties,hu_later_dyn,,,1302,1526,Central Europe
+812,Samo's Empire,cz_samo_emp,,,623,658,Central Europe
+813,Great Moravia,cz_moravia_k,,,820,907,Central Europe
+814,Crown of Aragon,es_aragon_crown,,,1164,1515,Southern Europe
+815,Crown of Castile,es_castile_crown,,,1231,1515,Southern Europe
+816,Brythonic Kingdoms,gb_brythonic_k,,,410,1283,Western Europe
+817,Danelaw,gb_danelaw,,,878,954,Western Europe
+818,Kingdom of Norway I,no_norway_k_1,,,872,1261,Northern Europe
+819,Kingdom of the Burgundians,fr_burgundian_k,,,411,534,Western Europe
+820,Kingdom of the Suebi,pt_suebi_k,,,409,584,Southern Europe
+821,Dál Riata,gb_dal_riata,,,498,899,Western Europe
+822,Kingdom of Alba,gb_alba_k,,,900,1292,Western Europe
+823,Duchy and Kingdom of Croatia,hr_croatia_k,,,790,1102,Southeastern Europe
+824,"Grand Principality, Kingdom and Serbian Empire",rs_serbia_k,,,1091,1371,Southeastern Europe
+825,Republic of Genoa I,it_genoa_rep_1,,,1099,1284,Southern Europe
+826,Latin Empire,tr_latin_emp,,,1204,1261,Anatolia-Caucasus
+827,Principality of Wallachia I,ro_wallachia_principality_1,,,1330,1416,Eastern Europe
+828,Banate of Bosnia,ba_bosnia_banate,,,1154,1376,Southeastern Europe
+829,Kingdom of Bosnia,ba_bosnia_k,,,1377,1463,Southeastern Europe
+830,Republic of Genoa II,it_genoa_rep_2,,,1285,1528,Southern Europe
+831,Republic of Genoa III,it_genoa_rep_3,,,1529,1797,Southern Europe
+832,Republic and Duchy of Florence,it_florence_rep,,,1115,1568,Southern Europe
+833,Grand Duchy of Tuscany,it_tuscany_grand_duc,,,1569,1860,Southern Europe
+834,Kingdom of Georgia III,ge_georgia_k_3,,,1329,1463,Anatolia-Caucasus
+835,Qara Qoyunlu,tr_qara_qoyunlu,,,1375,1468,Anatolia-Caucasus
+836,Principality of Moldavia I,md_moldavia_principality_1,,,1346,1503,Eastern Europe
+837,Principality of Moldavia II,md_moldavia_principality_2,,,1504,1710,Eastern Europe
+838,Principality of Moldavia III,md_moldavia_principality_3,,,1711,1859,Eastern Europe
+839,Duchy of Milan I,it_milan_duc_1,,,1395,1498,Southern Europe
+841,Emirate of Córdoba,es_cordoba_emirate,,,756,928,Southern Europe
+842,Kingdom of Asturias,es_asturias_k,,,718,924,Southern Europe
+843,Taifas of Iberia,es_taifas,,,1010,1241,Southern Europe
+844,Kingdom of Galicia,es_galicia_k,,,911,1111,Southern Europe
+845,Kingdom of Portugal,pt_portugal_k,,,1139,1494,Southern Europe
+846,Despotate of Epirus,gr_epirus_despot,,,1205,1479,Southeastern Europe
+847,Beylik of Karaman,tr_karaman_bey,,,1250,1487,Anatolia-Caucasus
+848,Empire of Trebizond,tr_trebizond_emp,,,1204,1461,Anatolia-Caucasus
+849,Principality of Achaea,gr_achaea_principality,,,1204,1432,Southeastern Europe
+850,Kingdom of Cyprus,cy_cyprus_k,,,1192,1489,Southeastern Europe
+851,Kingdom of Naples,it_naples_k,,,1282,1442,Southern Europe
+852,Principality of Hungary,hu_hungary_principality,,,895,999,Central Europe
+853,Old Swiss Confederacy,ch_swiss_conf_1,,,1315,1515,Central Europe
+854,Swiss Confederation - early modern period,ch_swiss_conf_2,,,1516,1798,Central Europe
+855,Swiss Confederation - Napoleonic period,ch_swiss_conf_3,,,1799,1848,Central Europe
+856,Swiss Confederation - modern period,ch_swiss_conf_4,,,1849,2014,Central Europe
+857,Holy Roman Empire - Minor Imperial States I,de_empire_minor_1,,,1454,1648,Central Europe
+858,Holy Roman Empire - Minor Imperial States II,de_empire_minor_2,,,1649,1806,Central Europe
+859,Kingdom of the Gepids,rs_gepid_k,,,454,567,Southeastern Europe
+860,Ramadanid Emirate,tr_ramadanid_emirate,,,1397,1517,Anatolia-Caucasus
+861,Beylik of Candar,tr_candar_bey,,,1291,1461,Anatolia-Caucasus
+862,Duchy of Aquitaine II,fr_aquitania_duc_2,,,893,1137,Western Europe
+863,Republic of Poland I,pl_polish_rep_1,,,1919,1939,Central Europe
+864,Polish People's Republic,pl_polish_peoples_rep,,,1953,1989,Central Europe
+865,Czechoslovakia,cz_czechoslovakia,,,1919,1992,Central Europe
+866,Czech Republic,cz_czech_rep,,,1993,2020,Central Europe
+867,Grand Duchy of Lithuania,lt_lithuania_grand_duc,,,1220,1385,Central Europe
+868,Kingdom of Sweden I,sv_swedish_k_1,,,980,1396,Northern Europe
+869,Swedish Empire,sv_swedish_emp,,,1611,1814,Northern Europe
+870,Kingdom of Jerusalem I,il_jerusalem_k_1,,,1099,1187,Levant
+871,Kingdom of Jerusalem II,il_jerusalem_k_2,,,1192,1291,Levant
+872,Aghlabid Dynasty,tn_aghlabid_dyn,,,800,908,Maghreb
+873,Kingdom of Denmark - Medieval,dk_danish_k,,,958,1396,Northern Europe
+874,Denmark-Norway,dk_denmark_norway,,,1524,1814,Northern Europe
+875,Kingdom of Denmark - Modern,dk_danish_k_modern,,,1946,2020,Northern Europe
+876,Norman Sicily,it_sicily_k_1,,,1071,1193,Southern Europe
+877,Kingdom of the Two Sicilies,it_two_sicilies_k,,,1816,1861,Southern Europe
+878,Scandinavian Minor Kingdoms,sv_scandinavian_minor_k,,,500,979,Northern Europe
+879,Ahmadnagar Sultanate,in_ahmadnagar_sultanate,,,1490,1636,Southern India
+880,Kingdom of Arles,fr_arles_k,,,933,1006,Western Europe
+881,Duchy of Milan II,it_milan_duc_2,,,1499,1796,Southern Europe
+882,Early Cheras,in_cheras_1,,,-300,300,Southern India
+884,Harsha's Empire,in_harsha_emp,,,606,647,North India
+885,Kingdom of Mysore,in_mysore_k,,,1566,1799,Southern India
+886,Maratha Empire,in_maratha_emp,,,1674,1818,Southern India
+887,Principality of Wallachia II,ro_wallachia_principality_2,,,1417,1714,Eastern Europe
+888,Principality of Wallachia III,ro_wallachia_principality_3,,,1715,1858,Eastern Europe
+889,Qi - Spring and Autumn,cn_qi_spring_autumn,,,-770,-489,North China
+890,Qi - Warring States,cn_qi_warring_states,,,-488,-222,North China
+891,Principality of Transylvania,ro_transylvania_principality,,,1570,1711,Eastern Europe
+892,Kazakh Khanate I,kz_kazakh_khanate_1,,,1465,1718,Turkestan
+893,Kazakh Khanate II,kz_kazakh_khanate_2,,,1719,1847,Turkestan
+894,Haribhunjaya,th_haribhunjaya_k,,,662,1292,Mainland Southeast Asia
+895,Kimek–Kipchak Confederation,kz_kimek_conf,,,880,1227,Turkestan
+896,Oghuz Yabgu State,kz_oghuz_state,,,766,1055,Turkestan
+897,Kingdom of Scotland,gb_scotland_k,,,1293,1706,Western Europe
+898,Emirate of Afghanistan,af_afghanistan_emirate,,,1827,1926,Afghanistan
+899,Lavo Kingdom I,th_lavo_k_1,,,638,1001,Mainland Southeast Asia
+900,Lavo Kingdom II,th_lavo_k_2,,,1002,1350,Mainland Southeast Asia
+901,Qocho Kingdom,cn_qocho_k,,,843,1132,North China
+902,Ganzhou Kingdom,cn_ganzhou_k,,,893,1036,North China
+903,Khanates of the Caucasus,az_caucasus_khanates,,,1748,1828,Anatolia-Caucasus
+904,Bolivia - Independence and Republican Era,bo_bolivia_rep,,,1825,1952,Andes
+905,Bolivia - Modern Era,bo_bolivia_modern,,,1953,2024,Andes
+906,Kingdom of Khotan,cn_khotan_k,,,852,1006,Turkestan
+907,Duchy of Bohemia,cz_bohemian_duc,,,880,1003,Central Europe
+908,Antigonid Dynasty,gr_antigonid_emp,,,-311,-168,Southeastern Europe
+909,Middle Assyrian Empire,iq_middle_assyrian_emp,,,-1365,-912,Mesopotamia
+910,Russian Federation,ru_russian_federation,,,1992,2024,Eastern Europe
+911,Viking settlements,no_viking_settlements,,,750,1100,Northern Europe
+912,Khedivate of Egypt,eg_egypt_khedivate,,,1867,1914,Northeast Africa
+913,Sultanate of Egypt,eg_egypt_sultanate,,,1914,1922,Northeast Africa
+914,Kingdom of Egypt,eg_egypt_k,,,1922,1952,Northeast Africa
+915,United Arab Republic,eg_united_arab_rep,,,1958,1971,Northeast Africa
+916,Arab Republic of Egypt,eg_egypt_arab_rep,,,1971,2026,Northeast Africa
+917,Modern France II,fr_france_modern_2,,,1946,2026,Western Europe

@@ -86,8 +86,9 @@ EMBEDDED_CROSSWALK = {
     "dedicated_specialist": {
         "d_place": {"var_ids": ["EA34"], "include_codes": [3,4,5], "confidence": "high"},
         "drh": {"columns": ["healing_question_1"], "confidence": "high"},
-        "seshat": {},
+        "seshat": {"var_names": ["professional_priesthood"], "confidence": "high"},
         "notes": "EA34: 0/1/2→0 (part-time/none); 3/4/5→1 (full-time specialists). "
+                 "Seshat sc/professional-priesthoods: present/absent → 1/0. "
                  "Theory-driven threshold: shamanism requires full-time commitment.",
     },
     "initiatory_crisis": {
