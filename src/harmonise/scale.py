@@ -83,10 +83,11 @@ BINARISATION_RULES = {
     # Specialist role
     "dedicated_specialist": {
         "rule_type": "ordinal_to_binary_threshold",
-        "description": "EA34 ordinal 0-5 → binary via ≥3 threshold",
+        "description": "EA34 ordinal 0-5 → binary via ≥3 threshold; Seshat already binary",
         "threshold": 3,
         "rationale": "Theory: shamanism requires full-time specialist commitment",
-        "sources": ["dplace", "drh"],
+        "sources": ["dplace", "drh", "seshat"],
+        "source_overrides": {"seshat": "binary_passthrough"},
     },
     "initiatory_crisis": {
         "rule_type": "binary_passthrough",
@@ -278,7 +279,7 @@ class ScaleStandardiser:
             return feature_value  # Passthrough
         
         rule = self.binarisation_rules[feature_name]
-        rule_type = rule.get("rule_type", "binary_passthrough")
+        rule_type = rule.get("source_overrides", {}).get(source) or rule.get("rule_type", "binary_passthrough")
         
         if rule_type == "binary_passthrough":
             # Already binary, just ensure 0/1

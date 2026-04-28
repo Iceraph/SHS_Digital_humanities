@@ -1,9 +1,6 @@
 source_var_id,source_var_name,shamanism_relevant,reason
-spirit_possession,Spirit possession,True,Seshat variable
-trance_induction,Trance Induction,True,Seshat variable
-divination,Divination,True,Seshat variable
-healing_rituals,Healing Rituals,True,Seshat variable
-ancestor_mediation,Ancestor Mediation,True,Seshat variable
-ritual_complexity,Ritual Complexity,True,Seshat variable
-religious_specialist,Religious Specialist,True,Seshat variable
-ancestor_veneration,Ancestor Veneration,True,Seshat variable
+professional_priesthood,Professional priesthood,True,Seshat variable
+religious_level,Religious organisational levels,True,Seshat variable
+human_sacrifice,Human sacrifice,True,Seshat variable
+moralizing_supernatural,Moralizing supernatural punishment and reward,True,Seshat variable
+moralizing_agentic,Moralizing supernatural agent,True,Seshat variable

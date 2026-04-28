@@ -1,0 +1,6 @@
+endpoint,value_field,id,name
+sc/professional-priesthoods,professional_priesthood,professional_priesthood,Professional priesthood
+sc/religious-levels,religious_level_from,religious_level,Religious organisational levels
+rt/human-sacrifices,human_sacrifice,human_sacrifice,Human sacrifice
+rt/moralizing-supernatural-punishment-and-reward,coded_value,moralizing_supernatural,Moralizing supernatural punishment and reward
+rt/moralizing-enforcement-is-agentic,coded_value,moralizing_agentic,Moralizing supernatural agent

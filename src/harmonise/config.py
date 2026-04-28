@@ -23,7 +23,7 @@ from pathlib import Path
 #   - NEVER hardcode exclusion of any source
 #   - When Seshat becomes real, toggle here and recompute (no code changes needed)
 
-ACTIVE_SOURCES = ["dplace", "drh"]  # Future: ["dplace", "drh", "seshat"]
+ACTIVE_SOURCES = ["dplace", "drh", "seshat"]
 
 # ==============================================================================
 # METHODOLOGICAL DECISIONS (locked in 15 April 2026)
