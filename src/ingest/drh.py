@@ -21,8 +21,9 @@ def parse_drh(
 
     if shamanism_keywords is None:
         shamanism_keywords = [
-            "trance", "shamanism", "spirit", "possession", "healing", 
+            "trance", "shamanism", "spirit", "possession", "healing",
             "divination", "ritual", "soul", "initiation", "ancestor", "supernatural",
+            "afterlife", "belief in afterlife",
         ]
 
     # Load data

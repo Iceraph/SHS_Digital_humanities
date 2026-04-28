@@ -63,17 +63,18 @@ EMBEDDED_CROSSWALK = {
     },
     "spirit_possession": {
         "d_place": {"var_ids": ["EA112"], "include_codes": [6,7,8], "confidence": "high"},
-        "drh": {"columns": ["Is a spirit-body distinction present:", "Other spirit-body relationship:"], "confidence": "high"},
+        "drh": {"columns": ["Is a spirit-body distinction present:", "Other spirit-body relationship:",
+                            "Spirit distinct powers:", "Spirit non-material:"], "confidence": "high"},
         "seshat": {"var_names": ["spirit_possession"], "confidence": "high"},
-        "notes": "EA112 codes 6-8 (spirit possession forms). DRH Q4776/Q4779 spirit-body distinction. "
+        "notes": "EA112 codes 6-8 (spirit possession forms). DRH Q4776/Q4777/Q4778/Q4779 spirit-body distinction. "
                  "Seshat explicit spirit_possession. SPLIT from trance_induction (codes 1-5): different state types.",
     },
     "soul_flight": {
         "d_place": {"var_ids": ["SCCS1170"], "include_codes": [1], "confidence": "medium"},
-        "drh": {},
+        "drh": {"columns": ["Belief in afterlife:"], "confidence": "low"},
         "seshat": {"var_names": ["spirit_mediation"], "confidence": "medium"},
         "notes": "SCCS1170 shamanism index. Seshat spirit_mediation as proxy. "
-                 "Limited cross-source coverage; soul-spirit interaction.",
+                 "DRH Q4780 belief in afterlife as low-confidence proxy for soul concept.",
     },
     "entheogen_use": {
         "d_place": {"var_ids": ["WNAI390"], "include_codes": [1], "confidence": "high"},

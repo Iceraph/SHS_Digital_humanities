@@ -25,9 +25,9 @@ drh,ancestor_mediation,240,0,0.0
 drh,animal_transformation,240,0,0.0
 drh,chanting_singing,240,0,0.0
 drh,dedicated_specialist,240,0,0.0
-drh,divination,240,3,1.2
+drh,divination,240,103,42.9
 drh,entheogen_use,240,0,0.0
-drh,healing_function,240,3,1.2
+drh,healing_function,240,0,0.0
 drh,hereditary_transmission,240,0,0.0
 drh,initiatory_crisis,240,0,0.0
 drh,initiatory_ordeal,240,0,0.0
@@ -38,10 +38,10 @@ drh,possession_crisis,240,0,0.0
 drh,public_performance,240,0,0.0
 drh,rhythmic_percussion,240,0,0.0
 drh,ritual_performance,240,0,0.0
-drh,soul_flight,240,0,0.0
+drh,soul_flight,240,173,72.1
 drh,specialist_presence,240,0,0.0
-drh,spirit_possession,240,3,1.2
-drh,trance_induction,240,3,1.2
+drh,spirit_possession,240,167,69.6
+drh,trance_induction,240,95,39.6
 drh,unmapped_shamanic_indicators,240,0,0.0
 seshat,ancestor_mediation,597,0,0.0
 seshat,animal_transformation,597,0,0.0
