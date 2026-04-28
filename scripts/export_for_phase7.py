@@ -56,11 +56,12 @@ def export_cultures_metadata():
                      'lat', 'lon', 'time_start', 'time_end', 'language_family', 'glottocode'}
     feature_cols = [c for c in feature_matrix.columns if c not in metadata_cols]
 
-    # One row per culture (feature_matrix already has one row per culture)
+    # Keep ALL cultures; cluster_id = NaN for phylogenetically-filtered-out cultures
+    # (those without cluster assignments render as gray "unclustered" points in the viz)
     culture_meta = feature_matrix.merge(
         clusters[['culture_id', 'cluster_id']],
         on='culture_id',
-        how='inner'  # Only include cultures that appear in the multisource clustering
+        how='left'
     )
 
     # Build cultures array

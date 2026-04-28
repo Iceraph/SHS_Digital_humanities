@@ -91,23 +91,43 @@ const GlobeVisualization = (() => {
         // Draw graticule (optional)
         drawGraticule();
 
-        // Draw cultures
+        // Pass 1: draw unclustered cultures as small gray dots (background layer)
+        if (highlightedCluster === null) {
+            cultures.forEach(culture => {
+                if (culture.lat === null || culture.lon === null) return;
+                if (culture.cluster !== null && culture.cluster !== undefined) return;
+
+                const proj = projectCoordinates(culture.lon, culture.lat);
+                const isSelected = selectedCultures.has(culture.id);
+                ctx.fillStyle = '#aaaaaa';
+                ctx.globalAlpha = 0.35;
+                ctx.beginPath();
+                ctx.arc(proj.x, proj.y, isSelected ? 5 : 2.5, 0, Math.PI * 2);
+                ctx.fill();
+                ctx.globalAlpha = 1.0;
+
+                culture.screenX = proj.x;
+                culture.screenY = proj.y;
+                culture.screenRadius = isSelected ? 5 : 2.5;
+            });
+        }
+
+        // Pass 2: draw clustered cultures on top
         cultures.forEach(culture => {
-            if (culture.lat === null || culture.lon === null || culture.cluster === null) {
-                return;
-            }
+            if (culture.lat === null || culture.lon === null) return;
+            if (culture.cluster === null || culture.cluster === undefined) return;
 
             const proj = projectCoordinates(culture.lon, culture.lat);
-            const size = selectedCultures.has(culture.id) ? 8 : 4;
+            const isSelected = selectedCultures.has(culture.id);
+            const size = isSelected ? 8 : 4;
             const color = ColorScheme.getClusterColor(culture.cluster);
 
             // Apply opacity based on cluster highlight
             let opacity = 0.8;
             if (highlightedCluster !== null && culture.cluster !== highlightedCluster) {
-                opacity = 0.2;  // Dim non-highlighted clusters
+                opacity = 0.2;
             }
 
-            // Draw point
             ctx.fillStyle = color;
             ctx.globalAlpha = opacity;
             ctx.beginPath();
@@ -115,12 +135,9 @@ const GlobeVisualization = (() => {
             ctx.fill();
             ctx.globalAlpha = 1.0;
 
-            // Store culture reference
-            if (!culture.screenX) {
-                culture.screenX = proj.x;
-                culture.screenY = proj.y;
-                culture.screenRadius = size;
-            }
+            culture.screenX = proj.x;
+            culture.screenY = proj.y;
+            culture.screenRadius = size;
         });
 
         // Draw legend
@@ -170,9 +187,10 @@ const GlobeVisualization = (() => {
         const legendX = 10;
         const legendY = 10;
         const itemHeight = 18;
+        const totalItems = 9; // 8 clusters + 1 unclustered row
 
         ctx.fillStyle = 'rgba(0, 0, 0, 0.7)';
-        ctx.fillRect(legendX, legendY, 150, 160);
+        ctx.fillRect(legendX, legendY, 160, 22 + totalItems * itemHeight);
 
         ctx.fillStyle = '#fff';
         ctx.font = 'bold 12px sans-serif';
@@ -182,15 +200,22 @@ const GlobeVisualization = (() => {
         for (let i = 0; i < 8; i++) {
             const y = legendY + 20 + (i * itemHeight);
             const color = ColorScheme.getClusterColor(i);
-
-            // Color box
             ctx.fillStyle = color;
             ctx.fillRect(legendX + 5, y, 12, 12);
-
-            // Label
             ctx.fillStyle = '#fff';
             ctx.fillText(`Cluster ${i}`, legendX + 20, y + 10);
         }
+
+        // Unclustered row
+        const uy = legendY + 20 + (8 * itemHeight);
+        ctx.fillStyle = '#aaaaaa';
+        ctx.globalAlpha = 0.5;
+        ctx.beginPath();
+        ctx.arc(legendX + 11, uy + 6, 3, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.globalAlpha = 1.0;
+        ctx.fillStyle = '#ccc';
+        ctx.fillText('Not clustered', legendX + 20, uy + 10);
     };
 
     /**
@@ -290,10 +315,14 @@ const GlobeVisualization = (() => {
      * Show tooltip for a culture
      */
     const showTooltip = (x, y, culture) => {
+        const clusterLabel = (culture.cluster !== null && culture.cluster !== undefined)
+            ? `Cluster ${culture.cluster}`
+            : '<em>Not clustered (phylogenetic filter)</em>';
         tooltip.innerHTML = `
             <div class="globe-tooltip-title">${culture.name}</div>
             <div class="globe-tooltip-content">
-                <div>Cluster: ${culture.cluster}</div>
+                <div>Cluster: ${clusterLabel}</div>
+                <div>Source: ${culture.source}</div>
                 <div>Lat: ${culture.lat.toFixed(2)}, Lon: ${culture.lon.toFixed(2)}</div>
                 <div>Features: ${Object.values(culture.features).filter(v => v === 1).length}</div>
             </div>
