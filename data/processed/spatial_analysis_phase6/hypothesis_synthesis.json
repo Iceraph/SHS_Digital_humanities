@@ -1,0 +1,28 @@
+{
+  "universalism_score": 4.0,
+  "diffusion_score": 0.0,
+  "conclusion": "\ud83e\udde0 NEUROBIOLOGICAL UNIVERSALISM SUPPORTED",
+  "interpretation": "Shamanic features appear to be universal neurobiological phenomena that arise independently across cultures. Geographic and linguistic patterns are weak or absent, suggesting features reflect inherent human neurobiology rather than cultural diffusion.",
+  "evidence": [
+    {
+      "test": "Random spatial distribution",
+      "supports": "Universalism",
+      "strength": "Strong"
+    },
+    {
+      "test": "Weak distance decay",
+      "supports": "Universalism",
+      "strength": "Moderate"
+    },
+    {
+      "test": "Weak phylogenetic signal",
+      "supports": "Universalism",
+      "strength": "Strong"
+    },
+    {
+      "test": "Geography-feature independence",
+      "supports": "Universalism",
+      "strength": "Strong"
+    }
+  ]
+}

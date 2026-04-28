@@ -1,0 +1,26 @@
+{
+  "geographic": {
+    "description": "Geographic distances (km) between cultures",
+    "shape": [
+      1257,
+      1257
+    ],
+    "data": []
+  },
+  "phylogenetic": {
+    "description": "Phylogenetic distances between cultures",
+    "shape": [
+      1257,
+      1257
+    ],
+    "data": []
+  },
+  "feature": {
+    "description": "Jaccard distances between feature vectors",
+    "shape": [
+      1257,
+      1257
+    ],
+    "data": []
+  }
+}

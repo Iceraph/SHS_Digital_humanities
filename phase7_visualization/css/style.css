@@ -1,0 +1,335 @@
+/* 
+ * Phase 7 Interactive Visualization - Custom Styling
+ * Shamanism Spatio-Temporal Analysis
+ */
+
+:root {
+    --color-cluster-0: #e74c3c;
+    --color-cluster-1: #3498db;
+    --color-cluster-2: #2ecc71;
+    --color-cluster-3: #f39c12;
+    --color-cluster-4: #9b59b6;
+    --color-cluster-5: #1abc9c;
+    --color-cluster-6: #e67e22;
+    --color-cluster-7: #34495e;
+    --color-inactive: #bdc3c7;
+}
+
+/* Global Styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #ecf0f1;
+}
+
+/* Container */
+.container-fluid {
+    max-width: 100%;
+    padding: 0;
+}
+
+.h-100 {
+    height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    height: 60px;
+}
+
+.navbar-brand {
+    font-size: 1.2rem;
+    letter-spacing: 0.5px;
+}
+
+.navbar-text {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Sidebar Panels */
+.sidebar-panel {
+    overflow-y: auto;
+    max-height: calc(100vh - 60px);
+    box-shadow: -2px 0 4px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar-panel h5 {
+    font-weight: 600;
+    color: #2c3e50;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.sidebar-panel h6 {
+    font-weight: 600;
+    color: #34495e;
+    font-size: 0.95rem;
+}
+
+/* Feature List */
+.feature-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.feature-item {
+    padding: 0.5rem 0.75rem;
+    border-left: 3px solid transparent;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background-color: #f8f9fa;
+    border-radius: 3px;
+    font-size: 0.9rem;
+}
+
+.feature-item:hover {
+    background-color: #e9ecef;
+    border-left-color: #3498db;
+}
+
+.feature-item.selected {
+    background-color: #d1ecf1;
+    border-left-color: #0c5460;
+    font-weight: 500;
+}
+
+.feature-item input[type="checkbox"] {
+    margin-right: 0.5rem;
+}
+
+.feature-sig-badge {
+    font-size: 0.75rem;
+    margin-left: 0.25rem;
+}
+
+/* Statistics Panel */
+#statsPanel {
+    border-left: 3px solid #3498db;
+    background-color: #ecf0f1;
+}
+
+#statsPanel h6 {
+    margin-bottom: 0.5rem;
+}
+
+#statsPanel .stat-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.25rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    font-size: 0.85rem;
+}
+
+#statsPanel .stat-row:last-child {
+    border-bottom: none;
+}
+
+/* Buttons */
+.btn-sm {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.75rem;
+}
+
+.btn-primary {
+    background-color: #3498db;
+    border-color: #3498db;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+    border-color: #2980b9;
+}
+
+/* Globe Container */
+#globeContainer {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+#globeCanvas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Globe Tooltip */
+.globe-tooltip {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    max-width: 200px;
+    z-index: 1001;
+    pointer-events: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.globe-tooltip-title {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.globe-tooltip-content {
+    font-size: 0.8rem;
+    line-height: 1.4;
+}
+
+/* Phylogenetic Tree */
+#phyloTree {
+    background-color: #fafafa;
+    border: 1px solid #e0e0e0;
+}
+
+.tree-node {
+    cursor: pointer;
+}
+
+.tree-node:hover {
+    opacity: 0.8;
+}
+
+.tree-link {
+    stroke: #999;
+    stroke-width: 1.5px;
+}
+
+.tree-label {
+    font-size: 0.8rem;
+    pointer-events: none;
+}
+
+/* Cluster Info Panel */
+#clusterInfo {
+    background-color: #ecf0f1;
+    border-left: 3px solid #3498db;
+    border-radius: 4px;
+    padding: 0.75rem;
+}
+
+#clusterInfo h6 {
+    margin-bottom: 0.5rem;
+}
+
+.cluster-info-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.25rem 0;
+    font-size: 0.85rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.cluster-info-row:last-child {
+    border-bottom: none;
+}
+
+/* Cluster Legend */
+#clusterLegend .badge {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+    margin-right: 0.5rem;
+}
+
+/* Spinner */
+.spinner-border-sm {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-width: 0.2em;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991.98px) {
+    .sidebar-panel {
+        position: absolute;
+        top: 60px;
+        z-index: 500;
+        width: 300px;
+        max-height: calc(100vh - 60px);
+        background-color: white;
+    }
+
+    #featurePanel {
+        left: 0;
+        border-right: 1px solid #dee2e6;
+    }
+
+    #phyloPanel {
+        right: 0;
+        border-left: 1px solid #dee2e6;
+    }
+
+    #globeContainer {
+        position: relative;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .navbar-text {
+        display: none;
+    }
+
+    .sidebar-panel {
+        width: 100%;
+        max-height: 50vh;
+    }
+
+    #globeContainer {
+        height: calc(100vh - 60px);
+    }
+}
+
+/* Utility Classes */
+.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.no-gutters > [class*='col-'] {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+/* Scrollbar Styling */
+.sidebar-panel::-webkit-scrollbar {
+    width: 6px;
+}
+
+.sidebar-panel::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.sidebar-panel::-webkit-scrollbar-thumb {
+    background: #bbb;
+    border-radius: 3px;
+}
+
+.sidebar-panel::-webkit-scrollbar-thumb:hover {
+    background: #888;
+}
+
+/* Print Styles */
+@media print {
+    .navbar,
+    .sidebar-panel,
+    .btn {
+        display: none;
+    }
+
+    #globeContainer {
+        height: auto;
+    }
+}

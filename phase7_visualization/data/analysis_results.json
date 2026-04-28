@@ -1,0 +1,884 @@
+{
+  "morans_i": [
+    {
+      "statistic": -0.0096247511129579,
+      "p_value": 0.9927521815712981,
+      "z_score": -0.009083918230318636,
+      "significant": false,
+      "interpretation": "Random spatial distribution (no significant autocorrelation)",
+      "feature": "CARNEIRO4_182",
+      "n_ones": 22,
+      "n_zeros": 1828
+    },
+    {
+      "statistic": -0.004146721904506223,
+      "p_value": 0.9971229230563199,
+      "z_score": -0.003605889021866959,
+      "significant": false,
+      "interpretation": "Random spatial distribution (no significant autocorrelation)",
+      "feature": "CARNEIRO4_276",
+      "n_ones": 9,
+      "n_zeros": 1841
+    },
+    {
+      "statistic": -0.002280407095567204,
+      "p_value": 0.9986120212931653,
+      "z_score": -0.0017395742129279394,
+      "significant": false,
+      "interpretation": "Random spatial distribution (no significant autocorrelation)",
+      "feature": "CARNEIRO6_319",
+      "n_ones": 19,
+      "n_zeros": 1831
+    },
+    {
+      "statistic": -0.006495398163984405,
+      "p_value": 0.9952489723718156,
+      "z_score": -0.005954565281345141,
+      "significant": false,
+      "interpretation": "Random spatial distribution (no significant autocorrelation)",
+      "feature": "CARNEIRO6_450",
+      "n_ones": 27,
+      "n_zeros": 1823
+    },
+    {
+      "statistic": -0.003941121358605741,
+      "p_value": 0.9972869675507476,
+      "z_score": -0.0034002884759664767,
+      "significant": false,
+      "interpretation": "Random spatial distribution (no significant autocorrelation)",
+      "feature": "CARNEIRO6_469",
+      "n_ones": 21,
+      "n_zeros": 1829
+    },
+    {
+      "statistic": 0.00020554279497626612,
+      "p_value": 0.9994044784255636,
+      "z_score": 0.0007463756776155306,
+      "significant": false,
+      "interpretation": "Random spatial distribution (no significant autocorrelation)",
+      "feature": "CARNEIRO6_477",
+      "n_ones": 13,
+      "n_zeros": 1837
+    },
+    {
+      "statistic": -0.003438957034238415,
+      "p_value": 0.9976876347211232,
+      "z_score": -0.0028981241515991505,
+      "significant": false,
+      "interpretation": "Random spatial distribution (no significant autocorrelation)",
+      "feature": "CARNEIRO6_478",
+      "n_ones": 7,
+      "n_zeros": 1843
+    },
+    {
+      "statistic": -0.005398302773538287,
+      "p_value": 0.9961243150106329,
+      "z_score": -0.004857469890899023,
+      "significant": false,
+      "interpretation": "Random spatial distribution (no significant autocorrelation)",
+      "feature": "CARNEIRO6_481",
+      "n_ones": 10,
+      "n_zeros": 1840
+    },
+    {
+      "statistic": 0.17167052588249915,
+      "p_value": 0.8632713682868729,
+      "z_score": 0.1722113587651384,
+      "significant": false,
+      "interpretation": "Random spatial distribution (no significant autocorrelation)",
+      "feature": "EA112",
+      "n_ones": 65566,
+      "n_zeros": -63716
+    },
+    {
+      "statistic": -0.012101220971963672,
+      "p_value": 0.9907763502724762,
+      "z_score": -0.011560388089324407,
+      "significant": false,
+      "interpretation": "Random spatial distribution (no significant autocorrelation)",
+      "feature": "SCCS1170",
+      "n_ones": 2513,
+      "n_zeros": -663
+    },
+    {
+      "statistic": -0.011690600781545027,
+      "p_value": 0.9911039566593602,
+      "z_score": -0.011149767898905762,
+      "significant": false,
+      "interpretation": "Random spatial distribution (no significant autocorrelation)",
+      "feature": "SCCS1171",
+      "n_ones": 2488,
+      "n_zeros": -638
+    },
+    {
+      "statistic": -0.01181200165456325,
+      "p_value": 0.9910070988636441,
+      "z_score": -0.011271168771923985,
+      "significant": false,
+      "interpretation": "Random spatial distribution (no significant autocorrelation)",
+      "feature": "SCCS1172",
+      "n_ones": 2478,
+      "n_zeros": -628
+    },
+    {
+      "statistic": -0.011721400320005316,
+      "p_value": 0.9910793837148353,
+      "z_score": -0.01118056743736605,
+      "significant": false,
+      "interpretation": "Random spatial distribution (no significant autocorrelation)",
+      "feature": "SCCS1173",
+      "n_ones": 2500,
+      "n_zeros": -650
+    },
+    {
+      "statistic": -0.01864348871759927,
+      "p_value": 0.9855569592496078,
+      "z_score": -0.018102655834960006,
+      "significant": false,
+      "interpretation": "Random spatial distribution (no significant autocorrelation)",
+      "feature": "SCCS1823",
+      "n_ones": 5130,
+      "n_zeros": -3280
+    },
+    {
+      "statistic": -0.018903490377651867,
+      "p_value": 0.985349542418483,
+      "z_score": -0.0183626574950126,
+      "significant": false,
+      "interpretation": "Random spatial distribution (no significant autocorrelation)",
+      "feature": "SCCS1838",
+      "n_ones": 5150,
+      "n_zeros": -3300
+    },
+    {
+      "statistic": -0.029228000520118425,
+      "p_value": 0.9771140908987681,
+      "z_score": -0.02868716763747916,
+      "significant": false,
+      "interpretation": "Random spatial distribution (no significant autocorrelation)",
+      "feature": "SCCS1948",
+      "n_ones": 14092,
+      "n_zeros": -12242
+    },
+    {
+      "statistic": -0.02342631256980936,
+      "p_value": 0.981741622894452,
+      "z_score": -0.022885479687170095,
+      "significant": false,
+      "interpretation": "Random spatial distribution (no significant autocorrelation)",
+      "feature": "SCCS1949",
+      "n_ones": 12548,
+      "n_zeros": -10698
+    },
+    {
+      "statistic": -0.034225613497307766,
+      "p_value": 0.973128515395957,
+      "z_score": -0.0336847806146685,
+      "significant": false,
+      "interpretation": "Random spatial distribution (no significant autocorrelation)",
+      "feature": "SCCS1962",
+      "n_ones": 14464,
+      "n_zeros": -12614
+    },
+    {
+      "statistic": -0.02540794180405946,
+      "p_value": 0.980160962395416,
+      "z_score": -0.024867108921420196,
+      "significant": false,
+      "interpretation": "Random spatial distribution (no significant autocorrelation)",
+      "feature": "SCCS200",
+      "n_ones": 662,
+      "n_zeros": 1188
+    },
+    {
+      "statistic": -0.002623440625356653,
+      "p_value": 0.9983383206370653,
+      "z_score": -0.0020826077427173887,
+      "significant": false,
+      "interpretation": "Random spatial distribution (no significant autocorrelation)",
+      "feature": "SCCS529",
+      "n_ones": 561,
+      "n_zeros": 1289
+    },
+    {
+      "statistic": -0.0013766995518661245,
+      "p_value": 0.9993330749673945,
+      "z_score": -0.00083586666922686,
+      "significant": false,
+      "interpretation": "Random spatial distribution (no significant autocorrelation)",
+      "feature": "SCCS530",
+      "n_ones": 484,
+      "n_zeros": 1366
+    },
+    {
+      "statistic": -0.003450223554646608,
+      "p_value": 0.997678645376334,
+      "z_score": -0.0029093906720073434,
+      "significant": false,
+      "interpretation": "Random spatial distribution (no significant autocorrelation)",
+      "feature": "SCCS531",
+      "n_ones": 633,
+      "n_zeros": 1217
+    },
+    {
+      "statistic": -3.36037669776618e-05,
+      "p_value": 0.999595289737178,
+      "z_score": 0.0005072291156616027,
+      "significant": false,
+      "interpretation": "Random spatial distribution (no significant autocorrelation)",
+      "feature": "SCCS532",
+      "n_ones": 607,
+      "n_zeros": 1243
+    },
+    {
+      "statistic": -0.003179731202230356,
+      "p_value": 0.997894466217017,
+      "z_score": -0.0026388983195910916,
+      "significant": false,
+      "interpretation": "Random spatial distribution (no significant autocorrelation)",
+      "feature": "SCCS535",
+      "n_ones": 585,
+      "n_zeros": 1265
+    },
+    {
+      "statistic": 0.001062353724636862,
+      "p_value": 0.9987208427059184,
+      "z_score": 0.0016031866072761265,
+      "significant": false,
+      "interpretation": "Random spatial distribution (no significant autocorrelation)",
+      "feature": "SCCS536",
+      "n_ones": 540,
+      "n_zeros": 1310
+    },
+    {
+      "statistic": -0.02576041538340648,
+      "p_value": 0.9798798173463963,
+      "z_score": -0.025219582500767213,
+      "significant": false,
+      "interpretation": "Random spatial distribution (no significant autocorrelation)",
+      "feature": "SCCS573",
+      "n_ones": 10408,
+      "n_zeros": -8558
+    },
+    {
+      "statistic": -0.03934351188903611,
+      "p_value": 0.9690477089065119,
+      "z_score": -0.03880267900639685,
+      "significant": false,
+      "interpretation": "Random spatial distribution (no significant autocorrelation)",
+      "feature": "SCCS576",
+      "n_ones": 11958,
+      "n_zeros": -10108
+    },
+    {
+      "statistic": -0.0420969898776679,
+      "p_value": 0.9668525246760533,
+      "z_score": -0.04155615699502863,
+      "significant": false,
+      "interpretation": "Random spatial distribution (no significant autocorrelation)",
+      "feature": "SCCS580",
+      "n_ones": 11367,
+      "n_zeros": -9517
+    },
+    {
+      "statistic": -0.045185358347941046,
+      "p_value": 0.964390651831313,
+      "z_score": -0.04464452546530178,
+      "significant": false,
+      "interpretation": "Random spatial distribution (no significant autocorrelation)",
+      "feature": "SCCS623",
+      "n_ones": 11070,
+      "n_zeros": -9220
+    },
+    {
+      "statistic": -0.04342467694503095,
+      "p_value": 0.9657941274731494,
+      "z_score": -0.042883844062391686,
+      "significant": false,
+      "interpretation": "Random spatial distribution (no significant autocorrelation)",
+      "feature": "SCCS633",
+      "n_ones": 9396,
+      "n_zeros": -7546
+    },
+    {
+      "statistic": -0.04363516149866388,
+      "p_value": 0.9656263402100751,
+      "z_score": -0.043094328616024614,
+      "significant": false,
+      "interpretation": "Random spatial distribution (no significant autocorrelation)",
+      "feature": "SCCS635",
+      "n_ones": 9456,
+      "n_zeros": -7606
+    },
+    {
+      "statistic": -0.01790217649581504,
+      "p_value": 0.9861483478319293,
+      "z_score": -0.017361343613175775,
+      "significant": false,
+      "interpretation": "Random spatial distribution (no significant autocorrelation)",
+      "feature": "SCCS653",
+      "n_ones": 6000,
+      "n_zeros": -4150
+    },
+    {
+      "statistic": -0.015819548021005016,
+      "p_value": 0.9878098233614223,
+      "z_score": -0.015278715138365751,
+      "significant": false,
+      "interpretation": "Random spatial distribution (no significant autocorrelation)",
+      "feature": "SCCS654",
+      "n_ones": 5890,
+      "n_zeros": -4040
+    },
+    {
+      "statistic": -0.044466896957458944,
+      "p_value": 0.9649633392209516,
+      "z_score": -0.04392606407481968,
+      "significant": false,
+      "interpretation": "Random spatial distribution (no significant autocorrelation)",
+      "feature": "SCCS673",
+      "n_ones": 14710,
+      "n_zeros": -12860
+    },
+    {
+      "statistic": -0.04433801687036209,
+      "p_value": 0.9650660717844126,
+      "z_score": -0.043797183987722824,
+      "significant": false,
+      "interpretation": "Random spatial distribution (no significant autocorrelation)",
+      "feature": "SCCS674",
+      "n_ones": 14643,
+      "n_zeros": -12793
+    },
+    {
+      "statistic": -0.04305453701238251,
+      "p_value": 0.9660891873120467,
+      "z_score": -0.04251370412974324,
+      "significant": false,
+      "interpretation": "Random spatial distribution (no significant autocorrelation)",
+      "feature": "SCCS694",
+      "n_ones": 11169,
+      "n_zeros": -9319
+    },
+    {
+      "statistic": -0.0329529328103419,
+      "p_value": 0.9741434132117064,
+      "z_score": -0.03241209992770264,
+      "significant": false,
+      "interpretation": "Random spatial distribution (no significant autocorrelation)",
+      "feature": "SCCS792",
+      "n_ones": 9759,
+      "n_zeros": -7909
+    },
+    {
+      "statistic": -0.006350585223318592,
+      "p_value": 0.9953645143823944,
+      "z_score": -0.005809752340679327,
+      "significant": false,
+      "interpretation": "Random spatial distribution (no significant autocorrelation)",
+      "feature": "SCCS905",
+      "n_ones": 7798,
+      "n_zeros": -5948
+    },
+    {
+      "statistic": 0.047585930497655325,
+      "p_value": 0.9616152168212118,
+      "z_score": 0.04812676338029459,
+      "significant": false,
+      "interpretation": "Random spatial distribution (no significant autocorrelation)",
+      "feature": "WNAI169",
+      "n_ones": 480,
+      "n_zeros": 1370
+    },
+    {
+      "statistic": 0.04973085462713869,
+      "p_value": 0.9599058853268376,
+      "z_score": 0.05027168750977796,
+      "significant": false,
+      "interpretation": "Random spatial distribution (no significant autocorrelation)",
+      "feature": "WNAI381",
+      "n_ones": 1297,
+      "n_zeros": 553
+    },
+    {
+      "statistic": 0.040122884172879826,
+      "p_value": 0.9675639872521071,
+      "z_score": 0.04066371705551909,
+      "significant": false,
+      "interpretation": "Random spatial distribution (no significant autocorrelation)",
+      "feature": "WNAI389",
+      "n_ones": 670,
+      "n_zeros": 1180
+    },
+    {
+      "statistic": 0.057369376845363425,
+      "p_value": 0.953820150585186,
+      "z_score": 0.05791020972800269,
+      "significant": false,
+      "interpretation": "Random spatial distribution (no significant autocorrelation)",
+      "feature": "WNAI390",
+      "n_ones": 533,
+      "n_zeros": 1317
+    },
+    {
+      "statistic": 0.04102687619689734,
+      "p_value": 0.9668433154036375,
+      "z_score": 0.04156770907953661,
+      "significant": false,
+      "interpretation": "Random spatial distribution (no significant autocorrelation)",
+      "feature": "WNAI391",
+      "n_ones": 934,
+      "n_zeros": 916
+    },
+    {
+      "statistic": 0.048642014376292675,
+      "p_value": 0.9607735806269124,
+      "z_score": 0.04918284725893194,
+      "significant": false,
+      "interpretation": "Random spatial distribution (no significant autocorrelation)",
+      "feature": "WNAI392",
+      "n_ones": 1621,
+      "n_zeros": 229
+    },
+    {
+      "statistic": 0.04862566900520197,
+      "p_value": 0.9607866065872672,
+      "z_score": 0.04916650188784123,
+      "significant": false,
+      "interpretation": "Random spatial distribution (no significant autocorrelation)",
+      "feature": "WNAI393",
+      "n_ones": 1519,
+      "n_zeros": 331
+    },
+    {
+      "statistic": 0.07140318981475226,
+      "p_value": 0.9426464557502987,
+      "z_score": 0.07194402269739152,
+      "significant": false,
+      "interpretation": "Random spatial distribution (no significant autocorrelation)",
+      "feature": "WNAI394",
+      "n_ones": 1433,
+      "n_zeros": 417
+    },
+    {
+      "statistic": 0.07776514026411882,
+      "p_value": 0.9375846661711049,
+      "z_score": 0.07830597314675808,
+      "significant": false,
+      "interpretation": "Random spatial distribution (no significant autocorrelation)",
+      "feature": "WNAI395",
+      "n_ones": 1683,
+      "n_zeros": 167
+    },
+    {
+      "statistic": 0.05737724828317518,
+      "p_value": 0.9538138806102059,
+      "z_score": 0.05791808116581445,
+      "significant": false,
+      "interpretation": "Random spatial distribution (no significant autocorrelation)",
+      "feature": "WNAI396",
+      "n_ones": 2062,
+      "n_zeros": -212
+    },
+    {
+      "statistic": 0.01765861322134649,
+      "p_value": 0.9854797445090036,
+      "z_score": 0.018199446103985755,
+      "significant": false,
+      "interpretation": "Random spatial distribution (no significant autocorrelation)",
+      "feature": "WNAI397",
+      "n_ones": 607,
+      "n_zeros": 1243
+    },
+    {
+      "statistic": 0.019930422837890434,
+      "p_value": 0.9836674418821207,
+      "z_score": 0.0204712557205297,
+      "significant": false,
+      "interpretation": "Random spatial distribution (no significant autocorrelation)",
+      "feature": "WNAI398",
+      "n_ones": 682,
+      "n_zeros": 1168
+    },
+    {
+      "statistic": 0.03916948373092653,
+      "p_value": 0.9683240766975345,
+      "z_score": 0.0397103166135658,
+      "significant": false,
+      "interpretation": "Random spatial distribution (no significant autocorrelation)",
+      "feature": "WNAI399",
+      "n_ones": 1640,
+      "n_zeros": 210
+    },
+    {
+      "statistic": 0.047729405238617184,
+      "p_value": 0.9615008734331003,
+      "z_score": 0.04827023812125645,
+      "significant": false,
+      "interpretation": "Random spatial distribution (no significant autocorrelation)",
+      "feature": "WNAI408",
+      "n_ones": 537,
+      "n_zeros": 1313
+    },
+    {
+      "statistic": 0.04180347512031893,
+      "p_value": 0.9662242242632395,
+      "z_score": 0.04234430800295819,
+      "significant": false,
+      "interpretation": "Random spatial distribution (no significant autocorrelation)",
+      "feature": "WNAI409",
+      "n_ones": 685,
+      "n_zeros": 1165
+    },
+    {
+      "statistic": 0.031059906195531065,
+      "p_value": 0.9747904539863501,
+      "z_score": 0.03160073907817033,
+      "significant": false,
+      "interpretation": "Random spatial distribution (no significant autocorrelation)",
+      "feature": "WNAI410",
+      "n_ones": 679,
+      "n_zeros": 1171
+    },
+    {
+      "statistic": 0.023237070704264787,
+      "p_value": 0.9810297654492979,
+      "z_score": 0.023777903586904053,
+      "significant": false,
+      "interpretation": "Random spatial distribution (no significant autocorrelation)",
+      "feature": "WNAI411",
+      "n_ones": 399,
+      "n_zeros": 1451
+    },
+    {
+      "statistic": 0.01969488261342373,
+      "p_value": 0.9838553368671061,
+      "z_score": 0.020235715496062994,
+      "significant": false,
+      "interpretation": "Random spatial distribution (no significant autocorrelation)",
+      "feature": "WNAI412",
+      "n_ones": 416,
+      "n_zeros": 1434
+    },
+    {
+      "statistic": 0.313433865569223,
+      "p_value": 0.7535402554751729,
+      "z_score": 0.31397469845186227,
+      "significant": false,
+      "interpretation": "Random spatial distribution (no significant autocorrelation)",
+      "feature": "WNAI413",
+      "n_ones": 915,
+      "n_zeros": 935
+    },
+    {
+      "statistic": 0.04970923073866567,
+      "p_value": 0.9599231169150069,
+      "z_score": 0.050250063621304936,
+      "significant": false,
+      "interpretation": "Random spatial distribution (no significant autocorrelation)",
+      "feature": "WNAI414",
+      "n_ones": 534,
+      "n_zeros": 1316
+    },
+    {
+      "statistic": 0.02151260253696516,
+      "p_value": 0.9824053305839424,
+      "z_score": 0.022053435419604424,
+      "significant": false,
+      "interpretation": "Random spatial distribution (no significant autocorrelation)",
+      "feature": "WNAI416",
+      "n_ones": 643,
+      "n_zeros": 1207
+    },
+    {
+      "statistic": 0.018995481674240255,
+      "p_value": 0.9844132677381312,
+      "z_score": 0.01953631455687952,
+      "significant": false,
+      "interpretation": "Random spatial distribution (no significant autocorrelation)",
+      "feature": "WNAI418",
+      "n_ones": 963,
+      "n_zeros": 887
+    },
+    {
+      "statistic": 0.049967753174652574,
+      "p_value": 0.959717107455111,
+      "z_score": 0.05050858605729184,
+      "significant": false,
+      "interpretation": "Random spatial distribution (no significant autocorrelation)",
+      "feature": "WNAI422",
+      "n_ones": 1533,
+      "n_zeros": 317
+    },
+    {
+      "statistic": 0.10598072489239799,
+      "p_value": 0.9151685520842259,
+      "z_score": 0.10652155777503725,
+      "significant": false,
+      "interpretation": "Random spatial distribution (no significant autocorrelation)",
+      "feature": "WNAI423",
+      "n_ones": 3089,
+      "n_zeros": -1239
+    },
+    {
+      "statistic": 0.04733803778576128,
+      "p_value": 0.9618127788389295,
+      "z_score": 0.04787887066840055,
+      "significant": false,
+      "interpretation": "Random spatial distribution (no significant autocorrelation)",
+      "feature": "WNAI424",
+      "n_ones": 1034,
+      "n_zeros": 816
+    },
+    {
+      "statistic": 0.13051881989891195,
+      "p_value": 0.8957281182065644,
+      "z_score": 0.1310596527815512,
+      "significant": false,
+      "interpretation": "Random spatial distribution (no significant autocorrelation)",
+      "feature": "WNAI425",
+      "n_ones": 3083,
+      "n_zeros": -1233
+    }
+  ],
+  "mantel": [
+    {
+      "Test": "Mantel: Geography ~ Features",
+      "Correlation": 0.0397228070024335,
+      "p_value": 0.1861861861861861,
+      "Significant": "No"
+    },
+    {
+      "Test": "Partial Mantel: Features ~ Geo | Phylo",
+      "Correlation": 0.0399973488818863,
+      "p_value": 0.2532532532532532,
+      "Significant": "No"
+    },
+    {
+      "Test": "Partial Mantel: Features ~ Phylo | Geo",
+      "Correlation": 0.0122100161527094,
+      "p_value": 0.0920920920920921,
+      "Significant": "No"
+    }
+  ],
+  "phylogenetic_signal": [
+    {
+      "feature": "feature_0",
+      "pagels_lambda": 0.4447626910207046,
+      "blombergs_k": 1.4802612078164992,
+      "lambda_p_value": 0.3285554794754147,
+      "k_p_value": 0.3735910014210825,
+      "signal_strength": "Moderate"
+    },
+    {
+      "feature": "feature_1",
+      "pagels_lambda": 0.2189078258493269,
+      "blombergs_k": 0.6216052593480571,
+      "lambda_p_value": 0.3202117119831568,
+      "k_p_value": 0.4505217514982471,
+      "signal_strength": "Weak"
+    },
+    {
+      "feature": "feature_2",
+      "pagels_lambda": 0.5742462356525575,
+      "blombergs_k": 0.6340248943189918,
+      "lambda_p_value": 0.066722422660699,
+      "k_p_value": 0.4236510889538,
+      "signal_strength": "Weak"
+    },
+    {
+      "feature": "feature_3",
+      "pagels_lambda": 0.2835814032247486,
+      "blombergs_k": 1.0202319605040255,
+      "lambda_p_value": 0.0281855267815281,
+      "k_p_value": 0.0495281860216769,
+      "signal_strength": "Weak"
+    },
+    {
+      "feature": "feature_4",
+      "pagels_lambda": 0.6034089605857189,
+      "blombergs_k": 1.189181410427517,
+      "lambda_p_value": 0.1773200092381367,
+      "k_p_value": 0.1156487849690919,
+      "signal_strength": "Moderate"
+    },
+    {
+      "feature": "feature_5",
+      "pagels_lambda": 0.6882261624543848,
+      "blombergs_k": 0.7171032294698904,
+      "lambda_p_value": 0.2755932641365261,
+      "k_p_value": 0.4844223320228237,
+      "signal_strength": "Moderate"
+    },
+    {
+      "feature": "feature_6",
+      "pagels_lambda": 0.2887114627174303,
+      "blombergs_k": 1.4408762674947089,
+      "lambda_p_value": 0.0996175960036476,
+      "k_p_value": 0.2880471719313824,
+      "signal_strength": "Weak"
+    },
+    {
+      "feature": "feature_7",
+      "pagels_lambda": 0.4262046271752468,
+      "blombergs_k": 1.464928601501826,
+      "lambda_p_value": 0.144035594210949,
+      "k_p_value": 0.2058324210220193,
+      "signal_strength": "Moderate"
+    },
+    {
+      "feature": "feature_8",
+      "pagels_lambda": 0.7897160707132523,
+      "blombergs_k": 1.0364703911884732,
+      "lambda_p_value": 0.2562887566544142,
+      "k_p_value": 0.1363114592199557,
+      "signal_strength": "Strong"
+    },
+    {
+      "feature": "feature_9",
+      "pagels_lambda": 0.6208181361862649,
+      "blombergs_k": 0.5143729517777776,
+      "lambda_p_value": 0.0342611885541238,
+      "k_p_value": 0.3036857076965433,
+      "signal_strength": "Weak"
+    },
+    {
+      "feature": "feature_10",
+      "pagels_lambda": 0.4050047442910725,
+      "blombergs_k": 1.4533163722009603,
+      "lambda_p_value": 0.4525634384541649,
+      "k_p_value": 0.3597160667515865,
+      "signal_strength": "Moderate"
+    },
+    {
+      "feature": "feature_11",
+      "pagels_lambda": 0.6908873486766809,
+      "blombergs_k": 1.1673318496676934,
+      "lambda_p_value": 0.0715352303279787,
+      "k_p_value": 0.3851162511477093,
+      "signal_strength": "Moderate"
+    },
+    {
+      "feature": "feature_12",
+      "pagels_lambda": 0.3261151812313078,
+      "blombergs_k": 0.8234428551001968,
+      "lambda_p_value": 0.4114247639301859,
+      "k_p_value": 0.2728975481127896,
+      "signal_strength": "Weak"
+    },
+    {
+      "feature": "feature_13",
+      "pagels_lambda": 0.7159644285100456,
+      "blombergs_k": 0.7130353198432642,
+      "lambda_p_value": 0.3078114349173747,
+      "k_p_value": 0.0510575765486482,
+      "signal_strength": "Moderate"
+    },
+    {
+      "feature": "feature_14",
+      "pagels_lambda": 0.5858365961240178,
+      "blombergs_k": 1.2625340377755347,
+      "lambda_p_value": 0.2966161380495736,
+      "k_p_value": 0.140453435734417,
+      "signal_strength": "Moderate"
+    },
+    {
+      "feature": "feature_15",
+      "pagels_lambda": 0.21880560131532,
+      "blombergs_k": 0.6194488839642858,
+      "lambda_p_value": 0.3149284597462728,
+      "k_p_value": 0.4678659062528317,
+      "signal_strength": "Weak"
+    },
+    {
+      "feature": "feature_16",
+      "pagels_lambda": 0.3239206423832039,
+      "blombergs_k": 1.235026149105099,
+      "lambda_p_value": 0.4345610209920303,
+      "k_p_value": 0.2652322674392804,
+      "signal_strength": "Weak"
+    },
+    {
+      "feature": "feature_17",
+      "pagels_lambda": 0.6015594775061948,
+      "blombergs_k": 1.3150153166761482,
+      "lambda_p_value": 0.1377308272928908,
+      "k_p_value": 0.155478880391341,
+      "signal_strength": "Moderate"
+    },
+    {
+      "feature": "feature_18",
+      "pagels_lambda": 0.2003765099770737,
+      "blombergs_k": 1.4630941308978025,
+      "lambda_p_value": 0.4595969983522089,
+      "k_p_value": 0.3846384492421209,
+      "signal_strength": "Weak"
+    }
+  ],
+  "distance_decay": [
+    {
+      "distance_bin": "0-2000 km",
+      "distance_min": 0,
+      "distance_max": 2000,
+      "mean_similarity": -0.0104244590208325,
+      "std_similarity": 0.1793306726008708,
+      "n_pairs": 160,
+      "se_similarity": 0.0141773344937175
+    },
+    {
+      "distance_bin": "2000-5000 km",
+      "distance_min": 2000,
+      "distance_max": 5000,
+      "mean_similarity": 0.0100720231042435,
+      "std_similarity": 0.2297247568018265,
+      "n_pairs": 318,
+      "se_similarity": 0.0128823246720031
+    },
+    {
+      "distance_bin": "5000-10000 km",
+      "distance_min": 5000,
+      "distance_max": 10000,
+      "mean_similarity": 0.004417615872141,
+      "std_similarity": 0.2436516971783946,
+      "n_pairs": 808,
+      "se_similarity": 0.0085716367952043
+    },
+    {
+      "distance_bin": "10000-20000 km",
+      "distance_min": 10000,
+      "distance_max": 20000,
+      "mean_similarity": 0.0012071003353657,
+      "std_similarity": 0.2263589307458265,
+      "n_pairs": 1214,
+      "se_similarity": 0.0064966323508012
+    }
+  ],
+  "hypothesis_synthesis": {
+    "universalism_score": 4.0,
+    "diffusion_score": 0.0,
+    "conclusion": "\ud83e\udde0 NEUROBIOLOGICAL UNIVERSALISM SUPPORTED",
+    "interpretation": "Shamanic features appear to be universal neurobiological phenomena that arise independently across cultures. Geographic and linguistic patterns are weak or absent, suggesting features reflect inherent human neurobiology rather than cultural diffusion.",
+    "evidence": [
+      {
+        "test": "Random spatial distribution",
+        "supports": "Universalism",
+        "strength": "Strong"
+      },
+      {
+        "test": "Weak distance decay",
+        "supports": "Universalism",
+        "strength": "Moderate"
+      },
+      {
+        "test": "Weak phylogenetic signal",
+        "supports": "Universalism",
+        "strength": "Strong"
+      },
+      {
+        "test": "Geography-feature independence",
+        "supports": "Universalism",
+        "strength": "Strong"
+      }
+    ]
+  }
+}

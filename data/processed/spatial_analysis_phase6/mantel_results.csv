@@ -1,0 +1,4 @@
+Test,Correlation,p_value,Significant
+Mantel: Geography ~ Features,0.039722807002433566,0.18618618618618618,No
+Partial Mantel: Features ~ Geo | Phylo,0.039997348881886385,0.25325325325325326,No
+Partial Mantel: Features ~ Phylo | Geo,0.012210016152709401,0.0920920920920921,No

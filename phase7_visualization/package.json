@@ -1,0 +1,41 @@
+{
+  "name": "shamanism-phase7-visualization",
+  "version": "1.0.0",
+  "description": "Interactive visualization of shamanic practices clustering - Phase 7 of the Shamanism Spatio-Temporal Analysis project",
+  "main": "js/main.js",
+  "scripts": {
+    "build": "webpack --mode production",
+    "dev": "webpack serve --mode development --open",
+    "watch": "webpack --mode development --watch",
+    "lint": "eslint js/ --fix",
+    "serve": "python -m http.server 8000 --directory ."
+  },
+  "keywords": [
+    "shamanism",
+    "visualization",
+    "d3",
+    "three.js",
+    "clustering",
+    "geographic",
+    "phylogenetic"
+  ],
+  "author": "Shamanism Research Team",
+  "license": "MIT",
+  "dependencies": {
+    "d3": "^7.8.5",
+    "three": "^0.168.0",
+    "leaflet": "^1.9.4",
+    "bootstrap": "^5.3.0",
+    "chart.js": "^4.4.0",
+    "papaparse": "^5.4.1"
+  },
+  "devDependencies": {
+    "webpack": "^5.92.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.2",
+    "babel-loader": "^9.1.3",
+    "@babel/core": "^7.24.0",
+    "@babel/preset-env": "^7.24.0",
+    "eslint": "^8.57.0"
+  }
+}

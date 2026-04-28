@@ -1,0 +1,11 @@
+{
+  "name": "World Languages",
+  "children": [
+    {
+      "name": "Language Family 1",
+      "id": "LF_1",
+      "cultures": [],
+      "cluster_composition": {}
+    }
+  ]
+}

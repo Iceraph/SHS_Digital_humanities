@@ -1,0 +1,326 @@
+{
+  "profiles": [
+    {
+      "cluster": 0,
+      "ancestor_mediation": 0.0,
+      "animal_transformation": 0.0,
+      "chanting_singing": 0.0028011204481792,
+      "divination": 0.0,
+      "entheogen_use": 0.0,
+      "hereditary_transmission": 0.0,
+      "initiatory_crisis": 0.0,
+      "initiatory_ordeal": 0.0,
+      "layered_cosmology": 0.0007002801120448,
+      "nature_spirits": 0.0014005602240896,
+      "possession_crisis": 0.0,
+      "public_performance": 0.0,
+      "rhythmic_percussion": 0.0,
+      "ritual_performance": 0.0051353874883286,
+      "soul_flight": 0.0,
+      "specialist_presence": 0.0840336134453781,
+      "spirit_possession": 0.0,
+      "trance_induction": 0.0,
+      "unmapped_shamanic_indicators": 0.0677607927614431,
+      "n_cultures": 714
+    },
+    {
+      "cluster": 1,
+      "ancestor_mediation": 0.0,
+      "animal_transformation": 0.0,
+      "chanting_singing": 0.0,
+      "divination": 0.0,
+      "entheogen_use": 0.4634146341463415,
+      "hereditary_transmission": 0.0,
+      "initiatory_crisis": 0.0,
+      "initiatory_ordeal": 0.0,
+      "layered_cosmology": 0.5121951219512195,
+      "nature_spirits": 0.3658536585365853,
+      "possession_crisis": 0.0,
+      "public_performance": 0.0,
+      "rhythmic_percussion": 0.0,
+      "ritual_performance": 0.0,
+      "soul_flight": 0.0,
+      "specialist_presence": 0.9634146341463414,
+      "spirit_possession": 0.0,
+      "trance_induction": 0.0,
+      "unmapped_shamanic_indicators": 0.4211998653514926,
+      "n_cultures": 41
+    },
+    {
+      "cluster": 2,
+      "ancestor_mediation": 0.0,
+      "animal_transformation": 0.0,
+      "chanting_singing": 0.0,
+      "divination": 0.0,
+      "entheogen_use": 0.0,
+      "hereditary_transmission": 0.0,
+      "initiatory_crisis": 0.0,
+      "initiatory_ordeal": 0.0,
+      "layered_cosmology": 0.0,
+      "nature_spirits": 0.0,
+      "possession_crisis": 0.0,
+      "public_performance": 0.0,
+      "rhythmic_percussion": 0.0,
+      "ritual_performance": 0.0,
+      "soul_flight": 0.0,
+      "specialist_presence": 0.0,
+      "spirit_possession": 0.0,
+      "trance_induction": 1.0,
+      "unmapped_shamanic_indicators": 0.0,
+      "n_cultures": 273
+    },
+    {
+      "cluster": 3,
+      "ancestor_mediation": 0.0,
+      "animal_transformation": 0.0,
+      "chanting_singing": 0.0,
+      "divination": 0.0,
+      "entheogen_use": 0.0,
+      "hereditary_transmission": 0.0,
+      "initiatory_crisis": 0.0,
+      "initiatory_ordeal": 0.0,
+      "layered_cosmology": 0.0,
+      "nature_spirits": 0.0,
+      "possession_crisis": 0.0232558139534883,
+      "public_performance": 0.6511627906976745,
+      "rhythmic_percussion": 0.0,
+      "ritual_performance": 0.5465116279069767,
+      "soul_flight": 0.0,
+      "specialist_presence": 0.0930232558139534,
+      "spirit_possession": 0.0,
+      "trance_induction": 0.0,
+      "unmapped_shamanic_indicators": 0.3218161683277962,
+      "n_cultures": 43
+    },
+    {
+      "cluster": 4,
+      "ancestor_mediation": 0.0,
+      "animal_transformation": 0.0,
+      "chanting_singing": 0.0,
+      "divination": 0.0,
+      "entheogen_use": 0.0,
+      "hereditary_transmission": 0.0,
+      "initiatory_crisis": 0.0,
+      "initiatory_ordeal": 0.0,
+      "layered_cosmology": 0.0,
+      "nature_spirits": 0.0,
+      "possession_crisis": 0.0,
+      "public_performance": 0.0,
+      "rhythmic_percussion": 0.0,
+      "ritual_performance": 0.0,
+      "soul_flight": 0.0,
+      "specialist_presence": 0.0,
+      "spirit_possession": 1.0,
+      "trance_induction": 0.0,
+      "unmapped_shamanic_indicators": 0.0,
+      "n_cultures": 175
+    },
+    {
+      "cluster": 5,
+      "ancestor_mediation": 0.0,
+      "animal_transformation": 0.0,
+      "chanting_singing": 0.0,
+      "divination": 0.0,
+      "entheogen_use": 0.0,
+      "hereditary_transmission": 1.0,
+      "initiatory_crisis": 0.0,
+      "initiatory_ordeal": 0.0,
+      "layered_cosmology": 0.0,
+      "nature_spirits": 0.0,
+      "possession_crisis": 0.0,
+      "public_performance": 1.0,
+      "rhythmic_percussion": 0.0,
+      "ritual_performance": 1.0,
+      "soul_flight": 0.0,
+      "specialist_presence": 0.0,
+      "spirit_possession": 0.0,
+      "trance_induction": 0.0,
+      "unmapped_shamanic_indicators": 0.25,
+      "n_cultures": 1
+    },
+    {
+      "cluster": 6,
+      "ancestor_mediation": 0.0,
+      "animal_transformation": 0.0,
+      "chanting_singing": 0.0,
+      "divination": 0.0,
+      "entheogen_use": 0.0,
+      "hereditary_transmission": 0.0,
+      "initiatory_crisis": 1.0,
+      "initiatory_ordeal": 0.0,
+      "layered_cosmology": 0.0,
+      "nature_spirits": 0.0,
+      "possession_crisis": 0.0,
+      "public_performance": 0.3333333333333333,
+      "rhythmic_percussion": 0.0,
+      "ritual_performance": 0.8333333333333334,
+      "soul_flight": 0.0,
+      "specialist_presence": 0.0,
+      "spirit_possession": 0.0,
+      "trance_induction": 0.0,
+      "unmapped_shamanic_indicators": 0.3611111111111111,
+      "n_cultures": 3
+    },
+    {
+      "cluster": 7,
+      "ancestor_mediation": 1.0,
+      "animal_transformation": 0.0,
+      "chanting_singing": 0.0,
+      "divination": 0.0,
+      "entheogen_use": 0.0,
+      "hereditary_transmission": 0.0,
+      "initiatory_crisis": 0.0,
+      "initiatory_ordeal": 0.0,
+      "layered_cosmology": 0.0,
+      "nature_spirits": 0.0,
+      "possession_crisis": 0.0,
+      "public_performance": 0.1428571428571428,
+      "rhythmic_percussion": 0.0,
+      "ritual_performance": 0.1428571428571428,
+      "soul_flight": 0.0,
+      "specialist_presence": 0.4285714285714285,
+      "spirit_possession": 0.0,
+      "trance_induction": 0.0,
+      "unmapped_shamanic_indicators": 0.2349206349206349,
+      "n_cultures": 7
+    }
+  ],
+  "robustness_analysis": {
+    "timestamp": "2026-04-20 20:55:50.003183",
+    "feature_sensitivity": {
+      "core_shamanic": {
+        "n_features": 5,
+        "n_cultures": 1850,
+        "silhouette_score": 0.9994594594594595,
+        "davies_bouldin_index": 3.638347674079802e-09,
+        "calinski_harabasz_index": 1.4999762108432207e+31
+      },
+      "cosmology": {
+        "n_features": 4,
+        "n_cultures": 1850,
+        "silhouette_score": 1.0,
+        "davies_bouldin_index": 1.9747457515549503e-08,
+        "calinski_harabasz_index": 2.2827612333082915e+31
+      },
+      "all_features": {
+        "n_features": 19,
+        "n_cultures": 1850,
+        "silhouette_score": 0.5101276606587303,
+        "davies_bouldin_index": 0.833512901829475,
+        "calinski_harabasz_index": 302.0187941582732
+      }
+    },
+    "k_value_analysis": {
+      "5": {
+        "silhouette_score": 0.4964739572846871,
+        "davies_bouldin_index": 1.3465442784039776,
+        "calinski_harabasz_index": 250.44022314095767,
+        "cluster_sizes": {
+          "0": 419,
+          "1": 1224,
+          "2": 112,
+          "3": 92,
+          "4": 3
+        }
+      },
+      "6": {
+        "silhouette_score": 0.5091692016155509,
+        "davies_bouldin_index": 1.1468494808704472,
+        "calinski_harabasz_index": 260.6995067188546,
+        "cluster_sizes": {
+          "0": 1222,
+          "1": 111,
+          "2": 92,
+          "3": 4,
+          "4": 2,
+          "5": 419
+        }
+      },
+      "7": {
+        "silhouette_score": 0.5606228488598075,
+        "davies_bouldin_index": 1.0224283985996307,
+        "calinski_harabasz_index": 275.6812014138831,
+        "cluster_sizes": {
+          "0": 239,
+          "1": 49,
+          "2": 1250,
+          "3": 17,
+          "4": 289,
+          "5": 2,
+          "6": 4
+        }
+      },
+      "8": {
+        "silhouette_score": 0.5101276606587303,
+        "davies_bouldin_index": 0.833512901829475,
+        "calinski_harabasz_index": 302.0187941582732,
+        "cluster_sizes": {
+          "0": 108,
+          "1": 1435,
+          "2": 58,
+          "3": 239,
+          "4": 1,
+          "5": 3,
+          "6": 2,
+          "7": 4
+        }
+      },
+      "9": {
+        "silhouette_score": 0.6613579282209712,
+        "davies_bouldin_index": 0.846888138195283,
+        "calinski_harabasz_index": 337.3266699376377,
+        "cluster_sizes": {
+          "0": 1020,
+          "1": 104,
+          "2": 55,
+          "3": 239,
+          "4": 419,
+          "5": 4,
+          "6": 6,
+          "7": 1,
+          "8": 2
+        }
+      },
+      "10": {
+        "silhouette_score": 0.7429784512257572,
+        "davies_bouldin_index": 0.783697572893206,
+        "calinski_harabasz_index": 376.5421906921958,
+        "cluster_sizes": {
+          "0": 419,
+          "1": 252,
+          "2": 875,
+          "3": 239,
+          "4": 36,
+          "5": 4,
+          "6": 16,
+          "7": 2,
+          "8": 1,
+          "9": 6
+        }
+      }
+    },
+    "imputation_comparison": {
+      "fill_zero": {
+        "strategy": "Fill missing with 0",
+        "silhouette_score": 0.5101276606554476,
+        "davies_bouldin_index": 0.833512901829473
+      },
+      "mean": {
+        "strategy": "Mean imputation",
+        "silhouette_score": 0.797519991858609,
+        "davies_bouldin_index": 0.3746323744061003
+      }
+    },
+    "geographic_independence": {
+      "correlation": 0.059674193814155216,
+      "p_value": 0.0,
+      "interpretation": "Features are independent of geography (r < 0.3)"
+    },
+    "interpretation": {
+      "feature_sensitivity": "VARIABLE ACROSS SUBSETS",
+      "k_selection": "STABLE",
+      "imputation": "SENSITIVE TO IMPUTATION",
+      "geographic": "INDEPENDENT"
+    }
+  }
+}
