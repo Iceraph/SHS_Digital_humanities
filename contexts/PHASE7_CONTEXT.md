@@ -54,7 +54,7 @@ Phase 7 transforms Phase 6 statistical outputs into interactive web-based visual
 ### Data Availability for Phase 7
 - **Synthetic test data:** 50 cultures (used for validation)
 - **Production data:** 1,257 cultures (loaded in Phase 4, ready for Phase 7)
-- **Coordinates:** Complete geographic metadata (lat/lon for globe visualization)
+- **Coordinates:** Geographic metadata for 228/240 DRH + all D-PLACE + all Seshat entries. 12 DRH entries have no coordinates by design (globally distributed traditions — see Section 4.4).
 - **Cluster assignments:** 8 clusters from Phase 4 analysis
 - **Language families:** 5-7 language families (from D-PLACE/phylogenetic tree)
 - **Feature attributes:** 19 shamanic binary features with metadata
@@ -176,6 +176,7 @@ const globe = new ThreeGlobe()
 - [ ] Cluster colors consistent with Phase 6 figures
 - [ ] Hover information (culture name, cluster, features) displayed
 - [ ] Feature filter highlights subset of cultures
+- [ ] Globally distributed traditions listed in sidebar (see Section 4.4)
 
 ### 4.2 Component 2: Feature Search & Filter Interface
 
@@ -248,6 +249,25 @@ featurePanel.onPhyloFilter(familyName, () => {
 - [ ] Phylogenetic filtering works correctly
 - [ ] Globe and tree update synchronously
 - [ ] Export CSV of filtered data working
+
+### 4.4 Globally Distributed Traditions (no-coordinate entries)
+
+**Background:** 12 DRH traditions have no geographic coordinates because they are inherently non-localizable — they are global diffusion networks or organisations with no meaningful single point (Gardnerian Wicca, Wesleyanism, Digital Shinto Communities, etc.). Assigning a fake centroid would introduce spurious signal into Moran's I and Mantel tests, so `lat/lon = NaN` is the correct encoding.
+
+**Consequences by use:**
+- **Clustering:** No effect — k-means uses features only, not coordinates. All 12 will receive cluster assignments.
+- **Spatial analysis:** Correctly excluded from Moran's I and Mantel test (requires coordinates).
+- **Globe:** These 12 entries do not appear as dots — they must be surfaced elsewhere to avoid silently misleading the reader.
+
+**Required UI treatment — Globally Distributed Traditions sidebar:**
+- A collapsible panel (or footer note) on the globe view listing these 12 entries by name, with their cluster assignment and feature count
+- Label: *"12 traditions are globally distributed and cannot be plotted geographically. They are included in the clustering analysis."*
+- Each entry links to its detail card (same as clicking a globe dot)
+- The count (12) should appear in the data coverage legend so readers know the globe does not show 100% of the DRH data
+
+**Implementation note:** Filter `cultures_metadata.json` entries where `lat === null` and `source === "drh"` to populate this list dynamically.
+
+---
 
 ### 4.3 Component 3: Phylogenetic Tree Visualization
 
@@ -344,6 +364,7 @@ svg.selectAll('.link')
 - [ ] Accessibility audit (WCAG 2.1 AA)
 - [ ] Documentation and README
 - [ ] Package for deployment
+- [ ] Implement Globally Distributed Traditions sidebar (Section 4.4) — list 12 no-coordinate DRH entries with cluster assignments and link to detail cards
 
 ---
 
