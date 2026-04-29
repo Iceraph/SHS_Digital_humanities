@@ -55,10 +55,9 @@ const GlobeVisualization = (() => {
     const loadWorldMap = async () => {
         if (worldLand) return;
         try {
-            const topo = await fetch(
-                'https://cdn.jsdelivr.net/npm/world-atlas@2/land-110m.json'
-            ).then(r => r.json());
+            const topo = await fetch('data/land-110m.json').then(r => r.json());
             worldLand = topojson.feature(topo, topo.objects.land);
+            console.log('✓ World map loaded');
             if (canvas.userData && canvas.userData.cultures) {
                 render(canvas.userData.cultures);
             }
