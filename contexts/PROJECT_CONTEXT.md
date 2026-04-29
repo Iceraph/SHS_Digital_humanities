@@ -517,6 +517,8 @@ Track every methodological choice here. When you make a decision, add a row.
 | Missing data strategy | Complete-case / Imputation / Both | **Complete-case (primary, min 2 features); mean imputation as sensitivity check** | Complete-case avoids imputing structural missingness across sources; imputation available in `src/features/impute.py` | Ph. 3 | 28 Apr 2026 |
 | Clustering algorithm | k-means / Hierarchical / DBSCAN / Multiple | **K-means (primary) + Hierarchical Ward (confirmation)** | K-means chosen for scalability and interpretability; Ward hierarchical used to validate via ARI (0.752 — high agreement) | Ph. 4 | 28 Apr 2026 |
 | Optimal k | 1–10 | **k=10** (silhouette=0.696, DB=0.629, bootstrap ARI=0.896 ± 0.040) | All three metrics agree on k=10 from the 196-culture phylo-filtered dataset; bootstrap stability is very high; 10 clusters align with expected cultural diversity | Ph. 4 | 28 Apr 2026 |
+| `moralizing_supernatural` in CLUSTERING_FEATURES | Include / Exclude / Post-hoc only | **Excluded from clustering; used as post-hoc validation variable** | Only coded in Seshat — including it would create source-specific clusters, not cross-cultural ones. Conceptually orthogonal: it measures Big God cosmology, not shamanic practice. Use in Phase 5 interpretation notebooks to validate that shamanic clusters score low on this variable (independent confirmation). | Ph. 4–5 | 29 Apr 2026 |
+| Non-phylo culture assignment | Re-fit / Nearest centroid / Leave unassigned | **Nearest-centroid assignment** for D-PLACE cultures excluded by phylo filter but with ≥1 feature | Model fitted on phylo-filtered set (Galton-safe); remaining cultures predicted to nearest k=8 centroid. Assignment is for visualisation only — does not affect statistical analysis. 841 cultures with 0 coded features remain unassigned. | Ph. 4 | 29 Apr 2026 |
 | Spatial weight matrix | k-nearest / Distance band / Queen contiguity | _pending_ | | Ph. 6 | |
 | Globe framework | Deck.gl / CesiumJS / Mapbox Globe | _pending_ | | Ph. 7 | |
 
@@ -604,6 +606,7 @@ Original approach used quality-weighted averaging (D-PLACE: 0.5, DRH: 0.3, Sesha
 | Galton's problem inflates sample size | Spatial clusters are artifacts of shared ancestry | Phylogenetic correction via D-PLACE language trees |
 | Western classification bias in source databases | "Shamanism" label applied inconsistently | Include all spirit-related practices, not just those labeled "shamanic"; let clustering decide |
 | Missing data skews clustering | Cultures with few recorded features cluster by missingness, not by actual similarity | Use complete-case as primary; imputation as sensitivity check |
+| 841 cultures (31.3%) have 0 coded shamanism features and cannot be clustered | Globe shows large grey population; reader may perceive gaps as failure | Show coverage legend in viz; document causes explicitly. Three distinct causes: (1) **D-PLACE 633**: `trance_induction` in codebook but value never recorded by ethnographer — true data absence; (2) **DRH 62**: expert answered `unk` to all target questions — no codable answer; (3) **Seshat 146**: have `moralizing_supernatural` coded but it is excluded from the shamanism feature schema by design — not a data gap, a principled exclusion. |
 
 ---
 

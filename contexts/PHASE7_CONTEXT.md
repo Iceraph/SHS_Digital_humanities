@@ -177,6 +177,7 @@ const globe = new ThreeGlobe()
 - [ ] Hover information (culture name, cluster, features) displayed
 - [ ] Feature filter highlights subset of cultures
 - [ ] Globally distributed traditions listed in sidebar (see Section 4.4)
+- [ ] Coverage legend visible (see Section 4.5)
 
 ### 4.2 Component 2: Feature Search & Filter Interface
 
@@ -266,6 +267,38 @@ featurePanel.onPhyloFilter(familyName, () => {
 - The count (12) should appear in the data coverage legend so readers know the globe does not show 100% of the DRH data
 
 **Implementation note:** Filter `cultures_metadata.json` entries where `lat === null` and `source === "drh"` to populate this list dynamically.
+
+---
+
+### 4.5 Data Coverage Legend
+
+**Background:** 841 of 2,687 cultures (31.3%) have zero coded shamanism features and appear as gray dots (or are absent from the globe). Without explanation, a reader will interpret this as a bug or an incomplete dataset. The coverage legend makes the situation transparent.
+
+**Three distinct causes (must be explained in UI):**
+
+| Cause | Count | Source | Reason | Fixable? |
+|---|---|---|---|---|
+| Variable in codebook, value never recorded | 633 | D-PLACE | Ethnographer left `trance_induction` blank | No — requires new fieldwork |
+| Expert answered "unknown" to all questions | 62 | DRH | `unk` responses correctly map to NaN | No — requires new expert coding |
+| Feature coded but outside shamanism schema | 146 | Seshat | Have `moralizing_supernatural`; excluded by design (Big God indicator, not shamanic practice) | By design — see PROJECT_CONTEXT §8 |
+
+**Required UI treatment — Coverage Legend:**
+- A small persistent info panel (bottom-left or top-right of globe) showing:
+  ```
+  ● 1,846 cultures clustered
+  ● 841 cultures: insufficient shamanism data
+      633 D-PLACE — variable not recorded
+       62 DRH — expert answer unknown
+      146 Seshat — data outside shamanism schema
+    + 12 DRH globally distributed (no coordinates)
+  ```
+- Clicking any line in the legend filters/highlights that subset on the globe
+- The Seshat 146 tooltip should note: *"moralizing_supernatural coded but excluded from shamanism feature set by design"*
+
+**`moralizing_supernatural` as post-hoc validation (Phase 5):**
+This variable (present for 386 Seshat polities) is excluded from `CLUSTERING_FEATURES` because it measures Big God cosmology, not shamanic practice, and is only coded in Seshat. However, it is a strong external validator: shamanic clusters are expected to score low on `moralizing_supernatural`. Use in `notebooks/11_cluster_interpretation.ipynb` Section 5–6 to test whether cluster assignments correlate negatively with this variable — independent confirmation that the clusters capture shamanic rather than generic religious complexity.
+
+**Implementation note:** Filter `cultures_metadata.json` entries where `cluster === null` to populate the coverage breakdown. The `source` field distinguishes the three categories.
 
 ---
 
@@ -365,6 +398,7 @@ svg.selectAll('.link')
 - [ ] Documentation and README
 - [ ] Package for deployment
 - [ ] Implement Globally Distributed Traditions sidebar (Section 4.4) — list 12 no-coordinate DRH entries with cluster assignments and link to detail cards
+- [ ] Implement Data Coverage Legend (Section 4.5) — persistent panel breaking down 841 unclusterable cultures by cause; clicking any line filters globe
 
 ---
 
