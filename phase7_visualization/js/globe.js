@@ -172,18 +172,53 @@ const GlobeVisualization = (() => {
     };
 
     /**
-     * Draw land polygons using D3 geoTransform + our projectCoordinates.
+     * Draw land polygons with proper antimeridian clipping.
+     *
+     * geoTransform (used previously) has no antimeridian clipping, causing
+     * Russia/Eurasia polygons to draw a stray horizontal line across the top.
+     *
+     * Fix: route through d3.geoEquirectangular (which clips at ±180°) using
+     * its x-scale, then warp y to match our canvas-filling stretched projection.
+     * The warp factor yscaleFactor = 2H/W converts D3's isotropic equirectangular
+     * y into our aspect-ratio-independent y, keeping land perfectly aligned with
+     * the culture dots drawn by projectCoordinates.
      */
     const drawWorldMap = () => {
         if (!worldLand) return;
 
-        const projection = d3.geoTransform({
-            point: function(lon, lat) {
-                const p = projectCoordinates(lon, lat);
-                this.stream.point(p.x, p.y);
+        const W = canvas.width;
+        const H = canvas.height;
+        const baseScale = W / (2 * Math.PI * scale);
+        const centerX   = W / (2 * scale) + offsetX;
+        const centerY   = H / (2 * scale) + offsetY;
+        const yscaleFactor = 2 * H / W;
+
+        // D3 equirectangular projection (isotropic, handles antimeridian clipping)
+        const baseProj = d3.geoEquirectangular()
+            .scale(baseScale)
+            .translate([centerX, centerY])
+            .precision(0.1);
+
+        // Composite projection: pass through D3's clipped pipeline, warp y afterwards
+        const compositeProj = {
+            stream: function(outputStream) {
+                return baseProj.stream({
+                    point:        (x, y) => outputStream.point(x, (y - centerY) * yscaleFactor + centerY),
+                    lineStart:    ()     => outputStream.lineStart(),
+                    lineEnd:      ()     => outputStream.lineEnd(),
+                    polygonStart: ()     => outputStream.polygonStart(),
+                    polygonEnd:   ()     => outputStream.polygonEnd(),
+                    sphere:       ()     => outputStream.sphere()
+                });
             }
-        });
-        const path = d3.geoPath().projection(projection).context(ctx);
+        };
+
+        const path = d3.geoPath().projection(compositeProj).context(ctx);
+
+        ctx.save();
+        ctx.beginPath();
+        ctx.rect(0, 0, W, H);
+        ctx.clip();
 
         ctx.beginPath();
         path(worldLand);
@@ -192,6 +227,8 @@ const GlobeVisualization = (() => {
         ctx.strokeStyle = 'rgba(160, 200, 160, 0.3)';
         ctx.lineWidth = 0.4;
         ctx.stroke();
+
+        ctx.restore();
     };
 
     /**
