@@ -20,6 +20,7 @@ const GlobeVisualization = (() => {
     let offsetY = 0;
     let highlightedCluster = null;
     let subsetHighlight = null;   // { ids: Set, color: string } — coverage legend filter
+    let worldLand = null;         // GeoJSON FeatureCollection for land polygons
 
     /**
      * Initialize canvas and set up rendering
@@ -44,7 +45,26 @@ const GlobeVisualization = (() => {
         canvas.addEventListener('wheel', onMouseWheel, { passive: false });
         document.addEventListener('clusterHighlight', onClusterHighlight);
 
+        loadWorldMap();
         console.log('✓ 2D Canvas globe initialized');
+    };
+
+    /**
+     * Fetch Natural Earth land polygons (once) and re-render when ready.
+     */
+    const loadWorldMap = async () => {
+        if (worldLand) return;
+        try {
+            const topo = await fetch(
+                'https://cdn.jsdelivr.net/npm/world-atlas@2/land-110m.json'
+            ).then(r => r.json());
+            worldLand = topojson.feature(topo, topo.objects.land);
+            if (canvas.userData && canvas.userData.cultures) {
+                render(canvas.userData.cultures);
+            }
+        } catch (e) {
+            console.warn('World map unavailable:', e);
+        }
     };
 
     /**
@@ -86,11 +106,14 @@ const GlobeVisualization = (() => {
             return;
         }
 
-        // Clear canvas
-        ctx.fillStyle = 'rgba(102, 126, 234, 0.4)';
+        // Clear canvas — solid ocean colour
+        ctx.fillStyle = '#1a3a5c';
         ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-        // Draw graticule (optional)
+        // Draw land polygons (if loaded)
+        drawWorldMap();
+
+        // Draw graticule on top of land
         drawGraticule();
 
         // Pass 1: draw unclustered cultures as small gray dots (background layer)
@@ -147,6 +170,29 @@ const GlobeVisualization = (() => {
 
         // Draw legend
         drawLegend();
+    };
+
+    /**
+     * Draw land polygons using D3 geoTransform + our projectCoordinates.
+     */
+    const drawWorldMap = () => {
+        if (!worldLand) return;
+
+        const projection = d3.geoTransform({
+            point: function(lon, lat) {
+                const p = projectCoordinates(lon, lat);
+                this.stream.point(p.x, p.y);
+            }
+        });
+        const path = d3.geoPath().projection(projection).context(ctx);
+
+        ctx.beginPath();
+        path(worldLand);
+        ctx.fillStyle = '#2d4a38';
+        ctx.fill();
+        ctx.strokeStyle = 'rgba(160, 200, 160, 0.3)';
+        ctx.lineWidth = 0.4;
+        ctx.stroke();
     };
 
     /**
