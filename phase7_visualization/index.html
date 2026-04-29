@@ -21,7 +21,7 @@
                     <strong>Shamanism Clustering Analysis</strong>
                 </a>
                 <span class="navbar-text text-light ms-auto">
-                    Interactive Phase 7 Visualization • 1,257 Cultures • 8 Clusters
+                    Interactive Phase 7 Visualization • 2,687 Cultures • 8 Clusters
                 </span>
             </div>
         </header>
@@ -102,8 +102,8 @@
 
             <!-- Column 2: Center - 3D Globe -->
             <div class="col-lg-6 col-md-8 bg-light" id="globeContainer">
-                <div id="globeCanvas" class="w-100 h-100"></div>
                 <div id="globeTooltip" class="globe-tooltip" style="display: none;"></div>
+                <!-- Coverage legend overlay appended here by coverageLegend.js -->
             </div>
 
             <!-- Column 3: Right Sidebar - Phylogenetic Tree & Info -->
@@ -128,6 +128,20 @@
                     <h6 class="mb-2">Cluster Information</h6>
                     <div id="clusterInfo" class="small bg-light p-2 rounded">
                         <p class="text-muted mb-0">Click a cluster to view details</p>
+                    </div>
+
+                    <hr class="my-3">
+
+                    <!-- Globally Distributed Traditions -->
+                    <h6 class="mb-2 d-flex align-items-center justify-content-between">
+                        <span>Globally Distributed</span>
+                        <button class="btn btn-link btn-sm p-0 text-secondary" id="globalDistToggle" title="Traditions with no fixed location">▾</button>
+                    </h6>
+                    <div id="globalDistPanel" class="small mb-3">
+                        <p class="text-muted mb-1" style="font-size:0.8rem">
+                            12 DRH traditions without a fixed geographic location
+                        </p>
+                        <div id="globalDistList"></div>
                     </div>
 
                     <hr class="my-3">
@@ -181,6 +195,7 @@
     <script src="js/phylotree.js"></script>
     <script src="js/clusterInteraction.js"></script>
     <script src="js/featurePanel.js"></script>
+    <script src="js/coverageLegend.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

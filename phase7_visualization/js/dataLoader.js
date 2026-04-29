@@ -191,6 +191,60 @@ const DataLoader = (() => {
         return Array.from(families).sort();
     };
 
+    /**
+     * Get cultures with no geographic coordinates (globally distributed).
+     * @returns {Array}
+     */
+    const getGloballyDistributed = () => {
+        return culturesData?.cultures.filter(c => c.lat === null || c.lon === null) || [];
+    };
+
+    /**
+     * Compute coverage breakdown for the Coverage Legend.
+     * Returns counts for each category of unclusterable culture.
+     * @returns {Object}
+     */
+    const getCoverageStats = () => {
+        const cultures = culturesData?.cultures || [];
+        const clustered   = cultures.filter(c => c.cluster !== null && c.cluster !== undefined);
+        const unclustered = cultures.filter(c => c.cluster === null || c.cluster === undefined);
+
+        // Globally distributed = no coordinates (regardless of cluster status)
+        const noCoords = cultures.filter(c => c.lat === null || c.lon === null);
+
+        // Unclustered WITH coordinates, by source
+        const unclusteredWithCoords = unclustered.filter(c => c.lat !== null && c.lon !== null);
+        const bySource = {};
+        unclusteredWithCoords.forEach(c => {
+            bySource[c.source] = (bySource[c.source] || []);
+            bySource[c.source].push(c.id);
+        });
+
+        // Count total unclustered by source (for display in legend)
+        const unclusteredCount = {};
+        unclustered.forEach(c => {
+            unclusteredCount[c.source] = (unclusteredCount[c.source] || 0) + 1;
+        });
+
+        return {
+            total: cultures.length,
+            clustered: clustered.length,
+            unclustered: unclustered.length,
+            noCoords: noCoords.length,
+            counts: {
+                dplace: unclusteredCount['dplace'] || 0,
+                drh:    unclusteredCount['drh']    || 0,
+                seshat: unclusteredCount['seshat'] || 0,
+            },
+            // IDs for globe highlighting (only cultures with coordinates)
+            ids: {
+                dplace_unrecorded: (bySource['dplace'] || []),
+                drh_unknown:       (bySource['drh']    || []),
+                seshat_schema:     (bySource['seshat'] || []),
+            }
+        };
+    };
+
     return {
         loadAll,
         isLoaded,
@@ -206,6 +260,8 @@ const DataLoader = (() => {
         getModransI,
         getClusterProfiles,
         getPhyloTree,
-        getLanguageFamilies
+        getLanguageFamilies,
+        getGloballyDistributed,
+        getCoverageStats
     };
 })();

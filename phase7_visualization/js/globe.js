@@ -18,7 +18,8 @@ const GlobeVisualization = (() => {
     let scale = 1;
     let offsetX = 0;
     let offsetY = 0;
-    let highlightedCluster = null;  // For interactive cluster highlighting
+    let highlightedCluster = null;
+    let subsetHighlight = null;   // { ids: Set, color: string } — coverage legend filter
 
     /**
      * Initialize canvas and set up rendering
@@ -30,8 +31,9 @@ const GlobeVisualization = (() => {
         canvas.height = container.clientHeight;
         canvas.style.display = 'block';
         canvas.style.cursor = 'grab';
-        container.innerHTML = '';
-        container.appendChild(canvas);
+        const existingCanvas = container.querySelector('canvas');
+        if (existingCanvas) existingCanvas.remove();
+        container.insertBefore(canvas, container.firstChild);
         
         ctx = canvas.getContext('2d');
 
@@ -99,16 +101,18 @@ const GlobeVisualization = (() => {
 
                 const proj = projectCoordinates(culture.lon, culture.lat);
                 const isSelected = selectedCultures.has(culture.id);
-                ctx.fillStyle = '#aaaaaa';
-                ctx.globalAlpha = 0.35;
+                const inSubset   = subsetHighlight && subsetHighlight.ids.has(culture.id);
+
+                ctx.fillStyle = inSubset ? subsetHighlight.color : '#aaaaaa';
+                ctx.globalAlpha = inSubset ? 0.85 : (subsetHighlight ? 0.1 : 0.35);
                 ctx.beginPath();
-                ctx.arc(proj.x, proj.y, isSelected ? 5 : 2.5, 0, Math.PI * 2);
+                ctx.arc(proj.x, proj.y, inSubset ? 5 : (isSelected ? 5 : 2.5), 0, Math.PI * 2);
                 ctx.fill();
                 ctx.globalAlpha = 1.0;
 
                 culture.screenX = proj.x;
                 culture.screenY = proj.y;
-                culture.screenRadius = isSelected ? 5 : 2.5;
+                culture.screenRadius = inSubset ? 5 : (isSelected ? 5 : 2.5);
             });
         }
 
@@ -122,11 +126,12 @@ const GlobeVisualization = (() => {
             const size = isSelected ? 8 : 4;
             const color = ColorScheme.getClusterColor(culture.cluster);
 
-            // Apply opacity based on cluster highlight
             let opacity = 0.8;
             if (highlightedCluster !== null && culture.cluster !== highlightedCluster) {
                 opacity = 0.2;
             }
+            // Dim clustered dots when a subset (unclustered) is highlighted
+            if (subsetHighlight) opacity = Math.min(opacity, 0.15);
 
             ctx.fillStyle = color;
             ctx.globalAlpha = opacity;
@@ -409,6 +414,24 @@ const GlobeVisualization = (() => {
         requestAnimationFrame(animate);
     };
 
+    /**
+     * Highlight a specific subset of cultures (by ID array) in a given colour.
+     * All other cultures are dimmed. Call with null to clear.
+     */
+    const highlightSubset = (ids, color = '#f39c12') => {
+        subsetHighlight = ids && ids.length > 0
+            ? { ids: new Set(ids), color }
+            : null;
+        if (canvas.userData && canvas.userData.cultures) {
+            render(canvas.userData.cultures);
+        }
+    };
+
+    /**
+     * Clear subset highlight and return to normal rendering.
+     */
+    const clearSubsetHighlight = () => highlightSubset(null);
+
     return {
         init,
         plotCultures,
@@ -417,6 +440,8 @@ const GlobeVisualization = (() => {
         filterByCluster,
         filterByLanguageFamily,
         resetFilters,
+        highlightSubset,
+        clearSubsetHighlight,
         getFilters: () => ({ ...currentFilters }),
         getSelectedCultures: () => Array.from(selectedCultures)
     };

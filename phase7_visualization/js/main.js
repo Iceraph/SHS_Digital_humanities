@@ -40,7 +40,14 @@ document.addEventListener('DOMContentLoaded', async () => {
         // Step 4: Start animation loop
         GlobeVisualization.animate();
 
-        // Step 5: Setup cross-component event handling
+        // Step 5: Initialize coverage legend overlay
+        CoverageLegend.init();
+        console.log('✓ Coverage legend initialized');
+
+        // Step 6: Populate globally distributed sidebar section
+        populateGloballyDistributed();
+
+        // Step 7: Setup cross-component event handling
         setupEventHandling();
 
         console.log('\n✓✓✓ Application ready ✓✓✓\n');
@@ -56,6 +63,44 @@ document.addEventListener('DOMContentLoaded', async () => {
         displayError(error);
     }
 });
+
+/**
+ * Populate the Globally Distributed sidebar section with 12 DRH no-coord entries.
+ */
+function populateGloballyDistributed() {
+    const list = document.getElementById('globalDistList');
+    const toggle = document.getElementById('globalDistToggle');
+    const panel = document.getElementById('globalDistPanel');
+    if (!list) return;
+
+    const cultures = DataLoader.getGloballyDistributed()
+        .filter(c => c.source === 'drh')
+        .sort((a, b) => a.name.localeCompare(b.name));
+
+    if (cultures.length === 0) {
+        list.innerHTML = '<p class="text-muted mb-0">None found.</p>';
+        return;
+    }
+
+    list.innerHTML = cultures.map(c => {
+        const featCount = Object.values(c.features).filter(v => v === 1).length;
+        const clusterBadge = c.cluster !== null && c.cluster !== undefined
+            ? `<span class="badge global-dist-cluster-badge" style="background-color:${ColorScheme.getClusterColor(c.cluster)}">C${c.cluster}</span>`
+            : `<span class="badge bg-secondary global-dist-cluster-badge">—</span>`;
+        return `<div class="global-dist-item">
+            <span class="global-dist-name">${c.name}</span>
+            <span class="global-dist-meta">${clusterBadge} ${featCount} feat.</span>
+        </div>`;
+    }).join('');
+
+    if (toggle && panel) {
+        toggle.addEventListener('click', () => {
+            const collapsed = list.style.display === 'none';
+            list.style.display = collapsed ? '' : 'none';
+            toggle.textContent = collapsed ? '▾' : '▸';
+        });
+    }
+}
 
 /**
  * Setup event listeners for cross-component communication
@@ -76,7 +121,7 @@ function setupEventHandling() {
         GlobeVisualization.filterByLanguageFamily(familyId);
     });
 
-    // Handle window resize
+    // Handle window resize — globe re-init preserves overlays (canvas-only replacement)
     window.addEventListener('resize', () => {
         GlobeVisualization.init();
     });
