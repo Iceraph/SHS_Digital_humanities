@@ -15,6 +15,7 @@ import numpy as np
 import json
 from pathlib import Path
 import sys
+import re
 
 # Add src to path
 sys.path.insert(0, str(Path(__file__).parent.parent / 'src'))
@@ -204,38 +205,205 @@ def export_cluster_profiles():
     print(f"✓ Exported cluster profiles to {output_path}")
 
 
-def export_phylo_tree_stub():
+def _extract_newick_from_nexus(nexus_text: str) -> str | None:
+    match = re.search(r"TREE\s+summary\s*=\s*(?:\[&R\]\s*)?(.*?);", nexus_text, re.S)
+    if not match:
+        return None
+    newick = match.group(1).strip()
+    newick = re.sub(r"\[.*?\]", "", newick)
+    return newick
+
+
+def _parse_newick(newick: str) -> dict | None:
+    if not newick:
+        return None
+
+    root = None
+    current = None
+    stack: list[dict] = []
+    i = 0
+    length = len(newick)
+
+    while i < length:
+        ch = newick[i]
+
+        if ch in " \t\n\r":
+            i += 1
+            continue
+
+        if ch == "(":
+            node = {"name": None, "children": []}
+            if current is not None:
+                current["children"].append(node)
+                stack.append(current)
+            current = node
+            if root is None:
+                root = node
+            i += 1
+            continue
+
+        if ch == ",":
+            if stack:
+                parent = stack[-1]
+                node = {"name": None, "children": []}
+                parent["children"].append(node)
+                current = node
+            i += 1
+            continue
+
+        if ch == ")":
+            if stack:
+                current = stack.pop()
+            i += 1
+            continue
+
+        if ch == ":":
+            i += 1
+            while i < length and newick[i] not in ",);":
+                i += 1
+            continue
+
+        if ch in "'\"":
+            quote = ch
+            i += 1
+            start = i
+            while i < length and newick[i] != quote:
+                i += 1
+            name = newick[start:i].strip()
+            if current is not None and name:
+                current["name"] = name
+            i += 1
+            continue
+
+        if ch == ";":
+            break
+
+        start = i
+        while i < length and newick[i] not in ":,);":
+            i += 1
+        name = newick[start:i].strip()
+        if current is not None and name:
+            current["name"] = name
+
+    return root
+
+
+def _prune_tree(node: dict | None, keep: set[str]) -> dict | None:
+    if node is None:
+        return None
+
+    children = node.get("children") or []
+    if children:
+        pruned_children = []
+        for child in children:
+            pruned = _prune_tree(child, keep)
+            if pruned is not None:
+                pruned_children.append(pruned)
+        node["children"] = pruned_children
+
+    if node.get("children"):
+        return node
+
+    name = node.get("name")
+    if name in keep:
+        return node
+    return None
+
+
+def _add_cluster_composition(node: dict, cluster_map: dict[str, list[int]]) -> dict[int, int]:
+    children = node.get("children") or []
+    if not children:
+        clusters = cluster_map.get(node.get("name"), [])
+        counts: dict[int, int] = {}
+        for cluster in clusters:
+            if cluster is None or (isinstance(cluster, float) and np.isnan(cluster)):
+                continue
+            counts[int(cluster)] = counts.get(int(cluster), 0) + 1
+        node["cluster_composition"] = counts
+        return counts
+
+    totals: dict[int, int] = {}
+    for child in children:
+        child_counts = _add_cluster_composition(child, cluster_map)
+        for cluster, count in child_counts.items():
+            totals[cluster] = totals.get(cluster, 0) + count
+    node["cluster_composition"] = totals
+    return totals
+
+
+def _assign_node_ids(node: dict, prefix: str, counter: list[int]) -> None:
+    if node.get("name"):
+        node["id"] = node["name"]
+    else:
+        counter[0] += 1
+        node["id"] = f"{prefix}_{counter[0]}"
+
+    for child in node.get("children") or []:
+        _assign_node_ids(child, prefix, counter)
+
+
+def export_phylo_tree():
     """
-    Create phylo_tree.json with phylogenetic structure (stub for now).
-    
-    Real implementation requires parsing D-PLACE/Glottolog phylogenetic tree.
-    For Phase 7 Sprint 1, this is a placeholder.
+    Create phylo_tree.json by parsing D-PLACE Glottolog trees.
     """
-    print("Creating phylogenetic tree stub...")
-    
-    # Load cultures to get language families
-    dplace = pd.read_parquet('data/processed/dplace_real.parquet')
-    culture_meta = dplace.drop_duplicates(subset=['culture_id'], keep='first')
-    
-    # Create a simple tree structure (stub)
+    print("Creating phylogenetic tree...")
+
+    feature_matrix = pd.read_parquet('data/processed/feature_matrix.parquet')
+    clusters = pd.read_csv('data/processed/clusters/multisource/culture_cluster_membership_k8.csv')
+
+    culture_meta = feature_matrix.merge(
+        clusters[['culture_id', 'cluster_id']],
+        on='culture_id',
+        how='left'
+    )
+
+    dplace = culture_meta[(culture_meta['source'] == 'dplace') & culture_meta['glottocode'].notna()]
+    glottocode_clusters: dict[str, list[int]] = {}
+    for _, row in dplace.iterrows():
+        code = str(row['glottocode'])
+        cluster = row['cluster_id'] if pd.notna(row['cluster_id']) else None
+        glottocode_clusters.setdefault(code, []).append(cluster)
+
+    keep = set(glottocode_clusters.keys())
+    trees_dir = Path('data/raw/dplace_repo/cldf/trees')
+    children = []
+
+    for tree_path in sorted(trees_dir.glob('*.trees')):
+        try:
+            text = tree_path.read_text()
+        except Exception:
+            continue
+
+        newick = _extract_newick_from_nexus(text)
+        if not newick:
+            continue
+
+        parsed = _parse_newick(newick)
+        pruned = _prune_tree(parsed, keep)
+        if not pruned:
+            continue
+
+        if not pruned.get('name'):
+            pruned['name'] = tree_path.stem
+        pruned['id'] = tree_path.stem
+        _add_cluster_composition(pruned, glottocode_clusters)
+        _assign_node_ids(pruned, tree_path.stem, [0])
+
+        children.append(pruned)
+
     tree = {
         "name": "World Languages",
-        "children": [
-            {
-                "name": "Language Family 1",
-                "id": "LF_1",
-                "cultures": [],
-                "cluster_composition": {}
-            },
-            # TODO: Populate with real language family data
-        ]
+        "id": "world_languages",
+        "children": children
     }
-    
+    _add_cluster_composition(tree, glottocode_clusters)
+    _assign_node_ids(tree, "world", [0])
+
     output_path = Path('phase7_visualization/data/phylo_tree.json')
     with open(output_path, 'w') as f:
         json.dump(tree, f, indent=2)
-    
-    print(f"✓ Created phylogenetic tree stub at {output_path}")
+
+    print(f"✓ Created phylogenetic tree at {output_path}")
 
 
 def export_distance_matrices_stub():
@@ -285,7 +453,7 @@ def main():
         n_cultures = export_cultures_metadata()
         export_analysis_results()
         export_cluster_profiles()
-        export_phylo_tree_stub()
+        export_phylo_tree()
         export_distance_matrices_stub()
         
         print("\n" + "="*60)

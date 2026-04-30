@@ -12,11 +12,26 @@ document.addEventListener('DOMContentLoaded', async () => {
         await DataLoader.loadAll();
         console.log('✓ Data loaded');
 
+        // Step 1.5: Initialize map mode selector
+        const mapModeSelect = document.getElementById('mapModeSelect');
+        const savedMode = localStorage.getItem('mapMode') || '3d';
+        if (mapModeSelect) {
+            mapModeSelect.value = savedMode;
+            GlobeVisualization.setMode(savedMode);
+            mapModeSelect.addEventListener('change', async (event) => {
+                const nextMode = event.target.value;
+                localStorage.setItem('mapMode', nextMode);
+                GlobeVisualization.setMode(nextMode);
+                await GlobeVisualization.init();
+                GlobeVisualization.plotCultures(DataLoader.getCultures());
+            });
+        }
+
         // Step 2: Initialize visualization components
         console.log('Step 2: Initializing visualizations...');
         
         // Initialize globe
-        GlobeVisualization.init();
+        await GlobeVisualization.init();
         console.log('✓ Globe initialized');
 
         // Initialize phylogenetic tree
