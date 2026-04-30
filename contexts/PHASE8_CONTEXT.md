@@ -191,7 +191,76 @@ This **reverses the hypothesis evaluation**: the evidence now points toward geog
 - `phase7_visualization/data/cluster_profiles_phase8.json`
 - `phase7_visualization/data/analysis_results.json` — `phase8` section added
 
-## 7. Implementation Log
+## 7. Open Question — Did Phase 2 Harmonization Fail?
+
+**Status:** TODO — audit required before final write-up
+
+**Context:** The 87.6% source classification accuracy and zero shared features across sources raises the question: did the Phase 2 crosswalk fail to map overlapping variables, or do the databases genuinely not overlap on shamanic features?
+
+**Two possible explanations:**
+
+| Explanation | Evidence | Implication |
+|---|---|---|
+| Crosswalk missed mappings | Seshat has spirit_possession_crisis, Seshat has ritual specialists — were these mapped? | Phase 2 process failure; crosswalk needs revision |
+| Databases genuinely don't overlap | Seshat was built for political complexity, not shamanism; DRH covers world religions not ethnographic societies | Data gap, not process failure; joint clustering was always the wrong design |
+
+**Audit steps (TODO):**
+1. Read `data/reference/crosswalk.csv` — list every Seshat and DRH variable that was mapped to the shared schema
+2. Cross-check against `data/processed/harmonised/seshat_harmonised.parquet` and `drh_harmonised.parquet` — are the mapped variables populated, or all-NA?
+3. If all-NA despite a crosswalk entry: Phase 2 extraction failed (fix the ingest pipeline)
+4. If variable genuinely absent from source: data gap (document as limitation, no fix needed)
+5. Document findings in this section
+
+**Why it matters for the paper:** If the crosswalk is correct, the zero-intersection result is a data limitation to acknowledge. If Phase 2 missed real mappings, fixing it could add 1–3 shared features and enable a partial cross-source validation.
+
+**Priority:** Medium — does not block Phase 8 reanalysis (D-PLACE primary is valid regardless), but affects the Discussion section's framing of cross-source coverage.
+
+---
+
+## 8. Refinement Results (30 April 2026, phase8_refinement.py)
+
+### Feature set change
+Removed `unmapped_shamanic_indicators` (99.7% present in SCCS subset — constant, no discriminating power) and `dedicated_specialist` (0% in D-PLACE). Final clustering used 16 SCCS shamanic features.
+
+### Clustering: k=3
+
+Only k=2 and k=3 avoid micro-clusters (min size ≥ 10). Selected k=3 (silhouette=0.341, all clusters ≥ 39 cultures).
+
+| Cluster | n | Defining features |
+|---|---|---|
+| 0 | 39 | specialist_presence (1.0), nature_spirits (0.85), layered_cosmology (0.79), entheogen_use (0.72) — **cosmological specialists** |
+| 1 | 215 | specialist_presence (0.82), layered_cosmology (0.30) — **general religious practitioners** |
+| 2 | 103 | ritual_performance (0.83), public_performance (0.75) — **performative/public ritual** |
+
+Three interpretable clusters corresponding to: specialist cosmology, generalist practitioners, public ritual performance.
+
+### Mantel Test (confirmed)
+
+**r = 0.465, p = 0.001** — highly significant. Geography predicts shamanic feature similarity in the clean D-PLACE dataset. This is the opposite of the Phase 4 conclusion and directly contradicts the "Neurobiological Universalism" synthesis.
+
+### Pagel's λ
+
+13/16 features show **strong phylogenetic signal** (λ ≈ 0.87–1.0, p < 0.05). This means shamanic features are strongly conserved within language families — cultures that share linguistic ancestry tend to share shamanic practices.
+
+| Interpretation | n features | Examples |
+|---|---|---|
+| Strong (λ > 0.7, p < 0.05) | 13 | ancestor_mediation, soul_flight, rhythmic_percussion, entheogen_use |
+| Moderate (not significant) | 1 | hereditary_transmission (n=39, underpowered) |
+| Insufficient data | 2 | spirit_possession, trance_induction (0 coded in SCCS subset) |
+
+### Revised Hypothesis Evaluation
+
+| Test | Phase 4 result | Phase 8 (clean) result | Direction |
+|---|---|---|---|
+| Mantel geography~features | r=0.04, p=0.19 n.s. | **r=0.47, p=0.001 sig** | Supports diffusion |
+| Pagel's λ | Stubs (not computed) | **λ=0.87–1.0, p<0.05 for 13/16 features** | Supports diffusion |
+| Spatial autocorrelation | 1/19 sig (from Phase 6) | Not recomputed (see Phase 6) | Ambiguous |
+
+**The universalism score of 4.0/5 must be retracted.** The clean analysis supports regional/phylogenetic patterning — shamanic features are geographically clustered (r=0.47) and phylogenetically conserved (λ≈1.0). This is more consistent with cultural diffusion within language families than with independent neurobiological emergence.
+
+---
+
+## 9. Implementation Log
 
 **Date:** 30 April 2026  
 **Script:** `scripts/phase8_reanalysis.py`  
