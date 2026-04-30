@@ -54,6 +54,12 @@ body {
     opacity: 0.8;
 }
 
+.map-mode-select {
+    min-width: 110px;
+    font-size: 0.8rem;
+    padding: 0.15rem 0.5rem;
+}
+
 /* Sidebar Panels */
 .sidebar-panel {
     overflow-y: auto;
@@ -155,6 +161,8 @@ body {
     background: #1a3a5c;
     position: relative;
     overflow: hidden;
+    height: calc(100vh - 60px);
+    min-height: 420px;
 }
 
 #globeCanvas {

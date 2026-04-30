@@ -20,9 +20,18 @@
                 <a class="navbar-brand" href="#">
                     <strong>Shamanism Clustering Analysis</strong>
                 </a>
-                <span class="navbar-text text-light ms-auto">
-                    Interactive Phase 7 Visualization • 2,687 Cultures • 8 Clusters
-                </span>
+                <div class="ms-auto d-flex align-items-center gap-3">
+                    <div class="d-flex align-items-center gap-2 text-light small">
+                        <label for="mapModeSelect" class="mb-0">Map:</label>
+                        <select id="mapModeSelect" class="form-select form-select-sm map-mode-select">
+                            <option value="3d" selected>3D Globe</option>
+                            <option value="2d">2D Map</option>
+                        </select>
+                    </div>
+                    <span class="navbar-text text-light">
+                        Interactive Phase 7 Visualization • 2,687 Cultures • 8 Clusters
+                    </span>
+                </div>
             </div>
         </header>
 
@@ -185,6 +194,33 @@
     <!-- D3 from CDN -->
     <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
 
+    <!-- Three.js loader (no importmap required) -->
+    <script>
+        window.__threeReady = false;
+        window.__threeLoaderPromise = new Promise((resolve) => {
+            window.__resolveThreeLoader = resolve;
+        });
+    </script>
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "/node_modules/three/build/three.module.js"
+            }
+        }
+    </script>
+    <script type="module">
+        import * as THREE from '/node_modules/three/build/three.module.js';
+        import { OrbitControls } from '/js/vendor/OrbitControls.module.js';
+
+        const THREE_NS = { ...THREE, OrbitControls };
+        window.THREE = THREE_NS;
+        window.__threeReady = true;
+
+        if (window.__resolveThreeLoader) {
+            window.__resolveThreeLoader();
+        }
+    </script>
+
     <!-- TopoJSON client (for Natural Earth land polygons) -->
     <script src="js/topojson.min.js"></script>
     
@@ -194,6 +230,8 @@
     <!-- Application Scripts -->
     <script src="js/colorScheme.js"></script>
     <script src="js/dataLoader.js"></script>
+    <script src="js/globe2d.js"></script>
+    <script src="js/globe3d.js"></script>
     <script src="js/globe.js"></script>
     <script src="js/phylotree.js"></script>
     <script src="js/clusterInteraction.js"></script>

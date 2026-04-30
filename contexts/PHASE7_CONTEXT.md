@@ -398,6 +398,34 @@ svg.selectAll('.link')
 - [ ] Documentation and README
 - [ ] Package for deployment
 - [ ] Implement Globally Distributed Traditions sidebar (Section 4.4) — list 12 no-coordinate DRH entries with cluster assignments and link to detail cards
+
+---
+
+## Implementation Log (Agent: GitHub Copilot, GPT-5.2-Codex)
+
+**Date:** 29 April 2026
+
+**Scope:** Phase 7 points 1–2 (3D globe + real phylogenetic tree)
+
+**Changes:**
+- Replaced the 2D canvas globe with a Three.js 3D globe, preserving existing filters, tooltip, selection, and coverage legend integration. Updated [phase7_visualization/js/globe.js](../phase7_visualization/js/globe.js).
+- Added Three.js + OrbitControls CDN imports to [phase7_visualization/index.html](../phase7_visualization/index.html).
+- Implemented real phylogenetic tree export by parsing D-PLACE Glottolog `.trees` NEXUS files and aggregating cluster composition. Updated [scripts/export_for_phase7.py](../scripts/export_for_phase7.py).
+
+**Notes:**
+- Tree leaves are glottocodes; internal nodes derive cluster composition from D-PLACE cultures with cluster assignments.
+- Distance matrices remain stubbed and unchanged.
+
+---
+
+**Date:** 30 April 2026
+
+**Scope:** Phase 7 UI fixes (3D globe texture + 2D/3D switching)
+
+**Changes:**
+- Added a land texture under the 3D globe points using Natural Earth land polygons, with a consistent equirectangular projection so point locations match coastlines. Updated [phase7_visualization/js/globe3d.js](../phase7_visualization/js/globe3d.js).
+- Stabilized the globe container height to prevent skewed or zoomed rendering when switching between 2D and 3D. Updated [phase7_visualization/css/style.css](../phase7_visualization/css/style.css).
+- Added an import map + module loader for Three.js and OrbitControls, and exposed the 2D/3D mode selector in the navbar. Updated [phase7_visualization/index.html](../phase7_visualization/index.html).
 - [ ] Implement Data Coverage Legend (Section 4.5) — persistent panel breaking down 841 unclusterable cultures by cause; clicking any line filters globe
 
 ---
