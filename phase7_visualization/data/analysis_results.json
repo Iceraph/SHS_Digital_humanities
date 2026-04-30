@@ -430,5 +430,83 @@
         "strength": "Strong"
       }
     ]
-  }
+  },
+  "phase8": {
+    "diagnostics": {
+      "missingness_cluster_spearman_rho": 0.3386981539952757,
+      "missingness_cluster_p": 8.858563211311499e-51,
+      "source_classification_accuracy_mean": 0.8764227811121955,
+      "source_classification_accuracy_std": 0.03547199361527435
+    },
+    "dplace_subset_size": 357,
+    "optimal_k": 9,
+    "k_selection": {
+      "2": {
+        "silhouette": 0.2533061846062286,
+        "davies_bouldin": 1.9816058234066163,
+        "calinski_harabasz": 55.01559200730227
+      },
+      "3": {
+        "silhouette": 0.31595491652773083,
+        "davies_bouldin": 1.723738679606911,
+        "calinski_harabasz": 51.32556072579016
+      },
+      "4": {
+        "silhouette": 0.27710918769748827,
+        "davies_bouldin": 1.2255851183033506,
+        "calinski_harabasz": 49.10098859702809
+      },
+      "5": {
+        "silhouette": 0.29116725855121184,
+        "davies_bouldin": 1.1346792020241563,
+        "calinski_harabasz": 50.61082979740557
+      },
+      "6": {
+        "silhouette": 0.3329394087070026,
+        "davies_bouldin": 1.001539917008194,
+        "calinski_harabasz": 54.98596817618822
+      },
+      "7": {
+        "silhouette": 0.37239767713653377,
+        "davies_bouldin": 0.7949674550883058,
+        "calinski_harabasz": 58.007491490448174
+      },
+      "8": {
+        "silhouette": 0.37898660688493796,
+        "davies_bouldin": 0.7791603743415252,
+        "calinski_harabasz": 70.03665295751243
+      },
+      "9": {
+        "silhouette": 0.41700805263451696,
+        "davies_bouldin": 0.6765972422437811,
+        "calinski_harabasz": 78.23931135554639
+      },
+      "10": {
+        "silhouette": 0.4113146317953281,
+        "davies_bouldin": 0.6018954292971437,
+        "calinski_harabasz": 93.17769083712525
+      }
+    },
+    "mantel_dplace_primary": [
+      {
+        "test": "Mantel: Geography ~ Features (D-PLACE primary subset)",
+        "n_cultures": 357,
+        "correlation": 0.4444224365213878,
+        "p_value": 0.001,
+        "significant": true,
+        "note": "D-PLACE cultures with >=3 features coded and coordinates"
+      }
+    ],
+    "note": "Phase 8 reanalysis: D-PLACE only primary clustering. See PHASE8_CONTEXT.md."
+  },
+  "mantel_phase8": [
+    {
+      "test": "Mantel: Geography ~ Features (D-PLACE primary subset)",
+      "n_cultures": 357,
+      "correlation": 0.4444224365213878,
+      "p_value": 0.001,
+      "significant": true,
+      "note": "D-PLACE cultures with >=3 features coded and coordinates"
+    }
+  ]
 }
