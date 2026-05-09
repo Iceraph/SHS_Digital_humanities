@@ -1,14 +1,18 @@
-# Phase 5: Interpretation & Publication - COMPLETE ✅
+# Phase 5: Interpretation & Publication - REVISED WITH PHASE 8 CAVEATS ⚠️
 
-**Status:** 21 avril 2026 - All core deliverables complete. Ready for manuscript finalization.
+**Status:** 21 avril 2026 baseline, revised 9 May 2026 after Phase 8 diagnostics.
+
+> **Critical caveat (Phase 8):** Several headline claims below were produced before source-confounding diagnostics.
+> Treat this document as a historical analysis record, not as a final claims source.
+> Final interpretation priority: `contexts/PHASE8_CONTEXT.md`.
 
 ---
 
 ## Executive Summary
 
-Phase 5 transformed the 8 clusters from Phase 4 into publication-ready interpretations with full robustness validation and hypothesis evaluation. Both competing theoretical models (neurobiological universalism vs. regional diffusion) received empirical support, suggesting a synthesis: *constrained universalism with regional elaboration*.
+Phase 5 transformed the 8 clusters from Phase 4 into interpretation-ready narratives with robustness checks and hypothesis evaluation. After Phase 8, these conclusions must be read as provisional because source-confounding can inflate apparent cross-cultural structure.
 
-**Key Achievement:** Silhouette score of 0.722 maintained across all 6 robustness sensitivity tests, confirming Phase 4 clustering results are publication-ready.
+**Revised takeaway:** Phase 5 established a strong interpretive workflow, but Phase 4/5 substantive conclusions are superseded where they conflict with Phase 8 confounding-aware results.
 
 ---
 
@@ -85,11 +89,11 @@ Robustness tests were executed offline via `scripts/phase4_robustness.py`, produ
 6. **Geographic independence test** → `fig_04_geographic_independence.png`
 7. **Robustness validation checklist** — 5/5 tests PASS ✓
 
-### Conclusion
+### Conclusion (Revised)
 ```
-CLUSTERING RESULTS ARE PUBLICATION-READY
-All robustness tests exceed publication thresholds.
-Cluster structure stable and replicable.
+PHASE 5 INTERPRETATIONS ARE PROVISIONAL
+Robustness checks were informative, but not sufficient to rule out source confounding.
+Use Phase 8 outputs as the current validity baseline.
 ```
 
 ---
@@ -208,9 +212,9 @@ Cluster structure stable and replicable.
 - Ancestor mediation emphasis
 - **Interpretation:** Ancestor-focused shamanism (possibly African)
 
-#### 8. Hypothesis Evaluation Synthesis
+#### 8. Hypothesis Evaluation Synthesis (Superseded by Phase 8)
 
-**Synthesis Finding:** Constrained Universalism with Regional Elaboration
+**Historical synthesis (pre-Phase 8):** Constrained Universalism with Regional Elaboration
 
 The evidence supports BOTH theories:
 - **Universal substrate:** Human neurobiology enables altered states (trance, possession globally present)
@@ -224,7 +228,7 @@ The evidence supports BOTH theories:
 ✅ 8 complete interpretations with cultural context and implications
 
 #### 10. Hypothesis Evaluation Synthesis
-✅ Evidence summary with quantified support for both theories
+⚠️ Evidence summary retained for traceability; final interpretation must reference Phase 8 corrections
 
 #### 11. Publication Manuscript Sections
 
@@ -243,7 +247,15 @@ The evidence supports BOTH theories:
 - Geographic patterns: Concentration of specific clusters by region
 - Hypothesis evaluation: Evidence quantified for both universalism and diffusion
 - Robustness: Feature subsets, k values, and imputation strategies validated
-- Conclusion: Results support constrained universalism model
+- Historical conclusion (now caveated): Results appeared to support constrained universalism before Phase 8 confounding checks
+
+---
+
+## Phase 8 Alignment Note (Added 9 May 2026)
+
+- This document remains useful for workflow traceability and interpretation templates.
+- Do not cite Phase 5 headline claims without Phase 8 caveats.
+- For manuscript-facing conclusions, defer to `contexts/PHASE8_CONTEXT.md` and refined exports.
 
 ---
 

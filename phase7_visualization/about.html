@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Shamanism Spatio-Temporal Analysis</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="about-page">
+    <header class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <strong>Shamanism Clustering Analysis</strong>
+            </a>
+            <div class="ms-auto d-flex align-items-center gap-2">
+                <span class="navbar-text text-light d-none d-md-inline">About the visualization</span>
+                <a class="btn btn-outline-light btn-sm" href="index.html">Back to app</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="about-shell py-4 py-lg-5">
+        <div class="container">
+            <section class="about-hero mb-4 mb-lg-5">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-8">
+                        <p class="about-eyebrow mb-2">Interactive research prototype</p>
+                        <h1 class="display-5 fw-bold mb-3">What this website shows</h1>
+                        <p class="lead mb-4">
+                            This visualization brings together shamanism-related cultural features, spatial
+                            clustering, and language-family structure so you can explore how practices vary
+                            across cultures and regions.
+                        </p>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="about-chip">2,687 cultures</span>
+                            <span class="about-chip">19 features</span>
+                            <span class="about-chip">8 clusters</span>
+                            <span class="about-chip">3 data sources</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="about-summary-card">
+                            <h2 class="h5 mb-3">How to read it</h2>
+                            <p class="mb-2">Colors identify cluster membership.</p>
+                            <p class="mb-2">Search selects one feature at a time and updates the globe.</p>
+                            <p class="mb-0">The tree groups cultures by language family and shows which clusters dominate each branch.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="row g-4 mb-4">
+                <div class="col-lg-4">
+                    <article class="about-card h-100">
+                        <p class="about-section-label">Globe</p>
+                        <h3 class="h5">Spatial overview</h3>
+                        <p>
+                            The center panel places every culture on the map. Use the globe to inspect where
+                            cultures are located, whether they cluster spatially, and how selections change the view.
+                        </p>
+                        <ul class="about-list">
+                            <li>Click a point to inspect a culture.</li>
+                            <li>Drag to rotate the globe or switch to 2D map mode.</li>
+                            <li>Selected features and filters reduce the visible set.</li>
+                        </ul>
+                    </article>
+                </div>
+                <div class="col-lg-4">
+                    <article class="about-card h-100">
+                        <p class="about-section-label">Feature search</p>
+                        <h3 class="h5">Feature-by-feature exploration</h3>
+                        <p>
+                            The left panel lets you search the coded shamanic features. Selecting a feature updates
+                            the map and the statistics panel so you can compare prevalence and spatial autocorrelation.
+                        </p>
+                        <ul class="about-list">
+                            <li>Search narrows the feature list.</li>
+                            <li>Clicking a feature filters the globe to cultures where it is present.</li>
+                            <li>The statistics card shows prevalence and Moran&apos;s I when available.</li>
+                        </ul>
+                    </article>
+                </div>
+                <div class="col-lg-4">
+                    <article class="about-card h-100">
+                        <p class="about-section-label">Phylogenetic tree</p>
+                        <h3 class="h5">Language-family structure</h3>
+                        <p>
+                            The right panel shows a language-family summary. Branches are colored by dominant
+                            cluster composition, and clicking a family narrows the globe to that lineage.
+                        </p>
+                        <ul class="about-list">
+                            <li>Hover for cluster composition details.</li>
+                            <li>Click a family node to filter the map.</li>
+                            <li>The root summarizes the full language-family overview.</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+
+            <section class="row g-4">
+                <div class="col-lg-6">
+                    <article class="about-card h-100">
+                        <p class="about-section-label">Legend</p>
+                        <h3 class="h5">Cluster colors</h3>
+                        <p>
+                            The cluster legend maps each color to one of the eight inferred clusters. The same
+                            colors appear in the globe, the tree, and the feature summaries so you can follow the
+                            same group across the whole interface.
+                        </p>
+                    </article>
+                </div>
+                <div class="col-lg-6">
+                    <article class="about-card h-100">
+                        <p class="about-section-label">Filters</p>
+                        <h3 class="h5">Combine views</h3>
+                        <p>
+                            Language family, cluster, and feature filters work together. That means a tree click,
+                            a dropdown selection, or a feature search can all narrow the same underlying data
+                            instead of replacing each other.
+                        </p>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+</html>

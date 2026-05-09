@@ -449,20 +449,17 @@ class TestSchema:
     
     def test_harmonised_output_has_correct_columns(self, pipeline, sample_phase1_df):
         """Test harmonised output has harmonisation step 1-3 columns."""
-        # Load Phase 1, harmonise with steps 1-3, and check schema
-        if Path(DPLACE_RAW).exists():
-            df_phase1 = pd.read_parquet(DPLACE_RAW).head(100)
-            
-            df = pipeline.harmonise_source("dplace", df_phase1)
-            
-            # Check steps 1-3 columns present (steps 4-5 require all sources)
-            expected_step1_3_cols = [
-                "feature_name", "feature_value",  # crosswalk
-                "unit_ambiguous", "unit_note",  # units
-                "time_start_standardised", "temporal_mode", "time_uncertainty",  # temporal
-            ]
-            for col in expected_step1_3_cols:
-                assert col in df.columns, f"Missing column: {col}"
+        df_phase1 = sample_phase1_df[sample_phase1_df["source"] == "dplace"].copy()
+        df = pipeline.harmonise_source("dplace", df_phase1)
+
+        # Check steps 1-3 columns present (steps 4-5 require all sources)
+        expected_step1_3_cols = [
+            "feature_name", "feature_value",  # crosswalk
+            "unit_ambiguous", "unit_note",  # units
+            "time_start_standardised", "temporal_mode", "time_uncertainty",  # temporal
+        ]
+        for col in expected_step1_3_cols:
+            assert col in df.columns, f"Missing column: {col}"
     
     def test_no_unnamed_columns(self, pipeline, sample_phase1_df):
         """Test output has no unnamed columns."""
@@ -525,21 +522,27 @@ class TestDataQuality:
 class TestWithRealData:
     """Tests using real Phase 1 data files."""
     
-    @pytest.mark.skipif(not Path(DPLACE_RAW).exists(), reason="D-PLACE file not found")
-    def test_real_dplace_harmonisation(self, pipeline):
-        """Test harmonisation on real D-PLACE data (steps 1-3)."""
-        df_phase1 = pd.read_parquet(DPLACE_RAW).head(100)
+    @pytest.mark.integration
+    def test_real_dplace_harmonisation(self, pipeline, sample_phase1_df):
+        """Test harmonisation on D-PLACE-like data (real if available)."""
+        if Path(DPLACE_RAW).exists():
+            df_phase1 = pd.read_parquet(DPLACE_RAW).head(100)
+        else:
+            df_phase1 = sample_phase1_df[sample_phase1_df["source"] == "dplace"].copy()
         
         df = pipeline.harmonise_source("dplace", df_phase1)
         
-        assert len(df) == 100
+        assert len(df) == len(df_phase1)
         # Steps 1-3 columns
         assert all(col in df.columns for col in ["feature_name", "unit_ambiguous", "temporal_mode"])
     
-    @pytest.mark.skipif(not Path(DRH_RAW).exists(), reason="DRH file not found")
-    def test_real_drh_harmonisation(self, pipeline):
-        """Test harmonisation on real DRH data."""
-        df_phase1 = pd.read_parquet(DRH_RAW)
+    @pytest.mark.integration
+    def test_real_drh_harmonisation(self, pipeline, sample_phase1_df):
+        """Test harmonisation on DRH-like data (real if available)."""
+        if Path(DRH_RAW).exists():
+            df_phase1 = pd.read_parquet(DRH_RAW)
+        else:
+            df_phase1 = sample_phase1_df[sample_phase1_df["source"] == "drh"].copy()
         
         df = pipeline.harmonise_source("drh", df_phase1)
         

@@ -29,6 +29,33 @@ const Globe3D = (() => {
         languageFamily: null
     };
 
+    const normalizeClusterFilter = (clusterId) => {
+        if (clusterId === null || clusterId === undefined || clusterId === '') return null;
+        return String(clusterId);
+    };
+
+    const normalizeLanguageFamilyFilter = (languageFamily) => {
+        if (languageFamily === null || languageFamily === undefined || languageFamily === '') return null;
+        return languageFamily;
+    };
+
+    const matchesFilters = (culture, filters) => {
+        if (filters.feature && culture.features?.[filters.feature] !== 1) return false;
+
+        const clusterFilter = normalizeClusterFilter(filters.cluster);
+        if (clusterFilter !== null) {
+            const cultureCluster = culture.cluster === null || culture.cluster === undefined
+                ? null
+                : String(culture.cluster);
+            if (cultureCluster !== clusterFilter) return false;
+        }
+
+        const languageFamilyFilter = normalizeLanguageFamilyFilter(filters.languageFamily);
+        if (languageFamilyFilter !== null && culture.language_family !== languageFamilyFilter) return false;
+
+        return true;
+    };
+
     const waitForThree = async () => {
         if (window.__threeReady || (window.THREE && window.THREE.OrbitControls)) {
             return;
@@ -246,6 +273,17 @@ const Globe3D = (() => {
         updateSelectedMesh();
     };
 
+    const applyFilters = (filters = {}) => {
+        currentFilters = {
+            feature: filters.feature !== undefined ? filters.feature : currentFilters.feature,
+            cluster: filters.cluster !== undefined ? normalizeClusterFilter(filters.cluster) : normalizeClusterFilter(currentFilters.cluster),
+            languageFamily: filters.languageFamily !== undefined ? normalizeLanguageFamilyFilter(filters.languageFamily) : normalizeLanguageFamilyFilter(currentFilters.languageFamily)
+        };
+
+        const cultures = DataLoader.getCultures().filter(culture => matchesFilters(culture, currentFilters));
+        plotCultures(cultures);
+    };
+
     const buildPointGeometry = (cultures) => {
         const positions = [];
         const colors = [];
@@ -414,33 +452,21 @@ const Globe3D = (() => {
     };
 
     const filterByFeature = (featureName) => {
-        currentFilters.feature = featureName;
-        const cultures = DataLoader.getCultures();
-        const culturesWithFeature = featureName
-            ? DataLoader.getCulturesByFeature(featureName, 1)
-            : cultures;
-
-        plotCultures(culturesWithFeature);
+        applyFilters({ feature: featureName });
     };
 
     const filterByCluster = (clusterId) => {
-        currentFilters.cluster = clusterId;
-        const cultures = clusterId !== null && clusterId !== ''
-            ? DataLoader.getCulturesByCluster(parseInt(clusterId))
-            : DataLoader.getCultures();
-
-        plotCultures(cultures);
+        applyFilters({ cluster: clusterId });
     };
 
     const filterByLanguageFamily = (languageFamily) => {
-        currentFilters.languageFamily = languageFamily;
-        const cultures = DataLoader.getCulturesByLanguageFamily(languageFamily);
-        plotCultures(cultures);
+        applyFilters({ languageFamily });
     };
 
     const resetFilters = () => {
         currentFilters = { cluster: null, feature: null, languageFamily: null };
         selectedCultures.clear();
+        subsetHighlight = null;
         plotCultures(DataLoader.getCultures());
     };
 
@@ -465,6 +491,7 @@ const Globe3D = (() => {
         init,
         plotCultures,
         animate,
+        applyFilters,
         filterByFeature,
         filterByCluster,
         filterByLanguageFamily,

@@ -18,6 +18,7 @@ const GlobeVisualization = (() => {
 
     const plotCultures = (cultures) => active.plotCultures(cultures);
     const animate = () => active.animate();
+    const applyFilters = (filters) => active.applyFilters(filters);
     const filterByFeature = (featureName) => active.filterByFeature(featureName);
     const filterByCluster = (clusterId) => active.filterByCluster(clusterId);
     const filterByLanguageFamily = (languageFamily) => active.filterByLanguageFamily(languageFamily);
@@ -32,6 +33,7 @@ const GlobeVisualization = (() => {
         setMode,
         plotCultures,
         animate,
+        applyFilters,
         filterByFeature,
         filterByCluster,
         filterByLanguageFamily,

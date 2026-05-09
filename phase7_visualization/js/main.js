@@ -131,9 +131,8 @@ function setupEventHandling() {
     document.addEventListener('languageFamilySelected', (event) => {
         const { familyId } = event.detail;
         console.log(`Language family selected: ${familyId}`);
-        
-        // Could update globe filter here
-        GlobeVisualization.filterByLanguageFamily(familyId);
+
+        FeaturePanel.setLanguageFamilyFilter(familyId);
     });
 
     // Handle window resize — globe re-init preserves overlays (canvas-only replacement)

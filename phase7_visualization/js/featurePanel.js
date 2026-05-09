@@ -14,6 +14,10 @@ const FeaturePanel = (() => {
 
     let allFeatures = [];
     let selectedFeature = null;
+    let currentSearchQuery = '';
+    let currentLanguageFamily = '';
+    let currentCluster = '';
+    let listenersBound = false;
 
     /**
      * Initialize feature panel
@@ -28,14 +32,87 @@ const FeaturePanel = (() => {
         // Render feature list
         renderFeatureList(allFeatures);
 
-        // Event listeners
-        featureSearch.addEventListener('input', onFeatureSearch);
-        phyloFilter.addEventListener('change', onPhyloFilterChange);
-        clusterFilter.addEventListener('change', onClusterFilterChange);
-        viewStatsBtn.addEventListener('click', onViewStats);
-        exportBtn.addEventListener('click', onExport);
+        if (!listenersBound) {
+            featureList.addEventListener('click', onFeatureListClick);
+            featureList.addEventListener('change', onFeatureListChange);
+            featureList.addEventListener('keydown', onFeatureListKeydown);
+            featureSearch.addEventListener('input', onFeatureSearch);
+            phyloFilter.addEventListener('change', onPhyloFilterChange);
+            clusterFilter.addEventListener('change', onClusterFilterChange);
+            viewStatsBtn.addEventListener('click', onViewStats);
+            exportBtn.addEventListener('click', onExport);
+            listenersBound = true;
+        }
 
         console.log(`✓ Feature panel initialized with ${allFeatures.length} features`);
+    };
+
+    const getVisibleFeatures = () => {
+        const query = currentSearchQuery.trim().toLowerCase();
+        if (!query) return allFeatures;
+        return allFeatures.filter(feature => feature.toLowerCase().includes(query));
+    };
+
+    const syncRenderedSelection = () => {
+        const featureItems = featureList.querySelectorAll('.feature-item');
+        featureItems.forEach(item => {
+            const checkbox = item.querySelector('.feature-checkbox');
+            const featureName = item.dataset.feature;
+            const isSelected = featureName === selectedFeature;
+
+            item.classList.toggle('selected', isSelected);
+            if (checkbox) checkbox.checked = isSelected;
+        });
+    };
+
+    const applyCurrentFilters = () => {
+        GlobeVisualization.applyFilters({
+            feature: selectedFeature,
+            cluster: currentCluster,
+            languageFamily: currentLanguageFamily
+        });
+    };
+
+    const setLanguageFamilyFilter = (familyId) => {
+        currentLanguageFamily = familyId || '';
+        if (phyloFilter) {
+            phyloFilter.value = currentLanguageFamily;
+        }
+        applyCurrentFilters();
+    };
+
+    const setClusterFilter = (clusterId) => {
+        currentCluster = clusterId || '';
+        if (clusterFilter) {
+            clusterFilter.value = currentCluster;
+        }
+        applyCurrentFilters();
+    };
+
+    const onFeatureListClick = (event) => {
+        const checkbox = event.target.closest('.feature-checkbox');
+        if (checkbox) return;
+
+        const item = event.target.closest('.feature-item');
+        if (!item) return;
+
+        const featureName = item.dataset.feature;
+        if (featureName) selectFeature(featureName);
+    };
+
+    const onFeatureListChange = (event) => {
+        if (!event.target.classList.contains('feature-checkbox')) return;
+        selectFeature(event.target.value);
+    };
+
+    const onFeatureListKeydown = (event) => {
+        if (event.key !== 'Enter' && event.key !== ' ') return;
+        const item = event.target.closest('.feature-item');
+        if (!item) return;
+
+        event.preventDefault();
+        const featureName = item.dataset.feature;
+        if (featureName) selectFeature(featureName);
     };
 
     /**
@@ -70,14 +147,18 @@ const FeaturePanel = (() => {
         features.forEach(feature => {
             const stats = DataLoader.getFeatureStats(feature);
             const moransI = DataLoader.getModransI(feature);
-            const isSignificant = moransI && moransI.p_value && moransI.p_value < 0.05;
+            const isSignificant = moransI && moransI.p_value !== undefined && moransI.p_value !== null && moransI.p_value < 0.05;
 
             const div = document.createElement('div');
             div.className = 'feature-item';
+            div.dataset.feature = feature;
+            div.setAttribute('role', 'button');
+            div.setAttribute('tabindex', '0');
+            div.classList.toggle('selected', feature === selectedFeature);
             div.innerHTML = `
                 <div style="display: flex; align-items: center; justify-content: space-between;">
                     <div style="display: flex; align-items: center; flex: 1;">
-                        <input type="checkbox" value="${feature}" class="feature-checkbox">
+                        <input type="checkbox" value="${feature}" class="feature-checkbox" ${feature === selectedFeature ? 'checked' : ''}>
                         <span class="ms-2">${feature}</span>
                     </div>
                     <div style="display: flex; align-items: center; gap: 0.5rem;">
@@ -86,18 +167,18 @@ const FeaturePanel = (() => {
                     </div>
                 </div>
             `;
-
-            div.addEventListener('click', () => selectFeature(feature));
             featureList.appendChild(div);
         });
+
+        syncRenderedSelection();
     };
 
     /**
      * Handle feature search
      */
     const onFeatureSearch = (event) => {
-        const query = event.target.value.toLowerCase();
-        const filtered = allFeatures.filter(f => f.toLowerCase().includes(query));
+        currentSearchQuery = event.target.value || '';
+        const filtered = getVisibleFeatures();
         renderFeatureList(filtered);
     };
 
@@ -107,25 +188,13 @@ const FeaturePanel = (() => {
     const selectFeature = (featureName) => {
         selectedFeature = featureName;
 
-        // Update UI
-        document.querySelectorAll('.feature-item').forEach(item => {
-            item.classList.remove('selected');
-        });
-
-        const selectedItem = Array.from(document.querySelectorAll('.feature-item')).find(item => {
-            const checkbox = item.querySelector('.feature-checkbox');
-            return checkbox && checkbox.value === featureName;
-        });
-
-        if (selectedItem) {
-            selectedItem.classList.add('selected');
-        }
+        syncRenderedSelection();
 
         // Update stats panel
         updateStatsPanel(featureName);
 
         // Filter globe
-        GlobeVisualization.filterByFeature(featureName);
+        applyCurrentFilters();
 
         console.log(`Selected feature: ${featureName}`);
     };
@@ -179,8 +248,8 @@ const FeaturePanel = (() => {
 
         // Moran's I if available - Enhanced display
         if (moransI && moransI.statistic !== undefined) {
-            const isSig = moransI.p_value && moransI.p_value < 0.05;
-            const isSigStrict = moransI.p_value && moransI.p_value < 0.01;
+            const isSig = moransI.p_value !== undefined && moransI.p_value !== null && moransI.p_value < 0.05;
+            const isSigStrict = moransI.p_value !== undefined && moransI.p_value !== null && moransI.p_value < 0.01;
             
             // Determine border color based on significance
             let moransColor = '#999';  // Default: not significant
@@ -238,7 +307,7 @@ const FeaturePanel = (() => {
                     </div>
                     
                     <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.75rem; color: #999; border-top: 1px solid rgba(0,0,0,0.1); padding-top: 0.4rem;">
-                        <span>p-value: <strong>${moransI.p_value ? moransI.p_value.toFixed(4) : 'N/A'}</strong></span>
+                        <span>p-value: <strong>${moransI.p_value !== undefined && moransI.p_value !== null ? moransI.p_value.toFixed(4) : 'N/A'}</strong></span>
                         <span>${sigLevel}</span>
                     </div>
                 </div>
@@ -288,18 +357,18 @@ const FeaturePanel = (() => {
      * Handle phylogenetic filter change
      */
     const onPhyloFilterChange = (event) => {
-        const familyId = event.target.value;
-        GlobeVisualization.filterByLanguageFamily(familyId);
-        console.log(`Filtered by language family: ${familyId}`);
+        currentLanguageFamily = event.target.value || '';
+        applyCurrentFilters();
+        console.log(`Filtered by language family: ${currentLanguageFamily || 'all'}`);
     };
 
     /**
      * Handle cluster filter change
      */
     const onClusterFilterChange = (event) => {
-        const clusterId = event.target.value;
-        GlobeVisualization.filterByCluster(clusterId);
-        console.log(`Filtered by cluster: ${clusterId}`);
+        currentCluster = event.target.value || '';
+        applyCurrentFilters();
+        console.log(`Filtered by cluster: ${currentCluster || 'all'}`);
     };
 
     /**
@@ -392,19 +461,25 @@ const FeaturePanel = (() => {
      * Clear filters and reset to default
      */
     const resetFilters = () => {
+        currentSearchQuery = '';
+        currentLanguageFamily = '';
+        currentCluster = '';
         featureSearch.value = '';
         phyloFilter.value = '';
         clusterFilter.value = '';
         selectedFeature = null;
         statsPanel.innerHTML = '<p class="text-muted mb-0">Select a feature to view details</p>';
-        GlobeVisualization.resetFilters();
         renderFeatureList(allFeatures);
+        GlobeVisualization.resetFilters();
     };
 
     return {
         init,
         selectFeature,
         resetFilters,
+        setLanguageFamilyFilter,
+        setClusterFilter,
+        applyCurrentFilters,
         getSelectedFeature: () => selectedFeature
     };
 })();

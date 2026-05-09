@@ -411,7 +411,17 @@ for _, row in assigned.iterrows():
 with open(VIZ / "cultures_metadata.json") as f:
     meta = json.load(f)
 for culture in meta["cultures"]:
-    culture["cluster_phase8r"] = cluster_lookup.get(str(culture["id"]))
+    refined_cluster = cluster_lookup.get(str(culture["id"]))
+    # Keep both fields for compatibility; app components still read `cluster`.
+    culture["cluster_phase8r"] = refined_cluster
+    culture["cluster"] = refined_cluster
+
+assigned_clusters = [
+    c.get("cluster") for c in meta["cultures"]
+    if c.get("cluster") is not None
+]
+meta.setdefault("metadata", {})["total_clusters"] = len(set(assigned_clusters))
+meta["metadata"]["generated_from"] = "Phase 8 refined clustering export"
 
 with open(VIZ / "cultures_metadata.json", "w") as f:
     json.dump(meta, f, separators=(",", ":"))
@@ -433,6 +443,18 @@ analysis["phase8_refined"] = {
         "note": "D-PLACE primary subset, Jaccard feature distance, Spearman Mantel"
     },
     "pagels_lambda": lambda_results,
+}
+
+# Compatibility bridge for consumers that do not yet read `phase8_refined`.
+analysis["current_phase"] = "phase8_refined"
+analysis["current_summary"] = {
+    "k": int(best_k),
+    "n_cultures_primary": int(len(dplace)),
+    "mantel": {
+        "r": r,
+        "p": p,
+        "significant": p < 0.05,
+    },
 }
 with open(VIZ / "analysis_results.json", "w") as f:
     json.dump(analysis, f, indent=2)

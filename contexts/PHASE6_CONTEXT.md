@@ -1,6 +1,6 @@
-# Phase 6: Spatial & Phylogenetic Analysis - FRAMEWORK
+# Phase 6: Spatial & Phylogenetic Analysis - FRAMEWORK (REVISED)
 
-**Status:** ✅ IMPLEMENTATION COMPLETE  
+**Status:** ✅ IMPLEMENTATION COMPLETE (interpretation revised by Phase 8)  
 **Date:** 21 avril 2026  
 **Updated:** 28 April 2026 with Seshat integration results
 **Predecessor:** Phase 5 (Interpretation & Publication) ✅ COMPLETE
@@ -8,6 +8,10 @@
 ---
 
 ## Executive Summary
+
+> **Critical caveat (Phase 8):** Strong universalism interpretations from earlier Phase 6 reads are no longer standalone.
+> Source confounding and sparse cross-source overlap identified in Phase 8 require cautious interpretation.
+> Final claim priority: `contexts/PHASE8_CONTEXT.md`.
 
 Phase 6 adds spatial and phylogenetic analysis to test whether clusters reflect **geographic structure** (support for diffusion hypothesis) or **neurobiological universalism** (support for universalism hypothesis). Core question: **Do shamanic features cluster geographically, or are they independent of space?**
 
@@ -21,7 +25,7 @@ Phase 6 adds spatial and phylogenetic analysis to test whether clusters reflect 
 **Major Update (28 April 2026 - Seshat Activation):**
 - Moran's I expanded from **19 features → 64 features** (100% coverage)
 - **Result: 0 significant clustering** (all p-values ≥ 0.05)
-- **Strong support for Neurobiological Universalism hypothesis** over Regional Diffusion
+- **Historical interpretation (now caveated):** stronger support for universalism than diffusion in that analysis configuration
 
 ---
 
@@ -85,13 +89,21 @@ The two competing hypotheses make different predictions about spatial patterns:
 ### Interpretation (Phase 5)
 - 8 cluster narratives with geographic coherence assessment
 - Hypothesis evaluation framework with quantified tests
-- Preliminary finding: **Constrained universalism with regional elaboration**
+- Preliminary finding (pre-Phase 8): **Constrained universalism with regional elaboration**
 
 ### Available Data
 - Geographic coordinates (lat/lon) for 1,257 cultures (D-PLACE baseline) / 1,160 cultures (multisource)
 - Language family assignments (Glottolog via D-PLACE; region-based fallback for Seshat)
 - Feature matrix: 1,257 cultures × 19 features (D-PLACE baseline) / 2,452 cultures × 21 features (multisource, `feature_matrix.parquet`)
 - **Seshat temporal coverage note:** Seshat polities span −3000 CE to present (diachronic), unlike D-PLACE's ethnographic snapshot (1800–1950). When combining sources for spatial analysis, Seshat observations must be treated as temporally distinct. Moran's I analyses on the 64-feature expanded matrix (28 Apr) used the full multisource feature matrix but spatial coordinates are point-in-time; temporal heterogeneity may slightly dampen autocorrelation signals.
+
+---
+
+## Phase 8 Alignment Note (Added 9 May 2026)
+
+- Phase 6 methods remain valid as a framework and code scaffold.
+- Phase 6 headline interpretations are provisional unless corroborated under Phase 8 confounding-aware settings.
+- Use Phase 8 refined outputs for current reporting and visualization sync.
 
 ---
 

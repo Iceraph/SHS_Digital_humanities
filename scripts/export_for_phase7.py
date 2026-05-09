@@ -391,12 +391,66 @@ def export_phylo_tree():
 
         children.append(pruned)
 
+    if not children:
+        families: dict[str, dict] = {}
+        known_families = culture_meta[culture_meta['language_family'].notna()]
+
+        for _, row in known_families.iterrows():
+            family = str(row['language_family']).strip()
+            if not family or family.lower() == 'unknown':
+                family = 'Unclassified'
+
+            cluster = row['cluster_id'] if pd.notna(row['cluster_id']) else None
+            family_node = families.setdefault(family, {
+                'name': family,
+                'id': family,
+                'children': [],
+                'cluster_composition': {},
+                'n_cultures': 0,
+            })
+
+            family_node['n_cultures'] += 1
+            if cluster is not None:
+                cluster = int(cluster)
+                family_node['cluster_composition'][cluster] = family_node['cluster_composition'].get(cluster, 0) + 1
+
+        ordered_families = sorted(
+            families.values(),
+            key=lambda node: (-node['n_cultures'], node['name'])
+        )
+
+        max_family_nodes = 76
+        children = ordered_families[:max_family_nodes]
+        remainder = ordered_families[max_family_nodes:]
+
+        if remainder:
+            other_counts: dict[int, int] = {}
+            other_total = 0
+            for node in remainder:
+                other_total += int(node['n_cultures'])
+                for cluster, count in node.get('cluster_composition', {}).items():
+                    other_counts[int(cluster)] = other_counts.get(int(cluster), 0) + int(count)
+
+            children.append({
+                'name': 'Other language families',
+                'children': [],
+                'cluster_composition': other_counts,
+                'n_cultures': other_total,
+            })
+
     tree = {
         "name": "World Languages",
         "id": "world_languages",
         "children": children
     }
-    _add_cluster_composition(tree, glottocode_clusters)
+    if children and children[0].get('children'):
+        _add_cluster_composition(tree, glottocode_clusters)
+    else:
+        totals: dict[int, int] = {}
+        for child in children:
+            for cluster, count in child.get('cluster_composition', {}).items():
+                totals[int(cluster)] = totals.get(int(cluster), 0) + int(count)
+        tree['cluster_composition'] = totals
     _assign_node_ids(tree, "world", [0])
 
     output_path = Path('phase7_visualization/data/phylo_tree.json')

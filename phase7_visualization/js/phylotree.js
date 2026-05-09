@@ -9,6 +9,7 @@
 const PhylogenicTreeVisualization = (() => {
     const container = document.getElementById('phyloTree');
     let svg, nodeSelection;
+    let listenersBound = false;
 
     // Tooltip div shared across all phylotree hovers
     const tooltip = (() => {
@@ -52,10 +53,13 @@ const PhylogenicTreeVisualization = (() => {
         const phyloData = DataLoader.getPhyloTree();
         if (phyloData && phyloData.name) {
             displayTree(phyloData);
-            document.addEventListener('clusterHighlight', (e) => {
-                highlightCluster(e.detail.cluster);
-            });
-            window.addEventListener('resize', onResize);
+            if (!listenersBound) {
+                document.addEventListener('clusterHighlight', (e) => {
+                    highlightCluster(e.detail.cluster);
+                });
+                window.addEventListener('resize', onResize);
+                listenersBound = true;
+            }
         } else {
             container.innerHTML =
                 '<p class="text-muted text-center p-3" style="font-size:0.85rem">No phylogenetic data available.</p>';
@@ -102,9 +106,9 @@ const PhylogenicTreeVisualization = (() => {
             .attr('class', 'tree-node')
             .attr('data-dominant', d => dominantCluster(d.data.cluster_composition) || '')
             .attr('transform', d => `translate(${d.y},${d.x})`)
-            .style('cursor', d => d.data.id ? 'pointer' : 'default')
+            .style('cursor', d => d.depth > 0 && d.data.id ? 'pointer' : 'default')
             .on('click', (event, d) => {
-                if (d.data.id) selectLanguageFamily(d.data.id);
+                if (d.depth > 0 && d.data.id) selectLanguageFamily(d.data.id);
             })
             .on('mouseenter', onNodeEnter)
             .on('mousemove', onNodeMove)
