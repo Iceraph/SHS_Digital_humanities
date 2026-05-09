@@ -431,84 +431,6 @@
       }
     ]
   },
-  "phase8": {
-    "diagnostics": {
-      "missingness_cluster_spearman_rho": 0.3386981539952757,
-      "missingness_cluster_p": 8.858563211311499e-51,
-      "source_classification_accuracy_mean": 0.8764227811121955,
-      "source_classification_accuracy_std": 0.03547199361527435
-    },
-    "dplace_subset_size": 357,
-    "optimal_k": 9,
-    "k_selection": {
-      "2": {
-        "silhouette": 0.2533061846062286,
-        "davies_bouldin": 1.9816058234066163,
-        "calinski_harabasz": 55.01559200730227
-      },
-      "3": {
-        "silhouette": 0.31595491652773083,
-        "davies_bouldin": 1.723738679606911,
-        "calinski_harabasz": 51.32556072579016
-      },
-      "4": {
-        "silhouette": 0.27710918769748827,
-        "davies_bouldin": 1.2255851183033506,
-        "calinski_harabasz": 49.10098859702809
-      },
-      "5": {
-        "silhouette": 0.29116725855121184,
-        "davies_bouldin": 1.1346792020241563,
-        "calinski_harabasz": 50.61082979740557
-      },
-      "6": {
-        "silhouette": 0.3329394087070026,
-        "davies_bouldin": 1.001539917008194,
-        "calinski_harabasz": 54.98596817618822
-      },
-      "7": {
-        "silhouette": 0.37239767713653377,
-        "davies_bouldin": 0.7949674550883058,
-        "calinski_harabasz": 58.007491490448174
-      },
-      "8": {
-        "silhouette": 0.37898660688493796,
-        "davies_bouldin": 0.7791603743415252,
-        "calinski_harabasz": 70.03665295751243
-      },
-      "9": {
-        "silhouette": 0.41700805263451696,
-        "davies_bouldin": 0.6765972422437811,
-        "calinski_harabasz": 78.23931135554639
-      },
-      "10": {
-        "silhouette": 0.4113146317953281,
-        "davies_bouldin": 0.6018954292971437,
-        "calinski_harabasz": 93.17769083712525
-      }
-    },
-    "mantel_dplace_primary": [
-      {
-        "test": "Mantel: Geography ~ Features (D-PLACE primary subset)",
-        "n_cultures": 357,
-        "correlation": 0.4444224365213878,
-        "p_value": 0.001,
-        "significant": true,
-        "note": "D-PLACE cultures with >=3 features coded and coordinates"
-      }
-    ],
-    "note": "Phase 8 reanalysis: D-PLACE only primary clustering. See PHASE8_CONTEXT.md."
-  },
-  "mantel_phase8": [
-    {
-      "test": "Mantel: Geography ~ Features (D-PLACE primary subset)",
-      "n_cultures": 357,
-      "correlation": 0.4444224365213878,
-      "p_value": 0.001,
-      "significant": true,
-      "note": "D-PLACE cultures with >=3 features coded and coordinates"
-    }
-  ],
   "phase8_refined": {
     "k": 3,
     "n_cultures_primary": 357,
@@ -664,162 +586,172 @@
     "pagels_lambda": [
       {
         "feature": "ancestor_mediation",
-        "lambda": 1.0,
-        "p_value": 3.468653619886908e-08,
-        "ll_ml": -160.66326635478543,
+        "lambda": 0.0,
+        "p_value": 1.0,
+        "ll_ml": -175.87621787969576,
         "ll_null": -175.87621787969576,
-        "interpretation": "Strong",
+        "interpretation": "Weak",
         "n": 183
       },
       {
         "feature": "animal_transformation",
-        "lambda": 1.0,
-        "p_value": 1.1045180325908177e-09,
-        "ll_ml": -149.6003260009119,
+        "lambda": 0.0,
+        "p_value": 1.0,
+        "ll_ml": -168.16584307640937,
         "ll_null": -168.16584307640937,
-        "interpretation": "Strong",
+        "interpretation": "Weak",
         "n": 183
       },
       {
         "feature": "chanting_singing",
-        "lambda": 1.0,
-        "p_value": 2.5750914744993025e-06,
-        "ll_ml": -110.31090959517311,
+        "lambda": 0.0,
+        "p_value": 1.0,
+        "ll_ml": -121.36574518947502,
         "ll_null": -121.36574518947502,
-        "interpretation": "Strong",
+        "interpretation": "Weak",
         "n": 131
       },
       {
         "feature": "divination",
-        "lambda": 1.0,
-        "p_value": 1.1045180325908177e-09,
-        "ll_ml": -149.6003260009119,
+        "lambda": 0.0,
+        "p_value": 1.0,
+        "ll_ml": -168.16584307640937,
         "ll_null": -168.16584307640937,
-        "interpretation": "Strong",
+        "interpretation": "Weak",
         "n": 183
       },
       {
         "feature": "entheogen_use",
         "lambda": 0.93,
-        "p_value": 1.4432899320127035e-15,
-        "ll_ml": -140.856483839503,
+        "p_value": 5.972999872483342e-14,
+        "ll_ml": -144.53271383711206,
         "ll_null": -172.72335441481397,
         "interpretation": "Strong",
         "n": 171
       },
       {
         "feature": "hereditary_transmission",
-        "lambda": 1.0,
-        "p_value": 0.10527709114682327,
-        "ll_ml": -37.065219181487954,
+        "lambda": 0.0,
+        "p_value": 1.0,
+        "ll_ml": -38.37708129497503,
         "ll_null": -38.37708129497503,
-        "interpretation": "Moderate",
+        "interpretation": "Weak",
         "n": 39
       },
       {
         "feature": "initiatory_crisis",
-        "lambda": 1.0,
-        "p_value": 0.024191191522154543,
-        "ll_ml": -66.43252217238359,
+        "lambda": 0.0,
+        "p_value": 1.0,
+        "ll_ml": -68.9729584924179,
         "ll_null": -68.9729584924179,
-        "interpretation": "Strong",
+        "interpretation": "Weak",
         "n": 73
       },
       {
         "feature": "initiatory_ordeal",
-        "lambda": 1.0,
-        "p_value": 5.961161952949823e-08,
-        "ll_ml": -137.00580990558962,
+        "lambda": 0.0,
+        "p_value": 1.0,
+        "ll_ml": -151.6938053357702,
         "ll_null": -151.6938053357702,
-        "interpretation": "Strong",
+        "interpretation": "Weak",
         "n": 164
       },
       {
         "feature": "layered_cosmology",
         "lambda": 0.9500000000000001,
-        "p_value": 0.0,
-        "ll_ml": -138.3238844249585,
+        "p_value": 2.220446049250313e-16,
+        "ll_ml": -143.97381123948753,
         "ll_null": -177.81106862534537,
         "interpretation": "Strong",
         "n": 171
       },
       {
         "feature": "nature_spirits",
-        "lambda": 0.9500000000000001,
-        "p_value": 1.1102230246251565e-16,
-        "ll_ml": -135.7752067684948,
+        "lambda": 0.96,
+        "p_value": 0.0,
+        "ll_ml": -135.34476579472803,
         "ll_null": -170.45435083586432,
         "interpretation": "Strong",
         "n": 171
       },
       {
         "feature": "possession_crisis",
-        "lambda": 1.0,
-        "p_value": 3.426008565732275e-08,
-        "ll_ml": -133.2211278860589,
+        "lambda": 0.0,
+        "p_value": 1.0,
+        "ll_ml": -148.44607825895602,
         "ll_null": -148.44607825895602,
-        "interpretation": "Strong",
+        "interpretation": "Weak",
         "n": 161
       },
       {
         "feature": "public_performance",
-        "lambda": 1.0,
-        "p_value": 0.0005021699118734624,
-        "ll_ml": -134.86962418095402,
+        "lambda": 0.0,
+        "p_value": 1.0,
+        "ll_ml": -140.92341928261393,
         "ll_null": -140.92341928261393,
-        "interpretation": "Strong",
+        "interpretation": "Weak",
         "n": 135
       },
       {
         "feature": "rhythmic_percussion",
-        "lambda": 1.0,
-        "p_value": 1.1045180325908177e-09,
-        "ll_ml": -148.68138696770748,
+        "lambda": 0.0,
+        "p_value": 1.0,
+        "ll_ml": -167.24690404320495,
         "ll_null": -167.24690404320495,
-        "interpretation": "Strong",
+        "interpretation": "Weak",
         "n": 182
       },
       {
         "feature": "ritual_performance",
-        "lambda": 0.92,
-        "p_value": 0.0017797551579346038,
-        "ll_ml": -136.0312609037243,
+        "lambda": 0.0,
+        "p_value": 1.0,
+        "ll_ml": -140.91319257831742,
         "ll_null": -140.91319257831742,
-        "interpretation": "Strong",
+        "interpretation": "Weak",
         "n": 136
       },
       {
         "feature": "soul_flight",
-        "lambda": 1.0,
-        "p_value": 1.880750886140703e-07,
-        "ll_ml": -135.84525595720027,
+        "lambda": 0.0,
+        "p_value": 1.0,
+        "ll_ml": -149.42123256330484,
         "ll_null": -149.42123256330484,
-        "interpretation": "Strong",
+        "interpretation": "Weak",
         "n": 161
       },
       {
         "feature": "specialist_presence",
-        "lambda": 0.87,
-        "p_value": 0.0,
-        "ll_ml": -287.29529505301434,
+        "lambda": 0.92,
+        "p_value": 1.176836406102666e-14,
+        "ll_ml": -299.7128217620815,
         "ll_null": -329.5042051817006,
         "interpretation": "Strong",
         "n": 320
       },
       {
         "feature": "spirit_possession",
-        "lambda": NaN,
-        "p_value": NaN,
+        "lambda": null,
+        "p_value": null,
         "interpretation": "insufficient data",
         "n": 0
       },
       {
         "feature": "trance_induction",
-        "lambda": NaN,
-        "p_value": NaN,
+        "lambda": null,
+        "p_value": null,
         "interpretation": "insufficient data",
         "n": 0
       }
     ]
+  },
+  "current_phase": "phase8_refined",
+  "current_summary": {
+    "k": 3,
+    "n_cultures_primary": 357,
+    "mantel": {
+      "r": 0.4651473776600309,
+      "p": 0.001,
+      "significant": true
+    }
   }
 }
