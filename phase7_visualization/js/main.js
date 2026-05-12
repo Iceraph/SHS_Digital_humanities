@@ -59,6 +59,14 @@ document.addEventListener('DOMContentLoaded', async () => {
         CoverageLegend.init();
         console.log('✓ Coverage legend initialized');
 
+        // Step 5.5: Wire hide-missing-data toggle
+        const hideMissingToggle = document.getElementById('hideMissingToggle');
+        if (hideMissingToggle) {
+            hideMissingToggle.addEventListener('change', () => {
+                GlobeVisualization.filterByMissing(hideMissingToggle.checked);
+            });
+        }
+
         // Step 6: Populate globally distributed sidebar section
         populateGloballyDistributed();
 

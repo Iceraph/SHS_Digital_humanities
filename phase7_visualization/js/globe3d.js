@@ -26,7 +26,8 @@ const Globe3D = (() => {
     let currentFilters = {
         cluster: null,
         feature: null,
-        languageFamily: null
+        languageFamily: null,
+        hideMissing: false
     };
 
     const normalizeClusterFilter = (clusterId) => {
@@ -40,6 +41,7 @@ const Globe3D = (() => {
     };
 
     const matchesFilters = (culture, filters) => {
+        if (filters.hideMissing && (culture.cluster === null || culture.cluster === undefined)) return false;
         if (filters.feature && culture.features?.[filters.feature] !== 1) return false;
 
         const clusterFilter = normalizeClusterFilter(filters.cluster);
@@ -277,12 +279,15 @@ const Globe3D = (() => {
         currentFilters = {
             feature: filters.feature !== undefined ? filters.feature : currentFilters.feature,
             cluster: filters.cluster !== undefined ? normalizeClusterFilter(filters.cluster) : normalizeClusterFilter(currentFilters.cluster),
-            languageFamily: filters.languageFamily !== undefined ? normalizeLanguageFamilyFilter(filters.languageFamily) : normalizeLanguageFamilyFilter(currentFilters.languageFamily)
+            languageFamily: filters.languageFamily !== undefined ? normalizeLanguageFamilyFilter(filters.languageFamily) : normalizeLanguageFamilyFilter(currentFilters.languageFamily),
+            hideMissing: filters.hideMissing !== undefined ? filters.hideMissing : currentFilters.hideMissing
         };
 
         const cultures = DataLoader.getCultures().filter(culture => matchesFilters(culture, currentFilters));
         plotCultures(cultures);
     };
+
+    const filterByMissing = (hide) => applyFilters({ hideMissing: hide });
 
     const buildPointGeometry = (cultures) => {
         const positions = [];
@@ -464,9 +469,11 @@ const Globe3D = (() => {
     };
 
     const resetFilters = () => {
-        currentFilters = { cluster: null, feature: null, languageFamily: null };
+        currentFilters = { cluster: null, feature: null, languageFamily: null, hideMissing: false };
         selectedCultures.clear();
         subsetHighlight = null;
+        const toggle = document.getElementById('hideMissingToggle');
+        if (toggle) toggle.checked = false;
         plotCultures(DataLoader.getCultures());
     };
 
@@ -495,6 +502,7 @@ const Globe3D = (() => {
         filterByFeature,
         filterByCluster,
         filterByLanguageFamily,
+        filterByMissing,
         resetFilters,
         highlightSubset,
         clearSubsetHighlight,

@@ -22,6 +22,7 @@ const GlobeVisualization = (() => {
     const filterByFeature = (featureName) => active.filterByFeature(featureName);
     const filterByCluster = (clusterId) => active.filterByCluster(clusterId);
     const filterByLanguageFamily = (languageFamily) => active.filterByLanguageFamily(languageFamily);
+    const filterByMissing = (hide) => active.filterByMissing(hide);
     const resetFilters = () => active.resetFilters();
     const highlightSubset = (ids, color) => active.highlightSubset(ids, color);
     const clearSubsetHighlight = () => active.clearSubsetHighlight();
@@ -37,6 +38,7 @@ const GlobeVisualization = (() => {
         filterByFeature,
         filterByCluster,
         filterByLanguageFamily,
+        filterByMissing,
         resetFilters,
         highlightSubset,
         clearSubsetHighlight,

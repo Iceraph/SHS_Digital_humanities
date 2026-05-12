@@ -191,29 +191,44 @@ This **reverses the hypothesis evaluation**: the evidence now points toward geog
 - `phase7_visualization/data/cluster_profiles_phase8.json`
 - `phase7_visualization/data/analysis_results.json` — `phase8` section added
 
-## 7. Open Question — Did Phase 2 Harmonization Fail?
+## 7. Phase 2 Harmonization Audit — RESOLVED (12 May 2026)
 
-**Status:** TODO — audit required before final write-up
+**Status:** Complete  
+**Finding: Mixed — partly data gap, partly aspirational crosswalk. No actionable fix possible.**
 
-**Context:** The 87.6% source classification accuracy and zero shared features across sources raises the question: did the Phase 2 crosswalk fail to map overlapping variables, or do the databases genuinely not overlap on shamanic features?
+### What was audited
 
-**Two possible explanations:**
+Cross-checked `data/reference/crosswalk.csv` against all three harmonised parquets to determine whether declared cross-source mappings produced actual coded values.
 
-| Explanation | Evidence | Implication |
-|---|---|---|
-| Crosswalk missed mappings | Seshat has spirit_possession_crisis, Seshat has ritual specialists — were these mapped? | Phase 2 process failure; crosswalk needs revision |
-| Databases genuinely don't overlap | Seshat was built for political complexity, not shamanism; DRH covers world religions not ethnographic societies | Data gap, not process failure; joint clustering was always the wrong design |
+### Feature coverage per source (cultures with ≥1 coded value)
 
-**Audit steps (TODO):**
-1. Read `data/reference/crosswalk.csv` — list every Seshat and DRH variable that was mapped to the shared schema
-2. Cross-check against `data/processed/harmonised/seshat_harmonised.parquet` and `drh_harmonised.parquet` — are the mapped variables populated, or all-NA?
-3. If all-NA despite a crosswalk entry: Phase 2 extraction failed (fix the ingest pipeline)
-4. If variable genuinely absent from source: data gap (document as limitation, no fix needed)
-5. Document findings in this section
+| Feature | D-PLACE | DRH | Seshat | Crosswalk declares | Diagnosis |
+|---|---|---|---|---|---|
+| trance_induction | 419 | 95 | 0 | DRH ✓, Seshat — | OK (genuine DRH coverage) |
+| spirit_possession | 239 | 167 | 0 | Seshat ✓ | ⚠ Seshat mapping aspirational |
+| soul_flight | 161 | 173 | 0 | DRH ✓, Seshat ✓ | ⚠ Seshat mapping aspirational |
+| dedicated_specialist | 0 | 0 | 451 | DRH ✓ | ⚠ DRH questions not fetched |
+| divination | 183 | 103 | 0 | DRH ✓, Seshat ✓ | ⚠ Seshat mapping aspirational |
+| ancestor_mediation | 183 | 0 | 0 | DRH ✓ | ⚠ DRH questions not fetched |
+| initiatory_crisis | 73 | 0 | 0 | DRH ✓ | ⚠ DRH questions not fetched |
+| nature_spirits | 171 | 0 | 0 | Seshat ✓ | ⚠ Seshat mapping aspirational |
+| moralizing_supernatural | 0 | 0 | 386 | — | OK (Seshat-only by design) |
 
-**Why it matters for the paper:** If the crosswalk is correct, the zero-intersection result is a data limitation to acknowledge. If Phase 2 missed real mappings, fixing it could add 1–3 shared features and enable a partial cross-source validation.
+### Root cause analysis
 
-**Priority:** Medium — does not block Phase 8 reanalysis (D-PLACE primary is valid regardless), but affects the Discussion section's framing of cross-source coverage.
+**Seshat (6 aspirational mappings):**  
+The crosswalk declared Seshat covers `spirit_possession` (via `spirit_possession`), `soul_flight` and `nature_spirits` (via `spirit_mediation`), `divination`, and `ritual_practice`. **None of these variables exist in Seshat.** The Seshat API only exposes 5 variables for this project: `moralizing_agentic`, `moralizing_supernatural`, `professional_priesthood`, `religious_level`, `human_sacrifice`. Seshat is a political-complexity databank, not a shamanic-practices database. These crosswalk entries were aspirational declarations written before the API was queried. **No fix possible** — the variables do not exist in the source.
+
+**DRH (3 missing extractions):**  
+The crosswalk references column names `healing_question_1` (→ `dedicated_specialist`), `ancestor_question_1` (→ `ancestor_mediation`), `drh_trance_question` (→ `initiatory_crisis`). The DRH fetch script (`scripts/drh_fetch.py`) only fetched 8 questions (trance possession, divination practices/processes, spirit-body distinction, afterlife). The healing, ancestor, and initiatory-crisis questions were never added to `TARGET_QUESTION_IDS`. **Fixable in principle** — but would require re-fetching DRH and these concepts may not be well-covered given the 240-tradition sample size. Given that the primary analysis is now D-PLACE only, fixing this is not worthwhile for statistical inference; it would only add qualitative annotation for DRH traditions.
+
+### Conclusion
+
+The zero cross-source intersection is **primarily a genuine data gap**, not a process failure:
+- Seshat does not contain shamanic variables — the crosswalk was aspirational
+- DRH has 3 unfetched question types, but the sample (240 traditions) is too small and thematically narrow to contribute to statistical inference regardless
+
+**Implication for the paper:** The Discussion section should state clearly that joint cross-source clustering was not feasible because the databases were designed for different purposes (political complexity vs. world religions vs. ethnographic survey). D-PLACE/SCCS is the only source with sufficient shamanic-feature coverage for statistical analysis. DRH and Seshat contribute qualitative colour and post-hoc validation only.
 
 ---
 

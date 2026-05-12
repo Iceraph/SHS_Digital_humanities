@@ -12,7 +12,8 @@ const Globe2D = (() => {
     let currentFilters = {
         cluster: null,
         feature: null,
-        languageFamily: null
+        languageFamily: null,
+        hideMissing: false
     };
     let scale = 1;
     let offsetX = 0;
@@ -32,6 +33,7 @@ const Globe2D = (() => {
     };
 
     const matchesFilters = (culture, filters) => {
+        if (filters.hideMissing && (culture.cluster === null || culture.cluster === undefined)) return false;
         if (filters.feature && culture.features?.[filters.feature] !== 1) return false;
 
         const clusterFilter = normalizeClusterFilter(filters.cluster);
@@ -99,12 +101,15 @@ const Globe2D = (() => {
         currentFilters = {
             feature: filters.feature !== undefined ? filters.feature : currentFilters.feature,
             cluster: filters.cluster !== undefined ? normalizeClusterFilter(filters.cluster) : normalizeClusterFilter(currentFilters.cluster),
-            languageFamily: filters.languageFamily !== undefined ? normalizeLanguageFamilyFilter(filters.languageFamily) : normalizeLanguageFamilyFilter(currentFilters.languageFamily)
+            languageFamily: filters.languageFamily !== undefined ? normalizeLanguageFamilyFilter(filters.languageFamily) : normalizeLanguageFamilyFilter(currentFilters.languageFamily),
+            hideMissing: filters.hideMissing !== undefined ? filters.hideMissing : currentFilters.hideMissing
         };
 
         const cultures = DataLoader.getCultures().filter(culture => matchesFilters(culture, currentFilters));
         plotCultures(cultures);
     };
+
+    const filterByMissing = (hide) => applyFilters({ hideMissing: hide });
 
     const render = (cultures) => {
         if (!cultures || cultures.length === 0) {
@@ -368,12 +373,14 @@ const Globe2D = (() => {
     };
 
     const resetFilters = () => {
-        currentFilters = { cluster: null, feature: null, languageFamily: null };
+        currentFilters = { cluster: null, feature: null, languageFamily: null, hideMissing: false };
         selectedCultures.clear();
         scale = 1;
         offsetX = 0;
         offsetY = 0;
         subsetHighlight = null;
+        const toggle = document.getElementById('hideMissingToggle');
+        if (toggle) toggle.checked = false;
         plotCultures(DataLoader.getCultures());
     };
 
@@ -400,6 +407,7 @@ const Globe2D = (() => {
         filterByFeature,
         filterByCluster,
         filterByLanguageFamily,
+        filterByMissing,
         resetFilters,
         highlightSubset,
         clearSubsetHighlight,

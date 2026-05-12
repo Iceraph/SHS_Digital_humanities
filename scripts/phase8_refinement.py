@@ -431,6 +431,16 @@ print(f"  ✓ cultures_metadata.json updated (cluster_phase8r field)")
 with open(VIZ / "analysis_results.json") as f:
     analysis = json.load(f)
 
+def _sanitize(obj):
+    """Replace float nan/inf with None for valid JSON serialization."""
+    if isinstance(obj, float) and (obj != obj or obj == float("inf") or obj == float("-inf")):
+        return None
+    if isinstance(obj, dict):
+        return {k: _sanitize(v) for k, v in obj.items()}
+    if isinstance(obj, list):
+        return [_sanitize(v) for v in obj]
+    return obj
+
 analysis["phase8_refined"] = {
     "k": int(best_k),
     "n_cultures_primary": int(len(dplace)),
@@ -457,7 +467,7 @@ analysis["current_summary"] = {
     },
 }
 with open(VIZ / "analysis_results.json", "w") as f:
-    json.dump(analysis, f, indent=2)
+    json.dump(_sanitize(analysis), f, indent=2)
 print(f"  ✓ analysis_results.json updated (phase8_refined section)")
 
 # Save parquet

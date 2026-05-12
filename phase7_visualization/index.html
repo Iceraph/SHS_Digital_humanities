@@ -30,7 +30,7 @@
                         </select>
                     </div>
                     <span class="navbar-text text-light">
-                        Interactive Phase 7 Visualization • 2,687 Cultures • 8 Clusters
+                        Interactive Phase 7 Visualization • 2,687 Cultures • 3 Clusters (Phase 8)
                     </span>
                 </div>
             </div>
@@ -75,19 +75,25 @@
                         </select>
                     </div>
 
+                    <!-- Hide Missing Data Toggle -->
+                    <div class="mb-3 d-flex align-items-center gap-2">
+                        <div class="form-check form-switch mb-0">
+                            <input class="form-check-input" type="checkbox" id="hideMissingToggle" role="switch">
+                            <label class="form-check-label small" for="hideMissingToggle">
+                                Hide unclassified cultures
+                                <span class="text-muted" style="font-size:0.75em">(2,154 gray dots)</span>
+                            </label>
+                        </div>
+                    </div>
+
                     <!-- Cluster Filter -->
                     <div class="mb-3">
                         <label for="clusterFilter" class="form-label small">Cluster:</label>
                         <select class="form-select form-select-sm" id="clusterFilter">
                             <option value="">All Clusters</option>
-                            <option value="0">Cluster 0</option>
-                            <option value="1">Cluster 1</option>
-                            <option value="2">Cluster 2</option>
-                            <option value="3">Cluster 3</option>
-                            <option value="4">Cluster 4</option>
-                            <option value="5">Cluster 5</option>
-                            <option value="6">Cluster 6</option>
-                            <option value="7">Cluster 7</option>
+                            <option value="0">Cluster 0 — Cosmological specialists</option>
+                            <option value="1">Cluster 1 — General practitioners</option>
+                            <option value="2">Cluster 2 — Performative/public ritual</option>
                         </select>
                     </div>
 
